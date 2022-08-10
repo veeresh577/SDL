@@ -1,0 +1,1 @@
+<38>[88673.802240] type=1400 audit(1642521591.431:12279): avc: denied { read } for comm="Binder:581_1" name="wakeup48" dev="sysfs" ino=61027 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=1

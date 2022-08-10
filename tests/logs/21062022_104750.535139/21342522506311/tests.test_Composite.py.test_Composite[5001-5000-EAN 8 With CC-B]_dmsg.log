@@ -1,0 +1,39 @@
+<14>[ 2109.542621] init: starting service 'qccsyshalservice'...
+<14>[ 2109.590035] init: starting service 'qccvndhalservice'...
+<14>[ 2109.692165] init: Service 'qccsyshalservice' (pid 10299) exited with status 1
+<14>[ 2109.692281] init: Sending signal 9 to service 'qccsyshalservice' (pid 10299) process group...
+<14>[ 2109.693150] libprocessgroup: Successfully killed process cgroup uid 1000 pid 10299 in 0ms
+<14>[ 2109.716513] init: Service 'qccvndhalservice' (pid 10300) exited with status 1
+<14>[ 2109.716619] init: Sending signal 9 to service 'qccvndhalservice' (pid 10300) process group...
+<14>[ 2109.717578] libprocessgroup: Successfully killed process cgroup uid 1000 pid 10300 in 0ms
+<14>[ 2114.632552] init: starting service 'qccvndhalservice'...
+<14>[ 2114.726714] init: Service 'qccsyshalservice' (pid 10308) exited with status 1
+<14>[ 2114.726908] init: Sending signal 9 to service 'qccsyshalservice' (pid 10308) process group...
+<14>[ 2114.728518] libprocessgroup: Successfully killed process cgroup uid 1000 pid 10308 in 1ms
+<14>[ 2114.771501] init: Service 'qccvndhalservice' (pid 10309) exited with status 1
+<14>[ 2114.771646] init: Sending signal 9 to service 'qccvndhalservice' (pid 10309) process group...
+<14>[ 2114.773178] libprocessgroup: Successfully killed process cgroup uid 1000 pid 10309 in 0ms
+<3>[ 2117.825027] [schedu][0x115f72fb701][19:24:36.991282] wlan: [2070:E:scan] scm_11d_elected_country_algo_fcc: 98: No AP with 11d Country code is present in scan list
+<3>[ 2117.825179] FUSIONWL: : ==Regulatory_elect_country_db==: No AP with 11d Country code is present in scan list 
+<3>[ 2117.839920] FUSIONWL: : ==Regulatory_scan_country_list_db_reset==: Reset complete for scan country list 
+<14>[ 2119.766963] init: Service 'qccsyshalservice' (pid 10313) exited with status 1
+<14>[ 2119.767120] init: Sending signal 9 to service 'qccsyshalservice' (pid 10313) process group...
+<14>[ 2119.768745] libprocessgroup: Successfully killed process cgroup uid 1000 pid 10313 in 1ms
+<6>[ 2119.870908] IRQ 6: no longer affine to CPU5
+<12>[ 2121.845516] healthd: battery l=22 v=3379 t=27.0 h=2 st=2 c=-652831 fc=0 cc=7 chg=u
+<12>[ 2121.932149] healthd: battery l=22 v=3379 t=27.0 h=2 st=2 c=-652831 fc=0 cc=7 chg=u
+<12>[ 2121.961736] healthd: battery l=22 v=3379 t=27.0 h=2 st=2 c=-652831 fc=0 cc=7 chg=u
+<12>[ 2122.034030] healthd: battery l=22 v=3379 t=27.0 h=2 st=2 c=-652831 fc=0 cc=7 chg=u
+<12>[ 2122.052728] healthd: battery l=22 v=3379 t=27.0 h=2 st=2 c=-652831 fc=0 cc=7 chg=u
+<3>[ 2122.227480] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 2122.237977] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 2122.238546] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 2122.244075] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 2122.248332] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 2122.253903] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 2122.264425] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 2122.269605] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 2122.275025] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 2122.280200] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 2122.394417] [SDL] misc_ioctl msg.len is 3 : 0x77 0x02 0x87 
+<3>[ 2122.394943] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 

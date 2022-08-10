@@ -1,0 +1,38 @@
+<14>[ 7579.617546] init: starting service 'qccsyshalservice'...
+<14>[ 7579.666658] init: starting service 'qccvndhalservice'...
+<14>[ 7579.700019] init: starting service 'smartmu'...
+<14>[ 7579.783429] init: Service 'qccvndhalservice' (pid 7817) exited with status 1
+<14>[ 7579.783581] init: Sending signal 9 to service 'qccvndhalservice' (pid 7817) process group...
+<14>[ 7579.784952] libprocessgroup: Successfully killed process cgroup uid 1000 pid 7817 in 0ms
+<14>[ 7584.664812] init: starting service 'qccsyshalservice'...
+<14>[ 7584.748115] init: starting service 'smartmu'...
+<14>[ 7584.834906] init: Service 'qccvndhalservice' (pid 7828) exited with status 1
+<14>[ 7584.835043] init: Sending signal 9 to service 'qccvndhalservice' (pid 7828) process group...
+<14>[ 7584.836566] libprocessgroup: Successfully killed process cgroup uid 1000 pid 7828 in 0ms
+<14>[ 7589.709834] init: starting service 'qccsyshalservice'...
+<14>[ 7589.754709] init: starting service 'qccvndhalservice'...
+<14>[ 7589.831318] init: Service 'qccsyshalservice' (pid 7833) exited with status 1
+<14>[ 7589.831366] init: Sending signal 9 to service 'qccsyshalservice' (pid 7833) process group...
+<14>[ 7589.831804] libprocessgroup: Successfully killed process cgroup uid 1000 pid 7833 in 0ms
+<14>[ 7589.935523] init: Service 'smartmu' (pid 7835) exited with status 0
+<3>[ 7592.056224] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 7592.057746] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 7592.061139] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 7592.071716] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 7592.077129] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 7592.093329] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 7592.098691] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 7592.108981] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 7592.114605] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 7592.119781] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 7592.125157] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 7592.130331] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 7592.140965] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 7592.157977] [SDL] misc_ioctl msg.len is 4 : 0x82 0x00 0x00 0x7e 
+<3>[ 7592.163205] [SDL] misc_ioctl msg.len is 2 : 0x7d 0x80 
+<31>[ 7592.244484] logd: logdr: UID=0 GID=0 PID=7848 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[ 7592.255765] [SDL] misc_ioctl msg.len is 3 : 0x77 0x02 0x87 
+<3>[ 7592.256262] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 7592.371345] msm_isp_open_node: reset VFE
+<3>[ 7592.380714] msm_ispif_config:1061 Exit 
+<3>[ 7592.381308] msm_ispif_config2: Exit 

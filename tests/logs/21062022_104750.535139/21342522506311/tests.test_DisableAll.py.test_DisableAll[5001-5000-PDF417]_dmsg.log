@@ -1,0 +1,9 @@
+<14>[ 3632.633606] init: starting service 'qccsyshalservice'...
+<14>[ 3632.769945] init: Service 'qccsyshalservice' (pid 17099) exited with status 1
+<14>[ 3632.770093] init: Sending signal 9 to service 'qccsyshalservice' (pid 17099) process group...
+<14>[ 3632.772276] libprocessgroup: Successfully killed process cgroup uid 1000 pid 17099 in 1ms
+<14>[ 3632.922789] init: Service 'qccvndhalservice' (pid 17100) exited with status 1
+<14>[ 3632.922968] init: Sending signal 9 to service 'qccvndhalservice' (pid 17100) process group...
+<14>[ 3632.924458] libprocessgroup: Successfully killed process cgroup uid 1000 pid 17100 in 0ms
+<6>[ 3636.099726] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<6>[ 3636.099758] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 

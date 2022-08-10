@@ -1,0 +1,81 @@
+<6>[ 4826.365758] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<14>[ 4827.442075] init: starting service 'qccsyshalservice'...
+<14>[ 4827.568047] init: starting service 'qccvndhalservice'...
+<14>[ 4827.722859] init: Service 'qccvndhalservice' (pid 21730) exited with status 1
+<14>[ 4827.722948] init: Sending signal 9 to service 'qccvndhalservice' (pid 21730) process group...
+<14>[ 4827.723731] libprocessgroup: Successfully killed process cgroup uid 1000 pid 21730 in 0ms
+<14>[ 4832.599250] init: starting service 'qccvndhalservice'...
+<14>[ 4832.761086] libprocessgroup: Successfully killed process cgroup uid 1000 pid 21735 in 0ms
+<3>[ 4835.237084] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 4835.253893] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 4835.257811] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 4835.262111] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 4835.267600] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 4835.284621] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 4835.288564] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 4835.294038] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 4835.299255] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 4835.304484] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 4835.309995] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 4835.315390] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 4835.459954] [SDL] misc_ioctl msg.len is 3 : 0x77 0x02 0x87 
+<3>[ 4835.461415] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<31>[ 4835.523828] logd: logdr: UID=0 GID=0 PID=21746 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[ 4835.669317] msm_isp_open_node: reset VFE
+<3>[ 4835.695332] msm_ispif_config:1061 Exit 
+<3>[ 4835.695842] msm_ispif_config2: Exit 
+<3>[ 4835.710899] frame_src is 1 frame_id is 1 blackjoe
+<3>[ 4835.783661] frame_src is 1 frame_id is 2 blackjoe
+<3>[ 4835.818036] frame_src is 1 frame_id is 3 blackjoe
+<3>[ 4835.852326] frame_src is 1 frame_id is 4 blackjoe
+<3>[ 4835.925016] frame_src is 1 frame_id is 5 blackjoe
+<3>[ 4835.947469] qcom-lpi-pinctrl 15070000.lpi_pinctrl: lpi_pinctrl_runtime_resume: unable to get core clk handle -2
+<6>[ 4835.953498] __afe_port_start: port id: 0x102e
+<6>[ 4835.953540] afe_find_cal_topo_id_by_port: port id: 0x102e, dev_acdb_id: 0
+<6>[ 4835.953554] afe_find_cal_topo_id_by_port: top_id:1025e acdb_id:15 afe_port:0x102e
+<6>[ 4835.953568] afe_get_cal_topology_id: port_id = 0x102e acdb_id = 15 topology_id = 0x1025e cal_type_index=8 ret=0
+<6>[ 4835.954927] afe_send_port_topology_id: AFE set topology id 0x1025e  enable for port 0x102e ret 0
+<6>[ 4835.954945] send_afe_cal_type: cal_index is 0
+<6>[ 4835.954959] send_afe_cal_type: dev_acdb_id[130] is 0
+<6>[ 4835.954972] send_afe_cal_type: Sending cal_index cal 0
+<6>[ 4835.956101] afe_send_hw_delay: port_id 0x102e rate 48000 delay_usec 474 status 0
+<3>[ 4835.959341] frame_src is 1 frame_id is 6 blackjoe
+<3>[ 4835.993715] frame_src is 1 frame_id is 7 blackjoe
+<3>[ 4836.041307] qcom-lpi-pinctrl 15070000.lpi_pinctrl: lpi_pinctrl_runtime_suspend: unable to get core clk handle -2
+<3>[ 4836.066453] frame_src is 1 frame_id is 8 blackjoe
+<3>[ 4836.100778] frame_src is 1 frame_id is 9 blackjoe
+<3>[ 4836.135119] frame_src is 1 frame_id is 10 blackjoe
+<31>[ 4836.194907] logd: logdr: UID=0 GID=0 PID=21759 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[ 4836.207714] frame_src is 1 frame_id is 11 blackjoe
+<3>[ 4836.242052] frame_src is 1 frame_id is 12 blackjoe
+<3>[ 4836.306773] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 4836.307522] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 4836.316039] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 4836.316873] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<6>[ 4836.369102] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<6>[ 4836.369121] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 
+<14>[ 4837.508273] init: starting service 'qccsyshalservice'...
+<38>[ 4837.566371] type=1400 audit(1654200596.725:6361): avc: denied { search } for comm="qccsyshalservic" name="/" dev="mmcblk0p37" ino=2 scontext=u:r:vendor_qccsyshal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[ 4837.633905] init: starting service 'qccvndhalservice'...
+<14>[ 4837.674799] init: Service 'qccsyshalservice' (pid 21770) exited with status 1
+<14>[ 4837.674895] init: Sending signal 9 to service 'qccsyshalservice' (pid 21770) process group...
+<14>[ 4837.675634] libprocessgroup: Successfully killed process cgroup uid 1000 pid 21770 in 0ms
+<38>[ 4837.712455] type=1400 audit(1654200596.865:6362): avc: denied { search } for comm="vendor.qti.hard" name="/" dev="mmcblk0p37" ino=2 scontext=u:r:vendor_hal_qccvndhal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[ 4837.803369] init: Service 'qccvndhalservice' (pid 21771) exited with status 1
+<14>[ 4837.803441] init: Sending signal 9 to service 'qccvndhalservice' (pid 21771) process group...
+<14>[ 4837.804164] libprocessgroup: Successfully killed process cgroup uid 1000 pid 21771 in 0ms
+<3>[ 4838.450775] [schedu][0x12220b20856][20:09:57.617005] wlan: [2070:E:scan] scm_11d_elected_country_algo_fcc: 98: No AP with 11d Country code is present in scan list
+<3>[ 4838.450877] FUSIONWL: : ==Regulatory_elect_country_db==: No AP with 11d Country code is present in scan list 
+<3>[ 4838.477671] FUSIONWL: : ==Regulatory_scan_country_list_db_reset==: Reset complete for scan country list 
+<3>[ 4839.452658] qcom-lpi-pinctrl 15070000.lpi_pinctrl: lpi_pinctrl_runtime_resume: unable to get core clk handle -2
+<6>[ 4839.454714] afe_close: port_id = 0x102e
+<3>[ 4839.550771] qcom-lpi-pinctrl 15070000.lpi_pinctrl: lpi_pinctrl_runtime_suspend: unable to get core clk handle -2
+<38>[ 4839.849759] type=1400 audit(1654200599.005:6363): avc: denied { kill } for comm="swapper/0" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<3>[ 4841.186821] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 4841.197187] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 4841.197622] [SDL] se47xx_misc_ioctl ret = -107 
+<3>[ 4841.203103] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 4841.206372] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 4841.211619] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 4841.217775] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 4841.223617] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 

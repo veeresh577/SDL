@@ -1,0 +1,57 @@
+<38>[79167.929269] type=1400 audit(1642512085.551:11547): avc: denied { kill } for comm="swapper/3" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<14>[79170.004707] init: starting service 'smartmu'...
+<14>[79170.049598] init: starting service 'qccsyshalservice'...
+<14>[79170.165597] init: Service 'qccsyshalservice' (pid 4392) exited with status 1
+<14>[79170.166563] libprocessgroup: Successfully killed process cgroup uid 1000 pid 4392 in 0ms
+<14>[79170.207850] init: Service 'qccvndhalservice' (pid 4393) exited with status 1
+<14>[79175.047740] init: starting service 'smartmu'...
+<14>[79175.092573] init: starting service 'qccsyshalservice'...
+<14>[79175.196564] init: Service 'smartmu' (pid 4397) exited with status 0
+<14>[79175.196682] init: Sending signal 9 to service 'smartmu' (pid 4397) process group...
+<14>[79175.198390] libprocessgroup: Successfully killed process cgroup uid 0 pid 4397 in 1ms
+<14>[79175.247058] init: Service 'qccvndhalservice' (pid 4399) exited with status 1
+<3>[79180.045980] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[79180.047486] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[79180.055951] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[79180.061532] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[79180.066887] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[79180.077613] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[79180.088137] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<14>[79180.089630] init: starting service 'smartmu'...
+<3>[79180.093784] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[79180.104315] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[79180.109562] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[79180.114993] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[79180.120298] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[79180.125614] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<14>[79180.130325] init: starting service 'qccsyshalservice'...
+<3>[79180.130800] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[79180.137162] [SDL] misc_ioctl msg.len is 4 : 0x7b 0x00 0x00 0x85 
+<3>[79180.142288] [SDL] misc_ioctl msg.len is 2 : 0x84 0x00 
+<14>[79180.152141] init: starting service 'qccvndhalservice'...
+<3>[79180.152959] [SDL] misc_ioctl msg.len is 2 : 0x7d 0x80 
+<3>[79180.159380] [SDL] misc_ioctl msg.len is 3 : 0x77 0x02 0x87 
+<3>[79180.163608] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<38>[79180.166521] type=1400 audit(1642512097.791:11549): avc: denied { search } for comm="qccsyshalservic" name="/" dev="sda10" ino=2 scontext=u:r:vendor_qccsyshal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<3>[79180.195146] frame_src is 1 frame_id is 14249 blackjoe
+<14>[79180.215203] init: Service 'qccsyshalservice' (pid 4415) exited with status 1
+<14>[79180.215241] init: Sending signal 9 to service 'qccsyshalservice' (pid 4415) process group...
+<14>[79180.215597] libprocessgroup: Successfully killed process cgroup uid 1000 pid 4415 in 0ms
+<14>[79180.234731] init: Service 'smartmu' (pid 4412) exited with status 0
+<14>[79180.234796] init: Sending signal 9 to service 'smartmu' (pid 4412) process group...
+<14>[79180.235412] libprocessgroup: Successfully killed process cgroup uid 0 pid 4412 in 0ms
+<12>[79180.240211] healthd: battery l=35 v=3465 t=45.0 h=2 st=2 c=-667480 fc=4008000 cc=2 chg=u
+<3>[79180.361384] frame_src is 1 frame_id is 14257 blackjoe
+<3>[79180.430900] frame_src is 1 frame_id is 14259 blackjoe
+<31>[79180.438005] logd: logdr: UID=0 GID=0 PID=4420 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[79180.447699] frame_src is 1 frame_id is 14260 blackjoe
+<3>[79180.464104] frame_src is 1 frame_id is 14261 blackjoe
+<3>[79180.480616] frame_src is 1 frame_id is 14262 blackjoe
+<3>[79180.497291] frame_src is 1 frame_id is 14263 blackjoe
+<3>[79180.513909] frame_src is 1 frame_id is 14264 blackjoe
+<3>[79180.547206] frame_src is 1 frame_id is 14266 blackjoe
+<3>[79180.580531] frame_src is 1 frame_id is 14268 blackjoe
+<3>[79180.617680] frame_src is 1 frame_id is 14270 blackjoe
+<3>[79180.634294] frame_src is 1 frame_id is 14271 blackjoe
+<31>[79180.675151] logd: logdr: UID=0 GID=0 PID=4423 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[79180.700773] frame_src is 1 frame_id is 14275 blackjoe

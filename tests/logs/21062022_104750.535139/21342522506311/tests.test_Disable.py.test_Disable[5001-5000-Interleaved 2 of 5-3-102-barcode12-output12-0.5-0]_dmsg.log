@@ -1,0 +1,17 @@
+<6>[ 2634.971855] IRQ 6: no longer affine to CPU7
+<6>[ 2635.870102] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<6>[ 2635.870138] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 
+<3>[ 2637.967710] FUSIONWL: : ==Regulatory_scan_country_list_db_reset==: Reset complete for scan country list 
+<14>[ 2639.051291] init: starting service 'qccvndhalservice'...
+<14>[ 2639.142003] init: Service 'qccsyshalservice' (pid 12671) exited with status 1
+<14>[ 2639.142177] init: Sending signal 9 to service 'qccsyshalservice' (pid 12671) process group...
+<14>[ 2639.143648] libprocessgroup: Successfully killed process cgroup uid 1000 pid 12671 in 0ms
+<6>[ 2641.991279] IRQ 6: no longer affine to CPU5
+<14>[ 2644.049625] init: starting service 'qccsyshalservice'...
+<14>[ 2644.096134] init: starting service 'qccvndhalservice'...
+<14>[ 2644.186202] libprocessgroup: Successfully killed process cgroup uid 1000 pid 12676 in 1ms
+<14>[ 2644.228221] init: Service 'qccvndhalservice' (pid 12677) exited with status 1
+<14>[ 2644.228362] init: Sending signal 9 to service 'qccvndhalservice' (pid 12677) process group...
+<14>[ 2644.229803] libprocessgroup: Successfully killed process cgroup uid 1000 pid 12677 in 0ms
+<6>[ 2645.872314] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<6>[ 2645.872345] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 

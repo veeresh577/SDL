@@ -1,0 +1,64 @@
+<6>[86319.869553] IRQ 6: no longer affine to CPU4
+<14>[86323.262984] init: starting service 'smartmu'...
+<14>[86323.307949] init: starting service 'qccsyshalservice'...
+<14>[86323.338765] init: starting service 'qccvndhalservice'...
+<14>[86323.419948] init: Service 'smartmu' (pid 13064) exited with status 0
+<14>[86323.420049] init: Sending signal 9 to service 'smartmu' (pid 13064) process group...
+<14>[86323.420970] libprocessgroup: Successfully killed process cgroup uid 0 pid 13064 in 0ms
+<14>[86323.427064] init: Service 'qccsyshalservice' (pid 13065) exited with status 1
+<14>[86323.427140] init: Sending signal 9 to service 'qccsyshalservice' (pid 13065) process group...
+<14>[86323.427853] libprocessgroup: Successfully killed process cgroup uid 1000 pid 13065 in 0ms
+<14>[86328.305491] init: starting service 'smartmu'...
+<14>[86328.379707] init: starting service 'qccvndhalservice'...
+<14>[86328.461136] init: Service 'smartmu' (pid 13069) exited with status 0
+<14>[86328.461234] init: Sending signal 9 to service 'smartmu' (pid 13069) process group...
+<14>[86328.462153] libprocessgroup: Successfully killed process cgroup uid 0 pid 13069 in 0ms
+<14>[86328.468052] init: Service 'qccsyshalservice' (pid 13070) exited with status 1
+<14>[86328.468127] init: Sending signal 9 to service 'qccsyshalservice' (pid 13070) process group...
+<14>[86328.469392] libprocessgroup: Successfully killed process cgroup uid 1000 pid 13070 in 0ms
+<3>[86332.306979] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[86332.308629] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[86332.323076] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[86332.327885] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[86332.338755] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[86332.344398] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[86332.349547] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[86332.354930] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[86332.360284] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[86332.371105] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[86332.375936] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[86332.381615] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[86332.386558] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[86332.392224] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[86332.398436] [SDL] misc_ioctl msg.len is 4 : 0x7b 0x00 0x00 0x85 
+<3>[86332.408667] [SDL] misc_ioctl msg.len is 4 : 0x82 0x00 0x00 0x7e 
+<3>[86332.420336] [SDL] misc_ioctl msg.len is 3 : 0x77 0x02 0x87 
+<3>[86332.424845] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[86332.455739] frame_src is 1 frame_id is 16311 blackjoe
+<3>[86332.472417] frame_src is 1 frame_id is 16312 blackjoe
+<3>[86332.505493] frame_src is 1 frame_id is 16314 blackjoe
+<3>[86332.522115] frame_src is 1 frame_id is 16315 blackjoe
+<3>[86332.572681] frame_src is 1 frame_id is 16316 blackjoe
+<3>[86332.589260] frame_src is 1 frame_id is 16317 blackjoe
+<3>[86332.605813] frame_src is 1 frame_id is 16318 blackjoe
+<3>[86332.622341] frame_src is 1 frame_id is 16319 blackjoe
+<3>[86332.638978] frame_src is 1 frame_id is 16320 blackjoe
+<31>[86332.708503] logd: logdr: UID=0 GID=0 PID=13087 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[86332.708613] frame_src is 1 frame_id is 16322 blackjoe
+<3>[86332.791701] frame_src is 1 frame_id is 16327 blackjoe
+<3>[86332.808384] frame_src is 1 frame_id is 16328 blackjoe
+<3>[86332.841772] frame_src is 1 frame_id is 16330 blackjoe
+<3>[86332.879454] frame_src is 1 frame_id is 16332 blackjoe
+<3>[86332.896116] frame_src is 1 frame_id is 16333 blackjoe
+<3>[86332.912640] frame_src is 1 frame_id is 16334 blackjoe
+<3>[86332.929484] frame_src is 1 frame_id is 16335 blackjoe
+<3>[86332.945924] frame_src is 1 frame_id is 16336 blackjoe
+<3>[86332.962544] frame_src is 1 frame_id is 16337 blackjoe
+<31>[86332.977380] logd: logdr: UID=0 GID=0 PID=13090 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[86332.979090] frame_src is 1 frame_id is 16338 blackjoe
+<3>[86332.995712] frame_src is 1 frame_id is 16339 blackjoe
+<3>[86333.012309] frame_src is 1 frame_id is 16340 blackjoe
+<3>[86333.029229] frame_src is 1 frame_id is 16341 blackjoe
+<3>[86333.045602] frame_src is 1 frame_id is 16342 blackjoe
+<3>[86333.078877] frame_src is 1 frame_id is 16344 blackjoe
+<3>[86333.095482] frame_src is 1 frame_id is 16345 blackjoe

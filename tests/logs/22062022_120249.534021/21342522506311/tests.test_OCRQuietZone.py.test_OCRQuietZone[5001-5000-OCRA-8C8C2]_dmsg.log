@@ -1,0 +1,87 @@
+<3>[82354.186219] [schedu][0x171026a91aa][20:47:02.237439] wlan: [2028:E:scan] scm_11d_elected_country_algo_fcc: 98: No AP with 11d Country code is present in scan list
+<3>[82354.186331] FUSIONWL: : ==Regulatory_elect_country_db==: No AP with 11d Country code is present in scan list 
+<3>[82354.200520] FUSIONWL: : ==Regulatory_scan_country_list_db_reset==: Reset complete for scan country list 
+<14>[82355.993752] init: starting service 'qccsyshalservice'...
+<12>[82356.006402] healthd: battery l=43 v=3563 t=27.0 h=2 st=2 c=-406249 fc=0 cc=8 chg=u
+<14>[82356.037085] init: starting service 'qccvndhalservice'...
+<12>[82356.037576] healthd: battery l=43 v=3563 t=27.0 h=2 st=2 c=-406249 fc=0 cc=8 chg=u
+<12>[82356.065460] healthd: battery l=43 v=3563 t=27.0 h=2 st=2 c=-406249 fc=0 cc=8 chg=u
+<38>[82356.083186] type=1400 audit(1654289224.128:192467): avc: denied { search } for comm="vendor.qti.hard" name="/" dev="mmcblk0p37" ino=2 scontext=u:r:vendor_hal_qccvndhal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<12>[82356.094047] healthd: battery l=43 v=3563 t=27.0 h=2 st=2 c=-406249 fc=0 cc=8 chg=u
+<12>[82356.110744] healthd: battery l=43 v=3563 t=27.0 h=2 st=2 c=-406249 fc=0 cc=8 chg=u
+<14>[82356.116467] init: Service 'qccsyshalservice' (pid 8792) exited with status 1
+<14>[82356.116516] init: Sending signal 9 to service 'qccsyshalservice' (pid 8792) process group...
+<14>[82356.117103] libprocessgroup: Successfully killed process cgroup uid 1000 pid 8792 in 0ms
+<12>[82356.133989] healthd: battery l=43 v=3563 t=27.0 h=2 st=2 c=-406249 fc=0 cc=8 chg=u
+<14>[82356.134804] init: Service 'qccvndhalservice' (pid 8793) exited with status 1
+<14>[82356.134840] init: Sending signal 9 to service 'qccvndhalservice' (pid 8793) process group...
+<14>[82356.135192] libprocessgroup: Successfully killed process cgroup uid 1000 pid 8793 in 0ms
+<12>[82356.160897] healthd: battery l=43 v=3563 t=27.0 h=2 st=2 c=-406249 fc=0 cc=8 chg=u
+<12>[82356.186166] healthd: battery l=43 v=3563 t=27.0 h=2 st=2 c=-406249 fc=0 cc=8 chg=u
+<12>[82356.207896] healthd: battery l=43 v=3563 t=27.0 h=2 st=2 c=-406249 fc=0 cc=8 chg=u
+<12>[82357.144007] healthd: battery l=43 v=3575 t=27.0 h=2 st=2 c=-308105 fc=0 cc=8 chg=u
+<14>[82361.039431] init: starting service 'qccsyshalservice'...
+<14>[82361.086863] init: starting service 'qccvndhalservice'...
+<14>[82361.206944] init: Service 'qccvndhalservice' (pid 8799) exited with status 1
+<14>[82361.207034] init: Sending signal 9 to service 'qccvndhalservice' (pid 8799) process group...
+<14>[82361.208082] libprocessgroup: Successfully killed process cgroup uid 1000 pid 8799 in 0ms
+<3>[82364.196863] [schedu][0x1710ddf5f32][20:47:12.248073] wlan: [2028:E:scan] scm_11d_elected_country_algo_fcc: 98: No AP with 11d Country code is present in scan list
+<3>[82364.197007] FUSIONWL: : ==Regulatory_elect_country_db==: No AP with 11d Country code is present in scan list 
+<3>[82364.211649] FUSIONWL: : ==Regulatory_scan_country_list_db_reset==: Reset complete for scan country list 
+<3>[82365.251670] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[82365.261802] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[82365.262224] [SDL] se47xx_misc_ioctl ret = -107 
+<3>[82365.266673] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[82365.270622] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[82365.276177] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[82365.281650] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[82365.292449] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[82365.297568] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[82365.308285] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[82365.313726] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[82365.318912] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<31>[82365.425220] logd: logdr: UID=0 GID=0 PID=8810 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[82365.427400] [SDL] misc_ioctl msg.len is 3 : 0x77 0x02 0x87 
+<3>[82365.428065] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[82365.574749] msm_isp_open_node: reset VFE
+<3>[82365.588812] msm_ispif_config:1061 Exit 
+<3>[82365.589285] msm_ispif_config2: Exit 
+<3>[82365.620161] frame_src is 1 frame_id is 1 blackjoe
+<3>[82365.688848] frame_src is 1 frame_id is 3 blackjoe
+<3>[82365.743956] frame_src is 1 frame_id is 5 blackjoe
+<3>[82365.781672] frame_src is 1 frame_id is 7 blackjoe
+<31>[82365.808885] logd: logdr: UID=0 GID=0 PID=8826 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<12>[82365.828905] healthd: battery l=43 v=3480 t=27.0 h=2 st=2 c=-1004882 fc=0 cc=8 chg=u
+<3>[82365.868553] frame_src is 1 frame_id is 9 blackjoe
+<31>[82366.065082] logd: logdr: UID=0 GID=0 PID=8829 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[82366.146276] frame_src is 1 frame_id is 16 blackjoe
+<3>[82366.165129] frame_src is 1 frame_id is 17 blackjoe
+<12>[82366.180684] healthd: battery l=43 v=3480 t=27.0 h=2 st=2 c=-1004882 fc=0 cc=8 chg=u
+<14>[82366.202875] init: Service 'qccsyshalservice' (pid 8832) exited with status 1
+<3>[82366.202877] frame_src is 1 frame_id is 19 blackjoe
+<14>[82366.203018] init: Sending signal 9 to service 'qccsyshalservice' (pid 8832) process group...
+<12>[82366.209427] healthd: battery l=43 v=3480 t=27.0 h=2 st=2 c=-1004882 fc=0 cc=8 chg=u
+<3>[82366.272244] frame_src is 1 frame_id is 20 blackjoe
+<31>[82366.310806] logd: logdr: UID=0 GID=0 PID=8834 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[82366.424181] frame_src is 1 frame_id is 23 blackjoe
+<3>[82366.458527] frame_src is 1 frame_id is 24 blackjoe
+<12>[82366.461152] healthd: battery l=43 v=3480 t=27.0 h=2 st=2 c=-1004882 fc=0 cc=8 chg=u
+<3>[82366.492888] frame_src is 1 frame_id is 25 blackjoe
+<3>[82366.530993] frame_src is 1 frame_id is 26 blackjoe
+<3>[82366.549845] frame_src is 1 frame_id is 27 blackjoe
+<31>[82366.583135] logd: logdr: UID=0 GID=0 PID=8837 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[82366.587429] frame_src is 1 frame_id is 29 blackjoe
+<3>[82366.606237] frame_src is 1 frame_id is 30 blackjoe
+<6>[82366.652135] IRQ 6: no longer affine to CPU5
+<3>[82366.674409] frame_src is 1 frame_id is 31 blackjoe
+<3>[82366.743069] frame_src is 1 frame_id is 33 blackjoe
+<3>[82366.861237] frame_src is 1 frame_id is 35 blackjoe
+<3>[82366.933605] frame_src is 1 frame_id is 37 blackjoe
+<3>[82366.952377] frame_src is 1 frame_id is 38 blackjoe
+<31>[82366.959969] logd: logdr: UID=0 GID=0 PID=8841 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[82366.990652] frame_src is 1 frame_id is 40 blackjoe
+<3>[82367.009418] frame_src is 1 frame_id is 41 blackjoe
+<3>[82367.112545] frame_src is 1 frame_id is 43 blackjoe
+<3>[82367.230450] frame_src is 1 frame_id is 45 blackjoe
+<3>[82367.264725] frame_src is 1 frame_id is 46 blackjoe
+<3>[82367.337138] frame_src is 1 frame_id is 48 blackjoe

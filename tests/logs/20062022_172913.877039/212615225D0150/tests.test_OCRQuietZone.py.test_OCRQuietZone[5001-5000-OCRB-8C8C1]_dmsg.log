@@ -1,0 +1,31 @@
+<14>[ 4641.197792] init: starting service 'qccsyshalservice'...
+<14>[ 4641.255256] init: starting service 'qccvndhalservice'...
+<14>[ 4641.358236] init: Service 'qccsyshalservice' (pid 22539) exited with status 1
+<14>[ 4641.358339] init: Sending signal 9 to service 'qccsyshalservice' (pid 22539) process group...
+<14>[ 4641.359230] libprocessgroup: Successfully killed process cgroup uid 1000 pid 22539 in 0ms
+<14>[ 4641.471342] init: Service 'smartmu' (pid 22541) exited with status 0
+<6>[ 4641.511873] IRQ 6: no longer affine to CPU4
+<6>[ 4643.431386] IRQ 6: no longer affine to CPU4
+<14>[ 4646.252703] init: starting service 'qccsyshalservice'...
+<14>[ 4646.332066] init: starting service 'smartmu'...
+<14>[ 4646.393385] init: Service 'qccsyshalservice' (pid 22555) exited with status 1
+<14>[ 4646.393550] init: Sending signal 9 to service 'qccsyshalservice' (pid 22555) process group...
+<14>[ 4646.394768] libprocessgroup: Successfully killed process cgroup uid 1000 pid 22555 in 0ms
+<14>[ 4646.422983] init: Service 'qccvndhalservice' (pid 22556) exited with status 1
+<14>[ 4646.423139] init: Sending signal 9 to service 'qccvndhalservice' (pid 22556) process group...
+<14>[ 4646.424567] libprocessgroup: Successfully killed process cgroup uid 1000 pid 22556 in 0ms
+<14>[ 4646.490299] init: Service 'smartmu' (pid 22557) exited with status 0
+<12>[ 4650.800203] healthd: battery l=85 v=3860 t=47.0 h=2 st=2 c=-235839 fc=4008000 cc=2 chg=u
+<6>[ 4650.851132] IRQ 6: no longer affine to CPU4
+<14>[ 4651.295990] init: starting service 'qccsyshalservice'...
+<38>[ 4651.366289] type=1400 audit(1642435237.404:4762): avc: denied { search } for comm="qccsyshalservic" name="/" dev="sda10" ino=2 scontext=u:r:vendor_qccsyshal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[ 4651.424322] init: Service 'qccsyshalservice' (pid 22561) exited with status 1
+<14>[ 4651.424440] init: Sending signal 9 to service 'qccsyshalservice' (pid 22561) process group...
+<14>[ 4651.425491] libprocessgroup: Successfully killed process cgroup uid 1000 pid 22561 in 0ms
+<14>[ 4651.463016] libprocessgroup: Successfully killed process cgroup uid 1000 pid 22562 in 1ms
+<14>[ 4651.535262] init: Service 'smartmu' (pid 22563) exited with status 0
+<38>[ 4652.603555] type=1400 audit(1642435238.644:4763): avc: denied { kill } for comm="swapper/0" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<3>[ 4653.749296] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 4653.750775] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 4653.754259] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 4653.759529] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 

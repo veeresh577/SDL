@@ -1,0 +1,37 @@
+<14>[ 9501.524092] init: starting service 'qccsyshalservice'...
+<14>[ 9501.746166] init: starting service 'qccvndhalservice'...
+<14>[ 9501.919687] init: Service 'qccvndhalservice' (pid 25972) exited with status 1
+<14>[ 9501.919788] init: Sending signal 9 to service 'qccvndhalservice' (pid 25972) process group...
+<6>[ 9502.432932] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<6>[ 9502.432954] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 
+<4>[ 9503.150875] FG: is_batt_empty: batt_soc_rt_sts: 32 vbatt: 3115958 uV msoc:0
+<3>[ 9504.516021] [schedu][0x136fc955658][21:27:43.682257] wlan: [2070:E:scan] scm_11d_elected_country_algo_fcc: 98: No AP with 11d Country code is present in scan list
+<3>[ 9504.516129] FUSIONWL: : ==Regulatory_elect_country_db==: No AP with 11d Country code is present in scan list 
+<3>[ 9504.534203] FUSIONWL: : ==Regulatory_scan_country_list_db_reset==: Reset complete for scan country list 
+<14>[ 9506.560711] init: starting service 'qccsyshalservice'...
+<14>[ 9506.720945] init: Sending signal 9 to service 'qccsyshalservice' (pid 25979) process group...
+<4>[ 9506.936432] FG: is_batt_empty: batt_soc_rt_sts: 32 vbatt: 3123283 uV msoc:0
+<14>[ 9506.944969] init: Service 'qccvndhalservice' (pid 25980) exited with status 1
+<14>[ 9506.945070] init: Sending signal 9 to service 'qccvndhalservice' (pid 25980) process group...
+<14>[ 9506.945824] libprocessgroup: Successfully killed process cgroup uid 1000 pid 25980 in 0ms
+<12>[ 9506.945999] healthd: battery l=3 v=3123 t=28.0 h=2 st=2 c=-163574 fc=0 cc=7 chg=u
+<4>[ 9506.951551] FG: is_batt_empty: batt_soc_rt_sts: 32 vbatt: 3123283 uV msoc:0
+<4>[ 9506.976076] FG: is_batt_empty: batt_soc_rt_sts: 32 vbatt: 3123283 uV msoc:0
+<14>[ 9511.594371] init: starting service 'qccsyshalservice'...
+<14>[ 9511.758803] init: Service 'qccsyshalservice' (pid 25984) exited with status 1
+<14>[ 9511.758913] init: Sending signal 9 to service 'qccsyshalservice' (pid 25984) process group...
+<14>[ 9511.759887] libprocessgroup: Successfully killed process cgroup uid 1000 pid 25984 in 0ms
+<14>[ 9511.805794] init: starting service 'qccvndhalservice'...
+<6>[ 9512.434741] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<6>[ 9512.434763] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 
+<3>[ 9512.474031] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 9512.474353] [SDL] se47xx_misc_ioctl ret = -107 
+<3>[ 9512.478503] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 9512.483155] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 9512.488093] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 9512.493760] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 9512.498918] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 9512.509483] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 9512.515170] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 9512.520149] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 9512.530692] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 

@@ -1,0 +1,6 @@
+<38>[86559.908196] type=1400 audit(1642519477.531:11948): avc: denied { kill } for comm="swapper/3" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<14>[86560.013301] init: starting service 'smartmu'...
+<14>[86560.161770] init: Service 'qccsyshalservice' (pid 14021) exited with status 1
+<14>[86560.162926] libprocessgroup: Successfully killed process cgroup uid 1000 pid 14021 in 0ms
+<14>[86560.168443] init: Sending signal 9 to service 'smartmu' (pid 14020) process group...
+<14>[86560.169746] libprocessgroup: Successfully killed process cgroup uid 0 pid 14020 in 1ms

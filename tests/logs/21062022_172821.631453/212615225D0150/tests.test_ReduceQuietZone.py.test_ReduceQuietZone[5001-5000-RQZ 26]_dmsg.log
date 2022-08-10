@@ -1,0 +1,18 @@
+<12>[88408.066215] healthd: battery l=11 v=3338 t=43.0 h=2 st=2 c=-124511 fc=4008000 cc=2 chg=u
+<12>[88408.099777] healthd: battery l=11 v=3338 t=44.0 h=2 st=2 c=-124511 fc=4008000 cc=2 chg=u
+<12>[88408.132502] healthd: battery l=11 v=3338 t=44.0 h=2 st=2 c=-124511 fc=4008000 cc=2 chg=u
+<12>[88408.179283] healthd: battery l=11 v=3338 t=44.0 h=2 st=2 c=-124511 fc=4008000 cc=2 chg=u
+<12>[88408.195195] healthd: battery l=11 v=3338 t=44.0 h=2 st=2 c=-124511 fc=4008000 cc=2 chg=u
+<12>[88408.217709] healthd: battery l=11 v=3338 t=44.0 h=2 st=2 c=-124511 fc=4008000 cc=2 chg=u
+<12>[88408.232836] healthd: battery l=11 v=3272 t=44.0 h=2 st=2 c=-586913 fc=4008000 cc=2 chg=u
+<12>[88408.265725] healthd: battery l=11 v=3272 t=44.0 h=2 st=2 c=-586913 fc=4008000 cc=2 chg=u
+<14>[88409.004297] init: Service 'smartmu' (pid 21616) exited with status 0
+<14>[88409.005461] libprocessgroup: Successfully killed process cgroup uid 0 pid 21616 in 0ms
+<14>[88409.027287] init: starting service 'qccsyshalservice'...
+<14>[88409.185473] init: starting service 'qccvndhalservice'...
+<14>[88409.315858] init: Service 'qccvndhalservice' (pid 21619) exited with status 1
+<38>[88410.497759] type=1400 audit(1642521328.121:12254): avc: denied { kill } for comm="swapper/1" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<14>[88413.911567] init: starting service 'smartmu'...
+<14>[88414.042438] init: Service 'smartmu' (pid 21623) exited with status 0
+<14>[88414.042554] init: Sending signal 9 to service 'smartmu' (pid 21623) process group...
+<14>[88414.043696] libprocessgroup: Successfully killed process cgroup uid 0 pid 21623 in 0ms

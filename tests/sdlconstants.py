@@ -1,0 +1,85 @@
+from enum import Enum
+
+
+class Symbology(Enum):
+    UPCA = 34  # Need Check Digit
+    UPCE = 37  # Need Check Digit
+    UPCE1 = "Sdl_EnDis_BC3"
+    EAN8 = 10
+    EAN13 = 13
+    ISSN = 26
+    Code128 = 59
+    Code128b = 60
+    EAN128 = 16
+    ISBT128 = "Sdl_EnDis_BC9"
+    Code39 = 8
+    Code39ASCII = 9
+    Code93 = 25
+    Interleaved2of5 = 3
+    Discrete2of5 = "Sdl_EnDis_BC14"
+    Matrix2of5 = 5
+    Codabar = 18
+    MSI = 47  #"Sdl_EnDis_BC17"
+    MSI_1 = "test6_msi1cd"  #10
+    MSI_2 = "test7_msi2cd"  #11
+    GS1Databar14 = 29
+    GS1DatabarLimited = 30
+    PDF417 = 55
+    MicroPDF = 84
+    Datamatrix = 71
+    Maxicode = "Sdl_EnDis_BC23"
+    QRCode = 112
+    MicroQR = 97
+    Aztec = 92
+    HanXin = 116
+    Japanese = 76
+    Korean = "Sdl_Postal_BC2"#77
+    Planet = 82
+    Postnet = 41
+    Netherlands = "Sdl_Postal_BC5"
+    Australian = 63
+    UKPostal = 70
+    Intellimail = 85
+    EAN135 = 15
+    ISBN135 = 13
+
+
+class Size(Enum):
+    UPCA = 0.500
+    UPCE = 0.500
+    UPCE1 = 0
+    EAN8 = 0.500
+    EAN13 = 0.500
+    ISSN = 0.500
+    Code128 = 0.500
+    Code128b = 0.400
+    EAN128 = 0.500
+    ISBT128 = 0
+    Code39 = 0.500
+    Code39ASCII = 0.500
+    Code93 = 0.500
+    Interleaved2of5 = 0.500
+    Discrete2of5 = 0
+    Matrix2of5 = 0.500
+    Codabar = 0.400
+    MSI = 0.500
+    GS1Databar14 = 0.500
+    GS1DatabarLimited = 0.500
+    PDF417 = 0.500
+    MicroPDF = 0.500
+    Datamatrix = 0.500
+    Maxicode = 0.600
+    QRCode = 0.500
+    MicroQR = 0.500
+    Aztec = 0.500
+    HanXin = 0.500
+    Japanese = 0.500
+    Korean = 0.400
+    Planet = 0.500
+    Postnet = 0.500
+    Netherlands = 0
+    Australian = 0.500
+    UKPostal = 0.500
+    Intellimail = 0.500
+    EAN135 = 0.500
+    ISBN135 = 0.400

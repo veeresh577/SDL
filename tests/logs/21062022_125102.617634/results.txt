@@ -1,0 +1,73 @@
+. tests/test_Enable.py::test_Enable[5001-5000-UPC-A]
+. tests/test_Enable.py::test_Enable[5001-5000-UPC-E]
+R tests/test_Enable.py::test_Enable[5001-5000-UPC-E1]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['12345670'] == ['NR']
+ E     At index 0 diff: '12345670' != 'NR'
+ E     Full diff:
+ E     - ['12345670']
+ E     + ['NR']
+. tests/test_Enable.py::test_Enable[5001-5000-UPC-E1]
+. tests/test_Enable.py::test_Enable[5001-5000-EAN-8]
+. tests/test_Enable.py::test_Enable[5001-5000-EAN-13]
+R tests/test_Enable.py::test_Enable[5001-5000-ISSN]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['83013016'] == ['8765301X']
+ E     At index 0 diff: '83013016' != '8765301X'
+ E     Full diff:
+ E     - ['83013016']
+ E     + ['8765301X']
+F tests/test_Enable.py::test_Enable[5001-5000-ISSN]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['83013016'] == ['8765301X']
+ E     At index 0 diff: '83013016' != '8765301X'
+ E     Full diff:
+ E     - ['83013016']
+ E     + ['8765301X']
+. tests/test_Enable.py::test_Enable[5001-5000-Code 128b]
+. tests/test_Enable.py::test_Enable[5001-5000-EAN-128]
+. tests/test_Enable.py::test_Enable[5001-5000-ISBT-128]
+. tests/test_Enable.py::test_Enable[5001-5000-Code 39]
+. tests/test_Enable.py::test_Enable[5001-5000-Code 39 Sample with Full ASCII and the symbology enabled]
+. tests/test_Enable.py::test_Enable[5001-5000-Code 93]
+. tests/test_Enable.py::test_Enable[5001-5000-Interleaved 2 of 5]
+. tests/test_Enable.py::test_Enable[5001-5000-Discrete 2 of 5]
+. tests/test_Enable.py::test_Enable[5001-5000-Matrix 2 of 5]
+. tests/test_Enable.py::test_Enable[5001-5000-Codabar]
+R tests/test_Enable.py::test_Enable[5001-5000-MSI]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['20205977'] == ['NR']
+ E     At index 0 diff: '20205977' != 'NR'
+ E     Full diff:
+ E     - ['20205977']
+ E     + ['NR']
+F tests/test_Enable.py::test_Enable[5001-5000-MSI]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['20205977'] == ['NR']
+ E     At index 0 diff: '20205977' != 'NR'
+ E     Full diff:
+ E     - ['20205977']
+ E     + ['NR']
+. tests/test_Enable.py::test_Enable[5001-5000-GS1 Databar 14]
+. tests/test_Enable.py::test_Enable[5001-5000-GS1 Databar Limited]
+. tests/test_Enable.py::test_Enable[5001-5000-PDF417]
+. tests/test_Enable.py::test_Enable[5001-5000-MicroPDF]
+R tests/test_Enable.py::test_Enable[5001-5000-Datamatrix]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['01234567890512345'] == ['NR']
+ E     At index 0 diff: '01234567890512345' != 'NR'
+ E     Full diff:
+ E     - ['01234567890512345']
+ E     + ['NR']
+. tests/test_Enable.py::test_Enable[5001-5000-Datamatrix]
+. tests/test_Enable.py::test_Enable[5001-5000-Maxicode]
+. tests/test_Enable.py::test_Enable[5001-5000-QR Code]
+. tests/test_Enable.py::test_Enable[5001-5000-MicroQR]
+. tests/test_Enable.py::test_Enable[5001-5000-Aztec]
+. tests/test_Enable.py::test_Enable[5001-5000-Han-Xin]

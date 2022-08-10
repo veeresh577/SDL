@@ -1,0 +1,129 @@
+<14>[94317.028408] init: starting service 'smartmu'...
+<14>[94317.131773] init: starting service 'qccsyshalservice'...
+<14>[94317.214226] init: starting service 'qccvndhalservice'...
+<38>[94317.285724] type=1400 audit(1642527234.911:14724): avc: denied { search } for comm="vendor.qti.hard" name="/" dev="sda10" ino=2 scontext=u:r:vendor_hal_qccvndhal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[94322.058260] init: starting service 'smartmu'...
+<14>[94322.231162] init: Service 'smartmu' (pid 31700) exited with status 0
+<14>[94322.231247] init: Sending signal 9 to service 'smartmu' (pid 31700) process group...
+<14>[94322.232051] libprocessgroup: Successfully killed process cgroup uid 0 pid 31700 in 0ms
+<14>[94322.241912] init: starting service 'qccvndhalservice'...
+<14>[94322.392639] init: Service 'qccvndhalservice' (pid 31703) exited with status 1
+<3>[94322.745742] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[94322.751352] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[94322.756225] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[94322.762142] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[94322.767024] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[94322.772622] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[94322.777709] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[94322.788282] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[94322.794440] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[94322.800281] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[94322.804461] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[94322.820397] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[94322.826380] [SDL] misc_ioctl msg.len is 4 : 0x7b 0x00 0x00 0x85 
+<3>[94322.849281] [SDL] misc_ioctl msg.len is 3 : 0x77 0x02 0x87 
+<3>[94322.901168] frame_src is 1 frame_id is 55459 blackjoe
+<3>[94322.934399] frame_src is 1 frame_id is 55461 blackjoe
+<31>[94322.937304] logd: logdr: UID=0 GID=0 PID=31712 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[94322.951080] frame_src is 1 frame_id is 55462 blackjoe
+<3>[94323.035842] frame_src is 1 frame_id is 55465 blackjoe
+<3>[94323.123073] frame_src is 1 frame_id is 55468 blackjoe
+<3>[94323.156229] frame_src is 1 frame_id is 55470 blackjoe
+<3>[94323.189476] frame_src is 1 frame_id is 55472 blackjoe
+<3>[94323.206125] frame_src is 1 frame_id is 55473 blackjoe
+<3>[94323.222707] frame_src is 1 frame_id is 55474 blackjoe
+<3>[94323.239342] frame_src is 1 frame_id is 55475 blackjoe
+<3>[94323.255959] frame_src is 1 frame_id is 55476 blackjoe
+<3>[94323.295762] frame_src is 1 frame_id is 55478 blackjoe
+<3>[94323.329317] frame_src is 1 frame_id is 55480 blackjoe
+<3>[94323.345625] frame_src is 1 frame_id is 55481 blackjoe
+<3>[94323.379150] frame_src is 1 frame_id is 55483 blackjoe
+<3>[94323.412164] frame_src is 1 frame_id is 55485 blackjoe
+<3>[94323.445407] frame_src is 1 frame_id is 55487 blackjoe
+<3>[94323.478596] frame_src is 1 frame_id is 55489 blackjoe
+<3>[94323.511841] frame_src is 1 frame_id is 55491 blackjoe
+<3>[94323.545132] frame_src is 1 frame_id is 55493 blackjoe
+<3>[94323.578300] frame_src is 1 frame_id is 55495 blackjoe
+<3>[94323.628192] frame_src is 1 frame_id is 55498 blackjoe
+<3>[94323.644817] frame_src is 1 frame_id is 55499 blackjoe
+<3>[94323.661435] frame_src is 1 frame_id is 55500 blackjoe
+<3>[94323.729526] frame_src is 1 frame_id is 55502 blackjoe
+<3>[94323.762761] frame_src is 1 frame_id is 55504 blackjoe
+<3>[94323.831184] frame_src is 1 frame_id is 55506 blackjoe
+<3>[94323.864413] frame_src is 1 frame_id is 55508 blackjoe
+<3>[94323.935093] frame_src is 1 frame_id is 55510 blackjoe
+<3>[94323.968311] frame_src is 1 frame_id is 55512 blackjoe
+<3>[94324.001530] frame_src is 1 frame_id is 55514 blackjoe
+<3>[94324.018144] frame_src is 1 frame_id is 55515 blackjoe
+<3>[94324.034765] frame_src is 1 frame_id is 55516 blackjoe
+<3>[94324.068028] frame_src is 1 frame_id is 55518 blackjoe
+<3>[94324.084652] frame_src is 1 frame_id is 55519 blackjoe
+<3>[94324.107687] frame_src is 1 frame_id is 55520 blackjoe
+<3>[94324.124300] frame_src is 1 frame_id is 55521 blackjoe
+<3>[94324.140910] frame_src is 1 frame_id is 55522 blackjoe
+<3>[94324.157557] frame_src is 1 frame_id is 55523 blackjoe
+<3>[94324.174173] frame_src is 1 frame_id is 55524 blackjoe
+<3>[94324.190813] frame_src is 1 frame_id is 55525 blackjoe
+<3>[94324.207394] frame_src is 1 frame_id is 55526 blackjoe
+<3>[94324.224024] frame_src is 1 frame_id is 55527 blackjoe
+<3>[94324.240876] frame_src is 1 frame_id is 55528 blackjoe
+<3>[94324.257443] frame_src is 1 frame_id is 55529 blackjoe
+<3>[94324.274029] frame_src is 1 frame_id is 55530 blackjoe
+<3>[94324.290629] frame_src is 1 frame_id is 55531 blackjoe
+<3>[94324.307256] frame_src is 1 frame_id is 55532 blackjoe
+<3>[94324.323764] frame_src is 1 frame_id is 55533 blackjoe
+<3>[94324.340400] frame_src is 1 frame_id is 55534 blackjoe
+<3>[94324.356999] frame_src is 1 frame_id is 55535 blackjoe
+<3>[94324.373629] frame_src is 1 frame_id is 55536 blackjoe
+<3>[94324.390245] frame_src is 1 frame_id is 55537 blackjoe
+<31>[94324.403462] logd: logdr: UID=0 GID=0 PID=31722 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[94324.406866] frame_src is 1 frame_id is 55538 blackjoe
+<3>[94324.423543] frame_src is 1 frame_id is 55539 blackjoe
+<3>[94324.440105] frame_src is 1 frame_id is 55540 blackjoe
+<3>[94324.456761] frame_src is 1 frame_id is 55541 blackjoe
+<3>[94324.473338] frame_src is 1 frame_id is 55542 blackjoe
+<3>[94324.489959] frame_src is 1 frame_id is 55543 blackjoe
+<3>[94324.541568] frame_src is 1 frame_id is 55544 blackjoe
+<3>[94324.558195] frame_src is 1 frame_id is 55545 blackjoe
+<3>[94324.574789] frame_src is 1 frame_id is 55546 blackjoe
+<3>[94324.626583] frame_src is 1 frame_id is 55547 blackjoe
+<3>[94324.643209] frame_src is 1 frame_id is 55548 blackjoe
+<3>[94324.659820] frame_src is 1 frame_id is 55549 blackjoe
+<3>[94324.676442] frame_src is 1 frame_id is 55550 blackjoe
+<3>[94324.693077] frame_src is 1 frame_id is 55551 blackjoe
+<3>[94324.747257] frame_src is 1 frame_id is 55552 blackjoe
+<3>[94324.763895] frame_src is 1 frame_id is 55553 blackjoe
+<3>[94324.813741] frame_src is 1 frame_id is 55556 blackjoe
+<3>[94324.830358] frame_src is 1 frame_id is 55557 blackjoe
+<3>[94324.863603] frame_src is 1 frame_id is 55559 blackjoe
+<3>[94324.919874] frame_src is 1 frame_id is 55562 blackjoe
+<3>[94324.936467] frame_src is 1 frame_id is 55563 blackjoe
+<3>[94324.969728] frame_src is 1 frame_id is 55565 blackjoe
+<3>[94325.002982] frame_src is 1 frame_id is 55567 blackjoe
+<3>[94325.019604] frame_src is 1 frame_id is 55568 blackjoe
+<3>[94325.052856] frame_src is 1 frame_id is 55570 blackjoe
+<3>[94325.069447] frame_src is 1 frame_id is 55571 blackjoe
+<3>[94325.086123] frame_src is 1 frame_id is 55572 blackjoe
+<3>[94325.119362] frame_src is 1 frame_id is 55574 blackjoe
+<3>[94325.135961] frame_src is 1 frame_id is 55575 blackjoe
+<3>[94325.169192] frame_src is 1 frame_id is 55577 blackjoe
+<3>[94325.185813] frame_src is 1 frame_id is 55578 blackjoe
+<3>[94325.219189] frame_src is 1 frame_id is 55580 blackjoe
+<3>[94325.252376] frame_src is 1 frame_id is 55582 blackjoe
+<3>[94325.285633] frame_src is 1 frame_id is 55584 blackjoe
+<3>[94325.302158] frame_src is 1 frame_id is 55585 blackjoe
+<3>[94325.353628] frame_src is 1 frame_id is 55586 blackjoe
+<3>[94325.386836] frame_src is 1 frame_id is 55588 blackjoe
+<3>[94325.455341] frame_src is 1 frame_id is 55590 blackjoe
+<3>[94325.471909] frame_src is 1 frame_id is 55591 blackjoe
+<3>[94325.505101] frame_src is 1 frame_id is 55593 blackjoe
+<3>[94325.575832] frame_src is 1 frame_id is 55595 blackjoe
+<3>[94325.609104] frame_src is 1 frame_id is 55597 blackjoe
+<3>[94325.642233] frame_src is 1 frame_id is 55599 blackjoe
+<3>[94325.658905] frame_src is 1 frame_id is 55600 blackjoe
+<3>[94325.675490] frame_src is 1 frame_id is 55601 blackjoe
+<3>[94325.708741] frame_src is 1 frame_id is 55603 blackjoe
+<3>[94325.748384] frame_src is 1 frame_id is 55605 blackjoe
+<3>[94325.765030] frame_src is 1 frame_id is 55606 blackjoe
+<3>[94325.781698] frame_src is 1 frame_id is 55607 blackjoe
+<3>[94325.798231] frame_src is 1 frame_id is 55608 blackjoe

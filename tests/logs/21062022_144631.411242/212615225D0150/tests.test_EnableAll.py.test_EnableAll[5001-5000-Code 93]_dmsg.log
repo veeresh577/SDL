@@ -1,0 +1,20 @@
+<14>[76832.584359] init: starting service 'smartmu'...
+<14>[76832.616962] init: starting service 'qccsyshalservice'...
+<14>[76832.647100] init: starting service 'qccvndhalservice'...
+<38>[76832.704665] type=1400 audit(1642509750.331:11147): avc: denied { search } for comm="vendor.qti.hard" name="/" dev="sda10" ino=2 scontext=u:r:vendor_hal_qccvndhal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[76837.612485] init: starting service 'smartmu'...
+<14>[76837.685528] init: starting service 'qccvndhalservice'...
+<14>[76837.773549] init: Service 'qccsyshalservice' (pid 25127) exited with status 1
+<14>[76837.773628] init: Sending signal 9 to service 'qccsyshalservice' (pid 25127) process group...
+<14>[76837.774447] libprocessgroup: Successfully killed process cgroup uid 1000 pid 25127 in 0ms
+<3>[76840.818962] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[76840.820614] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[76840.824455] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[76840.829468] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[76840.834618] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[76840.839874] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[76840.845066] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[76840.850599] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[76840.855974] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[76840.866612] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[76840.877283] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 

@@ -1,0 +1,18 @@
+<14>[ 4500.427574] init: Service 'qccvndhalservice' (pid 20516) exited with status 1
+<14>[ 4500.427669] init: Sending signal 9 to service 'qccvndhalservice' (pid 20516) process group...
+<14>[ 4500.428458] libprocessgroup: Successfully killed process cgroup uid 1000 pid 20516 in 0ms
+<14>[ 4505.248740] init: Service 'qccsyshalservice' (pid 20524) exited with status 1
+<14>[ 4505.248823] init: Sending signal 9 to service 'qccsyshalservice' (pid 20524) process group...
+<14>[ 4505.249670] libprocessgroup: Successfully killed process cgroup uid 1000 pid 20524 in 0ms
+<14>[ 4505.265762] init: starting service 'qccvndhalservice'...
+<6>[ 4506.288621] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<6>[ 4506.288639] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 
+<3>[ 4508.390031] FUSIONWL: : ==Regulatory_scan_country_list_db_reset==: Reset complete for scan country list 
+<12>[ 4510.090312] healthd: battery l=10 v=3317 t=28.0 h=2 st=2 c=-238281 fc=0 cc=7 chg=u
+<12>[ 4510.123136] healthd: battery l=10 v=3317 t=28.0 h=2 st=2 c=-238281 fc=0 cc=7 chg=u
+<14>[ 4510.137943] init: starting service 'qccsyshalservice'...
+<12>[ 4510.233187] healthd: battery l=10 v=3315 t=28.0 h=2 st=2 c=-243163 fc=0 cc=7 chg=u
+<12>[ 4510.307555] healthd: battery l=10 v=3315 t=28.0 h=2 st=2 c=-243163 fc=0 cc=7 chg=u
+<12>[ 4510.352719] healthd: battery l=10 v=3315 t=28.0 h=2 st=2 c=-243163 fc=0 cc=7 chg=u
+<12>[ 4510.485560] healthd: battery l=10 v=3315 t=28.0 h=2 st=2 c=-243163 fc=0 cc=7 chg=u
+<12>[ 4510.519855] healthd: battery l=10 v=3315 t=28.0 h=2 st=2 c=-243163 fc=0 cc=7 chg=u

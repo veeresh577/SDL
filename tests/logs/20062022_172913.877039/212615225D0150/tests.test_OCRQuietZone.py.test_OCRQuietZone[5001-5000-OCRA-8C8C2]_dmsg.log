@@ -1,0 +1,28 @@
+<14>[ 4207.745338] init: starting service 'qccsyshalservice'...
+<14>[ 4207.797314] init: starting service 'qccvndhalservice'...
+<14>[ 4207.832213] init: starting service 'smartmu'...
+<14>[ 4207.898020] init: Sending signal 9 to service 'qccsyshalservice' (pid 20452) process group...
+<14>[ 4207.930087] init: Service 'qccvndhalservice' (pid 20453) exited with status 1
+<14>[ 4207.930239] init: Sending signal 9 to service 'qccvndhalservice' (pid 20453) process group...
+<14>[ 4207.932057] libprocessgroup: Successfully killed process cgroup uid 1000 pid 20453 in 1ms
+<14>[ 4207.990416] init: Service 'smartmu' (pid 20454) exited with status 0
+<6>[ 4208.032189] IRQ 6: no longer affine to CPU7
+<6>[ 4209.271180] IRQ 6: no longer affine to CPU5
+<12>[ 4209.286583] healthd: battery l=86 v=3867 t=47.0 h=2 st=2 c=-249023 fc=4008000 cc=2 chg=u
+<38>[ 4209.435479] type=1400 audit(1642434795.464:4683): avc: denied { read } for comm="Binder:581_2" name="wakeup48" dev="sysfs" ino=61027 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=1
+<38>[ 4209.436309] type=1400 audit(1642434795.464:4684): avc: denied { open } for comm="Binder:581_2" path="/sys/devices/virtual/misc/msm_mp3/wakeup48" dev="sysfs" ino=61027 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=1
+<38>[ 4209.436512] type=1400 audit(1642434795.464:4685): avc: denied { read } for comm="Binder:581_2" name="event_count" dev="sysfs" ino=61034 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+<38>[ 4209.444870] type=1400 audit(1642434795.464:4686): avc: denied { open } for comm="Binder:581_2" path="/sys/devices/virtual/misc/msm_mp3/wakeup48/event_count" dev="sysfs" ino=61034 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+<38>[ 4209.445212] type=1400 audit(1642434795.464:4687): avc: denied { getattr } for comm="Binder:581_2" path="/sys/devices/virtual/misc/msm_mp3/wakeup48/event_count" dev="sysfs" ino=61034 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+<12>[ 4209.449393] healthd: battery l=86 v=3857 t=47.0 h=2 st=2 c=-334960 fc=4008000 cc=2 chg=u
+<12>[ 4209.477710] healthd: battery l=86 v=3857 t=47.0 h=2 st=2 c=-334960 fc=4008000 cc=2 chg=u
+<12>[ 4209.503507] healthd: battery l=86 v=3857 t=47.0 h=2 st=2 c=-334960 fc=4008000 cc=2 chg=u
+<12>[ 4209.533035] healthd: battery l=86 v=3857 t=47.0 h=2 st=2 c=-334960 fc=4008000 cc=2 chg=u
+<12>[ 4209.554780] healthd: battery l=86 v=3857 t=47.0 h=2 st=2 c=-334960 fc=4008000 cc=2 chg=u
+<12>[ 4209.579893] healthd: battery l=86 v=3857 t=47.0 h=2 st=2 c=-334960 fc=4008000 cc=2 chg=u
+<4>[ 4209.598290] audit: audit_lost=2928 audit_rate_limit=5 audit_backlog_limit=64
+<38>[ 4209.598302] type=1400 audit(1642434795.634:4688): avc: denied { read } for comm="Binder:581_2" name="wakeup27" dev="sysfs" ino=52502 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs_battery_supply:s0 tclass=dir permissive=1
+<3>[ 4209.598304] audit: rate limit exceeded
+<38>[ 4209.598752] type=1400 audit(1642434795.634:4689): avc: denied { open } for comm="Binder:581_2" path="/sys/devices/platform/soc/800f000.qcom,spmi/spmi-0/spmi0-00/800f000.qcom,spmi:qcom,pm660@0:qcom,qpnp-smb2/power_supply/battery/wakeup27" dev="sysfs" ino=52502 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs_battery_supply:s0 tclass=dir permissive=1
+<12>[ 4209.604044] healthd: battery l=86 v=3857 t=47.0 h=2 st=2 c=-334960 fc=4008000 cc=2 chg=u
+<12>[ 4209.622565] healthd: battery l=86 v=3857 t=47.0 h=2 st=2 c=-334960 fc=4008000 cc=2 chg=u

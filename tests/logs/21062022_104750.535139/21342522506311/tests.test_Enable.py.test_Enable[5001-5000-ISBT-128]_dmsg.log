@@ -1,0 +1,14 @@
+<3>[ 4138.301761] [schedu][0x11eff704194][19:58:17.468009] wlan: [2070:E:scan] scm_11d_elected_country_algo_fcc: 98: No AP with 11d Country code is present in scan list
+<3>[ 4138.301910] FUSIONWL: : ==Regulatory_elect_country_db==: No AP with 11d Country code is present in scan list 
+<38>[ 4139.632490] type=1400 audit(1654199898.795:6248): avc: denied { kill } for comm="swapper/0" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<14>[ 4142.373850] init: starting service 'qccsyshalservice'...
+<14>[ 4142.435264] init: starting service 'qccvndhalservice'...
+<14>[ 4142.546005] init: Service 'qccvndhalservice' (pid 19133) exited with status 1
+<14>[ 4142.546115] init: Sending signal 9 to service 'qccvndhalservice' (pid 19133) process group...
+<14>[ 4142.547281] libprocessgroup: Successfully killed process cgroup uid 1000 pid 19133 in 0ms
+<14>[ 4147.605478] init: Service 'qccvndhalservice' (pid 19137) exited with status 1
+<14>[ 4147.605558] init: Sending signal 9 to service 'qccvndhalservice' (pid 19137) process group...
+<14>[ 4147.606288] libprocessgroup: Successfully killed process cgroup uid 1000 pid 19137 in 0ms
+<3>[ 4148.302017] [schedu][0x11f0ae20506][19:58:27.468268] wlan: [2070:E:scan] scm_11d_elected_country_algo_fcc: 98: No AP with 11d Country code is present in scan list
+<3>[ 4148.302117] FUSIONWL: : ==Regulatory_elect_country_db==: No AP with 11d Country code is present in scan list 
+<3>[ 4150.674763] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 

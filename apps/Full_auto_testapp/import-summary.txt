@@ -1,0 +1,168 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Risky Project Location:
+-----------------------
+The tools *should* handle project locations in any directory. However,
+due to bugs, placing projects in directories containing spaces in the
+path, or characters like ", ' and &, have had issues. We're working to
+eliminate these bugs, but to save yourself headaches you may want to
+move your project to a location where this is not a problem.
+C:\Users\gfrp64\Documents\SDL\Automation_android\Android Software\SW_Decode_Android_TestApp1\SW_Decode_Android_TestApp1\Out
+                                                        -                                                                  
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* ..classpath.un~
+* .classpath~
+* .metadata\
+* .metadata\.lock
+* .metadata\.log
+* .metadata\.mylyn\
+* .metadata\.mylyn\.taskListIndex\
+* .metadata\.mylyn\.taskListIndex\segments.gen
+* .metadata\.mylyn\.taskListIndex\segments_1
+* .metadata\.mylyn\.tasks.xml.zip
+* .metadata\.mylyn\repositories.xml.zip
+* .metadata\.mylyn\tasks.xml.zip
+* .metadata\version.ini
+* Out\
+* Out\.idea\
+* Out\.idea\.name
+* Out\.idea\compiler.xml
+* Out\.idea\copyright\
+* Out\.idea\copyright\profiles_settings.xml
+* Out\.idea\misc.xml
+* Out\.idea\workspace.xml
+* Out\app\
+* Out\app\build.gradle
+* Out\app\lint.xml
+* Out\app\src\
+* Out\app\src\main\
+* Out\app\src\main\AndroidManifest.xml
+* Out\app\src\main\java\
+* Out\app\src\main\java\com\
+* Out\app\src\main\java\com\zebra\
+* Out\app\src\main\java\com\zebra\adc\
+* Out\app\src\main\java\com\zebra\adc\decoder\
+* Out\app\src\main\java\com\zebra\adc\decoder\BarCodeReader.java
+* Out\app\src\main\java\sdl\
+* Out\app\src\main\java\sdl\android\
+* Out\app\src\main\java\sdl\android\testapp1\
+* Out\app\src\main\java\sdl\android\testapp1\DPMData.java
+* Out\app\src\main\java\sdl\android\testapp1\GetLastDecodedImageActivity.java
+* Out\app\src\main\java\sdl\android\testapp1\PreviewWindowActivity.java
+* Out\app\src\main\java\sdl\android\testapp1\RQZHandler.java
+* Out\app\src\main\java\sdl\android\testapp1\SW_Decode_Android_TestApp1Activity.java
+* Out\app\src\main\java\sdl\android\testapp1\mdData.java
+* Out\app\src\main\java\sdl\android\testapp1\readFromMobileSamples.java
+* Out\app\src\main\jniLibs\
+* Out\app\src\main\jniLibs\armeabi\
+* Out\app\src\main\jniLibs\armeabi\libIAL.so
+* Out\app\src\main\jniLibs\armeabi\libSDL.so
+* Out\app\src\main\jniLibs\armeabi\libbarcodereader.so
+* Out\app\src\main\jniLibs\armeabi\libbarcodereader43.so
+* Out\app\src\main\jniLibs\armeabi\libbarcodereader44.so
+* Out\app\src\main\res\
+* Out\app\src\main\res\drawable-hdpi\
+* Out\app\src\main\res\drawable-hdpi\ic_launcher.png
+* Out\app\src\main\res\drawable-ldpi\
+* Out\app\src\main\res\drawable-ldpi\ic_launcher.png
+* Out\app\src\main\res\drawable-mdpi\
+* Out\app\src\main\res\drawable-mdpi\ic_launcher.png
+* Out\app\src\main\res\drawable-xhdpi\
+* Out\app\src\main\res\drawable-xhdpi\ic_launcher.png
+* Out\app\src\main\res\layout\
+* Out\app\src\main\res\layout\activity_get_last_decoded_image.xml
+* Out\app\src\main\res\layout\control.xml
+* Out\app\src\main\res\layout\image.xml
+* Out\app\src\main\res\layout\main.xml
+* Out\app\src\main\res\layout\previewimage.xml
+* Out\app\src\main\res\layout\surface.xml
+* Out\app\src\main\res\menu\
+* Out\app\src\main\res\menu\get_last_decoded_image.xml
+* Out\app\src\main\res\values-sw600dp\
+* Out\app\src\main\res\values-sw600dp\dimens.xml
+* Out\app\src\main\res\values-sw720dp-land\
+* Out\app\src\main\res\values-sw720dp-land\dimens.xml
+* Out\app\src\main\res\values\
+* Out\app\src\main\res\values\dimens.xml
+* Out\app\src\main\res\values\strings.xml
+* Out\app\src\main\resources\
+* Out\app\src\main\resources\com\
+* Out\app\src\main\resources\com\zebra\
+* Out\app\src\main\resources\com\zebra\adc\
+* Out\app\src\main\resources\com\zebra\adc\decoder\
+* Out\app\src\main\resources\com\zebra\adc\decoder\BarCodeReader.java.bak
+* Out\app\src\main\resources\sdl\
+* Out\app\src\main\resources\sdl\android\
+* Out\app\src\main\resources\sdl\android\testapp1.7z
+* Out\app\src\main\resources\sdl\android\testapp1\
+* Out\app\src\main\resources\sdl\android\testapp1\.SW_Decode_Android_TestApp1Activity.java.un~
+* Out\app\src\main\resources\sdl\android\testapp1\.idea\
+* Out\app\src\main\resources\sdl\android\testapp1\.idea\compiler.xml
+* Out\app\src\main\resources\sdl\android\testapp1\.idea\copyright\
+* Out\app\src\main\resources\sdl\android\testapp1\.idea\copyright\profiles_settings.xml
+* Out\app\src\main\resources\sdl\android\testapp1\.idea\misc.xml
+* Out\app\src\main\resources\sdl\android\testapp1\.idea\modules.xml
+* Out\app\src\main\resources\sdl\android\testapp1\.idea\workspace.xml
+* Out\app\src\main\resources\sdl\android\testapp1\SW_Decode_Android_TestApp1Activity.java.bak
+* Out\app\src\main\resources\sdl\android\testapp1\SW_Decode_Android_TestApp1Activity.java~
+* Out\app\src\main\resources\sdl\android\testapp1\testapp1.iml
+* Out\build.gradle
+* Out\gradle\
+* Out\gradle\wrapper\
+* Out\gradle\wrapper\gradle-wrapper.jar
+* Out\gradle\wrapper\gradle-wrapper.properties
+* Out\gradlew
+* Out\gradlew.bat
+* Out\local.properties
+* Out\settings.gradle
+* SW_Decode_Android_TestApp1.iml
+* proguard-project.txt
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => app\src\main\AndroidManifest.xml
+* assets\ => app\src\main\assets
+* libs\armeabi\libbarcodereader.so => app\src\main\jniLibs\armeabi\libbarcodereader.so
+* libs\armeabi\libbarcodereader43.so => app\src\main\jniLibs\armeabi\libbarcodereader43.so
+* libs\armeabi\libbarcodereader44.so => app\src\main\jniLibs\armeabi\libbarcodereader44.so
+* libs\armeabi\libIAL.so => app\src\main\jniLibs\armeabi\libIAL.so
+* libs\armeabi\libSDL.so => app\src\main\jniLibs\armeabi\libSDL.so
+* lint.xml => app\lint.xml
+* res\ => app\src\main\res\
+* src\ => app\src\main\java\
+* src\com\zebra\adc\decoder\BarCodeReader.java.bak => app\src\main\resources\com\zebra\adc\decoder\BarCodeReader.java.bak
+* src\sdl\android\testapp1.7z => app\src\main\resources\sdl\android\testapp1.7z
+* src\sdl\android\testapp1\.idea\compiler.xml => app\src\main\resources\sdl\android\testapp1\.idea\compiler.xml
+* src\sdl\android\testapp1\.idea\copyright\profiles_settings.xml => app\src\main\resources\sdl\android\testapp1\.idea\copyright\profiles_settings.xml
+* src\sdl\android\testapp1\.idea\misc.xml => app\src\main\resources\sdl\android\testapp1\.idea\misc.xml
+* src\sdl\android\testapp1\.idea\modules.xml => app\src\main\resources\sdl\android\testapp1\.idea\modules.xml
+* src\sdl\android\testapp1\.idea\workspace.xml => app\src\main\resources\sdl\android\testapp1\.idea\workspace.xml
+* src\sdl\android\testapp1\.SW_Decode_Android_TestApp1Activity.java.un~ => app\src\main\resources\sdl\android\testapp1\.SW_Decode_Android_TestApp1Activity.java.un~
+* src\sdl\android\testapp1\SW_Decode_Android_TestApp1Activity.java.bak => app\src\main\resources\sdl\android\testapp1\SW_Decode_Android_TestApp1Activity.java.bak
+* src\sdl\android\testapp1\SW_Decode_Android_TestApp1Activity.java~ => app\src\main\resources\sdl\android\testapp1\SW_Decode_Android_TestApp1Activity.java~
+* src\sdl\android\testapp1\testapp1.iml => app\src\main\resources\sdl\android\testapp1\testapp1.iml
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

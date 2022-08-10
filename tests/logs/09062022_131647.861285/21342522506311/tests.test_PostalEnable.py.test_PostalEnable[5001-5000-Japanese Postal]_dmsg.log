@@ -1,0 +1,8 @@
+<6>[ 7274.939776] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 
+<3>[ 7277.023257] [schedu][0x209f96523c][21:49:14.085636] wlan: [2898:E:scan] scm_11d_elected_country_algo_fcc: 98: No AP with 11d Country code is present in scan list
+<3>[ 7277.023352] FUSIONWL: : ==Regulatory_elect_country_db==: No AP with 11d Country code is present in scan list 
+<3>[ 7277.036917] FUSIONWL: : ==Regulatory_scan_country_list_db_reset==: Reset complete for scan country list 
+<38>[ 7277.206477] type=1400 audit(1653169754.254:11058): avc: denied { write } for comm="android.testapp" name="SDLgui1" dev="dm-0" ino=129282 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:system_file:s0 tclass=dir permissive=1 app=sdl.android.testapp
+<14>[ 7277.253255] init: starting service 'qccsyshalservice'...
+<38>[ 7277.266246] type=1400 audit(1653169754.314:11059): avc: denied { read } for comm="android.testapp" name="sdcard" dev="tmpfs" ino=18845 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:mnt_sdcard_file:s0 tclass=lnk_file permissive=1 app=sdl.android.testapp
+<14>[ 7277.278278] init: starting service 'qccvndhalservice'...

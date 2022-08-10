@@ -1,0 +1,5 @@
+<6>[ 4591.792570] IRQ 6: no longer affine to CPU4
+<14>[ 4595.861419] init: starting service 'qccvndhalservice'...
+<14>[ 4595.964023] libprocessgroup: Successfully killed process cgroup uid 1000 pid 22323 in 0ms
+<14>[ 4596.011254] libprocessgroup: Successfully killed process cgroup uid 1000 pid 22324 in 1ms
+<14>[ 4596.083315] init: Service 'smartmu' (pid 22325) exited with status 0

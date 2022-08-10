@@ -1,0 +1,936 @@
+--------- beginning of main
+01-18 12:45:50.078 D/audio_hw_primary(  718): out_standby: enter: stream (0xf1a864c0) usecase(1: low-latency-playback)
+--------- beginning of kernel
+01-18 12:45:50.148 I/afe_close(    0): port_id = 0x4000
+01-18 12:45:50.156 D/audio_hw_primary(  718): disable_audio_route: reset and update mixer path: low-latency-playback
+01-18 12:45:50.158 D/soundtrigger(  718): audio_extn_sound_trigger_update_stream_status: uc_info->id 1 of type 0 for Event 2, with Raise=0
+01-18 12:45:50.159 D/hardware_info(  718): hw_info_append_hw_type : device_name = speaker
+01-18 12:45:50.159 D/audio_hw_primary(  718): disable_snd_device: snd_device(2: speaker)
+01-18 12:45:50.179 E/        (    0): tavil_codec tavil_codec: ASoC: DAPM unknown pin Lineout_3 amp
+01-18 12:45:50.175 I/soundtrigger(  718): audio_extn_sound_trigger_update_device_status: device 0x2 of type 0 for Event 0, with Raise=0
+01-18 12:45:50.178 I/system_server( 1670): oneway function results will be dropped but finished with status OK and parcel size 4
+01-18 12:45:51.651 I/init    (    0): starting service 'smartmu'...
+01-18 12:45:51.698 I/init    (    0): starting service 'qccsyshalservice'...
+01-18 12:45:51.730 I/init    (    0): starting service 'qccvndhalservice'...
+01-18 12:45:51.770 D/SMARTMU (26035): #(26035) [ main.cpp : 25] SmartMU Version , 
+01-18 12:45:51.773 E/AsymmetricDecrypt(26035): [AsymmetricDecrypt::acquireKeyFile] KeyPath - /system/vendor/keys/TC52AXANF/proxyframework 
+01-18 12:45:51.778 E/AsymmetricDecrypt(26035): [AsymmetricDecrypt::ObtainSeedText] Buffer - Zebra Technologies/TC52AXANF/TC52AX/proxyframework 
+01-18 12:45:51.779 E/AsymmetricDecrypt(26035): [AsymmetricDecrypt::NativeAuthenticate] Authentication failed. zDecodedText returned by ReadAndDecodeEncryptedText = Zebra Technologies/TC52AX/TC52AX/proxyframework, zBuf returned by ObtainSeedText = Zebra Technologies/TC52AXANF/TC52AX/proxyframework
+01-18 12:45:51.779 D/SMARTMU (26035): #(26035) [ main.cpp : 31] Authentication failed
+01-18 12:45:51.793 I/qccsyshalservice(26036): Start with system binder
+01-18 12:45:51.794 I/qccsyshalservice(26036): Registering qccsyshal service...
+01-18 12:45:51.797 I/hwservicemanager(  512): getTransport: Cannot find entry vendor.qti.hardware.qccsyshal@1.0::IQccsyshal/qccsyshal in either framework or device manifest.
+01-18 12:45:51.798 E/HidlServiceManagement(26036): Service vendor.qti.hardware.qccsyshal@1.0::IQccsyshal/qccsyshal must be in VINTF manifest in order to register/get.
+01-18 12:45:51.798 E/qccsyshalservice(26036): [ERROR] registerAsService() failed with status: -2147483648
+01-18 12:45:51.813 I/init    (    0): Service 'smartmu' (pid 26035) exited with status 0
+01-18 12:45:51.813 I/init    (    0): Sending signal 9 to service 'smartmu' (pid 26035) process group...
+01-18 12:45:51.814 I/libprocessgroup(    0): Successfully killed process cgroup uid 0 pid 26035 in 0ms
+01-18 12:45:51.820 I/init    (    0): Service 'qccsyshalservice' (pid 26036) exited with status 1
+01-18 12:45:51.821 I/init    (    0): Sending signal 9 to service 'qccsyshalservice' (pid 26036) process group...
+01-18 12:45:51.821 I/libprocessgroup(    0): Successfully killed process cgroup uid 1000 pid 26036 in 0ms
+01-18 12:45:51.815 I/vendor.qti.hardware.qccvndhal@1.0-service(26037): Start with vendor binder
+01-18 12:45:51.818 I/vendor.qti.hardware.qccvndhal@1.0-service(26037): Registering qccvndhal service...
+01-18 12:45:51.822 I/hwservicemanager(  512): getTransport: Cannot find entry vendor.qti.hardware.qccvndhal@1.0::IQccvndhal/qccvndhal in either framework or device manifest.
+01-18 12:45:51.823 E/HidlServiceManagement(26037): Service vendor.qti.hardware.qccvndhal@1.0::IQccvndhal/qccvndhal must be in VINTF manifest in order to register/get.
+01-18 12:45:51.824 E/vendor.qti.hardware.qccvndhal@1.0-service(26037): [ERROR] registerAsService() failed with status: -2147483648
+01-18 12:45:51.845 I/init    (    0): Service 'qccvndhalservice' (pid 26037) exited with status 1
+01-18 12:45:52.212 D/CompatibilityInfo( 1670): mCompatibilityFlags - 0
+01-18 12:45:52.212 D/CompatibilityInfo( 1670): applicationDensity - 480
+01-18 12:45:52.212 D/CompatibilityInfo( 1670): applicationScale - 1.0
+01-18 12:45:52.228 E/        (    0): [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8
+01-18 12:45:52.219 I/NextSubtest service( 4265): hit
+01-18 12:45:52.230 E/        (    0): [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00
+01-18 12:45:52.233 E/        (    0): [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86
+01-18 12:45:52.239 E/        (    0): [SDL] misc_ioctl msg.len is 2 : 0x88 0x00
+01-18 12:45:52.244 E/        (    0): [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81
+01-18 12:45:52.249 E/        (    0): [SDL] misc_ioctl msg.len is 2 : 0x88 0x00
+01-18 12:45:52.254 E/        (    0): [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8
+01-18 12:45:52.259 E/        (    0): [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00
+01-18 12:45:52.265 E/        (    0): [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8
+01-18 12:45:52.270 E/        (    0): [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00
+01-18 12:45:52.276 E/        (    0): [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86
+01-18 12:45:52.281 E/        (    0): [SDL] misc_ioctl msg.len is 2 : 0x88 0x00
+01-18 12:45:52.286 E/        (    0): [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81
+01-18 12:45:52.291 E/        (    0): [SDL] misc_ioctl msg.len is 2 : 0x88 0x00
+01-18 12:45:52.297 E/        (    0): [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8
+01-18 12:45:52.302 E/        (    0): [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00
+01-18 12:45:52.658 D/logd    (    0): logdr: UID=0 GID=0 PID=26047 b tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+01-18 12:45:53.416 D/SharedPreferencesImpl( 3183): Time required to fsync /data/user/0/com.symbol.batterymanager/shared_prefs/sharedPreferences.xml: [<1: 0, <2: 0, <4: 0, <8: 14, <16: 3223, <32: 11874, <64: 242, <128: 7, <256: 0, <512: 0, <1024: 0, <2048: 0, <4096: 0, <8192: 0, <16384: 0, >=16384: 0]
+01-18 12:45:53.423 W/adbd    ( 3678): timeout expired while flushing socket, closing
+01-18 12:45:54.921 I/swapper/3(    0): type=1400 audit(0.0:11172): avc: denied { kill } for capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+--------- beginning of system
+01-18 12:45:54.930 I/ActivityTaskManager( 1670): START u0 {flg=0x10000000 cmp=sdl.android.testapp/.SW_Decode_Android_TestApp_Activity} from uid 0
+01-18 12:45:54.931 D/EventSequenceValidator( 1670): Transition from INTENT_FAILED to INTENT_STARTED
+01-18 12:45:54.935 D/EventSequenceValidator( 1670): Transition from INTENT_STARTED to INTENT_FAILED
+01-18 12:45:56.813 D/SMARTMU (26064): #(26064) [ main.cpp : 25] SmartMU Version , 
+01-18 12:45:56.816 E/AsymmetricDecrypt(26064): [AsymmetricDecrypt::acquireKeyFile] KeyPath - /system/vendor/keys/TC52AXANF/proxyframework 
+01-18 12:45:56.820 E/AsymmetricDecrypt(26064): [AsymmetricDecrypt::ObtainSeedText] Buffer - Zebra Technologies/TC52AXANF/TC52AX/proxyframework 
+01-18 12:45:56.820 E/AsymmetricDecrypt(26064): [AsymmetricDecrypt::NativeAuthenticate] Authentication failed. zDecodedText returned by ReadAndDecodeEncryptedText = Zebra Technologies/TC52AX/TC52AX/proxyframework, zBuf returned by ObtainSeedText = Zebra Technologies/TC52AXANF/TC52AX/proxyframework
+01-18 12:45:56.820 D/SMARTMU (26064): #(26064) [ main.cpp : 31] Authentication failed
+01-18 12:45:56.826 I/qccsyshalservice(26065): Start with system binder
+01-18 12:45:56.828 I/qccsyshalservice(26065): Registering qccsyshal service...
+01-18 12:45:56.831 I/hwservicemanager(  512): getTransport: Cannot find entry vendor.qti.hardware.qccsyshal@1.0::IQccsyshal/qccsyshal in either framework or device manifest.
+01-18 12:45:56.832 E/HidlServiceManagement(26065): Service vendor.qti.hardware.qccsyshal@1.0::IQccsyshal/qccsyshal must be in VINTF manifest in order to register/get.
+01-18 12:45:56.833 E/qccsyshalservice(26065): [ERROR] registerAsService() failed with status: -2147483648
+01-18 12:45:56.840 I/init    (    0): Service 'smartmu' (pid 26064) exited with status 0
+01-18 12:45:56.841 I/init    (    0): Sending signal 9 to service 'smartmu' (pid 26064) process group...
+01-18 12:45:56.842 I/libprocessgroup(    0): Successfully killed process cgroup uid 0 pid 26064 in 0ms
+01-18 12:45:56.852 I/init    (    0): Service 'qccsyshalservice' (pid 26065) exited with status 1
+01-18 12:45:56.852 I/init    (    0): Sending signal 9 to service 'qccsyshalservice' (pid 26065) process group...
+01-18 12:45:56.855 I/libprocessgroup(    0): Successfully killed process cgroup uid 1000 pid 26065 in 1ms
+01-18 12:45:56.887 I/vendor.qti.hardware.qccvndhal@1.0-service(26066): Start with vendor binder
+01-18 12:45:56.889 I/vendor.qti.hardware.qccvndhal@1.0-service(26066): Registering qccvndhal service...
+01-18 12:45:56.894 I/hwservicemanager(  512): getTransport: Cannot find entry vendor.qti.hardware.qccvndhal@1.0::IQccvndhal/qccvndhal in either framework or device manifest.
+01-18 12:45:56.896 E/HidlServiceManagement(26066): Service vendor.qti.hardware.qccvndhal@1.0::IQccvndhal/qccvndhal must be in VINTF manifest in order to register/get.
+01-18 12:45:56.896 E/vendor.qti.hardware.qccvndhal@1.0-service(26066): [ERROR] registerAsService() failed with status: -2147483648
+01-18 12:45:56.920 I/init    (    0): Service 'qccvndhalservice' (pid 26066) exited with status 1
+01-18 12:45:57.134 E/        (    0): GBSOC->42, GBTemp->420, GBTTE->221, GBTTF->65535
+01-18 12:45:57.166 W/healthd (    0): battery l=42 v=3556 t=42.0 h=2 st=2 c=-325195 fc=4008000 cc=2 chg=u
+01-18 12:45:57.192 E/BatteryStatsService( 1670): Power Hal not loaded
+01-18 12:45:57.192 D/BatteryService( 1670): level : 42 / status : 2/Health : 2/Decommission : 0
+01-18 12:45:57.196 D/BatterySwapServ( 3346): onReceive BATTERY_CHANGED
+01-18 12:45:57.197 D/BatterySwapServ( 3346): battery changed: present=true level=42 plugType=2 shutdownLevel=4 batteryType = 201 serialnumber =T6560
+01-18 12:45:57.198 D/HighTemperatureReceiver(11246): Receive action: android.intent.action.BATTERY_CHANGED
+01-18 12:45:57.198 D/com.symbol.dataanalytics.a.a.d.b( 4979): Received battery event
+01-18 12:45:57.198 D/com.symbol.dataanalytics.a.a.d.b( 4979): BatteryFactory event action = android.intent.action.BATTERY_CHANGED
+01-18 12:45:57.201 W/ContextImpl( 3183): Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1669 android.content.ContextWrapper.startService:720 com.symbol.batterymanager.model.BatteryManagerReceiver.startBatteryApplicationService:81 com.symbol.batterymanager.model.BatteryManagerReceiver.onReceive:47 android.app.LoadedApk$ReceiverDispatcher$Args.lambda$getRunnable$0$LoadedApk$ReceiverDispatcher$Args:1580 
+01-18 12:45:57.200 D/UsbCradleMode(20319): onReceive:Battery change, status:2
+01-18 12:45:57.209 D/KeyguardUpdateMonitor( 1897): received broadcast android.intent.action.BATTERY_CHANGED
+01-18 12:45:57.214 D/KeyguardUpdateMonitor( 1897): handleBatteryUpdate
+01-18 12:45:57.616 E/KernelCpuSpeedReader( 1670): Failed to read cpu-freq: /sys/devices/system/cpu/cpu4/cpufreq/stats/time_in_state: open failed: ENOENT (No such file or directory)
+01-18 12:45:57.617 E/KernelCpuSpeedReader( 1670): Failed to read cpu-freq: /sys/devices/system/cpu/cpu0/cpufreq/stats/time_in_state: open failed: ENOENT (No such file or directory)
+01-18 12:45:57.611 I/Binder:581_1(  581): type=1400 audit(0.0:11173): avc: denied { read } for name="wakeup48" dev="sysfs" ino=61027 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=1
+01-18 12:45:57.761 I/Binder:581_1(  581): type=1400 audit(0.0:11178): avc: denied { read } for name="wakeup27" dev="sysfs" ino=52502 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs_battery_supply:s0 tclass=dir permissive=1
+01-18 12:45:57.781 W/audit   (    0): audit_lost=4177 audit_rate_limit=5 audit_backlog_limit=64
+01-18 12:45:57.781 E/audit   (    0): rate limit exceeded
+01-18 12:45:57.850 W/system_server( 1670): Long monitor contention with owner batterystats-worker (1708) at void com.android.server.am.BatteryExternalStatsWorker.updateExternalStatsLocked(java.lang.String, int, boolean, boolean, boolean)(BatteryExternalStatsWorker.java:508) waiters=0 in boolean com.android.server.am.BatteryStatsService.isCharging() for 651ms
+01-18 12:45:57.852 W/system_server( 1670): Long monitor contention with owner batterystats-worker (1708) at void com.android.server.am.BatteryExternalStatsWorker.updateExternalStatsLocked(java.lang.String, int, boolean, boolean, boolean)(BatteryExternalStatsWorker.java:508) waiters=2 in long com.android.server.am.BatteryStatsService.computeChargeTimeRemaining() for 638ms
+01-18 12:45:57.854 W/system_server( 1670): Long monitor contention with owner batterystats-worker (1708) at void com.android.server.am.BatteryExternalStatsWorker.updateExternalStatsLocked(java.lang.String, int, boolean, boolean, boolean)(BatteryExternalStatsWorker.java:508) waiters=1 in android.content.ComponentName com.android.server.am.ActiveServices.startServiceInnerLocked(com.android.server.am.ActiveServices$ServiceMap, android.content.Intent, com.android.server.am.ServiceRecord, boolean, boolean) for 647ms
+01-18 12:45:57.860 D/OSUService( 3114): dev-dbg:is_charging current_now -422363, batteryLevel: 42, isCharging(isCharging): true
+01-18 12:45:57.860 D/OSUService( 3114): dev-dbg:is_charging ADAPTER_CHARGE_LIMIIT 500000
+01-18 12:45:57.861 D/OSUService( 3114): dev-dbg:is_charging current_now > ADAPTER_CHARGE_LIMIIT false
+01-18 12:45:57.861 D/OSUService( 3114): dev-dbg:is_charging conditionCheck false
+01-18 12:45:57.861 D/OSUService( 3114): dev-dbg: battery change intent batteryLevel: 42, is_charging(context): true, STATE: 1
+01-18 12:45:57.861 V/BatteryApplicationService( 3183): BatteryType  201
+01-18 12:45:57.871 D/OSUService( 3114): dev-dbg:is_charging current_now -422363, batteryLevel: 42, isCharging(isCharging): true
+01-18 12:45:57.871 D/OSUService( 3114): dev-dbg:is_charging ADAPTER_CHARGE_LIMIIT 500000
+01-18 12:45:57.871 D/OSUService( 3114): dev-dbg:is_charging current_now > ADAPTER_CHARGE_LIMIIT false
+01-18 12:45:57.871 D/OSUService( 3114): dev-dbg:is_charging conditionCheck false
+01-18 12:45:57.872 D/OSUService( 3114): dev-dbg: calling for resume
+01-18 12:45:57.872 I/OSUService( 3114): handle_ab_resume -1 3
+01-18 12:45:57.872 I/OSUService( 3114): handle_ab_resume state 1 last_state 0
+01-18 12:45:57.872 E/OSUService( 3114): Can't resume - there are no update in suspended state
+01-18 12:45:57.872 D/OSUService( 3114): dev-dbg: battery change intent finished
+01-18 12:46:00.005 D/KeyguardUpdateMonitor( 1897): received broadcast android.intent.action.TIME_TICK
+01-18 12:46:00.006 D/KeyguardUpdateMonitor( 1897): handleTimeUpdate
+01-18 12:46:00.008 D/KeyguardClockSwitch( 1897): Updating clock: 1246
+01-18 12:46:00.018 D/CompatibilityInfo( 1670): mCompatibilityFlags - 0
+01-18 12:46:00.018 D/CompatibilityInfo( 1670): applicationDensity - 480
+01-18 12:46:00.019 D/CompatibilityInfo( 1670): applicationScale - 1.0
+01-18 12:46:00.435 D/CompatibilityInfo( 1670): mCompatibilityFlags - 0
+01-18 12:46:00.435 D/CompatibilityInfo( 1670): applicationDensity - 480
+01-18 12:46:00.435 D/CompatibilityInfo( 1670): applicationScale - 1.0
+01-18 12:46:00.442 I/NextSubtest service( 4265): hit
+01-18 12:46:00.451 E/        (    0): [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8
+01-18 12:46:00.443 D/SW_Decode_Android_TestApp_Activity( 4265): GetLastDecodedImageTests : 0
+01-18 12:46:00.452 E/        (    0): [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00
+01-18 12:46:00.456 E/        (    0): [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86
+01-18 12:46:00.443 E/BCReader-JNI( 4265): mCancelCaptSession=0
+01-18 12:46:00.461 E/        (    0): [SDL] misc_ioctl msg.len is 2 : 0x88 0x00
+01-18 12:46:00.467 E/        (    0): [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81
+01-18 12:46:00.472 E/        (    0): [SDL] misc_ioctl msg.len is 2 : 0x88 0x00
+01-18 12:46:00.477 E/        (    0): [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8
+01-18 12:46:00.483 E/        (    0): [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00
+01-18 12:46:00.488 E/        (    0): [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8
+01-18 12:46:00.493 E/        (    0): [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00
+01-18 12:46:00.499 E/        (    0): [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86
+01-18 12:46:00.504 E/        (    0): [SDL] misc_ioctl msg.len is 2 : 0x88 0x00
+01-18 12:46:00.509 E/        (    0): [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81
+01-18 12:46:00.515 E/        (    0): [SDL] misc_ioctl msg.len is 2 : 0x88 0x00
+01-18 12:46:00.520 E/        (    0): [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8
+01-18 12:46:00.525 E/        (    0): [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00
+01-18 12:46:00.531 E/        (    0): [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8
+01-18 12:46:00.536 E/        (    0): [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00
+01-18 12:46:00.542 E/        (    0): [SDL] misc_ioctl msg.len is 4 : 0x7b 0x00 0x00 0x85
+01-18 12:46:00.547 E/        (    0): [SDL] misc_ioctl msg.len is 2 : 0x84 0x00
+01-18 12:46:00.553 E/        (    0): [SDL] misc_ioctl msg.len is 4 : 0x82 0x00 0x00 0x7e
+01-18 12:46:00.558 E/        (    0): [SDL] misc_ioctl msg.len is 2 : 0x7d 0x80
+01-18 12:46:00.555 D/BCReader-JNI( 4265): CHECK camera_status_t ZebraCamera::createCaptureSession() /swdec/SDL/MR-2022/Release/SDL-ALAS00-011-R00-D01/Framework.SDL_standard/project/Android/proj_BarCodeReaderSDL/jni/camera2.h 1741
+01-18 12:46:00.555 D/BCReader-JNI( 4265): CHECK camera_status_t ZebraCamera::createCaptureSession() /swdec/SDL/MR-2022/Release/SDL-ALAS00-011-R00-D01/Framework.SDL_standard/project/Android/proj_BarCodeReaderSDL/jni/camera2.h 1757
+01-18 12:46:00.555 D/BCReader-JNI( 4265): CHECK camera_status_t ZebraCamera::createCaptureSession() /swdec/SDL/MR-2022/Release/SDL-ALAS00-011-R00-D01/Framework.SDL_standard/project/Android/proj_BarCodeReaderSDL/jni/camera2.h 1769
+01-18 12:46:00.555 D/BCReader-JNI( 4265): Call ACameraDevice_createCaptureSession createCaptureSession:1819
+01-18 12:46:00.560 E/QCamera (  722): <HAL><ERROR> stop: 1656: Attempt to stop inactive channel
+01-18 12:46:00.560 E/QCamera (  722): <HAL><ERROR> stop: 277: Attempt to stop inactive channel
+01-18 12:46:00.561 I/QCamera (  722): <HAL><INFO> configureStreamsPerfLocked: 2399: stream[0] type = 0, format = 36, width = 1344, height = 760, rotation = 0, usage = 0x3
+01-18 12:46:00.562 E/mm-camera(  722): <MCT   ><ERROR> 4828: mct_pipeline_process_serv_msg: pipeline blackjoe data->sessionid 3 pipeline->session 3 msgid 3
+01-18 12:46:00.562 E/mm-camera(  722): <MCT   ><ERROR> 4299: mct_pipeline_process_set: command is 0x800000b blackjoe CAM_PRIV_PARM 0x8000014
+01-18 12:46:00.562 I/mm-camera(  722): <MCT   >< INFO> 4302: mct_pipeline_process_set: command=800000b
+01-18 12:46:00.562 I/mm-camera(  722): <MCT   >< INFO> 4547: mct_pipeline_process_set: Issuing DEL_STREAM on stream 0x30002 and stream type=8
+01-18 12:46:00.562 I/mm-camera(  722): <IFACE >< INFO> 705: iface_unreserve_sink_port: stream_id 2 mode 0 
+01-18 12:46:00.563 I/mm-camera(  722): <ISP   >< INFO> 948: isp_port_check_caps_unreserve: ide 30002 port 0xec997110
+01-18 12:46:00.563 I/mm-camera(  722): <MCT   >< INFO> 4570: mct_pipeline_process_set: Stream 0x30002 and stream type=8, successfully deleted
+01-18 12:46:00.565 E/mm-camera(  722): <MCT   ><ERROR> 4828: mct_pipeline_process_serv_msg: pipeline blackjoe data->sessionid 3 pipeline->session 3 msgid 3
+01-18 12:46:00.565 E/mm-camera(  722): <MCT   ><ERROR> 4299: mct_pipeline_process_set: command is 0x800000b blackjoe CAM_PRIV_PARM 0x8000014
+01-18 12:46:00.566 I/mm-camera(  722): <MCT   >< INFO> 4302: mct_pipeline_process_set: command=800000b
+01-18 12:46:00.566 I/mm-camera(  722): <MCT   >< INFO> 4547: mct_pipeline_process_set: Issuing DEL_STREAM on stream 0x30001 and stream type=7
+01-18 12:46:00.566 I/mm-camera(  722): <MCT   >< INFO> 4570: mct_pipeline_process_set: Stream 0x30001 and stream type=7, successfully deleted
+01-18 12:46:00.567 E/mm-camera(  722): <MCT   ><ERROR> 4828: mct_pipeline_process_serv_msg: pipeline blackjoe data->sessionid 3 pipeline->session 3 msgid 3
+01-18 12:46:00.567 E/mm-camera(  722): <MCT   ><ERROR> 4299: mct_pipeline_process_set: command is 0x800000a blackjoe CAM_PRIV_PARM 0x8000014
+01-18 12:46:00.567 I/mm-camera(  722): <MCT   >< INFO> 4302: mct_pipeline_process_set: command=800000a
+01-18 12:46:00.622 D/blackjoe callstack(  722): #00 pc 0000b1c5  /vendor/lib/libmmcamera_interface.so (dump_stack_android+36)
+01-18 12:46:00.622 D/blackjoe callstack(  722): #01 pc 0001a2af  /vendor/lib/libmmcamera_interface.so (mm_stream_config+66)
+01-18 12:46:00.622 D/blackjoe callstack(  722): #02 pc 00019a71  /vendor/lib/libmmcamera_interface.so (mm_stream_fsm_acquired+100)
+01-18 12:46:00.622 D/blackjoe callstack(  722): #03 pc 00019771  /vendor/lib/libmmcamera_interface.so (mm_stream_fsm_fn+168)
+01-18 12:46:00.622 D/blackjoe callstack(  722): #04 pc 0001600d  /vendor/lib/libmmcamera_interface.so (mm_channel_config_stream+128)
+01-18 12:46:00.622 D/blackjoe callstack(  722): #05 pc 00015117  /vendor/lib/libmmcamera_interface.so (mm_channel_fsm_fn_stopped+126)
+01-18 12:46:00.622 D/blackjoe callstack(  722): #06 pc 00014fc3  /vendor/lib/libmmcamera_interface.so (mm_channel_fsm_fn+142)
+01-18 12:46:00.622 D/blackjoe callstack(  722): #07 pc 00011479  /vendor/lib/libmmcamera_interface.so (mm_camera_config_stream+92)
+01-18 12:46:00.622 D/blackjoe callstack(  722): #08 pc 0000e3a7  /vendor/lib/libmmcamera_interface.so (mm_camera_intf_config_stream+198)
+01-18 12:46:00.622 D/blackjoe callstack(  722): #09 pc 000a1539  /vendor/lib/hw/camera.sdm660.so (qcamera::QCamera3Stream::init(cam_stream_type_t, cam_format_t, cam_dimension_t, cam_rotation_t, cam_stream_reproc_config_t*, unsigned char, unsigned long long, cam_is_type_t, unsigned int, void (*)(mm_camera_super_buf_t*, qcamera::QCamera3Stream*, void*), void*, bool, bool)+816)
+01-18 12:46:00.624 D/logd    (    0): logdr: UID=0 GID=0 PID=26079 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+01-18 12:46:00.622 D/blackjoe callstack(  722): #10 pc 000a28ad  /vendor/lib/hw/camera.sdm660.so (qcamera::QCamera3Channel::addStream(cam_stream_type_t, cam_format_t, cam_dimension_t, cam_rotation_t, unsigned char, unsigned long long, cam_is_type_t, unsigned int, bool, bool)+208)
+01-18 12:46:00.623 D/blackjoe callstack(  722): #11 pc 000a5c8d  /vendor/lib/hw/camera.sdm660.so (qcamera::QCamera3MetadataChannel::initialize(cam_is_type_t)+192)
+01-18 12:46:00.623 D/blackjoe callstack(  722): #12 pc 00082889  /vendor/lib/hw/camera.sdm660.so (qcamera::QCamera3HardwareInterface::configureStreamsPerfLocked(camera3_stream_configuration*)+3912)
+01-18 12:46:00.623 D/blackjoe callstack(  722): #13 pc 000818fb  /vendor/lib/hw/camera.sdm660.so (qcamera::QCamera3HardwareInterface::configureStreams(camera3_stream_configuration*)+70)
+01-18 12:46:00.623 D/blackjoe callstack(  722): #14 pc 0007e24b  /vendor/lib/hw/camera.sdm660.so (qcamera::QCamera3HardwareInterface::configure_streams(camera3_device const*, camera3_stream_configuration*)+46)
+01-18 12:46:00.623 D/blackjoe callstack(  722): #15 pc 00011787  /vendor/lib/camera.device@3.4-impl.so (android::hardware::camera::device::V3_4::implementation::CameraDeviceSession::configureStreams_3_4_Impl(android::hardware::camera::device::V3_4::StreamConfiguration const&, std::__1::function<void (android::hardware::camera::common::V1_0::Status, android::hardware::camera::device::V3_4::HalStreamConfiguration const&)>, unsigned int, bool)+422)
+01-18 12:46:00.623 D/blackjoe callstack(  722): #16 pc 00014f37  /vendor/lib/camera.device@3.4-impl.so (android::hardware::camera::device::V3_4::implementation::CameraDeviceSession::TrampolineSessionInterface_3_4::configureStreams_3_4(android::hardware::camera::device::V3_4::StreamConfiguration const&, std::__1::function<void (android::hardware::camera::common::V1_0::Status, android::hardware::camera::device::V3_4::HalStreamConfiguration const&)>)+98)
+01-18 12:46:00.623 D/blackjoe callstack(  722): #17 pc 0001735b  /apex/com.android.vndk.v30/lib/android.hardware.camera.device@3.4.so (android::hardware::camera::device::V3_4::BnHwCameraDeviceSession::_hidl_configureStreams_3_4(android::hidl::base::V1_0::BnHwBase*, android::hardware::Parcel const&, android::hardware::Parcel*, std::__1::function<void (android::hardware::Parcel&)>)+222)
+01-18 12:46:00.623 D/blackjoe callstack(  722): #18 pc 00017a85  /apex/com.android.vndk.v30/lib/android.hardware.camera.device@3.4.so (android::hardware::camera::device::V3_4::BnHwCameraDeviceSession::onTransact(unsigned int, android::hardware::Parcel const&, android::hardware::Parcel*, unsigned int, std::__1::function<void (android::hardware::Parcel&)>)+680)
+01-18 12:46:00.623 D/blackjoe callstack(  722): #19 pc 0006d0fb  /apex/com.android.vndk.v30/lib/libhidlbase.so (android::hardware::BHwBinder::transact(unsigned int, android::hardware::Parcel const&, android::hardware::Parcel*, unsigned int, std::__1::function<void (android::hardware::Parcel&)>)+46)
+01-18 12:46:00.623 D/blackjoe callstack(  722): #20 pc 000700ad  /apex/com.android.vndk.v30/lib/libhidlbase.so (android::hardware::IPCThreadState::executeCommand(int)+1936)
+01-18 12:46:00.623 D/blackjoe callstack(  722): #21 pc 0006f79f  /apex/com.android.vndk.v30/lib/libhidlbase.so (android::hardware::IPCThreadState::getAndExecuteCommand()+138)
+01-18 12:46:00.623 D/blackjoe callstack(  722): #22 pc 0007060b  /apex/com.android.vndk.v30/lib/libhidlbase.so (android::hardware::IPCThreadState::joinThreadPool(bool)+110)
+01-18 12:46:00.623 D/blackjoe callstack(  722): #23 pc 000019b1  /vendor/bin/hw/android.hardware.camera.provider@2.4-service (main+124)
+01-18 12:46:00.623 D/blackjoe callstack(  722): #24 pc 00033641  /apex/com.android.runtime/lib/bionic/libc.so (__libc_init+68)
+01-18 12:46:00.624 E/mm-camera(  722): <MCT   ><ERROR> 4828: mct_pipeline_process_serv_msg: pipeline blackjoe data->sessionid 3 pipeline->session 3 msgid 3
+01-18 12:46:00.624 E/mm-camera(  722): <MCT   ><ERROR> 4299: mct_pipeline_process_set: command is 0x8000018 blackjoe CAM_PRIV_PARM 0x8000014
+01-18 12:46:00.624 I/mm-camera(  722): <MCT   >< INFO> 4302: mct_pipeline_process_set: command=8000018
+01-18 12:46:00.624 E/mm-camera(  722): <MCT   ><ERROR> 503: mct_stream_start_link: mct_stream_start_link blackjoe stream_type is 7
+01-18 12:46:00.624 I/mm-camera(  722): <MCT   >< INFO> 640: mct_stream_start_link: Link Metadata stream 0x30001: do nothing
+01-18 12:46:00.624 E/mm-camera(  722): <MCT   ><ERROR> 862: mct_stream_start_link: call link_module_array blackjoe 0x0
+01-18 12:46:00.624 I/mm-camera(  722): <MCT   >< INFO> 4400: mct_pipeline_process_set: Linking successful for stream 0x30001 stream type=7
+01-18 12:46:00.625 E/mm-camera(  722): <MCT   ><ERROR> 4828: mct_pipeline_process_serv_msg: pipeline blackjoe data->sessionid 3 pipeline->session 3 msgid 3
+01-18 12:46:00.625 E/mm-camera(  722): <MCT   ><ERROR> 4299: mct_pipeline_process_set: command is 0x8000004 blackjoe CAM_PRIV_PARM 0x8000014
+01-18 12:46:00.625 I/mm-camera(  722): <MCT   >< INFO> 4302: mct_pipeline_process_set: command=8000004
+01-18 12:46:00.639 D/Camera3-Device( 1374): Set real time priority for request queue thread (tid 18340)
+01-18 12:46:00.640 D/BCReader-JNI( 4265): End ACameraDevice_createCaptureSession createCaptureSession:1822
+01-18 12:46:00.640 D/BCReader-JNI( 4265): This is preallocated Preview Session
+01-18 12:46:00.643 I/BCReader-JNI( 4265): Session for camera 0 is busy!
+01-18 12:46:00.643 D/qdgralloc( 4265): Imported handle: 0x7baea29a30 id: 2098
+01-18 12:46:00.643 D/qdgralloc( 4265): GetTransportSize: num fds: 2 num ints: 22 err:0
+01-18 12:46:00.644 D/qdgralloc( 1374): Imported handle: 0xe8740c90 id: 2098
+01-18 12:46:00.644 D/qdgralloc( 1374): GetTransportSize: num fds: 2 num ints: 22 err:0
+01-18 12:46:00.650 E/        (    0): [SDL] misc_ioctl msg.len is 3 : 0x77 0x02 0x87
+01-18 12:46:00.646 D/qdgralloc(  722): Imported handle: 0xe4900a90 id: 2098
+01-18 12:46:00.652 E/        (    0): [SDL] misc_ioctl msg.len is 2 : 0x88 0x00
+01-18 12:46:00.647 E/mm-camera(  722): <MCT   ><ERROR> 4828: mct_pipeline_process_serv_msg: pipeline blackjoe data->sessionid 3 pipeline->session 3 msgid 3
+01-18 12:46:00.647 E/mm-camera(  722): <MCT   ><ERROR> 4299: mct_pipeline_process_set: command is 0x8000014 blackjoe CAM_PRIV_PARM 0x8000014
+01-18 12:46:00.648 E/mm-camera(  722): <IMGLIB><ERROR> 297: AllocateBuffers: Invalid dimensions 0x0
+01-18 12:46:00.648 I/mm-camera(  722): <ISP   >< INFO> 7159: isp_util_print_meta_stream_info: Deallocate resources
+01-18 12:46:00.648 I/mm-camera(  722): <ISP   >< INFO> 7490: isp_util_handle_stream_info: streams_desc num_streams is 0 
+01-18 12:46:00.648 E/mm-camera(  722): <IMGLIB><ERROR> 197: img_algo_preload: Preload: Failed to allocate buffer, rc -4
+01-18 12:46:00.649 I/mm-camera(  722): <IFACE >< INFO> 6386: iface_util_handle_meta_stream_info: iface_util_handle_meta_stream_info: ms_type 0 num streams 0
+01-18 12:46:00.649 E/mm-camera(  722): <IMGLIB><ERROR> 127: module_imgbase_client_preload_exec: IMG_CORE_PRELOAD failed -4
+01-18 12:46:00.652 E/mm-camera(  722): <MCT   ><ERROR> 4828: mct_pipeline_process_serv_msg: pipeline blackjoe data->sessionid 3 pipeline->session 3 msgid 3
+01-18 12:46:00.652 E/mm-camera(  722): <MCT   ><ERROR> 4299: mct_pipeline_process_set: command is 0x8000014 blackjoe CAM_PRIV_PARM 0x8000014
+01-18 12:46:00.653 I/mm-camera(  722): <ISP   >< INFO> 7159: isp_util_print_meta_stream_info: Deallocate resources
+01-18 12:46:00.653 I/mm-camera(  722): <ISP   >< INFO> 7490: isp_util_handle_stream_info: streams_desc num_streams is 0 
+01-18 12:46:00.654 E/mm-camera(  722): <IMGLIB><ERROR> 297: AllocateBuffers: Invalid dimensions 0x0
+01-18 12:46:00.654 I/mm-camera(  722): <IFACE >< INFO> 6386: iface_util_handle_meta_stream_info: iface_util_handle_meta_stream_info: ms_type 0 num streams 0
+01-18 12:46:00.654 E/mm-camera(  722): <IMGLIB><ERROR> 197: img_algo_preload: Preload: Failed to allocate buffer, rc -4
+01-18 12:46:00.654 E/mm-camera(  722): <IMGLIB><ERROR> 127: module_imgbase_client_preload_exec: IMG_CORE_PRELOAD failed -4
+01-18 12:46:00.654 E/QCamera (  722): <HAL><ERROR> processCaptureRequest: 7218: Check processCaptureRequest:7218 blackjoe
+01-18 12:46:00.654 E/QCamera (  722): <HAL><ERROR> setHalFpsRange: 14639: E : setHalFpsRange: min_fps 0, max_fps 0 => will be 60 blackjoe 
+01-18 12:46:00.655 I/QCamera (  722): <HAL><INFO> setHalFpsRange: 14674: aeTargetFpsRange fps: [5.000000 60.000000]
+01-18 12:46:00.655 I/QCamera (  722): <HAL><INFO> setHalFpsRange: 14752: fps: [5.000000 60.000000] vid_fps: [5.000000 60.000000]
+01-18 12:46:00.655 I/QCamera (  722): <HAL><INFO> setSensorHDR: 16388: send sensor HDR setting 0 blackjoe
+01-18 12:46:00.655 I/QCamera (  722): <HAL><INFO> processCaptureRequest: 7346: STREAM INFO 0: type 8, wxh: 1344 x 760, pp_mask: 0x0, Format:0 is_type: 0 sync_type 0
+01-18 12:46:00.655 E/mm-camera(  722): <MCT   ><ERROR> 4828: mct_pipeline_process_serv_msg: pipeline blackjoe data->sessionid 3 pipeline->session 3 msgid 3
+01-18 12:46:00.655 E/mm-camera(  722): <MCT   ><ERROR> 4299: mct_pipeline_process_set: command is 0x8000014 blackjoe CAM_PRIV_PARM 0x8000014
+01-18 12:46:00.656 E/mm-camera(  722): <IMGLIB><ERROR> 322: module_depth_map_handle_ctrl_parm: E
+01-18 12:46:00.656 E/mm-camera(  722): <IMGLIB><ERROR> 430: module_depth_map_set_config_param: X
+01-18 12:46:00.656 E/mm-camera(  722): <IMGLIB><ERROR> 254: module_depth_map_send_config_data: CAM_STREAM_TYPE_DEPTH not set !!
+01-18 12:46:00.656 E/mm-camera(  722): <IMGLIB><ERROR> 369: module_depth_map_handle_ctrl_parm: Error module_depth_map_send_config_data
+01-18 12:46:00.656 E/mm-camera(  722): <IMGLIB><ERROR> 373: module_depth_map_handle_ctrl_parm: X
+01-18 12:46:00.656 E/mm-camera(  722): <IMGLIB><ERROR> 880: module_imgbase_process_param: [depth_map] handle_ctrl_parm error : type=10, rc=-5
+01-18 12:46:00.690 D/blackjoe callstack(  722): #00 pc 00004085  /vendor/lib/libmmcamera_dbg.so (dump_stack_android+36)
+01-18 12:46:00.690 D/blackjoe callstack(  722): #01 pc 0001d06f  /vendor/lib/libmmcamera2_iface_modules.so (iface_util_set_dis_enable_flag+10)
+01-18 12:46:00.690 D/blackjoe callstack(  722): #02 pc 00033f03  /vendor/lib/libmmcamera2_iface_modules.so (port_iface_event_func+1690)
+01-18 12:46:00.690 D/blackjoe callstack(  722): #03 pc 0004c917  /vendor/lib/libmmcamera2_sensor_modules.so (port_sensor_port_process_event+286)
+01-18 12:46:00.690 D/blackjoe callstack(  722): #04 pc 0000c8d1  /vendor/lib/libmmcamera2_mct.so (mct_list_traverse+24)
+01-18 12:46:00.690 D/blackjoe callstack(  722): #05 pc 000450af  /vendor/lib/libmmcamera2_sensor_modules.so (module_sensor_module_process_event+3894)
+01-18 12:46:00.690 D/blackjoe callstack(  722): #06 pc 00010cc7  /vendor/lib/libmmcamera2_mct.so (mct_stream_send_event+470)
+01-18 12:46:00.690 D/blackjoe callstack(  722): #07 pc 00019ac5  /vendor/lib/libmmcamera2_mct.so (mct_pipeline_send_event+64)
+01-18 12:46:00.690 D/blackjoe callstack(  722): #08 pc 00014d43  /vendor/lib/libmmcamera2_mct.so (mct_pipeline_send_ctrl_events+678)
+01-18 12:46:00.691 D/blackjoe callstack(  722): #09 pc 000179d5  /vendor/lib/libmmcamera2_mct.so (mct_pipeline_process_serv_msg+2500)
+01-18 12:46:00.691 D/blackjoe callstack(  722): #10 pc 0001b5ef  /vendor/lib/libmmcamera2_mct.so (mct_controller_thread_run+362)
+01-18 12:46:00.691 D/blackjoe callstack(  722): #11 pc 00083d87  /apex/com.android.runtime/lib/bionic/libc.so (__pthread_start(void*)+40)
+01-18 12:46:00.691 D/blackjoe callstack(  722): #12 pc 0003a307  /apex/com.android.runtime/lib/bionic/libc.so (__start_thread+30)
+01-18 12:46:00.691 I/mm-camera(  722): <IFACE >< INFO> 6276: iface_util_set_dis_enable_flag: iface_util_set_dis_enable_flag:6276 DIS enable flag = 0
+01-18 12:46:00.691 E/mm-camera(  722): <SENSOR><ERROR> 5247: module_sensor_event_control_set_parm: Calling SENSOR_GET_RESOLUTION_INFO blackjoe module_sensor_event_control_set_parm:5247 cur_res -1
+01-18 12:46:00.691 I/mm-camera(  722): <SENSOR>< INFO> 3926: sensor_get_resolution_info: Forced cur_res print out blackjoe
+01-18 12:46:00.691 I/mm-camera(  722): <SENSOR>< INFO> 4269: sensor_get_resolution_info: sensor info: name: selowe, res: 0, max_fps: 54.000000, w: 1344, h: 760 op pix clk: 400000000, FLL: 787, LLPCK: 1424, mode: 1, PDAF support: 0
+01-18 12:46:00.692 I/mm-camera(  722): <C2D   >< INFO> 1970: c2d_module_handle_set_parm_event: META_STREAM_INFO type = 8 w x h : 1344 x 760 pp_mask = 0x0
+01-18 12:46:00.692 I/mm-camera(  722): <ISP   >< INFO> 7155: isp_util_print_meta_stream_info: Stream type 8 Resolution: 1344x760 pp_mask: 0x0
+01-18 12:46:00.692 E/mm-camera(  722): <IMGLIB><ERROR> 297: AllocateBuffers: Invalid dimensions 0x0
+01-18 12:46:00.692 E/mm-camera(  722): <ISP   ><ERROR> 7525: isp_util_handle_stream_info: <non-fatal> failed: isp resource allocate for mipi stream
+01-18 12:46:00.692 E/mm-camera(  722): <IMGLIB><ERROR> 197: img_algo_preload: Preload: Failed to allocate buffer, rc -4
+01-18 12:46:00.692 I/mm-camera(  722): <IFACE >< INFO> 6386: iface_util_handle_meta_stream_info: iface_util_handle_meta_stream_info: ms_type 0 num streams 1
+01-18 12:46:00.692 E/mm-camera(  722): <IMGLIB><ERROR> 127: module_imgbase_client_preload_exec: IMG_CORE_PRELOAD failed -4
+01-18 12:46:00.692 E/mm-camera(  722): <MCT   ><ERROR> 4828: mct_pipeline_process_serv_msg: pipeline blackjoe data->sessionid 3 pipeline->session 3 msgid 3
+01-18 12:46:00.692 E/mm-camera(  722): <MCT   ><ERROR> 4299: mct_pipeline_process_set: command is 0x8000014 blackjoe CAM_PRIV_PARM 0x8000014
+01-18 12:46:00.692 E/mm-camera(  722): <MCT   ><ERROR> 4828: mct_pipeline_process_serv_msg: pipeline blackjoe data->sessionid 3 pipeline->session 3 msgid 4
+01-18 12:46:00.692 E/mm-camera(  722): <MCT   ><ERROR> 4856: mct_pipeline_process_serv_msg: CHECK Get PARAM blackjoe
+01-18 12:46:00.692 E/mm-camera(  722): <MCT   ><ERROR> 4735: mct_pipeline_process_get: command is 0x8000014 blackjoe CAM_PRIV_PARM 0x8000014
+01-18 12:46:00.693 E/mm-camera(  722): <MCT   ><ERROR> 4736: mct_pipeline_process_get: command is 134217748 blackjoe
+01-18 12:46:00.693 E/mm-camera(  722): <MCT   ><ERROR> 4828: mct_pipeline_process_serv_msg: pipeline blackjoe data->sessionid 3 pipeline->session 3 msgid 3
+01-18 12:46:00.693 E/mm-camera(  722): <MCT   ><ERROR> 4299: mct_pipeline_process_set: command is 0x800000a blackjoe CAM_PRIV_PARM 0x8000014
+01-18 12:46:00.693 I/mm-camera(  722): <MCT   >< INFO> 4302: mct_pipeline_process_set: command=800000a
+01-18 12:46:00.730 D/blackjoe callstack(  722): #00 pc 0000b1c5  /vendor/lib/libmmcamera_interface.so (dump_stack_android+36)
+01-18 12:46:00.730 D/blackjoe callstack(  722): #01 pc 0001a2af  /vendor/lib/libmmcamera_interface.so (mm_stream_config+66)
+01-18 12:46:00.730 D/blackjoe callstack(  722): #02 pc 00019a71  /vendor/lib/libmmcamera_interface.so (mm_stream_fsm_acquired+100)
+01-18 12:46:00.730 D/blackjoe callstack(  722): #03 pc 00019771  /vendor/lib/libmmcamera_interface.so (mm_stream_fsm_fn+168)
+01-18 12:46:00.730 D/blackjoe callstack(  722): #04 pc 0001600d  /vendor/lib/libmmcamera_interface.so (mm_channel_config_stream+128)
+01-18 12:46:00.730 D/blackjoe callstack(  722): #05 pc 00015117  /vendor/lib/libmmcamera_interface.so (mm_channel_fsm_fn_stopped+126)
+01-18 12:46:00.730 D/blackjoe callstack(  722): #06 pc 00014fc3  /vendor/lib/libmmcamera_interface.so (mm_channel_fsm_fn+142)
+01-18 12:46:00.730 D/blackjoe callstack(  722): #07 pc 00011479  /vendor/lib/libmmcamera_interface.so (mm_camera_config_stream+92)
+01-18 12:46:00.730 D/blackjoe callstack(  722): #08 pc 0000e3a7  /vendor/lib/libmmcamera_interface.so (mm_camera_intf_config_stream+198)
+01-18 12:46:00.730 D/blackjoe callstack(  722): #09 pc 000a1539  /vendor/lib/hw/camera.sdm660.so (qcamera::QCamera3Stream::init(cam_stream_type_t, cam_format_t, cam_dimension_t, cam_rotation_t, cam_stream_reproc_config_t*, unsigned char, unsigned long long, cam_is_type_t, unsigned int, void (*)(mm_camera_super_buf_t*, qcamera::QCamera3Stream*, void*), void*, bool, bool)+816)
+01-18 12:46:00.731 D/blackjoe callstack(  722): #10 pc 000a28ad  /vendor/lib/hw/camera.sdm660.so (qcamera::QCamera3Channel::addStream(cam_stream_type_t, cam_format_t, cam_dimension_t, cam_rotation_t, unsigned char, unsigned long long, cam_is_type_t, unsigned int, bool, bool)+208)
+01-18 12:46:00.731 D/blackjoe callstack(  722): #11 pc 000a55a3  /vendor/lib/hw/camera.sdm660.so (qcamera::QCamera3RegularChannel::initialize(cam_is_type_t)+470)
+01-18 12:46:00.731 D/blackjoe callstack(  722): #12 pc 0008debb  /vendor/lib/hw/camera.sdm660.so (qcamera::QCamera3HardwareInterface::processCaptureRequest(camera3_capture_request*, android::List<qcamera::QCamera3HardwareInterface::InternalRequest>&)+6378)
+01-18 12:46:00.731 D/blackjoe callstack(  722): #13 pc 0008c515  /vendor/lib/hw/camera.sdm660.so (qcamera::QCamera3HardwareInterface::orchestrateRequest(camera3_capture_request*)+96)
+01-18 12:46:00.731 D/blackjoe callstack(  722): #14 pc 0007e44f  /vendor/lib/hw/camera.sdm660.so (qcamera::QCamera3HardwareInterface::process_capture_request(camera3_device const*, camera3_capture_request*)+274)
+01-18 12:46:00.731 D/blackjoe callstack(  722): #15 pc 0001300b  /vendor/lib/camera.device@3.4-impl.so (android::hardware::camera::device::V3_4::implementation::CameraDeviceSession::processOneCaptureRequest_3_4(android::hardware::camera::device::V3_4::CaptureRequest const&)+2070)
+01-18 12:46:00.731 D/blackjoe callstack(  722): #16 pc 0001278d  /vendor/lib/camera.device@3.4-impl.so (android::hardware::camera::device::V3_4::implementation::CameraDeviceSession::processCaptureRequest_3_4(android::hardware::hidl_vec<android::hardware::camera::device::V3_4::CaptureRequest> const&, android::hardware::hidl_vec<android::hardware::camera::device::V3_2::BufferCache> const&, std::__1::function<void (android::hardware::camera::common::V1_0::Status, unsigned int)>)+52)
+01-18 12:46:00.731 D/blackjoe callstack(  722): #17 pc 00014fdf  /vendor/lib/camera.device@3.4-impl.so (android::hardware::camera::device::V3_4::implementation::CameraDeviceSession::TrampolineSessionInterface_3_4::processCaptureRequest_3_4(android::hardware::hidl_vec<android::hardware::camera::device::V3_4::CaptureRequest> const&, android::hardware::hidl_vec<android::hardware::camera::device::V3_2::BufferCache> const&, std::__1::function<void (android::hardware::camera::common::V1_0::Status, unsigned int)>)+70)
+01-18 12:46:00.731 D/blackjoe callstack(  722): #18 pc 000175f5  /apex/com.android.vndk.v30/lib/android.hardware.camera.device@3.4.so (android::hardware::camera::device::V3_4::BnHwCameraDeviceSession::_hidl_processCaptureRequest_3_4(android::hidl::base::V1_0::BnHwBase*, android::hardware::Parcel const&, android::hardware::Parcel*, std::__1::function<void (android::hardware::Parcel&)>)+356)
+01-18 12:46:00.731 D/blackjoe callstack(  722): #19 pc 00017aad  /apex/com.android.vndk.v30/lib/android.hardware.camera.device@3.4.so (android::hardware::camera::device::V3_4::BnHwCameraDeviceSession::onTransact(unsigned int, android::hardware::Parcel const&, android::hardware::Parcel*, unsigned int, std::__1::function<void (android::hardware::Parcel&)>)+720)
+01-18 12:46:00.731 D/blackjoe callstack(  722): #20 pc 0006d0fb  /apex/com.android.vndk.v30/lib/libhidlbase.so (android::hardware::BHwBinder::transact(unsigned int, android::hardware::Parcel const&, android::hardware::Parcel*, unsigned int, std::__1::function<void (android::hardware::Parcel&)>)+46)
+01-18 12:46:00.731 D/blackjoe callstack(  722): #21 pc 000700ad  /apex/com.android.vndk.v30/lib/libhidlbase.so (android::hardware::IPCThreadState::executeCommand(int)+1936)
+01-18 12:46:00.731 D/blackjoe callstack(  722): #22 pc 0006f79f  /apex/com.android.vndk.v30/lib/libhidlbase.so (android::hardware::IPCThreadState::getAndExecuteCommand()+138)
+01-18 12:46:00.732 D/blackjoe callstack(  722): #23 pc 0007060b  /apex/com.android.vndk.v30/lib/libhidlbase.so (android::hardware::IPCThreadState::joinThreadPool(bool)+110)
+01-18 12:46:00.732 D/blackjoe callstack(  722): #24 pc 000019b1  /vendor/bin/hw/android.hardware.camera.provider@2.4-service (main+124)
+01-18 12:46:00.732 D/blackjoe callstack(  722): #25 pc 00033641  /apex/com.android.runtime/lib/bionic/libc.so (__libc_init+68)
+01-18 12:46:00.732 E/mm-camera(  722): <MCT   ><ERROR> 4828: mct_pipeline_process_serv_msg: pipeline blackjoe data->sessionid 3 pipeline->session 3 msgid 3
+01-18 12:46:00.732 E/mm-camera(  722): <MCT   ><ERROR> 4299: mct_pipeline_process_set: command is 0x8000018 blackjoe CAM_PRIV_PARM 0x8000014
+01-18 12:46:00.732 I/mm-camera(  722): <MCT   >< INFO> 4302: mct_pipeline_process_set: command=8000018
+01-18 12:46:00.732 E/mm-camera(  722): <MCT   ><ERROR> 503: mct_stream_start_link: mct_stream_start_link blackjoe stream_type is 8
+01-18 12:46:00.733 E/mm-camera(  722): <MCT   ><ERROR> 608: mct_stream_start_link: Start linking raw stream 0x30002, blackjoe is_secure 0
+01-18 12:46:00.733 E/mm-camera(  722): <MCT   ><ERROR> 862: mct_stream_start_link: call link_module_array blackjoe 0x0
+01-18 12:46:00.733 E/mm-camera(  722): <IFACE ><ERROR> 645: iface_reserve_src_port: iface_reserve_src_port: iface_src_port is 0x0xe9565030, state is 1 use_pix 0 blackjoe
+01-18 12:46:00.733 E/mm-camera(  722): <IFACE ><ERROR> 667: iface_reserve_src_port: iface_reserve_src_port: state is 1
+01-18 12:46:00.733 I/mm-camera(  722): <ISP   >< INFO> 858: isp_port_check_caps_reserve: port 0xec997110 ide 30002 type 8 dim 1344 760
+01-18 12:46:00.734 E/mm-camera(  722): <ISP   ><ERROR> 3417: isp_handler_get_hw_params: failed: num_hw_stream 0
+01-18 12:46:00.736 I/chatty  (  722): uid=1047(cameraserver) CAM_MctServ_3 identical 12 lines
+01-18 12:46:00.736 E/mm-camera(  722): <ISP   ><ERROR> 3417: isp_handler_get_hw_params: failed: num_hw_stream 0
+01-18 12:46:00.736 I/mm-camera(  722): <MCT   >< INFO> 4400: mct_pipeline_process_set: Linking successful for stream 0x30002 stream type=8
+01-18 12:46:00.736 E/QCamera (  722): <MCI><ERROR> mm_stream_get_v4l2_fmt: 2660: Unknown fmt=25
+01-18 12:46:00.736 E/mm-camera(  722): <MCT   ><ERROR> 4828: mct_pipeline_process_serv_msg: pipeline blackjoe data->sessionid 3 pipeline->session 3 msgid 3
+01-18 12:46:00.737 E/mm-camera(  722): <MCT   ><ERROR> 4299: mct_pipeline_process_set: command is 0x8000004 blackjoe CAM_PRIV_PARM 0x8000014
+01-18 12:46:00.737 I/mm-camera(  722): <MCT   >< INFO> 4302: mct_pipeline_process_set: command=8000004
+01-18 12:46:00.737 E/mm-camera(  722): <MCT   ><ERROR> 4828: mct_pipeline_process_serv_msg: pipeline blackjoe data->sessionid 3 pipeline->session 3 msgid 3
+01-18 12:46:00.737 E/mm-camera(  722): <MCT   ><ERROR> 4299: mct_pipeline_process_set: command is 0x8000019 blackjoe CAM_PRIV_PARM 0x8000014
+01-18 12:46:00.737 I/mm-camera(  722): <MCT   >< INFO> 4302: mct_pipeline_process_set: command=8000019
+01-18 12:46:00.752 E/QCamera (  722): <MCI><ERROR> mm_stream_streamon: 1375: E, my_handle = 0x2400, fd = 69, state = 6 blackjoe
+01-18 12:46:00.752 E/QCamera (  722): <MCI><ERROR> mm_stream_streamon: 1409: E, my_handle = 0x2400, fd = 69, state = 6 session_id:3 stream_id:1
+01-18 12:46:00.752 E/mm-camera(  722): <MCT   ><ERROR> 4828: mct_pipeline_process_serv_msg: pipeline blackjoe data->sessionid 3 pipeline->session 3 msgid 3
+01-18 12:46:00.752 E/mm-camera(  722): <MCT   ><ERROR> 4299: mct_pipeline_process_set: command is 0x8000008 blackjoe CAM_PRIV_PARM 0x8000014
+01-18 12:46:00.752 I/mm-camera(  722): <MCT   >< INFO> 4302: mct_pipeline_process_set: command=8000008
+01-18 12:46:00.753 I/mm-camera(  722): <MCT   >< INFO> 4465: mct_pipeline_process_set:  STREAM-ON on stream 0x30001 stream type=7
+01-18 12:46:00.753 I/mm-camera(  722): <MCT   >< INFO> 4482: mct_pipeline_process_set:  STREAM-ON success for stream 0x30001, stream type=7
+01-18 12:46:00.754 E/QCamera (  722): <MCI><ERROR> mm_stream_streamon: 1375: E, my_handle = 0x2501, fd = 78, state = 6 blackjoe
+01-18 12:46:00.754 E/QCamera (  722): <MCI><ERROR> mm_stream_streamon: 1409: E, my_handle = 0x2501, fd = 78, state = 6 session_id:3 stream_id:2
+01-18 12:46:00.754 E/mm-camera(  722): <MCT   ><ERROR> 4828: mct_pipeline_process_serv_msg: pipeline blackjoe data->sessionid 3 pipeline->session 3 msgid 3
+01-18 12:46:00.755 E/mm-camera(  722): <MCT   ><ERROR> 4299: mct_pipeline_process_set: command is 0x8000008 blackjoe CAM_PRIV_PARM 0x8000014
+01-18 12:46:00.755 I/mm-camera(  722): <MCT   >< INFO> 4302: mct_pipeline_process_set: command=8000008
+01-18 12:46:00.755 I/mm-camera(  722): <MCT   >< INFO> 4465: mct_pipeline_process_set:  STREAM-ON on stream 0x30002 stream type=8
+01-18 12:46:00.755 I/mm-camera(  722): <IFACE >< INFO> 430: iface_util_dump_sensor_cfg: iface_util_dump_sensor_cfg: sensor dim: width = 1344, heght = 760, fmt = 25, is_bayer = 1, init_skip = 0
+01-18 12:46:00.755 E/mm-camera(  722): <ISP   ><ERROR> 1324: isp_resource_get_stats_type_mask: failed: num_isp 0
+01-18 12:46:00.756 E/mm-camera(  722): <ISP   ><ERROR> 1793: isp_resource_iface_request_output_resource: failed: isp_util_get_stats_type_mask
+01-18 12:46:00.756 E/mm-camera(  722): <ISP   ><ERROR> 1807: isp_resource_iface_request_output_resource: failed; pipeline 0x0
+01-18 12:46:00.756 E/mm-camera(  722): <ISP   ><ERROR> 2413: isp_handler_module_iface_request_output_resource: failed: isp_resource_iface_request_output_resource
+01-18 12:46:00.756 E/mm-camera(  722): <ISP   ><ERROR> 308: isp_port_process_downstream_module_event: failed: isp_handler_control_streamoff
+01-18 12:46:00.756 E/mm-camera(  722): <ISP   ><ERROR> 2237: isp_handler_module_send_initial_crop_info: No VFE Resource, Do early exit
+01-18 12:46:00.757 E/mm-camera(  722): <ISP   ><ERROR> 312: isp_port_process_downstream_module_event: failed: isp_handler_module_set_stream_config
+01-18 12:46:00.757 E/mm-camera(  722): <ISP   ><ERROR> 446: isp_port_process_downstream_event: failed: isp_port_process_downstream_module_event
+01-18 12:46:00.757 E/mm-camera(  722): <ISP   ><ERROR> 574: isp_port_event: failed: isp_port_process_downstream_event
+01-18 12:46:00.757 E/mm-camera(  722): <IFACE ><ERROR> 1525: iface_util_request_isp_output_resource: iface_util_request_isp_output_resource: error in isp sink port event
+01-18 12:46:00.757 E/mm-camera(  722): <IFACE ><ERROR> 4149: iface_util_set_hw_stream_config_pix: iface_util_set_hw_stream_config_pix: iface_util_request_isp_output_resource failed, rc = -1
+01-18 12:46:00.757 I/mm-camera(  722): <IFACE >< INFO> 4087: iface_create_axi: iface_create_axi:4087: Create axi hw for session 3 on VFE 0
+01-18 12:46:00.767 E/msm_isp_open_node(    0): reset VFE
+01-18 12:46:00.765 I/mm-camera(  722): <IFACE >< INFO> 571: iface_dump_axi_plane_config: === AXI DUMP: VFE session_id 3, hw_stream_id 2 ===
+01-18 12:46:00.765 I/mm-camera(  722): <IFACE >< INFO> 575: iface_dump_axi_plane_config:     AXI DUMP Axi_src: RDI_0 hw_stream width 1344, height 760
+01-18 12:46:00.765 I/mm-camera(  722): <IFACE >< INFO> 577: iface_dump_axi_plane_config: need buf divert = 0, burst count = 0
+01-18 12:46:00.766 I/mm-camera(  722): <IFACE >< INFO> 580: iface_dump_axi_plane_config: hfr mode = 0, skip pattern = 0, init_frame_drop = 0
+01-18 12:46:00.766 I/mm-camera(  722): <IFACE >< INFO> 613: iface_dump_axi_plane_config: plane[0]: plane_fmt 0(Y-0/CB-1/Cr-2/CrCb-3/CbCr-4)
+01-18 12:46:00.766 I/mm-camera(  722): <IFACE >< INFO> 615: iface_dump_axi_plane_config: plane[0]: width = 1344, height = 760
+01-18 12:46:00.766 I/mm-camera(  722): <IFACE >< INFO> 617: iface_dump_axi_plane_config: plane[0]: stride = 1344, scanlines = 768
+01-18 12:46:00.766 I/mm-camera(  722): <IFACE >< INFO> 619: iface_dump_axi_plane_config: plane[0]: address_offset 0
+01-18 12:46:00.766 I/mm-camera(  722): <IFACE >< INFO> 1786: iface_streamon_to_thread: iface_streamon_to_thread: E, session id = 3, user stream id = 2
+01-18 12:46:00.767 E/mm-camera(  722): <ISP   ><ERROR> 823: isp_handler_control_streamon: num_isp 0
+01-18 12:46:00.767 I/mm-camera(  722): <IFACE >< INFO> 2133: iface_streamon: E, session_id 3 mct_stream_id = 2
+01-18 12:46:00.767 I/mm-camera(  722): <IFACE >< INFO> 12242: iface_util_get_user_streams_by_bundle: streamon, got all bundled streamon!
+01-18 12:46:00.773 I/mm-camera(  722): <IFACE >< INFO> 2426: iface_streamon: X
+01-18 12:46:00.773 I/mm-camera(  722): <IFACE >< INFO> 1815: iface_streamon_to_thread: iface_streamon_to_thread: X, session id = 3, user stream id = 2
+01-18 12:46:00.773 E/mm-camera(  722): <SENSOR><ERROR> 3759: module_sensor_stream_on: return by blackjoe
+01-18 12:46:00.774 I/mm-camera(  722): <MCT   >< INFO> 4482: mct_pipeline_process_set:  STREAM-ON success for stream 0x30002, stream type=8
+01-18 12:46:00.774 E/QCamera (  722): <HAL><ERROR> translateToHalMetadata: 14966: Check translateToHalMetadata:14966 blackjoe
+01-18 12:46:00.774 E/QCamera (  722): <HAL><ERROR> setHalFpsRange: 14639: E : setHalFpsRange: min_fps 0, max_fps 0 => will be 60 blackjoe 
+01-18 12:46:00.774 I/QCamera (  722): <HAL><INFO> setHalFpsRange: 14674: aeTargetFpsRange fps: [5.000000 60.000000]
+01-18 12:46:00.779 E/msm_ispif_config(    0): 1061 Exit
+01-18 12:46:00.779 E/msm_ispif_config2(    0): Exit
+01-18 12:46:00.774 I/QCamera (  722): <HAL><INFO> setHalFpsRange: 14752: fps: [5.000000 60.000000] vid_fps: [5.000000 60.000000]
+01-18 12:46:00.775 E/mm-camera(  722): <MCT   ><ERROR> 4828: mct_pipeline_process_serv_msg: pipeline blackjoe data->sessionid 3 pipeline->session 3 msgid 3
+01-18 12:46:00.776 E/mm-camera(  722): <MCT   ><ERROR> 4299: mct_pipeline_process_set: command is 0x8000014 blackjoe CAM_PRIV_PARM 0x8000014
+01-18 12:46:00.778 D/qdgralloc( 4265): Imported handle: 0x7baea292e0 id: 2099
+01-18 12:46:00.778 D/qdgralloc( 4265): GetTransportSize: num fds: 2 num ints: 22 err:0
+01-18 12:46:00.778 D/qdgralloc( 1374): Imported handle: 0xe8740710 id: 2099
+01-18 12:46:00.779 D/qdgralloc( 1374): GetTransportSize: num fds: 2 num ints: 22 err:0
+01-18 12:46:00.780 D/qdgralloc(  722): Imported handle: 0xe4900490 id: 2099
+01-18 12:46:00.781 E/mm-camera(  722): <MCT   ><ERROR> 4828: mct_pipeline_process_serv_msg: pipeline blackjoe data->sessionid 3 pipeline->session 3 msgid 3
+01-18 12:46:00.781 E/mm-camera(  722): <MCT   ><ERROR> 4299: mct_pipeline_process_set: command is 0x8000014 blackjoe CAM_PRIV_PARM 0x8000014
+01-18 12:46:00.783 D/qdgralloc( 4265): Imported handle: 0x7baea2a210 id: 2100
+01-18 12:46:00.783 D/qdgralloc( 4265): GetTransportSize: num fds: 2 num ints: 22 err:0
+01-18 12:46:00.783 D/qdgralloc( 1374): Imported handle: 0xe8740990 id: 2100
+01-18 12:46:00.784 D/qdgralloc( 1374): GetTransportSize: num fds: 2 num ints: 22 err:0
+01-18 12:46:00.784 D/qdgralloc(  722): Imported handle: 0xe4901810 id: 2100
+01-18 12:46:00.786 E/mm-camera(  722): <MCT   ><ERROR> 4828: mct_pipeline_process_serv_msg: pipeline blackjoe data->sessionid 3 pipeline->session 3 msgid 3
+01-18 12:46:00.786 E/mm-camera(  722): <MCT   ><ERROR> 4299: mct_pipeline_process_set: command is 0x8000014 blackjoe CAM_PRIV_PARM 0x8000014
+01-18 12:46:00.788 D/qdgralloc( 4265): Imported handle: 0x7baea28b90 id: 2101
+01-18 12:46:00.788 D/qdgralloc( 4265): GetTransportSize: num fds: 2 num ints: 22 err:0
+01-18 12:46:00.788 D/qdgralloc( 1374): Imported handle: 0xe8741890 id: 2101
+01-18 12:46:00.789 D/qdgralloc( 1374): GetTransportSize: num fds: 2 num ints: 22 err:0
+01-18 12:46:00.789 D/qdgralloc(  722): Imported handle: 0xe4901010 id: 2101
+01-18 12:46:00.790 E/mm-camera(  722): <MCT   ><ERROR> 1263: mct_controller_handle_SOF_proc: Invalid case ! bus_msg frame_id 1 cannot be greater than kernel_sofid 0
+01-18 12:46:00.790 E/mm-camera(  722): <MCT   ><ERROR> 4828: mct_pipeline_process_serv_msg: pipeline blackjoe data->sessionid 3 pipeline->session 3 msgid 3
+01-18 12:46:00.791 E/mm-camera(  722): <MCT   ><ERROR> 4299: mct_pipeline_process_set: command is 0x8000014 blackjoe CAM_PRIV_PARM 0x8000014
+01-18 12:46:00.791 E/mm-camera(  722): <SENSOR><ERROR> 5367: module_sensor_event_control_set_parm: func_tbl for submodule 4 is NULL
+01-18 12:46:00.799 E/        (    0): frame_src is 1 frame_id is 1 blackjoe
+01-18 12:46:00.791 E/mm-camera(  722): <SENSOR><ERROR> 5174: module_sensor_event_control_set_parm: func_tbl for submodule 4 is NULL
+01-18 12:46:00.791 E/mm-camera(  722): <SENSOR><ERROR> 5176: module_sensor_event_control_set_parm: CAM_INTF_META_FLASH_POWER failed
+01-18 12:46:00.791 E/mm-camera(  722): <SENSOR><ERROR> 4883: sensor_get_frame_duration: resolution is invalid, it seems stream has stopped.
+01-18 12:46:00.792 E/mm-camera(  722): <SENSOR><ERROR> 884: sensor_fc_report_meta: Failed to get frame duration
+01-18 12:46:00.792 E/mm-camera(  722): <SENSOR><ERROR> 4805: sensor_get_exposure_time: resolution is invalid, it seems stream has stopped.
+01-18 12:46:00.792 E/mm-camera(  722): <SENSOR><ERROR> 904: sensor_fc_report_meta: Failed to get exposure time
+01-18 12:46:00.793 D/qdgralloc( 4265): Imported handle: 0x7baea29eb0 id: 2102
+01-18 12:46:00.793 D/qdgralloc( 4265): GetTransportSize: num fds: 2 num ints: 22 err:0
+01-18 12:46:00.793 E/mm-camera(  722): <MCT   ><ERROR> 2722: mct_stream_process_bus_msg: Check the runing function blackjoe 
+01-18 12:46:00.793 E/mm-camera(  722): <MCT   ><ERROR> 2755: mct_stream_process_bus_msg: isp_sof_bus_msg is 0xecac0f40
+01-18 12:46:00.793 E/mm-camera(  722): <MCT   ><ERROR> 2757: mct_stream_process_bus_msg: frameid is 1 hal_version is 3
+01-18 12:46:00.793 E/mm-camera(  722): <MCT   ><ERROR> 2759: mct_stream_process_bus_msg: kstate_ptr is 0xe9d5f254, isp_kstate_ptr is 0xeda49000
+01-18 12:46:00.793 D/qdgralloc( 1374): Imported handle: 0xe8740590 id: 2102
+01-18 12:46:00.793 E/mm-camera(  722): <MCT   ><ERROR> 2765: mct_stream_process_bus_msg: frame_id is 1
+01-18 12:46:00.794 D/qdgralloc( 1374): GetTransportSize: num fds: 2 num ints: 22 err:0
+01-18 12:46:00.794 E/QCamera (  722): <MCI><ERROR> mm_stream_data_notify: 337: E, my_handle = 0x2400, fd = 69, state = 6 blackjoe
+01-18 12:46:00.794 E/QCamera (  722): <MCI><ERROR> mm_stream_read_msm_frame: 1723: E, my_handle = 0x2400, fd = 69, state = 6 blackjoe
+01-18 12:46:00.794 I/QCamera (  722): <MCI><INFO> mm_stream_read_msm_frame: 1770: VIDIOC_DQBUF buf_index 0, frame_idx 0, stream type 7, rc 0,queued: 17, buf_type = 0 flags = 8192 FD = 69 my_num 0 buf fd 82
+01-18 12:46:00.794 E/QCamera (  722): <MCI><ERROR> mm_stream_read_msm_frame: 1790: X rc = 0
+01-18 12:46:00.794 D/qdgralloc(  722): Imported handle: 0xe4902d90 id: 2102
+01-18 12:46:00.795 I/QCamera (  722): <MCI><INFO> mm_stream_handle_rcvd_buf: 220: E, my_handle = 0x2400, fd = 69, state = 6
+01-18 12:46:00.795 I/QCamera (  722): <MCI><INFO> mm_stream_handle_rcvd_buf: 244: has cb and it is active by blackjoe
+01-18 12:46:00.795 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 415: E, my_handle = 0x2400, fd = 69, state = 6
+01-18 12:46:00.795 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 436: frame_sync.is_active = 0, is_cb_active = 1
+01-18 12:46:00.796 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 457: Enter callback by blackjoe
+01-18 12:46:00.796 E/mm-camera(  722): <MCT   ><ERROR> 4828: mct_pipeline_process_serv_msg: pipeline blackjoe data->sessionid 3 pipeline->session 3 msgid 3
+01-18 12:46:00.796 E/mm-camera(  722): <MCT   ><ERROR> 4299: mct_pipeline_process_set: command is 0x8000014 blackjoe CAM_PRIV_PARM 0x8000014
+01-18 12:46:00.798 E/mm-camera(  722): <STATS_AIS ><ERROR> 1316: dsps_process_response_gyro: Query request denied, error code = 5, QId_valid = 1, QueryId = 0x10a, AckNak_valid = 1, AckNak = 3
+01-18 12:46:00.808 D/logd    (    0): logdr: UID=0 GID=0 PID=26085 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+01-18 12:46:00.798 D/qdgralloc( 4265): Imported handle: 0x7baea29880 id: 2103
+01-18 12:46:00.798 D/qdgralloc( 4265): GetTransportSize: num fds: 2 num ints: 22 err:0
+01-18 12:46:00.799 D/qdgralloc( 1374): Imported handle: 0xe8741090 id: 2103
+01-18 12:46:00.799 D/qdgralloc( 1374): GetTransportSize: num fds: 2 num ints: 22 err:0
+01-18 12:46:00.800 D/qdgralloc(  722): Imported handle: 0xe4900390 id: 2103
+01-18 12:46:00.801 E/mm-camera(  722): <MCT   ><ERROR> 4828: mct_pipeline_process_serv_msg: pipeline blackjoe data->sessionid 3 pipeline->session 3 msgid 3
+01-18 12:46:00.815 E/        (    0): frame_src is 1 frame_id is 2 blackjoe
+01-18 12:46:00.801 E/mm-camera(  722): <MCT   ><ERROR> 4299: mct_pipeline_process_set: command is 0x8000014 blackjoe CAM_PRIV_PARM 0x8000014
+01-18 12:46:00.807 E/mm-camera(  722): <SENSOR><ERROR> 4883: sensor_get_frame_duration: resolution is invalid, it seems stream has stopped.
+01-18 12:46:00.807 E/mm-camera(  722): <SENSOR><ERROR> 884: sensor_fc_report_meta: Failed to get frame duration
+01-18 12:46:00.807 E/mm-camera(  722): <SENSOR><ERROR> 4805: sensor_get_exposure_time: resolution is invalid, it seems stream has stopped.
+01-18 12:46:00.808 E/mm-camera(  722): <SENSOR><ERROR> 904: sensor_fc_report_meta: Failed to get exposure time
+01-18 12:46:00.808 E/mm-camera(  722): <MCT   ><ERROR> 2722: mct_stream_process_bus_msg: Check the runing function blackjoe 
+01-18 12:46:00.808 E/mm-camera(  722): <MCT   ><ERROR> 2755: mct_stream_process_bus_msg: isp_sof_bus_msg is 0xecac1180
+01-18 12:46:00.809 E/mm-camera(  722): <MCT   ><ERROR> 2757: mct_stream_process_bus_msg: frameid is 2 hal_version is 3
+01-18 12:46:00.809 E/mm-camera(  722): <MCT   ><ERROR> 2759: mct_stream_process_bus_msg: kstate_ptr is 0xe9d5f254, isp_kstate_ptr is 0xeda49000
+01-18 12:46:00.809 E/mm-camera(  722): <MCT   ><ERROR> 2765: mct_stream_process_bus_msg: frame_id is 2
+01-18 12:46:00.809 E/QCamera (  722): <MCI><ERROR> mm_stream_data_notify: 337: E, my_handle = 0x2400, fd = 69, state = 6 blackjoe
+01-18 12:46:00.809 E/QCamera (  722): <MCI><ERROR> mm_stream_read_msm_frame: 1723: E, my_handle = 0x2400, fd = 69, state = 6 blackjoe
+01-18 12:46:00.810 I/QCamera (  722): <MCI><INFO> mm_stream_read_msm_frame: 1770: VIDIOC_DQBUF buf_index 1, frame_idx 1, stream type 7, rc 0,queued: 17, buf_type = 0 flags = 8192 FD = 69 my_num 0 buf fd 84
+01-18 12:46:00.810 E/QCamera (  722): <MCI><ERROR> mm_stream_read_msm_frame: 1790: X rc = 0
+01-18 12:46:00.810 I/QCamera (  722): <MCI><INFO> mm_stream_handle_rcvd_buf: 220: E, my_handle = 0x2400, fd = 69, state = 6
+01-18 12:46:00.810 I/QCamera (  722): <MCI><INFO> mm_stream_handle_rcvd_buf: 244: has cb and it is active by blackjoe
+01-18 12:46:00.810 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 415: E, my_handle = 0x2400, fd = 69, state = 6
+01-18 12:46:00.811 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 436: frame_sync.is_active = 0, is_cb_active = 1
+01-18 12:46:00.811 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 457: Enter callback by blackjoe
+01-18 12:46:00.814 E/mm-camera(  722): <STATS_AIS ><ERROR> 1316: dsps_process_response_gyro: Query request denied, error code = 5, QId_valid = 1, QueryId = 0x20a, AckNak_valid = 1, AckNak = 3
+01-18 12:46:00.832 E/        (    0): frame_src is 1 frame_id is 3 blackjoe
+01-18 12:46:00.824 E/mm-camera(  722): <SENSOR><ERROR> 4883: sensor_get_frame_duration: resolution is invalid, it seems stream has stopped.
+01-18 12:46:00.824 E/mm-camera(  722): <SENSOR><ERROR> 884: sensor_fc_report_meta: Failed to get frame duration
+01-18 12:46:00.824 E/mm-camera(  722): <SENSOR><ERROR> 4805: sensor_get_exposure_time: resolution is invalid, it seems stream has stopped.
+01-18 12:46:00.824 E/mm-camera(  722): <SENSOR><ERROR> 904: sensor_fc_report_meta: Failed to get exposure time
+01-18 12:46:00.825 E/mm-camera(  722): <MCT   ><ERROR> 2722: mct_stream_process_bus_msg: Check the runing function blackjoe 
+01-18 12:46:00.825 E/mm-camera(  722): <MCT   ><ERROR> 2755: mct_stream_process_bus_msg: isp_sof_bus_msg is 0xecac1c30
+01-18 12:46:00.826 E/mm-camera(  722): <MCT   ><ERROR> 2757: mct_stream_process_bus_msg: frameid is 3 hal_version is 3
+01-18 12:46:00.826 E/mm-camera(  722): <MCT   ><ERROR> 2759: mct_stream_process_bus_msg: kstate_ptr is 0xe9d5f254, isp_kstate_ptr is 0xeda49000
+01-18 12:46:00.826 E/mm-camera(  722): <MCT   ><ERROR> 2765: mct_stream_process_bus_msg: frame_id is 3
+01-18 12:46:00.826 E/QCamera (  722): <MCI><ERROR> mm_stream_data_notify: 337: E, my_handle = 0x2400, fd = 69, state = 6 blackjoe
+01-18 12:46:00.826 E/QCamera (  722): <MCI><ERROR> mm_stream_read_msm_frame: 1723: E, my_handle = 0x2400, fd = 69, state = 6 blackjoe
+01-18 12:46:00.827 I/QCamera (  722): <MCI><INFO> mm_stream_read_msm_frame: 1770: VIDIOC_DQBUF buf_index 2, frame_idx 2, stream type 7, rc 0,queued: 17, buf_type = 0 flags = 8192 FD = 69 my_num 0 buf fd 86
+01-18 12:46:00.827 E/QCamera (  722): <MCI><ERROR> mm_stream_read_msm_frame: 1790: X rc = 0
+01-18 12:46:00.827 I/QCamera (  722): <MCI><INFO> mm_stream_handle_rcvd_buf: 220: E, my_handle = 0x2400, fd = 69, state = 6
+01-18 12:46:00.827 I/QCamera (  722): <MCI><INFO> mm_stream_handle_rcvd_buf: 244: has cb and it is active by blackjoe
+01-18 12:46:00.828 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 415: E, my_handle = 0x2400, fd = 69, state = 6
+01-18 12:46:00.828 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 436: frame_sync.is_active = 0, is_cb_active = 1
+01-18 12:46:00.828 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 457: Enter callback by blackjoe
+01-18 12:46:00.831 E/mm-camera(  722): <STATS_AIS ><ERROR> 1316: dsps_process_response_gyro: Query request denied, error code = 5, QId_valid = 1, QueryId = 0x30a, AckNak_valid = 1, AckNak = 3
+01-18 12:46:00.840 E/QCamera (  722): <MCI><ERROR> mm_stream_data_notify: 337: E, my_handle = 0x2501, fd = 78, state = 6 blackjoe
+01-18 12:46:00.840 E/QCamera (  722): <MCI><ERROR> mm_stream_read_msm_frame: 1723: E, my_handle = 0x2501, fd = 78, state = 6 blackjoe
+01-18 12:46:00.840 E/mm-camera(  722): <SENSOR><ERROR> 4883: sensor_get_frame_duration: resolution is invalid, it seems stream has stopped.
+01-18 12:46:00.840 E/mm-camera(  722): <SENSOR><ERROR> 884: sensor_fc_report_meta: Failed to get frame duration
+01-18 12:46:00.841 I/QCamera (  722): <MCI><INFO> mm_stream_read_msm_frame: 1770: VIDIOC_DQBUF buf_index 6, frame_idx 3, stream type 8, rc 0,queued: 5, buf_type = 0 flags = 8192 FD = 78 my_num 0 buf fd 76
+01-18 12:46:00.848 E/        (    0): frame_src is 1 frame_id is 4 blackjoe
+01-18 12:46:00.841 E/mm-camera(  722): <SENSOR><ERROR> 4805: sensor_get_exposure_time: resolution is invalid, it seems stream has stopped.
+01-18 12:46:00.841 E/QCamera (  722): <MCI><ERROR> mm_stream_read_msm_frame: 1790: X rc = 0
+01-18 12:46:00.841 E/mm-camera(  722): <SENSOR><ERROR> 904: sensor_fc_report_meta: Failed to get exposure time
+01-18 12:46:00.841 I/QCamera (  722): <MCI><INFO> mm_stream_handle_rcvd_buf: 220: E, my_handle = 0x2501, fd = 78, state = 6
+01-18 12:46:00.841 I/QCamera (  722): <MCI><INFO> mm_stream_handle_rcvd_buf: 244: has cb and it is active by blackjoe
+01-18 12:46:00.841 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 415: E, my_handle = 0x2501, fd = 78, state = 6
+01-18 12:46:00.841 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 436: frame_sync.is_active = 0, is_cb_active = 1
+01-18 12:46:00.842 E/mm-camera(  722): <MCT   ><ERROR> 2722: mct_stream_process_bus_msg: Check the runing function blackjoe 
+01-18 12:46:00.842 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 457: Enter callback by blackjoe
+01-18 12:46:00.842 E/mm-camera(  722): <MCT   ><ERROR> 2755: mct_stream_process_bus_msg: isp_sof_bus_msg is 0xecac1450
+01-18 12:46:00.842 E/mm-camera(  722): <MCT   ><ERROR> 2757: mct_stream_process_bus_msg: frameid is 4 hal_version is 3
+01-18 12:46:00.842 E/mm-camera(  722): <MCT   ><ERROR> 2759: mct_stream_process_bus_msg: kstate_ptr is 0xe9d5f254, isp_kstate_ptr is 0xeda49000
+01-18 12:46:00.842 E/mm-camera(  722): <MCT   ><ERROR> 2765: mct_stream_process_bus_msg: frame_id is 4
+01-18 12:46:00.843 E/QCamera (  722): <MCI><ERROR> mm_stream_data_notify: 337: E, my_handle = 0x2400, fd = 69, state = 6 blackjoe
+01-18 12:46:00.843 E/QCamera (  722): <MCI><ERROR> mm_stream_read_msm_frame: 1723: E, my_handle = 0x2400, fd = 69, state = 6 blackjoe
+01-18 12:46:00.843 I/QCamera (  722): <MCI><INFO> mm_stream_read_msm_frame: 1770: VIDIOC_DQBUF buf_index 3, frame_idx 3, stream type 7, rc 0,queued: 17, buf_type = 0 flags = 8192 FD = 69 my_num 0 buf fd 88
+01-18 12:46:00.843 E/QCamera (  722): <MCI><ERROR> mm_stream_read_msm_frame: 1790: X rc = 0
+01-18 12:46:00.843 I/QCamera (  722): <MCI><INFO> mm_stream_handle_rcvd_buf: 220: E, my_handle = 0x2400, fd = 69, state = 6
+01-18 12:46:00.843 I/QCamera (  722): <MCI><INFO> mm_stream_handle_rcvd_buf: 244: has cb and it is active by blackjoe
+01-18 12:46:00.843 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 415: E, my_handle = 0x2400, fd = 69, state = 6
+01-18 12:46:00.843 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 436: frame_sync.is_active = 0, is_cb_active = 1
+01-18 12:46:00.844 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 457: Enter callback by blackjoe
+01-18 12:46:00.847 E/mm-camera(  722): <STATS_AIS ><ERROR> 1316: dsps_process_response_gyro: Query request denied, error code = 5, QId_valid = 1, QueryId = 0x40a, AckNak_valid = 1, AckNak = 3
+01-18 12:46:00.850 E/mm-camera(  722): <MCT   ><ERROR> 4828: mct_pipeline_process_serv_msg: pipeline blackjoe data->sessionid 3 pipeline->session 3 msgid 3
+01-18 12:46:00.850 E/mm-camera(  722): <MCT   ><ERROR> 4299: mct_pipeline_process_set: command is 0x8000014 blackjoe CAM_PRIV_PARM 0x8000014
+01-18 12:46:00.852 I/BarCodeReader( 4265): Event message: 400, arg1=0x1, arg2=0
+01-18 12:46:00.852 I/BarCodeReader( 4265): Event message: 10000, arg1=0x30, arg2=16
+01-18 12:46:00.857 E/QCamera (  722): <MCI><ERROR> mm_stream_data_notify: 337: E, my_handle = 0x2501, fd = 78, state = 6 blackjoe
+01-18 12:46:00.857 E/QCamera (  722): <MCI><ERROR> mm_stream_read_msm_frame: 1723: E, my_handle = 0x2501, fd = 78, state = 6 blackjoe
+01-18 12:46:00.857 I/QCamera (  722): <MCI><INFO> mm_stream_read_msm_frame: 1770: VIDIOC_DQBUF buf_index 7, frame_idx 4, stream type 8, rc 0,queued: 5, buf_type = 0 flags = 8192 FD = 78 my_num 0 buf fd 126
+01-18 12:46:00.857 E/QCamera (  722): <MCI><ERROR> mm_stream_read_msm_frame: 1790: X rc = 0
+01-18 12:46:00.857 E/mm-camera(  722): <SENSOR><ERROR> 4883: sensor_get_frame_duration: resolution is invalid, it seems stream has stopped.
+01-18 12:46:00.857 I/QCamera (  722): <MCI><INFO> mm_stream_handle_rcvd_buf: 220: E, my_handle = 0x2501, fd = 78, state = 6
+01-18 12:46:00.857 I/QCamera (  722): <MCI><INFO> mm_stream_handle_rcvd_buf: 244: has cb and it is active by blackjoe
+01-18 12:46:00.865 E/        (    0): frame_src is 1 frame_id is 5 blackjoe
+01-18 12:46:00.857 E/mm-camera(  722): <SENSOR><ERROR> 884: sensor_fc_report_meta: Failed to get frame duration
+01-18 12:46:00.857 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 415: E, my_handle = 0x2501, fd = 78, state = 6
+01-18 12:46:00.857 E/mm-camera(  722): <SENSOR><ERROR> 4805: sensor_get_exposure_time: resolution is invalid, it seems stream has stopped.
+01-18 12:46:00.857 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 436: frame_sync.is_active = 0, is_cb_active = 1
+01-18 12:46:00.857 E/mm-camera(  722): <SENSOR><ERROR> 904: sensor_fc_report_meta: Failed to get exposure time
+01-18 12:46:00.858 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 457: Enter callback by blackjoe
+01-18 12:46:00.858 E/mm-camera(  722): <MCT   ><ERROR> 2722: mct_stream_process_bus_msg: Check the runing function blackjoe 
+01-18 12:46:00.858 E/mm-camera(  722): <MCT   ><ERROR> 2755: mct_stream_process_bus_msg: isp_sof_bus_msg is 0xecac0250
+01-18 12:46:00.859 E/mm-camera(  722): <MCT   ><ERROR> 2757: mct_stream_process_bus_msg: frameid is 5 hal_version is 3
+01-18 12:46:00.859 E/mm-camera(  722): <MCT   ><ERROR> 2759: mct_stream_process_bus_msg: kstate_ptr is 0xe9d5f254, isp_kstate_ptr is 0xeda49000
+01-18 12:46:00.859 E/mm-camera(  722): <MCT   ><ERROR> 2765: mct_stream_process_bus_msg: frame_id is 5
+01-18 12:46:00.859 E/QCamera (  722): <MCI><ERROR> mm_stream_data_notify: 337: E, my_handle = 0x2400, fd = 69, state = 6 blackjoe
+01-18 12:46:00.859 E/QCamera (  722): <MCI><ERROR> mm_stream_read_msm_frame: 1723: E, my_handle = 0x2400, fd = 69, state = 6 blackjoe
+01-18 12:46:00.860 I/QCamera (  722): <MCI><INFO> mm_stream_read_msm_frame: 1770: VIDIOC_DQBUF buf_index 4, frame_idx 4, stream type 7, rc 0,queued: 17, buf_type = 0 flags = 8192 FD = 69 my_num 0 buf fd 90
+01-18 12:46:00.860 E/QCamera (  722): <MCI><ERROR> mm_stream_read_msm_frame: 1790: X rc = 0
+01-18 12:46:00.860 I/QCamera (  722): <MCI><INFO> mm_stream_handle_rcvd_buf: 220: E, my_handle = 0x2400, fd = 69, state = 6
+01-18 12:46:00.860 I/QCamera (  722): <MCI><INFO> mm_stream_handle_rcvd_buf: 244: has cb and it is active by blackjoe
+01-18 12:46:00.861 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 415: E, my_handle = 0x2400, fd = 69, state = 6
+01-18 12:46:00.861 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 436: frame_sync.is_active = 0, is_cb_active = 1
+01-18 12:46:00.861 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 457: Enter callback by blackjoe
+01-18 12:46:00.862 E/mm-camera(  722): <STATS_AIS ><ERROR> 1316: dsps_process_response_gyro: Query request denied, error code = 5, QId_valid = 1, QueryId = 0x50a, AckNak_valid = 1, AckNak = 3
+01-18 12:46:00.863 I/EffectsFactory(  718): EffectCreate() create_effect
+01-18 12:46:00.865 D/qdgralloc( 4265): Imported handle: 0x7baea28ef0 id: 2104
+01-18 12:46:00.865 D/qdgralloc( 4265): GetTransportSize: num fds: 2 num ints: 22 err:0
+01-18 12:46:00.866 D/qdgralloc( 1374): Imported handle: 0xe8740390 id: 2104
+01-18 12:46:00.866 D/qdgralloc( 1374): GetTransportSize: num fds: 2 num ints: 22 err:0
+01-18 12:46:00.867 W/APM::AudioPolicyEngine(  855): getDevicesForStrategy() unknown strategy: -1
+01-18 12:46:00.867 W/APM::AudioPolicyEngine(  855): getDevicesForStrategy() unknown strategy: -1
+01-18 12:46:00.867 D/qdgralloc(  722): Imported handle: 0xe4903690 id: 2104
+01-18 12:46:00.869 E/mm-camera(  722): <MCT   ><ERROR> 4828: mct_pipeline_process_serv_msg: pipeline blackjoe data->sessionid 3 pipeline->session 3 msgid 3
+01-18 12:46:00.869 E/mm-camera(  722): <MCT   ><ERROR> 4299: mct_pipeline_process_set: command is 0x8000014 blackjoe CAM_PRIV_PARM 0x8000014
+01-18 12:46:00.870 I/system_server( 1670): oneway function results will be dropped but finished with status OK and parcel size 4
+01-18 12:46:00.870 I/system_server( 1670): oneway function results will be dropped but finished with status OK and parcel size 4
+01-18 12:46:00.871 E/volume_listener(  718): check_and_set_gain_dep_cal: Failed to set gain dep cal level
+01-18 12:46:00.871 D/audio_hw_primary(  718): start_output_stream: enter: stream(0xf1a864c0)usecase(1: low-latency-playback) devices(0x2) is_haptic_usecase(0)
+01-18 12:46:00.872 D/audio_hw_primary(  718): select_devices for use case (low-latency-playback)
+01-18 12:46:00.872 D/SDL_SCAN( 4265): 0120012345678909
+01-18 12:46:00.872 I/msm8974_platform(  718): platform_check_and_set_codec_backend_cfg:becf: afe: bitwidth 16, samplerate 48000 channels 2, backend_idx 0 usecase = 1 device (speaker)
+01-18 12:46:00.872 D/SDL_SCAN( 4265): Scan_Complete
+01-18 12:46:00.872 I/msm8974_platform(  718): platform_check_and_set_codec_backend_cfg: new_snd_devices[0] is 2
+01-18 12:46:00.872 I/msm8974_platform(  718): platform_check_codec_backend_cfg:becf: afe: bitwidth 16, samplerate 48000 channels 2, backend_idx 0 usecase = 1 device (speaker)
+01-18 12:46:00.876 D/msm8974_platform(  718): platform_check_codec_backend_cfg:becf: updated afe: bitwidth 16, samplerate 48000 channels 2,backend_idx 0 usecase = 1 device (speaker)
+01-18 12:46:00.876 I/msm8974_platform(  718): platform_check_codec_backend_cfg:becf: afe: Codec selected backend: 0 updated bit width: 16 and sample rate: 48000
+01-18 12:46:00.876 D/audio_hw_primary(  718): check_usecases_codec_backend:becf: force routing 0
+01-18 12:46:00.877 D/audio_hw_primary(  718): check_usecases_codec_backend:becf: (84) check_usecases curr device: speaker, usecase device: backends match 0
+01-18 12:46:00.877 D/audio_hw_primary(  718): check_usecases_codec_backend:becf: check_usecases num.of Usecases to switch 0
+01-18 12:46:00.877 D/hardware_info(  718): hw_info_append_hw_type : device_name = speaker
+01-18 12:46:00.877 D/audio_hw_primary(  718): enable_snd_device: snd_device(2: speaker)
+01-18 12:46:00.877 D/msm8974_platform(  718): platform_get_island_cfg_on_device:island cfg status on snd_device = (speaker 0)
+01-18 12:46:00.877 I/soundtrigger(  718): audio_extn_sound_trigger_update_device_status: device 0x2 of type 0 for Event 1, with Raise=0
+01-18 12:46:00.878 D/audio_route(  718): Apply path: speaker
+01-18 12:46:00.893 E/        (    0): tavil_codec tavil_codec: ASoC: DAPM unknown pin Lineout_3 amp
+01-18 12:46:00.894 D/soundtrigger(  718): audio_extn_sound_trigger_update_stream_status: uc_info->id 1 of type 0 for Event 3, with Raise=0
+01-18 12:46:00.894 D/audio_hw_utils(  718): audio_extn_utils_send_app_type_cfg: usecase->out_snd_device speaker
+01-18 12:46:00.895 I/audio_hw_utils(  718): send_app_type_cfg_for_device PLAYBACK app_type 69937, acdb_dev_id 14, sample_rate 48000, snd_device_be_idx 2
+01-18 12:46:00.897 D/ACDB-LOADER(  718): ACDB -> send_audio_cal, acdb_id = 14, path = 0, app id = 0x11131, sample rate = 48000, afe_sample_rate = 48000
+01-18 12:46:00.897 D/ACDB-LOADER(  718): ACDB -> send_asm_topology
+01-18 12:46:00.897 D/ACDB-LOADER(  718): ACDB -> ACDB_CMD_GET_AUDPROC_STREAM_TOPOLOGY_ID
+01-18 12:46:00.897 D/ACDB-LOADER(  718): ACDB -> send_adm_topology
+01-18 12:46:00.897 D/ACDB-LOADER(  718): ACDB -> ACDB_CMD_GET_AUDPROC_COMMON_TOPOLOGY_ID
+01-18 12:46:00.897 D/ACDB-LOADER(  718): ACDB -> send_audtable
+01-18 12:46:00.897 D/ACDB-LOADER(  718): ACDB -> ACDB_CMD_GET_AUDPROC_COMMON_TABLE_SIZE
+01-18 12:46:00.897 D/ACDB-LOADER(  718): ACDB -> ACDB_CMD_GET_AUDPROC_COMMON_TABLE
+01-18 12:46:00.898 D/ACDB-LOADER(  718): ACDB -> AUDIO_SET_AUDPROC_CAL cal_type[11] acdb_id[14] app_type[69937]
+01-18 12:46:00.898 D/ACDB-LOADER(  718): ACDB -> send_audvoltable
+01-18 12:46:00.898 D/ACDB-LOADER(  718): ACDB -> ACDB_CMD_GET_AUDPROC_GAIN_DEP_STEP_TABLE_SIZE
+01-18 12:46:00.898 D/ACDB-LOADER(  718): ACDB -> ACDB_CMD_GET_AUDPROC_GAIN_DEP_STEP_TABLE, vol index 0
+01-18 12:46:00.898 D/ACDB-LOADER(  718): ACDB -> AUDIO_SET_VOL_CAL cal type = 12
+01-18 12:46:00.898 D/ACDB-LOADER(  718): ACDB -> ACDB_CMD_GET_AUDPROC_STREAM_TABLE_SIZE
+01-18 12:46:00.898 D/ACDB-LOADER(  718): ACDB -> send_audstrmtable
+01-18 12:46:00.898 D/ACDB-LOADER(  718): ACDB -> ACDB_CMD_GET_AUDPROC_STREAM_TABLE_V2
+01-18 12:46:00.898 D/ACDB-LOADER(  718): ACDB -> audstrm_cal->cal_type.cal_data.cal_size = 16
+01-18 12:46:00.898 D/ACDB-LOADER(  718): ACDB -> send_afe_topology
+01-18 12:46:00.898 D/ACDB-LOADER(  718): ACDB -> ACDB_CMD_GET_AFE_TOPOLOGY_ID
+01-18 12:46:00.898 D/ACDB-LOADER(  718): ACDB -> GET_AFE_TOPOLOGY_ID for adcd_id 14, Topology Id 1025e
+01-18 12:46:00.899 D/ACDB-LOADER(  718): ACDB -> send_afe_cal
+01-18 12:46:00.899 D/ACDB-LOADER(  718): ACDB -> ACDB_CMD_GET_AFE_COMMON_TABLE_SIZE
+01-18 12:46:00.899 D/ACDB-LOADER(  718): ACDB -> ACDB_CMD_GET_AFE_COMMON_TABLE
+01-18 12:46:00.899 D/ACDB-LOADER(  718): ACDB -> AUDIO_SET_AFE_CAL cal_type[16] acdb_id[14]
+01-18 12:46:00.899 D/ACDB-LOADER(  718): ACDB -> send_hw_delay : acdb_id = 14 path = 0
+01-18 12:46:00.899 D/ACDB-LOADER(  718): ACDB -> ACDB_AVSYNC_INFO: ACDB_CMD_GET_DEVICE_PROPERTY
+01-18 12:46:00.899 D/audio_hw_primary(  718): enable_audio_route: apply mixer and update path: low-latency-playback
+01-18 12:46:00.899 D/audio_route(  718): Apply path: low-latency-playback
+01-18 12:46:00.918 E/        (    0): frame_src is 1 frame_id is 6 blackjoe
+01-18 12:46:00.910 E/QCamera (  722): <MCI><ERROR> mm_stream_data_notify: 337: E, my_handle = 0x2501, fd = 78, state = 6 blackjoe
+01-18 12:46:00.910 E/mm-camera(  722): <SENSOR><ERROR> 4883: sensor_get_frame_duration: resolution is invalid, it seems stream has stopped.
+01-18 12:46:00.910 E/mm-camera(  722): <SENSOR><ERROR> 884: sensor_fc_report_meta: Failed to get frame duration
+01-18 12:46:00.910 E/mm-camera(  722): <SENSOR><ERROR> 4805: sensor_get_exposure_time: resolution is invalid, it seems stream has stopped.
+01-18 12:46:00.910 E/QCamera (  722): <MCI><ERROR> mm_stream_read_msm_frame: 1723: E, my_handle = 0x2501, fd = 78, state = 6 blackjoe
+01-18 12:46:00.910 E/mm-camera(  722): <SENSOR><ERROR> 904: sensor_fc_report_meta: Failed to get exposure time
+01-18 12:46:00.911 I/QCamera (  722): <MCI><INFO> mm_stream_read_msm_frame: 1770: VIDIOC_DQBUF buf_index 8, frame_idx 5, stream type 8, rc 0,queued: 5, buf_type = 0 flags = 8192 FD = 78 my_num 0 buf fd 129
+01-18 12:46:00.911 E/mm-camera(  722): <MCT   ><ERROR> 2722: mct_stream_process_bus_msg: Check the runing function blackjoe 
+01-18 12:46:00.911 E/QCamera (  722): <MCI><ERROR> mm_stream_read_msm_frame: 1790: X rc = 0
+01-18 12:46:00.911 I/QCamera (  722): <MCI><INFO> mm_stream_handle_rcvd_buf: 220: E, my_handle = 0x2501, fd = 78, state = 6
+01-18 12:46:00.911 I/QCamera (  722): <MCI><INFO> mm_stream_handle_rcvd_buf: 244: has cb and it is active by blackjoe
+01-18 12:46:00.912 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 415: E, my_handle = 0x2501, fd = 78, state = 6
+01-18 12:46:00.912 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 436: frame_sync.is_active = 0, is_cb_active = 1
+01-18 12:46:00.912 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 457: Enter callback by blackjoe
+01-18 12:46:00.912 E/mm-camera(  722): <MCT   ><ERROR> 2755: mct_stream_process_bus_msg: isp_sof_bus_msg is 0xecac0250
+01-18 12:46:00.912 E/mm-camera(  722): <MCT   ><ERROR> 2757: mct_stream_process_bus_msg: frameid is 6 hal_version is 3
+01-18 12:46:00.912 E/mm-camera(  722): <STATS_AIS ><ERROR> 1316: dsps_process_response_gyro: Query request denied, error code = 5, QId_valid = 1, QueryId = 0x60a, AckNak_valid = 1, AckNak = 3
+01-18 12:46:00.912 E/mm-camera(  722): <MCT   ><ERROR> 2759: mct_stream_process_bus_msg: kstate_ptr is 0xe9d5f254, isp_kstate_ptr is 0xeda49000
+01-18 12:46:00.913 E/mm-camera(  722): <MCT   ><ERROR> 2765: mct_stream_process_bus_msg: frame_id is 6
+01-18 12:46:00.914 E/QCamera (  722): <MCI><ERROR> mm_stream_data_notify: 337: E, my_handle = 0x2400, fd = 69, state = 6 blackjoe
+01-18 12:46:00.914 E/QCamera (  722): <MCI><ERROR> mm_stream_read_msm_frame: 1723: E, my_handle = 0x2400, fd = 69, state = 6 blackjoe
+01-18 12:46:00.914 I/QCamera (  722): <MCI><INFO> mm_stream_read_msm_frame: 1770: VIDIOC_DQBUF buf_index 5, frame_idx 5, stream type 7, rc 0,queued: 17, buf_type = 0 flags = 8192 FD = 69 my_num 0 buf fd 92
+01-18 12:46:00.914 E/QCamera (  722): <MCI><ERROR> mm_stream_read_msm_frame: 1790: X rc = 0
+01-18 12:46:00.914 I/QCamera (  722): <MCI><INFO> mm_stream_handle_rcvd_buf: 220: E, my_handle = 0x2400, fd = 69, state = 6
+01-18 12:46:00.914 I/QCamera (  722): <MCI><INFO> mm_stream_handle_rcvd_buf: 244: has cb and it is active by blackjoe
+01-18 12:46:00.914 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 415: E, my_handle = 0x2400, fd = 69, state = 6
+01-18 12:46:00.914 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 436: frame_sync.is_active = 0, is_cb_active = 1
+01-18 12:46:00.915 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 457: Enter callback by blackjoe
+01-18 12:46:00.934 I/__afe_port_start(    0): port id: 0x4000
+01-18 12:46:00.934 I/afe_find_cal_topo_id_by_port(    0): port id: 0x4000, dev_acdb_id: 14
+01-18 12:46:00.934 I/afe_find_cal_topo_id_by_port(    0): top_id:1025e acdb_id:14 afe_port_id:0x4000
+01-18 12:46:00.934 I/afe_get_cal_topology_id(    0): port_id = 0x4000 acdb_id = 14 topology_id = 0x1025e cal_type_index=8 ret=0
+01-18 12:46:00.935 I/afe_send_port_topology_id(    0): AFE set topology id 0x1025e  enable for port 0x4000 ret 0
+01-18 12:46:00.935 E/        (    0): frame_src is 1 frame_id is 7 blackjoe
+01-18 12:46:00.927 E/QCamera (  722): <MCI><ERROR> mm_stream_data_notify: 337: E, my_handle = 0x2501, fd = 78, state = 6 blackjoe
+01-18 12:46:00.935 I/send_afe_cal_type(    0): cal_index is 0
+01-18 12:46:00.935 I/send_afe_cal_type(    0): dev_acdb_id[15] is 14
+01-18 12:46:00.927 E/QCamera (  722): <MCI><ERROR> mm_stream_read_msm_frame: 1723: E, my_handle = 0x2501, fd = 78, state = 6 blackjoe
+01-18 12:46:00.935 I/afe_find_cal(    0): cal_index 0 port_id 0x4000 port_index 15
+01-18 12:46:00.935 I/afe_find_cal(    0): acdb_id 14 dev_acdb_id 14 sample_rate 48000 afe_sample_rates 48000
+01-18 12:46:00.935 I/afe_find_cal(    0): cal block is a match, size is 1372
+01-18 12:46:00.935 I/send_afe_cal_type(    0): Sending cal_index cal 0
+01-18 12:46:00.927 I/QCamera (  722): <MCI><INFO> mm_stream_read_msm_frame: 1770: VIDIOC_DQBUF buf_index 9, frame_idx 6, stream type 8, rc 0,queued: 4, buf_type = 0 flags = 8192 FD = 78 my_num 0 buf fd 132
+01-18 12:46:00.927 E/QCamera (  722): <MCI><ERROR> mm_stream_read_msm_frame: 1790: X rc = 0
+01-18 12:46:00.927 I/QCamera (  722): <MCI><INFO> mm_stream_handle_rcvd_buf: 220: E, my_handle = 0x2501, fd = 78, state = 6
+01-18 12:46:00.927 I/QCamera (  722): <MCI><INFO> mm_stream_handle_rcvd_buf: 244: has cb and it is active by blackjoe
+01-18 12:46:00.927 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 415: E, my_handle = 0x2501, fd = 78, state = 6
+01-18 12:46:00.928 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 436: frame_sync.is_active = 0, is_cb_active = 1
+01-18 12:46:00.928 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 457: Enter callback by blackjoe
+01-18 12:46:00.928 E/mm-camera(  722): <SENSOR><ERROR> 4883: sensor_get_frame_duration: resolution is invalid, it seems stream has stopped.
+01-18 12:46:00.928 E/mm-camera(  722): <SENSOR><ERROR> 884: sensor_fc_report_meta: Failed to get frame duration
+01-18 12:46:00.928 E/mm-camera(  722): <SENSOR><ERROR> 4805: sensor_get_exposure_time: resolution is invalid, it seems stream has stopped.
+01-18 12:46:00.928 E/mm-camera(  722): <SENSOR><ERROR> 904: sensor_fc_report_meta: Failed to get exposure time
+01-18 12:46:00.929 E/mm-camera(  722): <MCT   ><ERROR> 2722: mct_stream_process_bus_msg: Check the runing function blackjoe 
+01-18 12:46:00.929 W/MessageQueue( 4265): Handler (android.view.textservice.SpellCheckerSession$1) {e9a3bf8} sending message to a Handler on a dead thread
+01-18 12:46:00.929 W/MessageQueue( 4265): java.lang.IllegalStateException: Handler (android.view.textservice.SpellCheckerSession$1) {e9a3bf8} sending message to a Handler on a dead thread
+01-18 12:46:00.929 W/MessageQueue( 4265): 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:560)
+01-18 12:46:00.929 W/MessageQueue( 4265): 	at android.os.Handler.enqueueMessage(Handler.java:778)
+01-18 12:46:00.929 W/MessageQueue( 4265): 	at android.os.Handler.sendMessageAtTime(Handler.java:727)
+01-18 12:46:00.929 W/MessageQueue( 4265): 	at android.os.Handler.sendMessageDelayed(Handler.java:697)
+01-18 12:46:00.929 W/MessageQueue( 4265): 	at android.os.Handler.sendMessage(Handler.java:635)
+01-18 12:46:00.929 W/MessageQueue( 4265): 	at android.view.textservice.SpellCheckerSession$SpellCheckerSessionListenerImpl.onGetSentenceSuggestions(SpellCheckerSession.java:507)
+01-18 12:46:00.929 W/MessageQueue( 4265): 	at com.android.internal.textservice.ISpellCheckerSessionListener$Stub.onTransact(ISpellCheckerSessionListener.java:99)
+01-18 12:46:00.929 W/MessageQueue( 4265): 	at android.os.Binder.execTransactInternal(Binder.java:1159)
+01-18 12:46:00.929 W/MessageQueue( 4265): 	at android.os.Binder.execTransact(Binder.java:1123)
+01-18 12:46:00.929 E/mm-camera(  722): <MCT   ><ERROR> 2755: mct_stream_process_bus_msg: isp_sof_bus_msg is 0xecac0250
+01-18 12:46:00.929 E/mm-camera(  722): <MCT   ><ERROR> 2757: mct_stream_process_bus_msg: frameid is 7 hal_version is 3
+01-18 12:46:00.929 E/mm-camera(  722): <MCT   ><ERROR> 2759: mct_stream_process_bus_msg: kstate_ptr is 0xe9d5f254, isp_kstate_ptr is 0xeda49000
+01-18 12:46:00.929 E/mm-camera(  722): <MCT   ><ERROR> 2765: mct_stream_process_bus_msg: frame_id is 7
+01-18 12:46:00.936 I/afe_send_hw_delay(    0): port_id 0x4000 rate 48000 delay_usec 474 status 0
+01-18 12:46:00.930 E/QCamera (  722): <MCI><ERROR> mm_stream_data_notify: 337: E, my_handle = 0x2400, fd = 69, state = 6 blackjoe
+01-18 12:46:00.930 E/QCamera (  722): <MCI><ERROR> mm_stream_read_msm_frame: 1723: E, my_handle = 0x2400, fd = 69, state = 6 blackjoe
+01-18 12:46:00.930 I/QCamera (  722): <MCI><INFO> mm_stream_read_msm_frame: 1770: VIDIOC_DQBUF buf_index 6, frame_idx 6, stream type 7, rc 0,queued: 17, buf_type = 0 flags = 8192 FD = 69 my_num 0 buf fd 94
+01-18 12:46:00.930 E/QCamera (  722): <MCI><ERROR> mm_stream_read_msm_frame: 1790: X rc = 0
+01-18 12:46:00.930 I/QCamera (  722): <MCI><INFO> mm_stream_handle_rcvd_buf: 220: E, my_handle = 0x2400, fd = 69, state = 6
+01-18 12:46:00.931 I/QCamera (  722): <MCI><INFO> mm_stream_handle_rcvd_buf: 244: has cb and it is active by blackjoe
+01-18 12:46:00.931 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 415: E, my_handle = 0x2400, fd = 69, state = 6
+01-18 12:46:00.931 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 436: frame_sync.is_active = 0, is_cb_active = 1
+01-18 12:46:00.931 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 457: Enter callback by blackjoe
+01-18 12:46:00.932 E/mm-camera(  722): <STATS_AIS ><ERROR> 1316: dsps_process_response_gyro: Query request denied, error code = 5, QId_valid = 1, QueryId = 0x70a, AckNak_valid = 1, AckNak = 3
+01-18 12:46:00.951 E/        (    0): frame_src is 1 frame_id is 8 blackjoe
+01-18 12:46:00.943 E/QCamera (  722): <MCI><ERROR> mm_stream_data_notify: 337: E, my_handle = 0x2501, fd = 78, state = 6 blackjoe
+01-18 12:46:00.943 E/QCamera (  722): <MCI><ERROR> mm_stream_read_msm_frame: 1723: E, my_handle = 0x2501, fd = 78, state = 6 blackjoe
+01-18 12:46:00.943 E/mm-camera(  722): <SENSOR><ERROR> 4883: sensor_get_frame_duration: resolution is invalid, it seems stream has stopped.
+01-18 12:46:00.943 I/QCamera (  722): <MCI><INFO> mm_stream_read_msm_frame: 1770: VIDIOC_DQBUF buf_index 10, frame_idx 7, stream type 8, rc 0,queued: 3, buf_type = 0 flags = 8192 FD = 78 my_num 0 buf fd 137
+01-18 12:46:00.943 E/mm-camera(  722): <SENSOR><ERROR> 884: sensor_fc_report_meta: Failed to get frame duration
+01-18 12:46:00.944 E/QCamera (  722): <MCI><ERROR> mm_stream_read_msm_frame: 1790: X rc = 0
+01-18 12:46:00.944 E/mm-camera(  722): <SENSOR><ERROR> 4805: sensor_get_exposure_time: resolution is invalid, it seems stream has stopped.
+01-18 12:46:00.944 I/QCamera (  722): <MCI><INFO> mm_stream_handle_rcvd_buf: 220: E, my_handle = 0x2501, fd = 78, state = 6
+01-18 12:46:00.944 E/mm-camera(  722): <SENSOR><ERROR> 904: sensor_fc_report_meta: Failed to get exposure time
+01-18 12:46:00.944 I/QCamera (  722): <MCI><INFO> mm_stream_handle_rcvd_buf: 244: has cb and it is active by blackjoe
+01-18 12:46:00.944 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 415: E, my_handle = 0x2501, fd = 78, state = 6
+01-18 12:46:00.944 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 436: frame_sync.is_active = 0, is_cb_active = 1
+01-18 12:46:00.944 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 457: Enter callback by blackjoe
+01-18 12:46:00.944 E/mm-camera(  722): <MCT   ><ERROR> 2722: mct_stream_process_bus_msg: Check the runing function blackjoe 
+01-18 12:46:00.944 E/mm-camera(  722): <MCT   ><ERROR> 2755: mct_stream_process_bus_msg: isp_sof_bus_msg is 0xecac0250
+01-18 12:46:00.944 E/mm-camera(  722): <MCT   ><ERROR> 2757: mct_stream_process_bus_msg: frameid is 8 hal_version is 3
+01-18 12:46:00.944 E/mm-camera(  722): <MCT   ><ERROR> 2759: mct_stream_process_bus_msg: kstate_ptr is 0xe9d5f254, isp_kstate_ptr is 0xeda49000
+01-18 12:46:00.945 E/mm-camera(  722): <MCT   ><ERROR> 2765: mct_stream_process_bus_msg: frame_id is 8
+01-18 12:46:00.946 E/QCamera (  722): <MCI><ERROR> mm_stream_data_notify: 337: E, my_handle = 0x2400, fd = 69, state = 6 blackjoe
+01-18 12:46:00.946 E/QCamera (  722): <MCI><ERROR> mm_stream_read_msm_frame: 1723: E, my_handle = 0x2400, fd = 69, state = 6 blackjoe
+01-18 12:46:00.946 I/QCamera (  722): <MCI><INFO> mm_stream_read_msm_frame: 1770: VIDIOC_DQBUF buf_index 7, frame_idx 7, stream type 7, rc 0,queued: 17, buf_type = 0 flags = 8192 FD = 69 my_num 0 buf fd 96
+01-18 12:46:00.946 E/QCamera (  722): <MCI><ERROR> mm_stream_read_msm_frame: 1790: X rc = 0
+01-18 12:46:00.946 I/QCamera (  722): <MCI><INFO> mm_stream_handle_rcvd_buf: 220: E, my_handle = 0x2400, fd = 69, state = 6
+01-18 12:46:00.946 I/QCamera (  722): <MCI><INFO> mm_stream_handle_rcvd_buf: 244: has cb and it is active by blackjoe
+01-18 12:46:00.947 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 415: E, my_handle = 0x2400, fd = 69, state = 6
+01-18 12:46:00.947 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 436: frame_sync.is_active = 0, is_cb_active = 1
+01-18 12:46:00.947 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 457: Enter callback by blackjoe
+01-18 12:46:00.952 E/mm-camera(  722): <STATS_AIS ><ERROR> 1316: dsps_process_response_gyro: Query request denied, error code = 5, QId_valid = 1, QueryId = 0x80a, AckNak_valid = 1, AckNak = 3
+01-18 12:46:00.968 E/        (    0): frame_src is 1 frame_id is 9 blackjoe
+01-18 12:46:00.960 E/QCamera (  722): <MCI><ERROR> mm_stream_data_notify: 337: E, my_handle = 0x2501, fd = 78, state = 6 blackjoe
+01-18 12:46:00.960 E/QCamera (  722): <MCI><ERROR> mm_stream_read_msm_frame: 1723: E, my_handle = 0x2501, fd = 78, state = 6 blackjoe
+01-18 12:46:00.960 E/mm-camera(  722): <SENSOR><ERROR> 4883: sensor_get_frame_duration: resolution is invalid, it seems stream has stopped.
+01-18 12:46:00.960 E/mm-camera(  722): <SENSOR><ERROR> 884: sensor_fc_report_meta: Failed to get frame duration
+01-18 12:46:00.960 I/QCamera (  722): <MCI><INFO> mm_stream_read_msm_frame: 1770: VIDIOC_DQBUF buf_index 11, frame_idx 8, stream type 8, rc 0,queued: 2, buf_type = 0 flags = 8192 FD = 78 my_num 0 buf fd 140
+01-18 12:46:00.960 E/mm-camera(  722): <SENSOR><ERROR> 4805: sensor_get_exposure_time: resolution is invalid, it seems stream has stopped.
+01-18 12:46:00.960 E/QCamera (  722): <MCI><ERROR> mm_stream_read_msm_frame: 1790: X rc = 0
+01-18 12:46:00.960 E/mm-camera(  722): <SENSOR><ERROR> 904: sensor_fc_report_meta: Failed to get exposure time
+01-18 12:46:00.960 I/QCamera (  722): <MCI><INFO> mm_stream_handle_rcvd_buf: 220: E, my_handle = 0x2501, fd = 78, state = 6
+01-18 12:46:00.960 I/QCamera (  722): <MCI><INFO> mm_stream_handle_rcvd_buf: 244: has cb and it is active by blackjoe
+01-18 12:46:00.960 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 415: E, my_handle = 0x2501, fd = 78, state = 6
+01-18 12:46:00.960 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 436: frame_sync.is_active = 0, is_cb_active = 1
+01-18 12:46:00.960 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 457: Enter callback by blackjoe
+01-18 12:46:00.961 E/mm-camera(  722): <MCT   ><ERROR> 2722: mct_stream_process_bus_msg: Check the runing function blackjoe 
+01-18 12:46:00.961 E/mm-camera(  722): <MCT   ><ERROR> 2755: mct_stream_process_bus_msg: isp_sof_bus_msg is 0xecac0250
+01-18 12:46:00.962 E/mm-camera(  722): <MCT   ><ERROR> 2757: mct_stream_process_bus_msg: frameid is 9 hal_version is 3
+01-18 12:46:00.962 E/mm-camera(  722): <MCT   ><ERROR> 2759: mct_stream_process_bus_msg: kstate_ptr is 0xe9d5f254, isp_kstate_ptr is 0xeda49000
+01-18 12:46:00.962 E/mm-camera(  722): <MCT   ><ERROR> 2765: mct_stream_process_bus_msg: frame_id is 9
+01-18 12:46:00.962 E/QCamera (  722): <MCI><ERROR> mm_stream_data_notify: 337: E, my_handle = 0x2400, fd = 69, state = 6 blackjoe
+01-18 12:46:00.963 E/QCamera (  722): <MCI><ERROR> mm_stream_read_msm_frame: 1723: E, my_handle = 0x2400, fd = 69, state = 6 blackjoe
+01-18 12:46:00.963 I/QCamera (  722): <MCI><INFO> mm_stream_read_msm_frame: 1770: VIDIOC_DQBUF buf_index 8, frame_idx 8, stream type 7, rc 0,queued: 17, buf_type = 0 flags = 8192 FD = 69 my_num 0 buf fd 98
+01-18 12:46:00.963 E/QCamera (  722): <MCI><ERROR> mm_stream_read_msm_frame: 1790: X rc = 0
+01-18 12:46:00.963 I/QCamera (  722): <MCI><INFO> mm_stream_handle_rcvd_buf: 220: E, my_handle = 0x2400, fd = 69, state = 6
+01-18 12:46:00.963 I/QCamera (  722): <MCI><INFO> mm_stream_handle_rcvd_buf: 244: has cb and it is active by blackjoe
+01-18 12:46:00.963 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 415: E, my_handle = 0x2400, fd = 69, state = 6
+01-18 12:46:00.963 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 436: frame_sync.is_active = 0, is_cb_active = 1
+01-18 12:46:00.963 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 457: Enter callback by blackjoe
+01-18 12:46:00.974 D/logd    (    0): logdr: UID=0 GID=0 PID=26096 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+01-18 12:46:00.967 D/msm8974_platform(  718): platform_set_channel_map mixer_ctl_name:Playback Channel Map13
+01-18 12:46:00.967 D/msm8974_platform(  718): platform_set_channel_map: set mapping(1 2 0 0 0 0 0 0) for channel:2
+01-18 12:46:00.968 E/mm-camera(  722): <STATS_AIS ><ERROR> 1316: dsps_process_response_gyro: Query request denied, error code = 5, QId_valid = 1, QueryId = 0x90a, AckNak_valid = 1, AckNak = 3
+01-18 12:46:00.969 D/audio_hw_primary(  718): start_output_stream: stream_handle(0xf1a864c0) usecase(1: low-latency-playback) out_snd_device(2: speaker)             acdb_id(14) sample_rate(48000) channel_mask(0x3) app_type(69937)             audio_mode(0 : MODE_NORMAL) out_flags(0x6 : OUTPUT_FLAG_PRIMARY|OUTPUT_FLAG_FAST) out_devices(0x2 : OUT_SPEAKER) 
+01-18 12:46:00.969 D/audio_hw_primary(  718): start_output_stream: exit
+01-18 12:46:00.969 D/audio_hw_primary(  718): out_write: retry previous failed cal level set
+01-18 12:46:00.970 D/ACDB-LOADER(  718): ACDB -> send_audvoltable
+01-18 12:46:00.970 D/ACDB-LOADER(  718): ACDB -> ACDB_CMD_GET_AUDPROC_GAIN_DEP_STEP_TABLE_SIZE
+01-18 12:46:00.970 D/ACDB-LOADER(  718): ACDB -> ACDB_CMD_GET_AUDPROC_GAIN_DEP_STEP_TABLE, vol index 5
+01-18 12:46:00.970 D/ACDB-LOADER(  718): ACDB -> AUDIO_SET_VOL_CAL cal type = 40
+01-18 12:46:00.976 E/QCamera (  722): <MCI><ERROR> mm_stream_data_notify: 337: E, my_handle = 0x2501, fd = 78, state = 6 blackjoe
+01-18 12:46:00.976 E/QCamera (  722): <MCI><ERROR> mm_stream_read_msm_frame: 1723: E, my_handle = 0x2501, fd = 78, state = 6 blackjoe
+01-18 12:46:00.976 E/mm-camera(  722): <SENSOR><ERROR> 4883: sensor_get_frame_duration: resolution is invalid, it seems stream has stopped.
+01-18 12:46:00.977 I/QCamera (  722): <MCI><INFO> mm_stream_read_msm_frame: 1770: VIDIOC_DQBUF buf_index 6, frame_idx 9, stream type 8, rc 0,queued: 1, buf_type = 0 flags = 8192 FD = 78 my_num 0 buf fd 76
+01-18 12:46:00.977 E/QCamera (  722): <MCI><ERROR> mm_stream_read_msm_frame: 1790: X rc = 0
+01-18 12:46:00.977 E/mm-camera(  722): <SENSOR><ERROR> 884: sensor_fc_report_meta: Failed to get frame duration
+01-18 12:46:00.977 I/QCamera (  722): <MCI><INFO> mm_stream_handle_rcvd_buf: 220: E, my_handle = 0x2501, fd = 78, state = 6
+01-18 12:46:00.977 I/QCamera (  722): <MCI><INFO> mm_stream_handle_rcvd_buf: 244: has cb and it is active by blackjoe
+01-18 12:46:00.985 E/        (    0): frame_src is 1 frame_id is 10 blackjoe
+01-18 12:46:00.977 E/mm-camera(  722): <SENSOR><ERROR> 4805: sensor_get_exposure_time: resolution is invalid, it seems stream has stopped.
+01-18 12:46:00.977 E/mm-camera(  722): <SENSOR><ERROR> 904: sensor_fc_report_meta: Failed to get exposure time
+01-18 12:46:00.977 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 415: E, my_handle = 0x2501, fd = 78, state = 6
+01-18 12:46:00.977 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 436: frame_sync.is_active = 0, is_cb_active = 1
+01-18 12:46:00.978 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 457: Enter callback by blackjoe
+01-18 12:46:00.978 E/mm-camera(  722): <MCT   ><ERROR> 2722: mct_stream_process_bus_msg: Check the runing function blackjoe 
+01-18 12:46:00.978 E/mm-camera(  722): <MCT   ><ERROR> 2755: mct_stream_process_bus_msg: isp_sof_bus_msg is 0xecac0250
+01-18 12:46:00.978 E/mm-camera(  722): <MCT   ><ERROR> 2757: mct_stream_process_bus_msg: frameid is 10 hal_version is 3
+01-18 12:46:00.979 E/mm-camera(  722): <MCT   ><ERROR> 2759: mct_stream_process_bus_msg: kstate_ptr is 0xe9d5f254, isp_kstate_ptr is 0xeda49000
+01-18 12:46:00.979 E/mm-camera(  722): <MCT   ><ERROR> 2765: mct_stream_process_bus_msg: frame_id is 10
+01-18 12:46:00.979 E/QCamera (  722): <MCI><ERROR> mm_stream_data_notify: 337: E, my_handle = 0x2400, fd = 69, state = 6 blackjoe
+01-18 12:46:00.979 E/QCamera (  722): <MCI><ERROR> mm_stream_read_msm_frame: 1723: E, my_handle = 0x2400, fd = 69, state = 6 blackjoe
+01-18 12:46:00.980 I/QCamera (  722): <MCI><INFO> mm_stream_read_msm_frame: 1770: VIDIOC_DQBUF buf_index 9, frame_idx 9, stream type 7, rc 0,queued: 17, buf_type = 0 flags = 8192 FD = 69 my_num 0 buf fd 100
+01-18 12:46:00.980 E/QCamera (  722): <MCI><ERROR> mm_stream_read_msm_frame: 1790: X rc = 0
+01-18 12:46:00.980 I/QCamera (  722): <MCI><INFO> mm_stream_handle_rcvd_buf: 220: E, my_handle = 0x2400, fd = 69, state = 6
+01-18 12:46:00.980 I/QCamera (  722): <MCI><INFO> mm_stream_handle_rcvd_buf: 244: has cb and it is active by blackjoe
+01-18 12:46:00.980 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 415: E, my_handle = 0x2400, fd = 69, state = 6
+01-18 12:46:00.980 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 436: frame_sync.is_active = 0, is_cb_active = 1
+01-18 12:46:00.981 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 457: Enter callback by blackjoe
+01-18 12:46:00.984 E/mm-camera(  722): <STATS_AIS ><ERROR> 1316: dsps_process_response_gyro: Query request denied, error code = 5, QId_valid = 1, QueryId = 0xa0a, AckNak_valid = 1, AckNak = 3
+01-18 12:46:01.001 E/        (    0): frame_src is 1 frame_id is 11 blackjoe
+01-18 12:46:00.993 E/QCamera (  722): <MCI><ERROR> mm_stream_data_notify: 337: E, my_handle = 0x2501, fd = 78, state = 6 blackjoe
+01-18 12:46:00.993 E/mm-camera(  722): <SENSOR><ERROR> 4883: sensor_get_frame_duration: resolution is invalid, it seems stream has stopped.
+01-18 12:46:00.993 E/QCamera (  722): <MCI><ERROR> mm_stream_read_msm_frame: 1723: E, my_handle = 0x2501, fd = 78, state = 6 blackjoe
+01-18 12:46:00.993 E/mm-camera(  722): <SENSOR><ERROR> 884: sensor_fc_report_meta: Failed to get frame duration
+01-18 12:46:00.994 E/mm-camera(  722): <SENSOR><ERROR> 4805: sensor_get_exposure_time: resolution is invalid, it seems stream has stopped.
+01-18 12:46:00.994 E/mm-camera(  722): <SENSOR><ERROR> 904: sensor_fc_report_meta: Failed to get exposure time
+01-18 12:46:00.995 E/mm-camera(  722): <MCT   ><ERROR> 2722: mct_stream_process_bus_msg: Check the runing function blackjoe 
+01-18 12:46:00.995 I/QCamera (  722): <MCI><INFO> mm_stream_read_msm_frame: 1770: VIDIOC_DQBUF buf_index 7, frame_idx 10, stream type 8, rc 0,queued: 0, buf_type = 0 flags = 8192 FD = 78 my_num 0 buf fd 128
+01-18 12:46:00.995 E/mm-camera(  722): <MCT   ><ERROR> 2755: mct_stream_process_bus_msg: isp_sof_bus_msg is 0xecac0250
+01-18 12:46:00.995 E/QCamera (  722): <MCI><ERROR> mm_stream_read_msm_frame: 1790: X rc = 0
+01-18 12:46:00.995 E/mm-camera(  722): <MCT   ><ERROR> 2757: mct_stream_process_bus_msg: frameid is 11 hal_version is 3
+01-18 12:46:00.995 I/QCamera (  722): <MCI><INFO> mm_stream_handle_rcvd_buf: 220: E, my_handle = 0x2501, fd = 78, state = 6
+01-18 12:46:00.995 E/mm-camera(  722): <MCT   ><ERROR> 2759: mct_stream_process_bus_msg: kstate_ptr is 0xe9d5f254, isp_kstate_ptr is 0xeda49000
+01-18 12:46:00.995 I/QCamera (  722): <MCI><INFO> mm_stream_handle_rcvd_buf: 244: has cb and it is active by blackjoe
+01-18 12:46:00.995 E/mm-camera(  722): <MCT   ><ERROR> 2765: mct_stream_process_bus_msg: frame_id is 11
+01-18 12:46:00.996 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 415: E, my_handle = 0x2501, fd = 78, state = 6
+01-18 12:46:00.996 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 436: frame_sync.is_active = 0, is_cb_active = 1
+01-18 12:46:00.996 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 457: Enter callback by blackjoe
+01-18 12:46:00.996 E/mm-camera(  722): <STATS_AIS ><ERROR> 1316: dsps_process_response_gyro: Query request denied, error code = 5, QId_valid = 1, QueryId = 0xb0a, AckNak_valid = 1, AckNak = 3
+01-18 12:46:00.996 E/QCamera (  722): <MCI><ERROR> mm_stream_data_notify: 337: E, my_handle = 0x2400, fd = 69, state = 6 blackjoe
+01-18 12:46:00.996 E/QCamera (  722): <MCI><ERROR> mm_stream_read_msm_frame: 1723: E, my_handle = 0x2400, fd = 69, state = 6 blackjoe
+01-18 12:46:00.997 I/QCamera (  722): <MCI><INFO> mm_stream_read_msm_frame: 1770: VIDIOC_DQBUF buf_index 10, frame_idx 10, stream type 7, rc 0,queued: 17, buf_type = 0 flags = 8192 FD = 69 my_num 0 buf fd 102
+01-18 12:46:00.997 E/QCamera (  722): <MCI><ERROR> mm_stream_read_msm_frame: 1790: X rc = 0
+01-18 12:46:00.997 I/QCamera (  722): <MCI><INFO> mm_stream_handle_rcvd_buf: 220: E, my_handle = 0x2400, fd = 69, state = 6
+01-18 12:46:00.997 I/QCamera (  722): <MCI><INFO> mm_stream_handle_rcvd_buf: 244: has cb and it is active by blackjoe
+01-18 12:46:00.998 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 415: E, my_handle = 0x2400, fd = 69, state = 6
+01-18 12:46:00.998 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 436: frame_sync.is_active = 0, is_cb_active = 1
+01-18 12:46:00.998 I/QCamera (  722): <MCI><INFO> mm_stream_dispatch_app_data: 457: Enter callback by blackjoe
+01-18 12:46:01.000 E/ACameraDevice( 4265): onDeviceIdle sending state cb
+01-18 12:46:01.000 E/NdkCameraCaptureSession( 4265): ACameraCaptureSession_getDevice: session 0x7bbe9f6960 is already closed
+01-18 12:46:01.000 I/BCReader-JNI( 4265): onReady Getting camera device from session callback failed!
+01-18 12:46:01.000 E/NdkCameraDevice( 4265): ACameraDevice_getId: invalid argument! device is null
+01-18 12:46:01.000 I/BCReader-JNI( 4265): Session for camera (null) is ready!
+01-18 12:46:01.005 I/CameraLatencyHistogram( 1374): Stream 48 dequeueBuffer latency histogram (8) samples:
+01-18 12:46:01.005 I/CameraLatencyHistogram( 1374):         5     10     15     20     25     30     35     40     45    inf (max ms)
+01-18 12:46:01.005 I/CameraLatencyHistogram( 1374):      100.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00 (%)
+01-18 12:46:01.005 I/CameraLatencyHistogram( 1374): Stream 48 latency histogram for wait on max_buffers (2) samples:
+01-18 12:46:01.005 I/CameraLatencyHistogram( 1374):        33     66     99    132    165    198    231    264    297    inf (max ms)
+01-18 12:46:01.005 I/CameraLatencyHistogram( 1374):      50.00   50.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00 (%)
+01-18 12:46:01.008 E/mm-camera(  722): <MCT   ><ERROR> 4828: mct_pipeline_process_serv_msg: pipeline blackjoe data->sessionid 3 pipeline->session 3 msgid 3
+01-18 12:46:01.008 E/mm-camera(  722): <MCT   ><ERROR> 4299: mct_pipeline_process_set: command is 0x8000009 blackjoe CAM_PRIV_PARM 0x8000014
+01-18 12:46:01.008 I/mm-camera(  722): <MCT   >< INFO> 4302: mct_pipeline_process_set: command=8000009
+01-18 12:46:01.008 I/mm-camera(  722): <MCT   >< INFO> 4465: mct_pipeline_process_set:  STREAM-OFF on stream 0x30002 stream type=8
+01-18 12:46:01.009 I/mm-camera(  722): <IFACE >< INFO> 1841: iface_streamoff_to_thread: iface_streamoff_to_thread: E, session id = 3, user stream id = 2
+01-18 12:46:01.009 I/mm-camera(  722): <IFACE >< INFO> 2472: iface_streamoff: E, session_id 3 mct_stream_id = 2
+01-18 12:46:01.009 I/mm-camera(  722): <IFACE >< INFO> 12256: iface_util_get_user_streams_by_bundle: streamoff, first bundled streamoff all bindled streams!
+01-18 12:46:01.018 E/        (    0): frame_src is 1 frame_id is 12 blackjoe
+01-18 12:46:01.014 I/mm-camera(  722): <IFACE >< INFO> 2718: iface_streamoff: session_id = 3, active_streams = 0
+01-18 12:46:01.014 I/mm-camera(  722): <IFACE >< INFO> 2722: iface_streamoff: all bundled stream streamoff, clear hal bundled mask
+01-18 12:46:01.014 I/mm-camera(  722): <IFACE >< INFO> 2727: iface_streamoff: X
+01-18 12:46:01.015 I/mm-camera(  722): <IFACE >< INFO> 1867: iface_streamoff_to_thread: iface_streamoff_to_thread: X, session id = 3, user stream id = 2
+01-18 12:46:01.015 E/mm-camera(  722): <ISP   ><ERROR> 1197: isp_handler_control_streamoff: Bundle streamon count is less than zero
+01-18 12:46:01.015 E/mm-camera(  722): <ISP   ><ERROR> 1201: isp_handler_control_streamoff: invalid stream_on_count 0
+01-18 12:46:01.017 I/mm-camera(  722): <IFACE >< INFO> 11005: iface_util_release_resource: camif_cnt= 0, rdi_cnt= 0, used mask 2
+01-18 12:46:01.017 I/mm-camera(  722): <IFACE >< INFO> 4047: iface_destroy_hw: iface_destroy_hw: Destroy axi hw on VFE :0
+01-18 12:46:01.020 I/mm-camera(  722): <MCT   >< INFO> 4482: mct_pipeline_process_set:  STREAM-OFF success for stream 0x30002, stream type=8
+01-18 12:46:01.020 I/mm-camera(  722): <MCT   >< INFO> 26: mct_refcount_get_object: ref count is already 0. Object is freed.
+01-18 12:46:01.020 E/mm-camera(  722): <MCT   ><ERROR> 229: mct_bus_sof_tracker: Current SOF: 12. SOF missed for 11 frame(s) session 3
+01-18 12:46:01.020 E/mm-camera(  722): <SENSOR><ERROR> 4883: sensor_get_frame_duration: resolution is invalid, it seems stream has stopped.
+01-18 12:46:01.020 E/mm-camera(  722): <SENSOR><ERROR> 884: sensor_fc_report_meta: Failed to get frame duration
+01-18 12:46:01.020 E/mm-camera(  722): <SENSOR><ERROR> 4805: sensor_get_exposure_time: resolution is invalid, it seems stream has stopped.
+01-18 12:46:01.020 E/mm-camera(  722): <SENSOR><ERROR> 904: sensor_fc_report_meta: Failed to get exposure time
+01-18 12:46:01.021 E/mm-camera(  722): <MCT   ><ERROR> 2722: mct_stream_process_bus_msg: Check the runing function blackjoe 
+01-18 12:46:01.021 E/mm-camera(  722): <MCT   ><ERROR> 2755: mct_stream_process_bus_msg: isp_sof_bus_msg is 0xecac0250
+01-18 12:46:01.021 E/mm-camera(  722): <MCT   ><ERROR> 2757: mct_stream_process_bus_msg: frameid is 12 hal_version is 3
+01-18 12:46:01.021 E/mm-camera(  722): <MCT   ><ERROR> 2759: mct_stream_process_bus_msg: kstate_ptr is 0xe9d5f254, isp_kstate_ptr is 0xeda49000
+01-18 12:46:01.021 E/mm-camera(  722): <MCT   ><ERROR> 2765: mct_stream_process_bus_msg: frame_id is 12
+01-18 12:46:01.023 E/mm-camera(  722): <STATS_AIS ><ERROR> 1316: dsps_process_response_gyro: Query request denied, error code = 5, QId_valid = 1, QueryId = 0xc0a, AckNak_valid = 1, AckNak = 3
+01-18 12:46:01.023 E/mm-camera(  722): <MCT   ><ERROR> 4828: mct_pipeline_process_serv_msg: pipeline blackjoe data->sessionid 3 pipeline->session 3 msgid 3
+01-18 12:46:01.023 E/mm-camera(  722): <MCT   ><ERROR> 4299: mct_pipeline_process_set: command is 0x8000009 blackjoe CAM_PRIV_PARM 0x8000014
+01-18 12:46:01.023 I/mm-camera(  722): <MCT   >< INFO> 4302: mct_pipeline_process_set: command=8000009
+01-18 12:46:01.023 I/mm-camera(  722): <MCT   >< INFO> 4465: mct_pipeline_process_set:  STREAM-OFF on stream 0x30001 stream type=7
+01-18 12:46:01.023 I/mm-camera(  722): <MCT   >< INFO> 4482: mct_pipeline_process_set:  STREAM-OFF success for stream 0x30001, stream type=7
+01-18 12:46:01.033 I/QCamera (  722): <HAL><INFO> configureStreamsPerfLocked: 2399: stream[0] type = 0, format = 34, width = 320, height = 240, rotation = 0, usage = 0x800
+01-18 12:46:01.033 E/QCamera (  722): <HAL><ERROR> validateStreamDimensions: 1491: Error: Unsupported size: 320 x 240 type: 34 array size: 1344 x 760
+01-18 12:46:01.033 E/QCamera (  722): <HAL><ERROR> configureStreamsPerfLocked: 2602: Invalid stream configuration requested!
+01-18 12:46:01.033 E/Camera3-Device( 1374): Camera 0: configureStreamsLocked: Set of requested inputs/outputs not supported by HAL
+01-18 12:46:01.033 E/CameraDeviceClient( 1374): endConfigure: Camera 0: Unsupported set of inputs/outputs provided
+01-18 12:46:01.034 E/ACameraDevice( 4265): Camera device 0 cannnot support app output configuration: Status(-8, EX_SERVICE_SPECIFIC): '3: endConfigure:513: Camera 0: Unsupported set of inputs/outputs provided'
+01-18 12:46:01.034 E/ACameraDevice( 4265): Unconfigure stream failed. Device might still be configured! ret -10009
+01-18 12:46:01.035 I/BCReader-JNI( 4265): ACameraCaptureSession_close session=0x7bbe9f6960 takes ~155 ms to close
+01-18 12:46:01.035 D/BCReader-JNI( 4265): LEAVE camera_status_t ZebraCamera::stopPreview():2725
+01-18 12:46:01.044 E/        (    0): [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8
+01-18 12:46:01.044 E/        (    0): [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00
+01-18 12:46:01.049 E/        (    0): [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8
+01-18 12:46:01.054 E/        (    0): [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00
+01-18 12:46:01.059 E/        (    0): [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86
+01-18 12:46:01.065 E/        (    0): [SDL] misc_ioctl msg.len is 2 : 0x88 0x00
+01-18 12:46:01.206 I/ActivityTaskManager( 1670): START u0 {flg=0x10000000 cmp=sdl.android.testapp/.SW_Decode_Android_TestApp_Activity} from uid 0
+01-18 12:46:01.206 D/EventSequenceValidator( 1670): Transition from INTENT_FAILED to INTENT_STARTED
+01-18 12:46:01.210 D/EventSequenceValidator( 1670): Transition from INTENT_STARTED to INTENT_FAILED
+01-18 12:46:01.278 D/AudioTrack( 4265): stop(36): called with 14592 frames delivered
+01-18 12:46:01.349 I/system_server( 1670): oneway function results will be dropped but finished with status OK and parcel size 4
+01-18 12:46:01.350 D/ACDB-LOADER(  718): ACDB -> send_audvoltable
+01-18 12:46:01.351 D/ACDB-LOADER(  718): ACDB -> ACDB_CMD_GET_AUDPROC_GAIN_DEP_STEP_TABLE_SIZE
+01-18 12:46:01.351 D/ACDB-LOADER(  718): ACDB -> ACDB_CMD_GET_AUDPROC_GAIN_DEP_STEP_TABLE, vol index 0
+01-18 12:46:01.351 D/ACDB-LOADER(  718): ACDB -> AUDIO_SET_VOL_CAL cal type = 40
+01-18 12:46:01.354 W/APM::AudioPolicyEngine(  855): getDevicesForStrategy() unknown strategy: -1
+01-18 12:46:01.736 I/init    (    0): starting service 'smartmu'...
+01-18 12:46:01.763 I/init    (    0): starting service 'qccsyshalservice'...
+01-18 12:46:01.793 I/init    (    0): starting service 'qccvndhalservice'...
+01-18 12:46:01.355 I/chatty  (  855): uid=1041(audioserver) ApmOutput identical 1 line
+01-18 12:46:01.355 W/APM::AudioPolicyEngine(  855): getDevicesForStrategy() unknown strategy: -1
+01-18 12:46:01.815 I/qccsyshalservice(26109): Start with system binder
+01-18 12:46:01.816 I/qccsyshalservice(26109): Registering qccsyshal service...
+01-18 12:46:01.818 I/hwservicemanager(  512): getTransport: Cannot find entry vendor.qti.hardware.qccsyshal@1.0::IQccsyshal/qccsyshal in either framework or device manifest.
+01-18 12:46:01.819 E/HidlServiceManagement(26109): Service vendor.qti.hardware.qccsyshal@1.0::IQccsyshal/qccsyshal must be in VINTF manifest in order to register/get.
+01-18 12:46:01.819 E/qccsyshalservice(26109): [ERROR] registerAsService() failed with status: -2147483648
+01-18 12:46:01.821 D/SMARTMU (26108): #(26108) [ main.cpp : 25] SmartMU Version , 
+01-18 12:46:01.823 E/AsymmetricDecrypt(26108): [AsymmetricDecrypt::acquireKeyFile] KeyPath - /system/vendor/keys/TC52AXANF/proxyframework 
+01-18 12:46:01.811 I/vendor.qti.hard(26110): type=1400 audit(0.0:11183): avc: denied { search } for name="/" dev="sda10" ino=2 scontext=u:r:vendor_hal_qccvndhal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+01-18 12:46:01.834 I/init    (    0): Service 'qccsyshalservice' (pid 26109) exited with status 1
+01-18 12:46:01.834 I/init    (    0): Sending signal 9 to service 'qccsyshalservice' (pid 26109) process group...
+01-18 12:46:01.835 I/libprocessgroup(    0): Successfully killed process cgroup uid 1000 pid 26109 in 0ms
+01-18 12:46:01.824 E/AsymmetricDecrypt(26108): [AsymmetricDecrypt::ObtainSeedText] Buffer - Zebra Technologies/TC52AXANF/TC52AX/proxyframework 
+01-18 12:46:01.824 E/AsymmetricDecrypt(26108): [AsymmetricDecrypt::NativeAuthenticate] Authentication failed. zDecodedText returned by ReadAndDecodeEncryptedText = Zebra Technologies/TC52AX/TC52AX/proxyframework, zBuf returned by ObtainSeedText = Zebra Technologies/TC52AXANF/TC52AX/proxyframework
+01-18 12:46:01.825 D/SMARTMU (26108): #(26108) [ main.cpp : 31] Authentication failed
+01-18 12:46:01.841 I/init    (    0): Service 'smartmu' (pid 26108) exited with status 0
+01-18 12:46:01.841 I/init    (    0): Sending signal 9 to service 'smartmu' (pid 26108) process group...
+01-18 12:46:01.841 I/libprocessgroup(    0): Successfully killed process cgroup uid 0 pid 26108 in 0ms
+01-18 12:46:01.856 I/vendor.qti.hardware.qccvndhal@1.0-service(26110): Start with vendor binder
+01-18 12:46:01.858 I/vendor.qti.hardware.qccvndhal@1.0-service(26110): Registering qccvndhal service...
+01-18 12:46:01.859 I/hwservicemanager(  512): getTransport: Cannot find entry vendor.qti.hardware.qccvndhal@1.0::IQccvndhal/qccvndhal in either framework or device manifest.
+01-18 12:46:01.860 E/HidlServiceManagement(26110): Service vendor.qti.hardware.qccvndhal@1.0::IQccvndhal/qccvndhal must be in VINTF manifest in order to register/get.
+01-18 12:46:01.860 E/vendor.qti.hardware.qccvndhal@1.0-service(26110): [ERROR] registerAsService() failed with status: -2147483648
+01-18 12:46:01.875 I/init    (    0): Service 'qccvndhalservice' (pid 26110) exited with status 1
+01-18 12:46:02.115 I/IRQ 6   (    0): no longer affine to CPU5
+01-18 12:46:04.338 D/audio_hw_primary(  718): out_standby: enter: stream (0xf1a864c0) usecase(1: low-latency-playback)
+01-18 12:46:04.413 I/afe_close(    0): port_id = 0x4000
+01-18 12:46:04.419 D/audio_hw_primary(  718): disable_audio_route: reset and update mixer path: low-latency-playback
+01-18 12:46:04.421 D/soundtrigger(  718): audio_extn_sound_trigger_update_stream_status: uc_info->id 1 of type 0 for Event 2, with Raise=0
+01-18 12:46:04.422 D/hardware_info(  718): hw_info_append_hw_type : device_name = speaker
+01-18 12:46:04.422 D/audio_hw_primary(  718): disable_snd_device: snd_device(2: speaker)
+01-18 12:46:04.441 E/        (    0): tavil_codec tavil_codec: ASoC: DAPM unknown pin Lineout_3 amp
+01-18 12:46:04.437 I/soundtrigger(  718): audio_extn_sound_trigger_update_device_status: device 0x2 of type 0 for Event 0, with Raise=0
+01-18 12:46:04.442 I/system_server( 1670): oneway function results will be dropped but finished with status OK and parcel size 4
+01-18 12:46:04.921 I/swapper/0(    0): type=1400 audit(0.0:11184): avc: denied { kill } for capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+01-18 12:46:06.495 D/CompatibilityInfo( 1670): mCompatibilityFlags - 0
+01-18 12:46:06.495 D/CompatibilityInfo( 1670): applicationDensity - 480
+01-18 12:46:06.495 D/CompatibilityInfo( 1670): applicationScale - 1.0
+01-18 12:46:06.504 I/NextSubtest service( 4265): hit
+01-18 12:46:06.514 E/        (    0): [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8
+01-18 12:46:06.515 E/        (    0): [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00
+01-18 12:46:06.518 E/        (    0): [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86
+01-18 12:46:06.524 E/        (    0): [SDL] misc_ioctl msg.len is 2 : 0x88 0x00
+01-18 12:46:06.529 E/        (    0): [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81
+01-18 12:46:06.534 E/        (    0): [SDL] misc_ioctl msg.len is 2 : 0x88 0x00

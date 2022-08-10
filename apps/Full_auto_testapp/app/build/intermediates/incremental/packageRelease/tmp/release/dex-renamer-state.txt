@@ -1,0 +1,4 @@
+#Tue Apr 19 12:30:54 IST 2022
+base.0=D\:\\SDL_SDC\\SDL\\Oreo\\apps\\Full_auto_testapp\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\out\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

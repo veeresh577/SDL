@@ -1,0 +1,9 @@
+<14>[ 4520.174359] init: starting service 'qccsyshalservice'...
+<14>[ 4520.220765] init: starting service 'qccvndhalservice'...
+<14>[ 4520.315369] init: Service 'qccsyshalservice' (pid 21961) exited with status 1
+<14>[ 4520.315511] init: Sending signal 9 to service 'qccsyshalservice' (pid 21961) process group...
+<14>[ 4520.316778] libprocessgroup: Successfully killed process cgroup uid 1000 pid 21961 in 0ms
+<14>[ 4520.416547] init: Service 'smartmu' (pid 21963) exited with status 0
+<12>[ 4520.738862] healthd: battery l=85 v=3843 t=47.0 h=2 st=2 c=-374511 fc=4008000 cc=2 chg=u
+<12>[ 4520.777505] healthd: battery l=85 v=3843 t=47.0 h=2 st=2 c=-374511 fc=4008000 cc=2 chg=u
+<12>[ 4520.850378] healthd: battery l=85 v=3843 t=47.0 h=2 st=2 c=-374511 fc=4008000 cc=2 chg=u

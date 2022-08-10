@@ -1,0 +1,61 @@
+<38>[76807.229993] type=1400 audit(1642509724.861:11143): avc: denied { kill } for comm="swapper/3" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<14>[76807.421897] init: starting service 'smartmu'...
+<14>[76807.474276] init: starting service 'qccsyshalservice'...
+<14>[76807.510577] init: starting service 'qccvndhalservice'...
+<38>[76807.572823] type=1400 audit(1642509725.201:11144): avc: denied { search } for comm="vendor.qti.hard" name="/" dev="sda10" ino=2 scontext=u:r:vendor_hal_qccvndhal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[76807.604736] init: Service 'qccsyshalservice' (pid 25002) exited with status 1
+<14>[76807.604818] init: Sending signal 9 to service 'qccsyshalservice' (pid 25002) process group...
+<14>[76807.605620] libprocessgroup: Successfully killed process cgroup uid 1000 pid 25002 in 0ms
+<14>[76807.642142] init: Service 'qccvndhalservice' (pid 25003) exited with status 1
+<14>[76812.469674] init: starting service 'smartmu'...
+<14>[76812.510066] init: starting service 'qccsyshalservice'...
+<14>[76812.541411] init: starting service 'qccvndhalservice'...
+<38>[76812.569833] type=1400 audit(1642509730.201:11145): avc: denied { search } for comm="qccsyshalservic" name="/" dev="sda10" ino=2 scontext=u:r:vendor_qccsyshal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[76812.622653] init: Service 'smartmu' (pid 25007) exited with status 0
+<14>[76812.622762] init: Sending signal 9 to service 'smartmu' (pid 25007) process group...
+<14>[76812.623623] libprocessgroup: Successfully killed process cgroup uid 0 pid 25007 in 0ms
+<14>[76812.631811] init: Service 'qccsyshalservice' (pid 25008) exited with status 1
+<14>[76812.631893] init: Sending signal 9 to service 'qccsyshalservice' (pid 25008) process group...
+<14>[76812.632870] libprocessgroup: Successfully killed process cgroup uid 1000 pid 25008 in 0ms
+<14>[76812.667447] init: Service 'qccvndhalservice' (pid 25009) exited with status 1
+<3>[76815.729853] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[76815.731409] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[76815.734595] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<12>[76815.745113] healthd: battery l=43 v=3541 t=41.0 h=2 st=2 c=-469726 fc=4008000 cc=2 chg=u
+<3>[76815.745337] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[76815.756211] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[76815.761328] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[76815.766728] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[76815.772026] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[76815.777389] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[76815.788114] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[76815.798799] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[76815.804122] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[76815.809492] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[76815.814792] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[76815.820803] [SDL] misc_ioctl msg.len is 4 : 0x7b 0x00 0x00 0x85 
+<3>[76815.825422] [SDL] misc_ioctl msg.len is 2 : 0x84 0x00 
+<3>[76815.831685] [SDL] misc_ioctl msg.len is 4 : 0x82 0x00 0x00 0x7e 
+<3>[76815.933646] [SDL] misc_ioctl msg.len is 3 : 0x77 0x02 0x87 
+<3>[76815.934513] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[76816.093442] msm_isp_open_node: reset VFE
+<3>[76816.112333] msm_ispif_config:1061 Exit 
+<3>[76816.112801] msm_ispif_config2: Exit 
+<3>[76816.115787] frame_src is 1 frame_id is 1 blackjoe
+<3>[76816.132397] frame_src is 1 frame_id is 2 blackjoe
+<3>[76816.149024] frame_src is 1 frame_id is 3 blackjoe
+<31>[76816.180423] logd: logdr: UID=0 GID=0 PID=25038 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[76816.202190] frame_src is 1 frame_id is 4 blackjoe
+<3>[76816.218803] frame_src is 1 frame_id is 5 blackjoe
+<3>[76816.252028] frame_src is 1 frame_id is 7 blackjoe
+<3>[76816.285276] frame_src is 1 frame_id is 9 blackjoe
+<3>[76816.318516] frame_src is 1 frame_id is 11 blackjoe
+<3>[76816.351755] frame_src is 1 frame_id is 13 blackjoe
+<31>[76816.361823] logd: logdr: UID=0 GID=0 PID=25041 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[76816.389978] frame_src is 1 frame_id is 15 blackjoe
+<3>[76816.423265] frame_src is 1 frame_id is 17 blackjoe
+<3>[76816.439849] frame_src is 1 frame_id is 18 blackjoe
+<3>[76816.456466] frame_src is 1 frame_id is 19 blackjoe
+<3>[76816.473083] frame_src is 1 frame_id is 20 blackjoe
+<3>[76816.489729] frame_src is 1 frame_id is 21 blackjoe
+<3>[76816.506336] frame_src is 1 frame_id is 22 blackjoe

@@ -1,0 +1,12 @@
+<6>[ 1995.611818] IRQ 6: no longer affine to CPU7
+<6>[ 1995.709869] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<6>[ 1995.709899] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 
+<3>[ 1997.793207] [schedu][0x1156dd22511][19:22:36.959470] wlan: [2070:E:scan] scm_11d_elected_country_algo_fcc: 98: No AP with 11d Country code is present in scan list
+<3>[ 1997.793325] FUSIONWL: : ==Regulatory_elect_country_db==: No AP with 11d Country code is present in scan list 
+<3>[ 1997.810888] FUSIONWL: : ==Regulatory_scan_country_list_db_reset==: Reset complete for scan country list 
+<38>[ 1998.684853] type=1400 audit(1654197757.845:5784): avc: denied { search } for comm="vendor.qti.hard" name="/" dev="mmcblk0p37" ino=2 scontext=u:r:vendor_hal_qccvndhal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[ 1998.752758] init: Sending signal 9 to service 'qccvndhalservice' (pid 9818) process group...
+<6>[ 1999.651216] IRQ 6: no longer affine to CPU7
+<14>[ 2003.618300] init: starting service 'qccsyshalservice'...
+<14>[ 2003.760878] init: Service 'qccsyshalservice' (pid 9823) exited with status 1
+<14>[ 2003.761059] init: Sending signal 9 to service 'qccsyshalservice' (pid 9823) process group...

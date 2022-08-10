@@ -1,0 +1,53 @@
+<14>[ 5911.744065] init: starting service 'qccsyshalservice'...
+<14>[ 5911.794765] init: starting service 'qccvndhalservice'...
+<14>[ 5911.830175] init: starting service 'smartmu'...
+<14>[ 5911.891162] init: Service 'qccsyshalservice' (pid 27654) exited with status 1
+<14>[ 5911.891250] init: Sending signal 9 to service 'qccsyshalservice' (pid 27654) process group...
+<14>[ 5911.892401] libprocessgroup: Successfully killed process cgroup uid 1000 pid 27654 in 0ms
+<14>[ 5911.926891] init: Service 'qccvndhalservice' (pid 27655) exited with status 1
+<14>[ 5911.926975] init: Sending signal 9 to service 'qccvndhalservice' (pid 27655) process group...
+<14>[ 5911.927998] libprocessgroup: Successfully killed process cgroup uid 1000 pid 27655 in 0ms
+<14>[ 5911.999930] init: Service 'smartmu' (pid 27656) exited with status 0
+<6>[ 5912.111497] IRQ 6: no longer affine to CPU5
+<38>[ 5913.008827] type=1400 audit(1642436499.044:4975): avc: denied { kill } for comm="swapper/2" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<14>[ 5916.793586] init: starting service 'qccsyshalservice'...
+<14>[ 5916.838152] init: starting service 'qccvndhalservice'...
+<14>[ 5916.870372] init: starting service 'smartmu'...
+<14>[ 5916.932198] init: Service 'qccsyshalservice' (pid 27667) exited with status 1
+<14>[ 5916.932329] init: Sending signal 9 to service 'qccsyshalservice' (pid 27667) process group...
+<14>[ 5916.933391] libprocessgroup: Successfully killed process cgroup uid 1000 pid 27667 in 0ms
+<14>[ 5916.959118] init: Service 'qccvndhalservice' (pid 27668) exited with status 1
+<14>[ 5916.959260] init: Sending signal 9 to service 'qccvndhalservice' (pid 27668) process group...
+<14>[ 5916.961221] libprocessgroup: Successfully killed process cgroup uid 1000 pid 27668 in 0ms
+<14>[ 5917.029580] init: Service 'smartmu' (pid 27669) exited with status 0
+<6>[ 5917.691485] IRQ 6: no longer affine to CPU5
+<14>[ 5921.837111] init: starting service 'qccsyshalservice'...
+<14>[ 5921.886660] init: starting service 'qccvndhalservice'...
+<14>[ 5921.919495] init: starting service 'smartmu'...
+<14>[ 5921.979752] init: Service 'qccsyshalservice' (pid 27673) exited with status 1
+<14>[ 5921.979846] init: Sending signal 9 to service 'qccsyshalservice' (pid 27673) process group...
+<14>[ 5921.980733] libprocessgroup: Successfully killed process cgroup uid 1000 pid 27673 in 0ms
+<14>[ 5922.005899] init: Service 'qccvndhalservice' (pid 27674) exited with status 1
+<14>[ 5922.005986] init: Sending signal 9 to service 'qccvndhalservice' (pid 27674) process group...
+<14>[ 5922.006977] libprocessgroup: Successfully killed process cgroup uid 1000 pid 27674 in 0ms
+<14>[ 5922.075072] init: Service 'smartmu' (pid 27675) exited with status 0
+<6>[ 5923.791516] IRQ 6: no longer affine to CPU6
+<3>[ 5924.204554] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 5924.206076] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 5924.209678] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 5924.214682] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 5924.223684] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 5924.225605] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 5924.230733] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 5924.241837] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 5924.246701] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 5924.252375] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 5924.257528] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 5924.263067] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 5924.268103] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 5924.278673] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 5924.284319] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 5924.295019] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 5924.300105] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 5924.305697] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 5924.310731] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 

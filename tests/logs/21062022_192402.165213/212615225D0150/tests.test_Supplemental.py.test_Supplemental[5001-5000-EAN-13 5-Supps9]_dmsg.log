@@ -1,0 +1,70 @@
+<12>[93675.739306] healthd: battery l=10 v=3301 t=36.0 h=2 st=2 c=-208495 fc=4008000 cc=2 chg=u
+<14>[93677.686856] init: starting service 'smartmu'...
+<14>[93677.845363] init: starting service 'qccsyshalservice'...
+<14>[93677.872375] init: Service 'smartmu' (pid 29691) exited with status 0
+<14>[93677.872489] init: Sending signal 9 to service 'smartmu' (pid 29691) process group...
+<14>[93677.873411] libprocessgroup: Successfully killed process cgroup uid 0 pid 29691 in 0ms
+<38>[93677.906898] type=1400 audit(1642526595.531:14657): avc: denied { search } for comm="qccsyshalservic" name="/" dev="sda10" ino=2 scontext=u:r:vendor_qccsyshal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[93677.987363] init: Service 'qccsyshalservice' (pid 29693) exited with status 1
+<14>[93677.987441] init: Sending signal 9 to service 'qccsyshalservice' (pid 29693) process group...
+<14>[93677.988371] libprocessgroup: Successfully killed process cgroup uid 1000 pid 29693 in 0ms
+<14>[93678.041707] init: starting service 'qccvndhalservice'...
+<38>[93678.104577] type=1400 audit(1642526595.731:14658): avc: denied { search } for comm="vendor.qti.hard" name="/" dev="sda10" ino=2 scontext=u:r:vendor_hal_qccvndhal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[93678.199611] init: Service 'qccvndhalservice' (pid 29694) exited with status 1
+<14>[93682.720429] init: starting service 'smartmu'...
+<14>[93682.868100] init: starting service 'qccsyshalservice'...
+<14>[93682.903392] init: Service 'smartmu' (pid 29697) exited with status 0
+<14>[93682.903504] init: Sending signal 9 to service 'smartmu' (pid 29697) process group...
+<14>[93682.904471] libprocessgroup: Successfully killed process cgroup uid 0 pid 29697 in 0ms
+<14>[93683.017486] init: Service 'qccsyshalservice' (pid 29699) exited with status 1
+<14>[93683.017571] init: Sending signal 9 to service 'qccsyshalservice' (pid 29699) process group...
+<14>[93683.018411] libprocessgroup: Successfully killed process cgroup uid 1000 pid 29699 in 0ms
+<14>[93683.067046] init: starting service 'qccvndhalservice'...
+<14>[93683.211797] init: Service 'qccvndhalservice' (pid 29700) exited with status 1
+<38>[93684.398921] type=1400 audit(1642526602.021:14659): avc: denied { kill } for comm="swapper/2" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<14>[93687.749203] init: starting service 'smartmu'...
+<14>[93687.898318] init: starting service 'qccsyshalservice'...
+<14>[93687.931122] init: Service 'smartmu' (pid 29703) exited with status 0
+<14>[93687.931227] init: Sending signal 9 to service 'smartmu' (pid 29703) process group...
+<14>[93687.932265] libprocessgroup: Successfully killed process cgroup uid 0 pid 29703 in 0ms
+<14>[93688.043805] init: Service 'qccsyshalservice' (pid 29709) exited with status 1
+<14>[93688.043887] init: Sending signal 9 to service 'qccsyshalservice' (pid 29709) process group...
+<14>[93688.044810] libprocessgroup: Successfully killed process cgroup uid 1000 pid 29709 in 0ms
+<14>[93688.094589] init: starting service 'qccvndhalservice'...
+<3>[93688.102785] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[93688.104770] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[93688.107698] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[93688.113102] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[93688.118400] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[93688.124055] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[93688.136196] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[93688.140658] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[93688.145213] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[93688.150863] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[93688.174466] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[93688.177236] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[93688.183911] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[93688.187836] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[93688.193799] [SDL] misc_ioctl msg.len is 4 : 0x7b 0x00 0x00 0x85 
+<3>[93688.198626] [SDL] misc_ioctl msg.len is 2 : 0x84 0x00 
+<3>[93688.209694] [SDL] misc_ioctl msg.len is 2 : 0x7d 0x80 
+<3>[93688.217251] [SDL] misc_ioctl msg.len is 3 : 0x77 0x02 0x87 
+<3>[93688.222561] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[93688.253484] frame_src is 1 frame_id is 47672 blackjoe
+<14>[93688.257659] init: Service 'qccvndhalservice' (pid 29714) exited with status 1
+<3>[93688.286672] frame_src is 1 frame_id is 47674 blackjoe
+<3>[93688.319936] frame_src is 1 frame_id is 47676 blackjoe
+<3>[93688.371182] frame_src is 1 frame_id is 47677 blackjoe
+<3>[93688.404344] frame_src is 1 frame_id is 47679 blackjoe
+<3>[93688.420957] frame_src is 1 frame_id is 47680 blackjoe
+<3>[93688.491919] frame_src is 1 frame_id is 47682 blackjoe
+<3>[93688.525041] frame_src is 1 frame_id is 47684 blackjoe
+<3>[93688.558274] frame_src is 1 frame_id is 47686 blackjoe
+<3>[93688.608128] frame_src is 1 frame_id is 47689 blackjoe
+<3>[93688.641377] frame_src is 1 frame_id is 47691 blackjoe
+<3>[93688.663651] frame_src is 1 frame_id is 47692 blackjoe
+<3>[93688.680245] frame_src is 1 frame_id is 47693 blackjoe
+<3>[93688.696855] frame_src is 1 frame_id is 47694 blackjoe
+<3>[93688.730087] frame_src is 1 frame_id is 47696 blackjoe
+<3>[93688.746752] frame_src is 1 frame_id is 47697 blackjoe
+<3>[93688.780025] frame_src is 1 frame_id is 47699 blackjoe

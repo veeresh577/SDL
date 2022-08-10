@@ -1,0 +1,65 @@
+<12>[86895.748341] healthd: battery l=18 v=3325 t=43.0 h=2 st=2 c=-497070 fc=4008000 cc=2 chg=u
+<14>[86897.486898] init: starting service 'smartmu'...
+<14>[86897.530813] init: starting service 'qccsyshalservice'...
+<14>[86897.561668] init: starting service 'qccvndhalservice'...
+<14>[86897.627739] init: Service 'smartmu' (pid 15462) exited with status 0
+<14>[86897.627851] init: Sending signal 9 to service 'smartmu' (pid 15462) process group...
+<14>[86897.630189] libprocessgroup: Successfully killed process cgroup uid 0 pid 15462 in 1ms
+<14>[86897.648787] init: Service 'qccsyshalservice' (pid 15463) exited with status 1
+<14>[86897.649315] init: Sending signal 9 to service 'qccsyshalservice' (pid 15463) process group...
+<14>[86902.529388] init: starting service 'smartmu'...
+<14>[86902.603508] init: starting service 'qccvndhalservice'...
+<14>[86902.686708] init: Service 'smartmu' (pid 15469) exited with status 0
+<14>[86902.686806] init: Sending signal 9 to service 'smartmu' (pid 15469) process group...
+<14>[86902.687740] libprocessgroup: Successfully killed process cgroup uid 0 pid 15469 in 0ms
+<14>[86902.696313] init: Service 'qccsyshalservice' (pid 15470) exited with status 1
+<14>[86902.696382] init: Sending signal 9 to service 'qccsyshalservice' (pid 15470) process group...
+<14>[86902.697106] libprocessgroup: Successfully killed process cgroup uid 1000 pid 15470 in 0ms
+<3>[86907.042342] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[86907.043857] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[86907.047300] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[86907.057795] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[86907.073956] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[86907.079375] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[86907.084527] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[86907.090017] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[86907.095211] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[86907.105947] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[86907.116655] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[86907.127354] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[86907.133174] [SDL] misc_ioctl msg.len is 4 : 0x7b 0x00 0x00 0x85 
+<3>[86907.138051] [SDL] misc_ioctl msg.len is 2 : 0x84 0x00 
+<3>[86907.155724] [SDL] misc_ioctl msg.len is 3 : 0x77 0x02 0x87 
+<3>[86907.160155] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[86907.191557] frame_src is 1 frame_id is 22485 blackjoe
+<31>[86907.223393] logd: logdr: UID=0 GID=0 PID=15481 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[86907.224756] frame_src is 1 frame_id is 22487 blackjoe
+<3>[86907.257935] frame_src is 1 frame_id is 22489 blackjoe
+<3>[86907.307887] frame_src is 1 frame_id is 22490 blackjoe
+<3>[86907.324343] frame_src is 1 frame_id is 22491 blackjoe
+<3>[86907.357571] frame_src is 1 frame_id is 22493 blackjoe
+<3>[86907.427407] frame_src is 1 frame_id is 22495 blackjoe
+<3>[86907.477000] frame_src is 1 frame_id is 22498 blackjoe
+<3>[86907.493611] frame_src is 1 frame_id is 22499 blackjoe
+<3>[86907.510301] frame_src is 1 frame_id is 22500 blackjoe
+<3>[86907.526972] frame_src is 1 frame_id is 22501 blackjoe
+<3>[86907.543682] frame_src is 1 frame_id is 22502 blackjoe
+<14>[86907.570303] init: starting service 'smartmu'...
+<3>[86907.576823] frame_src is 1 frame_id is 22504 blackjoe
+<3>[86907.597752] frame_src is 1 frame_id is 22505 blackjoe
+<14>[86907.605478] init: starting service 'qccsyshalservice'...
+<3>[86907.614403] frame_src is 1 frame_id is 22506 blackjoe
+<3>[86907.630963] frame_src is 1 frame_id is 22507 blackjoe
+<14>[86907.634609] init: starting service 'qccvndhalservice'...
+<3>[86907.647725] frame_src is 1 frame_id is 22508 blackjoe
+<3>[86907.664194] frame_src is 1 frame_id is 22509 blackjoe
+<14>[86907.672426] init: Service 'smartmu' (pid 15488) exited with status 0
+<14>[86907.672464] init: Sending signal 9 to service 'smartmu' (pid 15488) process group...
+<14>[86907.672798] libprocessgroup: Successfully killed process cgroup uid 0 pid 15488 in 0ms
+<31>[86907.675288] logd: logdr: UID=0 GID=0 PID=15489 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[86907.680816] frame_src is 1 frame_id is 22510 blackjoe
+<3>[86907.697485] frame_src is 1 frame_id is 22511 blackjoe
+<3>[86907.714061] frame_src is 1 frame_id is 22512 blackjoe
+<3>[86907.730863] frame_src is 1 frame_id is 22513 blackjoe
+<14>[86907.739053] init: Service 'qccvndhalservice' (pid 15492) exited with status 1
+<6>[86907.739861] IRQ 6: no longer affine to CPU5

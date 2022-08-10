@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?><testsuite errors="0" failures="1" name="pytest" skips="0" tests="8" time="208.077"><testcase classname="tests.test_PostalEnable" file="tests/test_PostalEnable.py" line="20" name="test_PostalEnable[5001-5000-Japanese Postal]" time="20.8612477779"></testcase><testcase classname="tests.test_PostalEnable" file="tests/test_PostalEnable.py" line="20" name="test_PostalEnable[5001-5000-Korean Postal]" time="61.5814015865"><failure message="AssertionError: assert [&apos;123456&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;123456&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;123456&apos;]
+  + [&apos;NR&apos;]">test_PostalEnable.py:26: in test_PostalEnable
+    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;123456&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;123456&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;123456&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_PostalEnable" file="tests/test_PostalEnable.py" line="20" name="test_PostalEnable[5001-5000-US Planet ]" time="16.0227470398"></testcase><testcase classname="tests.test_PostalEnable" file="tests/test_PostalEnable.py" line="20" name="test_PostalEnable[5001-5000-US Postnet]" time="19.3793158531"></testcase><testcase classname="tests.test_PostalEnable" file="tests/test_PostalEnable.py" line="20" name="test_PostalEnable[5001-5000-Netherlands Postal]" time="19.6901257038"></testcase><testcase classname="tests.test_PostalEnable" file="tests/test_PostalEnable.py" line="20" name="test_PostalEnable[5001-5000-Australian Postal]" time="19.4023549557"></testcase><testcase classname="tests.test_PostalEnable" file="tests/test_PostalEnable.py" line="20" name="test_PostalEnable[5001-5000-UK Royal Mail]" time="19.2516698837"></testcase><testcase classname="tests.test_PostalEnable" file="tests/test_PostalEnable.py" line="20" name="test_PostalEnable[5001-5000-Intellimail]" time="19.7289049625"></testcase></testsuite>

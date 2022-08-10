@@ -1,0 +1,748 @@
+. tests/test_CheckDigit.py::test_CheckDigit[5001-5000-UPC-A]
+. tests/test_CheckDigit.py::test_CheckDigit[5001-5000-UPC-E]
+. tests/test_CheckDigit.py::test_CheckDigit[5001-5000-UPC-E1]
+. tests/test_CheckDigit.py::test_CheckDigit[5001-5000-Code39]
+. tests/test_CheckDigit.py::test_CheckDigit[5001-5000-Interleaved 2 of 5]
+. tests/test_CheckDigit.py::test_CheckDigit[5001-5000-MSI-CheckDigit1]
+. tests/test_CheckDigit.py::test_CheckDigit[5001-5000-MSI-CheckDigit2]
+. tests/test_CodeId.py::test_CodeId[5001-5000-UPC-A0]
+. tests/test_CodeId.py::test_CodeId[5001-5000-UPC-A1]
+. tests/test_Composite.py::test_Composite[5001-5000-EAN 13 With CC-A ]
+. tests/test_Composite.py::test_Composite[5001-5000-EAN 8 With CC-A]
+. tests/test_Composite.py::test_Composite[5001-5000-UPC-A With CC-A]
+. tests/test_Composite.py::test_Composite[5001-5000-UPC-E With CC-A]
+. tests/test_Composite.py::test_Composite[5001-5000-EAN 13 With CC-B]
+. tests/test_Composite.py::test_Composite[5001-5000-EAN 8 With CC-B]
+. tests/test_Composite.py::test_Composite[5001-5000-UPC-A With CC-B]
+. tests/test_Composite.py::test_Composite[5001-5000-UPC-E With CC-B]
+. tests/test_Conversion.py::test_Conversion[5001-5000-UPC-E]
+. tests/test_Conversion.py::test_Conversion[5001-5000-UPC-E1]
+. tests/test_Conversion.py::test_Conversion[5001-5000-EAN-8]
+. tests/test_Conversion.py::test_Conversion[5001-5000-Interleaved 2 of 5]
+. tests/test_Conversion.py::test_Conversion[5001-5000-Codabar]
+. tests/test_Conversion.py::test_Conversion[5001-5000-GS1 Databar 14]
+. tests/test_Disable.py::test_Disable[5001-5000-UPC-A-34-90-barcode0-output0-0.5-0]
+. tests/test_Disable.py::test_Disable[5001-5000-UPC-E-37-91-barcode1-output1-0.5-0]
+. tests/test_Disable.py::test_Disable[5001-5000-UPC-E1-Sdl_EnDis_BC3-92-barcode2-output2-0-1]
+. tests/test_Disable.py::test_Disable[5001-5000-EAN-8-10-93-barcode3-output3-0.5-0]
+. tests/test_Disable.py::test_Disable[5001-5000-EAN-13-13-94-barcode4-output4-0.5-0]
+. tests/test_Disable.py::test_Disable[5001-5000-ISSN-26-95-barcode5-output5-0.5-0]
+. tests/test_Disable.py::test_Disable[5001-5000-Code 128b-60-96-barcode6-output6-0.4-0]
+. tests/test_Disable.py::test_Disable[5001-5000-EAN-128-16-97-barcode7-output7-0.5-0]
+. tests/test_Disable.py::test_Disable[5001-5000-ISBT-128-Sdl_EnDis_BC9-98-barcode8-output8-0-1]
+R tests/test_Disable.py::test_Disable[5001-5000-Code 39-8-99-barcode9-output9-0.5-0]
+ test_Disable.py:47: in test_Disable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['NR'] == ['=%BLDGP']
+ E     At index 0 diff: 'NR' != '=%BLDGP'
+ E     Full diff:
+ E     - ['NR']
+ E     + ['=%BLDGP']
+F tests/test_Disable.py::test_Disable[5001-5000-Code 39-8-99-barcode9-output9-0.5-0]
+ test_Disable.py:47: in test_Disable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['NR'] == ['=%BLDGP']
+ E     At index 0 diff: 'NR' != '=%BLDGP'
+ E     Full diff:
+ E     - ['NR']
+ E     + ['=%BLDGP']
+R tests/test_Disable.py::test_Disable[5001-5000-Code 39 Sample with Full ASCII and the symbology enabled-9-100-barcode10-output10-0.5-0]
+ test_Disable.py:47: in test_Disable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['CODE%V7'] == ['=%BLDGP']
+ E     At index 0 diff: 'CODE%V7' != '=%BLDGP'
+ E     Full diff:
+ E     - ['CODE%V7']
+ E     + ['=%BLDGP']
+F tests/test_Disable.py::test_Disable[5001-5000-Code 39 Sample with Full ASCII and the symbology enabled-9-100-barcode10-output10-0.5-0]
+ test_Disable.py:47: in test_Disable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['CODE%V7'] == ['=%BLDGP']
+ E     At index 0 diff: 'CODE%V7' != '=%BLDGP'
+ E     Full diff:
+ E     - ['CODE%V7']
+ E     + ['=%BLDGP']
+R tests/test_Disable.py::test_Disable[5001-5000-Code 93-25-101-barcode11-output11-0.5-0]
+ test_Disable.py:47: in test_Disable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['NR'] == ['=%BLDGP']
+ E     At index 0 diff: 'NR' != '=%BLDGP'
+ E     Full diff:
+ E     - ['NR']
+ E     + ['=%BLDGP']
+F tests/test_Disable.py::test_Disable[5001-5000-Code 93-25-101-barcode11-output11-0.5-0]
+ test_Disable.py:47: in test_Disable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['NR'] == ['=%BLDGP']
+ E     At index 0 diff: 'NR' != '=%BLDGP'
+ E     Full diff:
+ E     - ['NR']
+ E     + ['=%BLDGP']
+R tests/test_Disable.py::test_Disable[5001-5000-Interleaved 2 of 5-3-102-barcode12-output12-0.5-0]
+ test_Disable.py:47: in test_Disable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['NR'] == ['=%BLDGP']
+ E     At index 0 diff: 'NR' != '=%BLDGP'
+ E     Full diff:
+ E     - ['NR']
+ E     + ['=%BLDGP']
+F tests/test_Disable.py::test_Disable[5001-5000-Interleaved 2 of 5-3-102-barcode12-output12-0.5-0]
+ test_Disable.py:47: in test_Disable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['NR'] == ['=%BLDGP']
+ E     At index 0 diff: 'NR' != '=%BLDGP'
+ E     Full diff:
+ E     - ['NR']
+ E     + ['=%BLDGP']
+R tests/test_Disable.py::test_Disable[5001-5000-Discrete 2 of 5-Sdl_EnDis_BC14-103-barcode13-output13-0-1]
+ test_Disable.py:47: in test_Disable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['NR'] == ['=%BLDGP']
+ E     At index 0 diff: 'NR' != '=%BLDGP'
+ E     Full diff:
+ E     - ['NR']
+ E     + ['=%BLDGP']
+F tests/test_Disable.py::test_Disable[5001-5000-Discrete 2 of 5-Sdl_EnDis_BC14-103-barcode13-output13-0-1]
+ test_Disable.py:47: in test_Disable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['NR'] == ['=%BLDGP']
+ E     At index 0 diff: 'NR' != '=%BLDGP'
+ E     Full diff:
+ E     - ['NR']
+ E     + ['=%BLDGP']
+R tests/test_Disable.py::test_Disable[5001-5000-Matrix 2 of 5-5-104-barcode14-output14-0.5-0]
+ test_Disable.py:47: in test_Disable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['NR'] == ['=%BLDGP']
+ E     At index 0 diff: 'NR' != '=%BLDGP'
+ E     Full diff:
+ E     - ['NR']
+ E     + ['=%BLDGP']
+F tests/test_Disable.py::test_Disable[5001-5000-Matrix 2 of 5-5-104-barcode14-output14-0.5-0]
+ test_Disable.py:47: in test_Disable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['NR'] == ['=%BLDGP']
+ E     At index 0 diff: 'NR' != '=%BLDGP'
+ E     Full diff:
+ E     - ['NR']
+ E     + ['=%BLDGP']
+R tests/test_Disable.py::test_Disable[5001-5000-Codabar-18-105-barcode15-output15-0.4-0]
+ test_Disable.py:47: in test_Disable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['NR'] == ['=%BLDGP']
+ E     At index 0 diff: 'NR' != '=%BLDGP'
+ E     Full diff:
+ E     - ['NR']
+ E     + ['=%BLDGP']
+F tests/test_Disable.py::test_Disable[5001-5000-Codabar-18-105-barcode15-output15-0.4-0]
+ test_Disable.py:47: in test_Disable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['NR'] == ['=%BLDGP']
+ E     At index 0 diff: 'NR' != '=%BLDGP'
+ E     Full diff:
+ E     - ['NR']
+ E     + ['=%BLDGP']
+R tests/test_Disable.py::test_Disable[5001-5000-MSI-47-106-barcode16-output16-0.5-0]
+ test_Disable.py:47: in test_Disable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['NR'] == ['=%BLDGP']
+ E     At index 0 diff: 'NR' != '=%BLDGP'
+ E     Full diff:
+ E     - ['NR']
+ E     + ['=%BLDGP']
+F tests/test_Disable.py::test_Disable[5001-5000-MSI-47-106-barcode16-output16-0.5-0]
+ test_Disable.py:47: in test_Disable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['NR'] == ['=%BLDGP']
+ E     At index 0 diff: 'NR' != '=%BLDGP'
+ E     Full diff:
+ E     - ['NR']
+ E     + ['=%BLDGP']
+R tests/test_Disable.py::test_Disable[5001-5000-GS1 Databar 14-29-107-barcode17-output17-0.5-0]
+ test_Disable.py:47: in test_Disable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['NR'] == ['=%BLDGP']
+ E     At index 0 diff: 'NR' != '=%BLDGP'
+ E     Full diff:
+ E     - ['NR']
+ E     + ['=%BLDGP']
+F tests/test_Disable.py::test_Disable[5001-5000-GS1 Databar 14-29-107-barcode17-output17-0.5-0]
+ test_Disable.py:47: in test_Disable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['NR'] == ['=%BLDGP']
+ E     At index 0 diff: 'NR' != '=%BLDGP'
+ E     Full diff:
+ E     - ['NR']
+ E     + ['=%BLDGP']
+R tests/test_Disable.py::test_Disable[5001-5000-GS1 Databar Limited-30-108-barcode18-output18-0.5-0]
+ test_Disable.py:47: in test_Disable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['NR'] == ['=%BLDGP']
+ E     At index 0 diff: 'NR' != '=%BLDGP'
+ E     Full diff:
+ E     - ['NR']
+ E     + ['=%BLDGP']
+F tests/test_Disable.py::test_Disable[5001-5000-GS1 Databar Limited-30-108-barcode18-output18-0.5-0]
+ test_Disable.py:47: in test_Disable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['NR'] == ['=%BLDGP']
+ E     At index 0 diff: 'NR' != '=%BLDGP'
+ E     Full diff:
+ E     - ['NR']
+ E     + ['=%BLDGP']
+R tests/test_Disable.py::test_Disable[5001-5000-PDF417-55-109-barcode19-output19-0.5-0]
+ test_Disable.py:47: in test_Disable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['NR'] == ['=%BLDGP']
+ E     At index 0 diff: 'NR' != '=%BLDGP'
+ E     Full diff:
+ E     - ['NR']
+ E     + ['=%BLDGP']
+F tests/test_Disable.py::test_Disable[5001-5000-PDF417-55-109-barcode19-output19-0.5-0]
+ test_Disable.py:47: in test_Disable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['NR'] == ['=%BLDGP']
+ E     At index 0 diff: 'NR' != '=%BLDGP'
+ E     Full diff:
+ E     - ['NR']
+ E     + ['=%BLDGP']
+R tests/test_Disable.py::test_Disable[5001-5000-MicroPDF-84-110-barcode20-output20-0.5-0]
+ test_Disable.py:47: in test_Disable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['NR'] == ['=%BLDGP']
+ E     At index 0 diff: 'NR' != '=%BLDGP'
+ E     Full diff:
+ E     - ['NR']
+ E     + ['=%BLDGP']
+F tests/test_Disable.py::test_Disable[5001-5000-MicroPDF-84-110-barcode20-output20-0.5-0]
+ test_Disable.py:47: in test_Disable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['NR'] == ['=%BLDGP']
+ E     At index 0 diff: 'NR' != '=%BLDGP'
+ E     Full diff:
+ E     - ['NR']
+ E     + ['=%BLDGP']
+R tests/test_Disable.py::test_Disable[5001-5000-Datamatrix-71-111-barcode21-output21-0.5-0]
+ test_Disable.py:47: in test_Disable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['NR'] == ['=%BLDGP']
+ E     At index 0 diff: 'NR' != '=%BLDGP'
+ E     Full diff:
+ E     - ['NR']
+ E     + ['=%BLDGP']
+F tests/test_Disable.py::test_Disable[5001-5000-Datamatrix-71-111-barcode21-output21-0.5-0]
+ test_Disable.py:47: in test_Disable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['NR'] == ['=%BLDGP']
+ E     At index 0 diff: 'NR' != '=%BLDGP'
+ E     Full diff:
+ E     - ['NR']
+ E     + ['=%BLDGP']
+R tests/test_Disable.py::test_Disable[5001-5000-Maxicode-Sdl_EnDis_BC23-112-barcode22-output22-0.6-1]
+ test_Disable.py:47: in test_Disable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['NR'] == ['=%BLDGP']
+ E     At index 0 diff: 'NR' != '=%BLDGP'
+ E     Full diff:
+ E     - ['NR']
+ E     + ['=%BLDGP']
+F tests/test_Disable.py::test_Disable[5001-5000-Maxicode-Sdl_EnDis_BC23-112-barcode22-output22-0.6-1]
+ test_Disable.py:47: in test_Disable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['NR'] == ['=%BLDGP']
+ E     At index 0 diff: 'NR' != '=%BLDGP'
+ E     Full diff:
+ E     - ['NR']
+ E     + ['=%BLDGP']
+R tests/test_Disable.py::test_Disable[5001-5000-QR Code-112-113-barcode23-output23-0.5-0]
+ test_Disable.py:47: in test_Disable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['NR'] == ['=%BLDGP']
+ E     At index 0 diff: 'NR' != '=%BLDGP'
+ E     Full diff:
+ E     - ['NR']
+ E     + ['=%BLDGP']
+F tests/test_Disable.py::test_Disable[5001-5000-QR Code-112-113-barcode23-output23-0.5-0]
+ test_Disable.py:47: in test_Disable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['NR'] == ['=%BLDGP']
+ E     At index 0 diff: 'NR' != '=%BLDGP'
+ E     Full diff:
+ E     - ['NR']
+ E     + ['=%BLDGP']
+R tests/test_Disable.py::test_Disable[5001-5000-MicroQR-97-114-barcode24-output24-0.5-0]
+ test_Disable.py:47: in test_Disable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['NR'] == ['=%BLDGP']
+ E     At index 0 diff: 'NR' != '=%BLDGP'
+ E     Full diff:
+ E     - ['NR']
+ E     + ['=%BLDGP']
+F tests/test_Disable.py::test_Disable[5001-5000-MicroQR-97-114-barcode24-output24-0.5-0]
+ test_Disable.py:47: in test_Disable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['NR'] == ['=%BLDGP']
+ E     At index 0 diff: 'NR' != '=%BLDGP'
+ E     Full diff:
+ E     - ['NR']
+ E     + ['=%BLDGP']
+R tests/test_Disable.py::test_Disable[5001-5000-Aztec-92-115-barcode25-output25-0.5-0]
+ test_Disable.py:47: in test_Disable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['NR'] == ['=%BLDGP']
+ E     At index 0 diff: 'NR' != '=%BLDGP'
+ E     Full diff:
+ E     - ['NR']
+ E     + ['=%BLDGP']
+F tests/test_Disable.py::test_Disable[5001-5000-Aztec-92-115-barcode25-output25-0.5-0]
+ test_Disable.py:47: in test_Disable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['NR'] == ['=%BLDGP']
+ E     At index 0 diff: 'NR' != '=%BLDGP'
+ E     Full diff:
+ E     - ['NR']
+ E     + ['=%BLDGP']
+R tests/test_Disable.py::test_Disable[5001-5000-Han-Xin-116-116-barcode26-output26-0.5-0]
+ test_Disable.py:47: in test_Disable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['NR'] == ['=%BLDGP']
+ E     At index 0 diff: 'NR' != '=%BLDGP'
+ E     Full diff:
+ E     - ['NR']
+ E     + ['=%BLDGP']
+F tests/test_Disable.py::test_Disable[5001-5000-Han-Xin-116-116-barcode26-output26-0.5-0]
+ test_Disable.py:47: in test_Disable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['NR'] == ['=%BLDGP']
+ E     At index 0 diff: 'NR' != '=%BLDGP'
+ E     Full diff:
+ E     - ['NR']
+ E     + ['=%BLDGP']
+. tests/test_DisableAll.py::test_DisableAll[5001-5000-UPC-A]
+. tests/test_DisableAll.py::test_DisableAll[5001-5000-UPC-E]
+. tests/test_DisableAll.py::test_DisableAll[5001-5000-UPC-E1]
+. tests/test_DisableAll.py::test_DisableAll[5001-5000-EAN-8]
+. tests/test_DisableAll.py::test_DisableAll[5001-5000-EAN-13]
+. tests/test_DisableAll.py::test_DisableAll[5001-5000-ISSN]
+. tests/test_DisableAll.py::test_DisableAll[5001-5000-Code 128b]
+. tests/test_DisableAll.py::test_DisableAll[5001-5000-EAN-128]
+. tests/test_DisableAll.py::test_DisableAll[5001-5000-ISBT-128]
+. tests/test_DisableAll.py::test_DisableAll[5001-5000-Code 39]
+. tests/test_DisableAll.py::test_DisableAll[5001-5000-Code 39 Sample with Full ASCII and the symbology enabled]
+. tests/test_DisableAll.py::test_DisableAll[5001-5000-Code 93]
+. tests/test_DisableAll.py::test_DisableAll[5001-5000-Interleaved 2 of 5]
+. tests/test_DisableAll.py::test_DisableAll[5001-5000-Discrete 2 of 5]
+. tests/test_DisableAll.py::test_DisableAll[5001-5000-Matrix 2 of 5]
+. tests/test_DisableAll.py::test_DisableAll[5001-5000-Codabar]
+. tests/test_DisableAll.py::test_DisableAll[5001-5000-MSI]
+. tests/test_DisableAll.py::test_DisableAll[5001-5000-GS1 Databar 14]
+. tests/test_DisableAll.py::test_DisableAll[5001-5000-GS1 Databar Limited]
+. tests/test_DisableAll.py::test_DisableAll[5001-5000-PDF417]
+. tests/test_DisableAll.py::test_DisableAll[5001-5000-MicroPDF]
+. tests/test_DisableAll.py::test_DisableAll[5001-5000-Datamatrix]
+. tests/test_DisableAll.py::test_DisableAll[5001-5000-Maxicode]
+. tests/test_DisableAll.py::test_DisableAll[5001-5000-QR Code]
+. tests/test_DisableAll.py::test_DisableAll[5001-5000-MicroQR]
+. tests/test_DisableAll.py::test_DisableAll[5001-5000-Aztec]
+. tests/test_DisableAll.py::test_DisableAll[5001-5000-Han-Xin]
+R tests/test_Enable.py::test_Enable[5001-5000-UPC-A]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['012345678905'] == ['=%BLDGP']
+ E     At index 0 diff: '012345678905' != '=%BLDGP'
+ E     Full diff:
+ E     - ['012345678905']
+ E     + ['=%BLDGP']
+F tests/test_Enable.py::test_Enable[5001-5000-UPC-A]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['012345678905'] == ['=%BLDGP']
+ E     At index 0 diff: '012345678905' != '=%BLDGP'
+ E     Full diff:
+ E     - ['012345678905']
+ E     + ['=%BLDGP']
+R tests/test_Enable.py::test_Enable[5001-5000-UPC-E]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['01236432'] == ['=%BLDGP']
+ E     At index 0 diff: '01236432' != '=%BLDGP'
+ E     Full diff:
+ E     - ['01236432']
+ E     + ['=%BLDGP']
+F tests/test_Enable.py::test_Enable[5001-5000-UPC-E]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['01236432'] == ['=%BLDGP']
+ E     At index 0 diff: '01236432' != '=%BLDGP'
+ E     Full diff:
+ E     - ['01236432']
+ E     + ['=%BLDGP']
+R tests/test_Enable.py::test_Enable[5001-5000-UPC-E1]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['12345670'] == ['=%BLDGP']
+ E     At index 0 diff: '12345670' != '=%BLDGP'
+ E     Full diff:
+ E     - ['12345670']
+ E     + ['=%BLDGP']
+F tests/test_Enable.py::test_Enable[5001-5000-UPC-E1]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['12345670'] == ['=%BLDGP']
+ E     At index 0 diff: '12345670' != '=%BLDGP'
+ E     Full diff:
+ E     - ['12345670']
+ E     + ['=%BLDGP']
+R tests/test_Enable.py::test_Enable[5001-5000-EAN-8]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['40153476'] == ['=%BLDGP']
+ E     At index 0 diff: '40153476' != '=%BLDGP'
+ E     Full diff:
+ E     - ['40153476']
+ E     + ['=%BLDGP']
+F tests/test_Enable.py::test_Enable[5001-5000-EAN-8]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['40153476'] == ['=%BLDGP']
+ E     At index 0 diff: '40153476' != '=%BLDGP'
+ E     Full diff:
+ E     - ['40153476']
+ E     + ['=%BLDGP']
+R tests/test_Enable.py::test_Enable[5001-5000-EAN-13]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['4498765301535'] == ['=%BLDGP']
+ E     At index 0 diff: '4498765301535' != '=%BLDGP'
+ E     Full diff:
+ E     - ['4498765301535']
+ E     + ['=%BLDGP']
+F tests/test_Enable.py::test_Enable[5001-5000-EAN-13]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['4498765301535'] == ['=%BLDGP']
+ E     At index 0 diff: '4498765301535' != '=%BLDGP'
+ E     Full diff:
+ E     - ['4498765301535']
+ E     + ['=%BLDGP']
+R tests/test_Enable.py::test_Enable[5001-5000-ISSN]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['83013016'] == ['=%BLDGP']
+ E     At index 0 diff: '83013016' != '=%BLDGP'
+ E     Full diff:
+ E     - ['83013016']
+ E     + ['=%BLDGP']
+F tests/test_Enable.py::test_Enable[5001-5000-ISSN]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['83013016'] == ['=%BLDGP']
+ E     At index 0 diff: '83013016' != '=%BLDGP'
+ E     Full diff:
+ E     - ['83013016']
+ E     + ['=%BLDGP']
+R tests/test_Enable.py::test_Enable[5001-5000-Code 128b]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['abcdefghijklm'] == ['=%BLDGP']
+ E     At index 0 diff: 'abcdefghijklm' != '=%BLDGP'
+ E     Full diff:
+ E     - ['abcdefghijklm']
+ E     + ['=%BLDGP']
+F tests/test_Enable.py::test_Enable[5001-5000-Code 128b]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['abcdefghijklm'] == ['=%BLDGP']
+ E     At index 0 diff: 'abcdefghijklm' != '=%BLDGP'
+ E     Full diff:
+ E     - ['abcdefghijklm']
+ E     + ['=%BLDGP']
+R tests/test_Enable.py::test_Enable[5001-5000-EAN-128]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['EAN128'] == ['=%BLDGP']
+ E     At index 0 diff: 'EAN128' != '=%BLDGP'
+ E     Full diff:
+ E     - ['EAN128']
+ E     + ['=%BLDGP']
+F tests/test_Enable.py::test_Enable[5001-5000-EAN-128]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['EAN128'] == ['=%BLDGP']
+ E     At index 0 diff: 'EAN128' != '=%BLDGP'
+ E     Full diff:
+ E     - ['EAN128']
+ E     + ['=%BLDGP']
+. tests/test_Enable.py::test_Enable[5001-5000-ISBT-128]
+R tests/test_Enable.py::test_Enable[5001-5000-Code 39]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['CODE'] == ['=%BLDGP']
+ E     At index 0 diff: 'CODE' != '=%BLDGP'
+ E     Full diff:
+ E     - ['CODE']
+ E     + ['=%BLDGP']
+F tests/test_Enable.py::test_Enable[5001-5000-Code 39]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['CODE'] == ['=%BLDGP']
+ E     At index 0 diff: 'CODE' != '=%BLDGP'
+ E     Full diff:
+ E     - ['CODE']
+ E     + ['=%BLDGP']
+R tests/test_Enable.py::test_Enable[5001-5000-Code 39 Sample with Full ASCII and the symbology enabled]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['CODE@7'] == ['=%BLDGP']
+ E     At index 0 diff: 'CODE@7' != '=%BLDGP'
+ E     Full diff:
+ E     - ['CODE@7']
+ E     + ['=%BLDGP']
+F tests/test_Enable.py::test_Enable[5001-5000-Code 39 Sample with Full ASCII and the symbology enabled]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['CODE@7'] == ['=%BLDGP']
+ E     At index 0 diff: 'CODE@7' != '=%BLDGP'
+ E     Full diff:
+ E     - ['CODE@7']
+ E     + ['=%BLDGP']
+R tests/test_Enable.py::test_Enable[5001-5000-Code 93]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['CODE 93'] == ['=%BLDGP']
+ E     At index 0 diff: 'CODE 93' != '=%BLDGP'
+ E     Full diff:
+ E     - ['CODE 93']
+ E     + ['=%BLDGP']
+F tests/test_Enable.py::test_Enable[5001-5000-Code 93]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['CODE 93'] == ['=%BLDGP']
+ E     At index 0 diff: 'CODE 93' != '=%BLDGP'
+ E     Full diff:
+ E     - ['CODE 93']
+ E     + ['=%BLDGP']
+R tests/test_Enable.py::test_Enable[5001-5000-Interleaved 2 of 5]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['01234567890128'] == ['=%BLDGP']
+ E     At index 0 diff: '01234567890128' != '=%BLDGP'
+ E     Full diff:
+ E     - ['01234567890128']
+ E     + ['=%BLDGP']
+F tests/test_Enable.py::test_Enable[5001-5000-Interleaved 2 of 5]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['01234567890128'] == ['=%BLDGP']
+ E     At index 0 diff: '01234567890128' != '=%BLDGP'
+ E     Full diff:
+ E     - ['01234567890128']
+ E     + ['=%BLDGP']
+R tests/test_Enable.py::test_Enable[5001-5000-Discrete 2 of 5]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['14567'] == ['=%BLDGP']
+ E     At index 0 diff: '14567' != '=%BLDGP'
+ E     Full diff:
+ E     - ['14567']
+ E     + ['=%BLDGP']
+F tests/test_Enable.py::test_Enable[5001-5000-Discrete 2 of 5]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['14567'] == ['=%BLDGP']
+ E     At index 0 diff: '14567' != '=%BLDGP'
+ E     Full diff:
+ E     - ['14567']
+ E     + ['=%BLDGP']
+R tests/test_Enable.py::test_Enable[5001-5000-Matrix 2 of 5]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['01234567890128'] == ['=%BLDGP']
+ E     At index 0 diff: '01234567890128' != '=%BLDGP'
+ E     Full diff:
+ E     - ['01234567890128']
+ E     + ['=%BLDGP']
+F tests/test_Enable.py::test_Enable[5001-5000-Matrix 2 of 5]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['01234567890128'] == ['=%BLDGP']
+ E     At index 0 diff: '01234567890128' != '=%BLDGP'
+ E     Full diff:
+ E     - ['01234567890128']
+ E     + ['=%BLDGP']
+R tests/test_Enable.py::test_Enable[5001-5000-Codabar]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['A987654321098B'] == ['=%BLDGP']
+ E     At index 0 diff: 'A987654321098B' != '=%BLDGP'
+ E     Full diff:
+ E     - ['A987654321098B']
+ E     + ['=%BLDGP']
+F tests/test_Enable.py::test_Enable[5001-5000-Codabar]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['A987654321098B'] == ['=%BLDGP']
+ E     At index 0 diff: 'A987654321098B' != '=%BLDGP'
+ E     Full diff:
+ E     - ['A987654321098B']
+ E     + ['=%BLDGP']
+R tests/test_Enable.py::test_Enable[5001-5000-MSI]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['20205977'] == ['=%BLDGP']
+ E     At index 0 diff: '20205977' != '=%BLDGP'
+ E     Full diff:
+ E     - ['20205977']
+ E     + ['=%BLDGP']
+F tests/test_Enable.py::test_Enable[5001-5000-MSI]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['20205977'] == ['=%BLDGP']
+ E     At index 0 diff: '20205977' != '=%BLDGP'
+ E     Full diff:
+ E     - ['20205977']
+ E     + ['=%BLDGP']
+R tests/test_Enable.py::test_Enable[5001-5000-GS1 Databar 14]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['0120012345678909'] == ['=%BLDGP']
+ E     At index 0 diff: '0120012345678909' != '=%BLDGP'
+ E     Full diff:
+ E     - ['0120012345678909']
+ E     + ['=%BLDGP']
+F tests/test_Enable.py::test_Enable[5001-5000-GS1 Databar 14]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['0120012345678909'] == ['=%BLDGP']
+ E     At index 0 diff: '0120012345678909' != '=%BLDGP'
+ E     Full diff:
+ E     - ['0120012345678909']
+ E     + ['=%BLDGP']
+R tests/test_Enable.py::test_Enable[5001-5000-GS1 Databar Limited]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['0115012345678907'] == ['=%BLDGP']
+ E     At index 0 diff: '0115012345678907' != '=%BLDGP'
+ E     Full diff:
+ E     - ['0115012345678907']
+ E     + ['=%BLDGP']
+F tests/test_Enable.py::test_Enable[5001-5000-GS1 Databar Limited]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['0115012345678907'] == ['=%BLDGP']
+ E     At index 0 diff: '0115012345678907' != '=%BLDGP'
+ E     Full diff:
+ E     - ['0115012345678907']
+ E     + ['=%BLDGP']
+R tests/test_Enable.py::test_Enable[5001-5000-PDF417]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['ABCDEFGHIJK'] == ['=%BLDGP']
+ E     At index 0 diff: 'ABCDEFGHIJK' != '=%BLDGP'
+ E     Full diff:
+ E     - ['ABCDEFGHIJK']
+ E     + ['=%BLDGP']
+F tests/test_Enable.py::test_Enable[5001-5000-PDF417]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['ABCDEFGHIJK'] == ['=%BLDGP']
+ E     At index 0 diff: 'ABCDEFGHIJK' != '=%BLDGP'
+ E     Full diff:
+ E     - ['ABCDEFGHIJK']
+ E     + ['=%BLDGP']
+R tests/test_Enable.py::test_Enable[5001-5000-MicroPDF]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['ABC123ABC'] == ['=%BLDGP']
+ E     At index 0 diff: 'ABC123ABC' != '=%BLDGP'
+ E     Full diff:
+ E     - ['ABC123ABC']
+ E     + ['=%BLDGP']
+F tests/test_Enable.py::test_Enable[5001-5000-MicroPDF]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['ABC123ABC'] == ['=%BLDGP']
+ E     At index 0 diff: 'ABC123ABC' != '=%BLDGP'
+ E     Full diff:
+ E     - ['ABC123ABC']
+ E     + ['=%BLDGP']
+R tests/test_Enable.py::test_Enable[5001-5000-Datamatrix]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['01234567890512345'] == ['=%BLDGP']
+ E     At index 0 diff: '01234567890512345' != '=%BLDGP'
+ E     Full diff:
+ E     - ['01234567890512345']
+ E     + ['=%BLDGP']
+F tests/test_Enable.py::test_Enable[5001-5000-Datamatrix]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['01234567890512345'] == ['=%BLDGP']
+ E     At index 0 diff: '01234567890512345' != '=%BLDGP'
+ E     Full diff:
+ E     - ['01234567890512345']
+ E     + ['=%BLDGP']
+R tests/test_Enable.py::test_Enable[5001-5000-Maxicode]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['01234567890512345'] == ['=%BLDGP']
+ E     At index 0 diff: '01234567890512345' != '=%BLDGP'
+ E     Full diff:
+ E     - ['01234567890512345']
+ E     + ['=%BLDGP']
+F tests/test_Enable.py::test_Enable[5001-5000-Maxicode]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['01234567890512345'] == ['=%BLDGP']
+ E     At index 0 diff: '01234567890512345' != '=%BLDGP'
+ E     Full diff:
+ E     - ['01234567890512345']
+ E     + ['=%BLDGP']
+R tests/test_Enable.py::test_Enable[5001-5000-QR Code]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['01234567890512345'] == ['=%BLDGP']
+ E     At index 0 diff: '01234567890512345' != '=%BLDGP'
+ E     Full diff:
+ E     - ['01234567890512345']
+ E     + ['=%BLDGP']
+F tests/test_Enable.py::test_Enable[5001-5000-QR Code]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['01234567890512345'] == ['=%BLDGP']
+ E     At index 0 diff: '01234567890512345' != '=%BLDGP'
+ E     Full diff:
+ E     - ['01234567890512345']
+ E     + ['=%BLDGP']
+R tests/test_Enable.py::test_Enable[5001-5000-MicroQR]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['ABC123ABC'] == ['=%BLDGP']
+ E     At index 0 diff: 'ABC123ABC' != '=%BLDGP'
+ E     Full diff:
+ E     - ['ABC123ABC']
+ E     + ['=%BLDGP']
+F tests/test_Enable.py::test_Enable[5001-5000-MicroQR]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['ABC123ABC'] == ['=%BLDGP']
+ E     At index 0 diff: 'ABC123ABC' != '=%BLDGP'
+ E     Full diff:
+ E     - ['ABC123ABC']
+ E     + ['=%BLDGP']
+R tests/test_Enable.py::test_Enable[5001-5000-Aztec]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['1234567890ABCabc'] == ['=%BLDGP']
+ E     At index 0 diff: '1234567890ABCabc' != '=%BLDGP'
+ E     Full diff:
+ E     - ['1234567890ABCabc']
+ E     + ['=%BLDGP']
+F tests/test_Enable.py::test_Enable[5001-5000-Aztec]
+ test_Enable.py:51: in test_Enable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['1234567890ABCabc'] == ['=%BLDGP']
+ E     At index 0 diff: '1234567890ABCabc' != '=%BLDGP'
+ E     Full diff:
+ E     - ['1234567890ABCabc']
+ E     + ['=%BLDGP']

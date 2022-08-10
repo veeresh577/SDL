@@ -1,0 +1,16 @@
+<12>[79215.310896] healthd: battery l=34 v=3482 t=45.0 h=2 st=2 c=-510253 fc=4008000 cc=2 chg=u
+<14>[79215.352120] init: starting service 'smartmu'...
+<14>[79215.395731] init: starting service 'qccsyshalservice'...
+<38>[79215.495637] type=1400 audit(1642512133.121:11577): avc: denied { search } for comm="vendor.qti.hard" name="/" dev="sda10" ino=2 scontext=u:r:vendor_hal_qccvndhal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[79215.505493] init: Service 'qccsyshalservice' (pid 4617) exited with status 1
+<14>[79215.506400] init: Sending signal 9 to service 'qccsyshalservice' (pid 4617) process group...
+<14>[79215.508596] libprocessgroup: Successfully killed process cgroup uid 1000 pid 4617 in 1ms
+<14>[79215.520926] init: Service 'smartmu' (pid 4616) exited with status 0
+<14>[79215.521058] init: Sending signal 9 to service 'smartmu' (pid 4616) process group...
+<14>[79215.522202] libprocessgroup: Successfully killed process cgroup uid 0 pid 4616 in 0ms
+<14>[79215.570706] init: Service 'qccvndhalservice' (pid 4618) exited with status 1
+<38>[79217.947059] type=1400 audit(1642512135.571:11578): avc: denied { kill } for comm="swapper/2" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<14>[79220.534180] init: Service 'smartmu' (pid 4628) exited with status 0
+<14>[79220.534282] init: Sending signal 9 to service 'smartmu' (pid 4628) process group...
+<14>[79220.535246] libprocessgroup: Successfully killed process cgroup uid 0 pid 4628 in 0ms
+<14>[79220.560723] libprocessgroup: Successfully killed process cgroup uid 1000 pid 4629 in 1ms

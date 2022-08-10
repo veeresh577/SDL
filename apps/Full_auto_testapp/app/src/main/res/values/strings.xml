@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, SW_Decode_Android_TestApp_Activity!</string>
+    <string name="app_name">SDL Test App</string>
+    <string name="Test_Prompt">Choose a Test</string>
+    <string name="snap">Snapshot</string>
+
+    <string-array name="test_array">
+        <item>Param Defaults</item>
+        <item>Trigger Modes</item>
+        <item>Picklist</item>
+        <item>Illumination</item>
+        <item>AIM Pattern</item>
+        <item>Decode Session</item>
+        <item>Timeout Same Symbol</item>
+        <item>Code ID</item>
+        <item>No Read</item>
+        <item>Multi-Decode</item>
+        <item>Mobile Phone-Display</item>
+        <item>Get Last Decoded Image</item>
+        <item>Signature Capture</item>
+        <item>Security Level</item>
+        <item>I2 of 5 Security Level</item>
+        <item>Reduced Quiet Zone</item>
+        <item>Fuzzy 1D Processing</item>
+		<item>Ignore FNC4 Code128</item>
+		<item>Linked Aztec</item>
+		<item>Linked QR</item>
+        <item>Read From Mobile</item>
+		<item>SDL Unlisted Param Report</item>
+    </string-array>
+    
+    <string-array name="engine_array">
+        <item>Standard</item>
+        <item>Turbo</item>
+    </string-array>
+
+    <string name="title_activity_get_last_decoded_image">GetLastDecodedImageActivity</string>
+    <string name="last_decoded_image">Did the Image Display clearly?</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+
+</resources>

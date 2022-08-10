@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?><testsuite errors="2" failures="11" name="pytest" skips="0" tests="22" time="3446.439"><testcase classname="tests.test_Supplemental" file="tests/test_Supplemental.py" line="33" name="test_Supplemental[5001-5000-EAN-13 5-Supps0]" time="45.7819652557"><failure message="AssertionError: assert [&apos;4498765301535&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;4498765301535&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;4498765301535&apos;]
+  + [&apos;NR&apos;]">test_Supplemental.py:39: in test_Supplemental
+    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;4498765301535&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;4498765301535&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;4498765301535&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_Supplemental" file="tests/test_Supplemental.py" line="33" name="test_Supplemental[5001-5000-EAN-13 5-Supps1]" time="43.4586453438"><failure message="AssertionError: assert [&apos;449876530153512345&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;449876530153512345&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;449876530153512345&apos;]
+  + [&apos;NR&apos;]">test_Supplemental.py:39: in test_Supplemental
+    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;449876530153512345&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;449876530153512345&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;449876530153512345&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_Supplemental" file="tests/test_Supplemental.py" line="33" name="test_Supplemental[5001-5000-EAN-13 5-Supps2]" time="24.3458464146"></testcase><testcase classname="tests.test_Supplemental" file="tests/test_Supplemental.py" line="33" name="test_Supplemental[5001-5000-EAN-13 5-Supps3]" time="44.0021669865"><failure message="AssertionError: assert [&apos;449876530153512345&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;449876530153512345&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;449876530153512345&apos;]
+  + [&apos;NR&apos;]">test_Supplemental.py:39: in test_Supplemental
+    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;449876530153512345&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;449876530153512345&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;449876530153512345&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_Supplemental" file="tests/test_Supplemental.py" line="33" name="test_Supplemental[5001-5000-EAN-13 5-Supps4]" time="43.7706048489"><failure message="AssertionError: assert [&apos;4498765301535&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;4498765301535&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;4498765301535&apos;]
+  + [&apos;NR&apos;]">test_Supplemental.py:39: in test_Supplemental
+    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;4498765301535&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;4498765301535&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;4498765301535&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_Supplemental" file="tests/test_Supplemental.py" line="33" name="test_Supplemental[5001-5000-EAN-13 5-Supps5]" time="44.0210211277"><failure message="AssertionError: assert [&apos;414123456789412345&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;414123456789412345&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;414123456789412345&apos;]
+  + [&apos;NR&apos;]">test_Supplemental.py:39: in test_Supplemental
+    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;414123456789412345&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;414123456789412345&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;414123456789412345&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_Supplemental" file="tests/test_Supplemental.py" line="33" name="test_Supplemental[5001-5000-Bookland]" time="45.1353881359"><failure message="AssertionError: assert [&apos;97934535223280001&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;97934535223280001&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;97934535223280001&apos;]
+  + [&apos;NR&apos;]">test_Supplemental.py:39: in test_Supplemental
+    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;97934535223280001&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;97934535223280001&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;97934535223280001&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_Supplemental" file="tests/test_Supplemental.py" line="33" name="test_Supplemental[5001-5000-EAN-13 5-Supps6]" time="40.8223628998"><failure message="AssertionError: assert [&apos;414123456789412345&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;414123456789412345&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;414123456789412345&apos;]
+  + [&apos;NR&apos;]">test_Supplemental.py:39: in test_Supplemental
+    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;414123456789412345&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;414123456789412345&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;414123456789412345&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_Supplemental" file="tests/test_Supplemental.py" line="33" name="test_Supplemental[5001-5000-EAN-13 5-Supps7]" time="43.0050990582"><failure message="AssertionError: assert [&apos;977123456789812345&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;977123456789812345&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;977123456789812345&apos;]
+  + [&apos;NR&apos;]">test_Supplemental.py:39: in test_Supplemental
+    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;977123456789812345&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;977123456789812345&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;977123456789812345&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_Supplemental" file="tests/test_Supplemental.py" line="33" name="test_Supplemental[5001-5000-EAN-13 5-Supps8]" time="43.0168678761"><failure message="AssertionError: assert [&apos;449876530153512345&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;449876530153512345&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;449876530153512345&apos;]
+  + [&apos;NR&apos;]">test_Supplemental.py:39: in test_Supplemental
+    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;449876530153512345&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;449876530153512345&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;449876530153512345&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_Supplemental" file="tests/test_Supplemental.py" line="33" name="test_Supplemental[5001-5000-EAN-13 5-Supps9]" time="41.7298858166"><failure message="AssertionError: assert [&apos;414123456789412345&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;414123456789412345&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;414123456789412345&apos;]
+  + [&apos;NR&apos;]">test_Supplemental.py:39: in test_Supplemental
+    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;414123456789412345&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;414123456789412345&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;414123456789412345&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_SecurityLevel" file="tests/test_SecurityLevel.py" line="27" name="test_SecurityLevel[5001-5000-Security Level 1]" time="276.098390102"></testcase><testcase classname="tests.test_SecurityLevel" file="tests/test_SecurityLevel.py" line="27" name="test_SecurityLevel[5001-5000-Security Level 2]" time="274.010549068"></testcase><testcase classname="tests.test_SecurityLevel" file="tests/test_SecurityLevel.py" line="27" name="test_SecurityLevel[5001-5000-Security Level 3]" time="273.29987669"></testcase><testcase classname="tests.test_SecurityLevel" file="tests/test_SecurityLevel.py" line="27" name="test_SecurityLevel[5001-5000-Security Level 4]" time="271.938733101"></testcase><testcase classname="tests.test_SecurityLevel" file="tests/test_SecurityLevel.py" line="27" name="test_SecurityLevel[5001-5000-Security Level 5]" time="161.957291126"><failure message="IOError: RPC server not started!">test_SecurityLevel.py:36: in test_SecurityLevel
+    if barcode not in device.scanner.scan(symbology_num, subtest, barcode[0], size, use):
+../lib/scanner.py:32: in scan
+    self.device.wait.update(timeout=5000)
+../../venv27/local/lib/python2.7/site-packages/uiautomator/__init__.py:74: in __call__
+    return self.func(*args, **kwargs)
+../../venv27/local/lib/python2.7/site-packages/uiautomator/__init__.py:858: in _wait
+    return self.server.jsonrpc_wrap(timeout=http_timeout).waitForWindowUpdate(package_name, timeout)
+../../venv27/local/lib/python2.7/site-packages/uiautomator/__init__.py:425: in wrapper
+    server.start(timeout=30)
+../../venv27/local/lib/python2.7/site-packages/uiautomator/__init__.py:481: in start
+    raise IOError(&quot;RPC server not started!&quot;)
+E   IOError: RPC server not started!</failure></testcase><testcase classname="tests.test_SecurityLevel" file="tests/test_SecurityLevel.py" line="27" name="test_SecurityLevel[5001-5000-Security Level 5]" time="31.4644668102"><error message="test teardown failure">../conftest.py:215: in func
+    device.scanner.setparam(request.param)
+../lib/scanner.py:53: in setparam
+    self.device.wait.update(timeout=5000)
+../../venv27/local/lib/python2.7/site-packages/uiautomator/__init__.py:74: in __call__
+    return self.func(*args, **kwargs)
+../../venv27/local/lib/python2.7/site-packages/uiautomator/__init__.py:858: in _wait
+    return self.server.jsonrpc_wrap(timeout=http_timeout).waitForWindowUpdate(package_name, timeout)
+../../venv27/local/lib/python2.7/site-packages/uiautomator/__init__.py:425: in wrapper
+    server.start(timeout=30)
+../../venv27/local/lib/python2.7/site-packages/uiautomator/__init__.py:481: in start
+    raise IOError(&quot;RPC server not started!&quot;)
+E   IOError: RPC server not started!</error></testcase><testcase classname="tests.test_SecurityLevel" file="tests/test_SecurityLevel.py" line="27" name="test_SecurityLevel[5001-5000-Security Level 6]" time="277.226708174"></testcase><testcase classname="tests.test_SecurityLevel" file="tests/test_SecurityLevel.py" line="27" name="test_SecurityLevel[5001-5000-Security Level 7]" time="296.669986963"></testcase><testcase classname="tests.test_SecurityLevel" file="tests/test_SecurityLevel.py" line="27" name="test_SecurityLevel[5001-5000-Security Level 8]" time="299.195086956"></testcase><testcase classname="tests.test_SecurityLevel" file="tests/test_SecurityLevel.py" line="27" name="test_SecurityLevel[5001-5000-Security Level 9]" time="318.918962479"></testcase><testcase classname="tests.test_SecurityLevel" file="tests/test_SecurityLevel.py" line="27" name="test_SecurityLevel[5001-5000-Security Level 10]" time="336.891798019"></testcase><testcase classname="tests.test_SecurityLevel" file="tests/test_SecurityLevel.py" line="27" name="test_SecurityLevel[5001-5000-Security Level 11]" time="46.7387678623"><error message="test setup failure">../conftest.py:183: in logfolder
+    os.makedirs(logfolder)
+../../venv27/lib/python2.7/os.py:157: in makedirs
+    mkdir(name, mode)
+E   OSError: [Errno 17] File exists: &apos;logs/21062022_192402.165213/212615225D0150&apos;</error></testcase></testsuite>

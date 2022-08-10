@@ -1,0 +1,15 @@
+<3>[ 4178.324491] FUSIONWL: : ==Regulatory_scan_country_list_db_reset==: Reset complete for scan country list 
+<38>[ 4179.646232] type=1400 audit(1654199938.805:6254): avc: denied { kill } for comm="swapper/0" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<6>[ 4180.331211] IRQ 6: no longer affine to CPU4
+<14>[ 4182.727360] init: starting service 'qccvndhalservice'...
+<14>[ 4187.771193] init: starting service 'qccvndhalservice'...
+<14>[ 4187.865224] init: Service 'qccsyshalservice' (pid 19297) exited with status 1
+<14>[ 4187.865360] init: Sending signal 9 to service 'qccsyshalservice' (pid 19297) process group...
+<14>[ 4187.913370] libprocessgroup: Successfully killed process cgroup uid 1000 pid 19298 in 0ms
+<3>[ 4188.313725] FUSIONWL: : ==Regulatory_elect_country_db==: No AP with 11d Country code is present in scan list 
+<3>[ 4188.328148] FUSIONWL: : ==Regulatory_scan_country_list_db_reset==: Reset complete for scan country list 
+<6>[ 4190.651343] IRQ 6: no longer affine to CPU4
+<3>[ 4190.670679] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 4190.680943] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 4190.681371] [SDL] se47xx_misc_ioctl ret = -107 
+<3>[ 4190.685337] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 

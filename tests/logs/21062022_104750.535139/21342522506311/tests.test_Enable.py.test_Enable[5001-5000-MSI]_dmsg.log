@@ -1,0 +1,71 @@
+<38>[ 4459.873732] type=1400 audit(1654200219.035:6300): avc: denied { search } for comm="qccsyshalservic" name="/" dev="mmcblk0p37" ino=2 scontext=u:r:vendor_qccsyshal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[ 4459.966302] init: Service 'qccsyshalservice' (pid 20359) exited with status 1
+<14>[ 4459.966404] init: Sending signal 9 to service 'qccsyshalservice' (pid 20359) process group...
+<14>[ 4459.967112] libprocessgroup: Successfully killed process cgroup uid 1000 pid 20359 in 0ms
+<14>[ 4460.090415] init: Service 'qccvndhalservice' (pid 20360) exited with status 1
+<14>[ 4460.090714] init: Sending signal 9 to service 'qccvndhalservice' (pid 20360) process group...
+<14>[ 4464.832571] init: starting service 'qccsyshalservice'...
+<14>[ 4464.962461] init: starting service 'qccvndhalservice'...
+<14>[ 4464.998879] init: Service 'qccsyshalservice' (pid 20373) exited with status 1
+<14>[ 4464.998988] init: Sending signal 9 to service 'qccsyshalservice' (pid 20373) process group...
+<14>[ 4464.999721] libprocessgroup: Successfully killed process cgroup uid 1000 pid 20373 in 0ms
+<6>[ 4466.279727] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<6>[ 4466.279746] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 
+<3>[ 4468.362340] [schedu][0x1207929b1a5][20:03:47.528596] wlan: [2070:E:scan] scm_11d_elected_country_algo_fcc: 98: No AP with 11d Country code is present in scan list
+<3>[ 4468.362441] FUSIONWL: : ==Regulatory_elect_country_db==: No AP with 11d Country code is present in scan list 
+<14>[ 4469.862854] init: starting service 'qccsyshalservice'...
+<14>[ 4470.028853] init: Service 'qccsyshalservice' (pid 20378) exited with status 1
+<14>[ 4470.028952] init: Sending signal 9 to service 'qccsyshalservice' (pid 20378) process group...
+<14>[ 4470.029917] libprocessgroup: Successfully killed process cgroup uid 1000 pid 20378 in 0ms
+<3>[ 4472.247748] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 4472.258095] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 4472.258801] [SDL] se47xx_misc_ioctl ret = -107 
+<3>[ 4472.281626] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 4472.286644] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 4472.292744] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 4472.297405] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 4472.304350] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 4472.307943] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 4472.314119] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 4472.318836] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 4472.324320] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<31>[ 4472.482349] logd: logdr: UID=0 GID=0 PID=20389 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[ 4472.503717] [SDL] misc_ioctl msg.len is 3 : 0x77 0x02 0x87 
+<3>[ 4472.505723] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 4472.794923] msm_ispif_config:1061 Exit 
+<3>[ 4472.795425] msm_ispif_config2: Exit 
+<3>[ 4472.968613] frame_src is 1 frame_id is 4 blackjoe
+<3>[ 4473.052639] frame_src is 1 frame_id is 6 blackjoe
+<3>[ 4473.057953] qcom-lpi-pinctrl 15070000.lpi_pinctrl: lpi_pinctrl_runtime_resume: unable to get core clk handle -2
+<6>[ 4473.071311] __afe_port_start: port id: 0x102e
+<6>[ 4473.071351] afe_find_cal_topo_id_by_port: port id: 0x102e, dev_acdb_id: 0
+<6>[ 4473.071365] afe_find_cal_topo_id_by_port: top_id:1025e acdb_id:15 afe_port:0x102e
+<6>[ 4473.071379] afe_get_cal_topology_id: port_id = 0x102e acdb_id = 15 topology_id = 0x1025e cal_type_index=8 ret=0
+<6>[ 4473.072871] afe_send_port_topology_id: AFE set topology id 0x1025e  enable for port 0x102e ret 0
+<6>[ 4473.072885] send_afe_cal_type: cal_index is 0
+<6>[ 4473.072899] send_afe_cal_type: dev_acdb_id[130] is 0
+<6>[ 4473.072912] send_afe_cal_type: Sending cal_index cal 0
+<6>[ 4473.074251] afe_send_hw_delay: port_id 0x102e rate 48000 delay_usec 474 status 0
+<3>[ 4473.144441] frame_src is 1 frame_id is 8 blackjoe
+<3>[ 4473.150813] qcom-lpi-pinctrl 15070000.lpi_pinctrl: lpi_pinctrl_runtime_suspend: unable to get core clk handle -2
+<3>[ 4473.178782] frame_src is 1 frame_id is 9 blackjoe
+<3>[ 4473.285846] frame_src is 1 frame_id is 11 blackjoe
+<3>[ 4473.385573] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 4473.386304] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<14>[ 4475.025619] init: starting service 'qccvndhalservice'...
+<14>[ 4475.305209] init: Service 'qccvndhalservice' (pid 20422) exited with status 1
+<14>[ 4475.305275] init: Sending signal 9 to service 'qccvndhalservice' (pid 20422) process group...
+<14>[ 4475.306173] libprocessgroup: Successfully killed process cgroup uid 1000 pid 20422 in 0ms
+<3>[ 4476.562373] qcom-lpi-pinctrl 15070000.lpi_pinctrl: lpi_pinctrl_runtime_resume: unable to get core clk handle -2
+<6>[ 4476.564362] afe_close: port_id = 0x102e
+<3>[ 4478.370980] [schedu][0x120849de6f1][20:03:57.537200] wlan: [2070:E:scan] scm_11d_elected_country_algo_fcc: 98: No AP with 11d Country code is present in scan list
+<3>[ 4478.371083] FUSIONWL: : ==Regulatory_elect_country_db==: No AP with 11d Country code is present in scan list 
+<3>[ 4478.389872] FUSIONWL: : ==Regulatory_scan_country_list_db_reset==: Reset complete for scan country list 
+<3>[ 4479.383763] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 4479.394027] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 4479.394434] [SDL] se47xx_misc_ioctl ret = -107 
+<3>[ 4479.398281] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 4479.403319] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 4479.408218] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 4479.414171] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 4479.419428] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 

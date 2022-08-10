@@ -1,0 +1,9 @@
+R tests/test_CodeId.py::test_CodeId[5001-5000-UPC-A0]
+ test_CodeId.py:17: in test_CodeId
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert [']E00012345678905'] == [']A0NR']
+ E     At index 0 diff: ']E00012345678905' != ']A0NR'
+ E     Full diff:
+ E     - [']E00012345678905']
+ E     + [']A0NR']
+. tests/test_CodeId.py::test_CodeId[5001-5000-UPC-A0]

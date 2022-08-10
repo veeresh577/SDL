@@ -1,0 +1,3 @@
+<38>[ 1898.855715] type=1400 audit(1654197658.015:5771): avc: denied { kill } for comm="swapper/3" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<14>[ 1902.810960] init: starting service 'qccvndhalservice'...
+<38>[ 1902.867743] type=1400 audit(1654197662.025:5772): avc: denied { search } for comm="vendor.qti.hard" name="/" dev="mmcblk0p37" ino=2 scontext=u:r:vendor_hal_qccvndhal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1

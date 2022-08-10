@@ -1,0 +1,42 @@
+<6>[ 3118.891170] IRQ 6: no longer affine to CPU7
+<38>[ 3119.254537] type=1400 audit(1654198878.415:6017): avc: denied { kill } for comm="swapper/0" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<14>[ 3123.082544] init: starting service 'qccsyshalservice'...
+<14>[ 3123.133297] init: starting service 'qccvndhalservice'...
+<14>[ 3123.224399] init: Service 'qccsyshalservice' (pid 14705) exited with status 1
+<14>[ 3123.224589] init: Sending signal 9 to service 'qccsyshalservice' (pid 14705) process group...
+<14>[ 3123.226178] libprocessgroup: Successfully killed process cgroup uid 1000 pid 14705 in 1ms
+<14>[ 3123.278611] init: Service 'qccvndhalservice' (pid 14706) exited with status 1
+<14>[ 3123.278759] init: Sending signal 9 to service 'qccvndhalservice' (pid 14706) process group...
+<14>[ 3123.280221] libprocessgroup: Successfully killed process cgroup uid 1000 pid 14706 in 0ms
+<12>[ 3125.244193] healthd: battery l=17 v=3319 t=27.0 h=2 st=2 c=-637694 fc=0 cc=7 chg=u
+<12>[ 3125.309972] healthd: battery l=17 v=3319 t=27.0 h=2 st=2 c=-637694 fc=0 cc=7 chg=u
+<12>[ 3125.344614] healthd: battery l=17 v=3319 t=27.0 h=2 st=2 c=-637694 fc=0 cc=7 chg=u
+<12>[ 3125.447511] healthd: battery l=17 v=3319 t=27.0 h=2 st=2 c=-637694 fc=0 cc=7 chg=u
+<12>[ 3125.475152] healthd: battery l=17 v=3319 t=27.0 h=2 st=2 c=-637694 fc=0 cc=7 chg=u
+<6>[ 3125.989117] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<6>[ 3125.989148] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 
+<3>[ 3128.086244] FUSIONWL: : ==Regulatory_scan_country_list_db_reset==: Reset complete for scan country list 
+<14>[ 3128.163175] init: starting service 'qccvndhalservice'...
+<14>[ 3128.252912] init: Service 'qccsyshalservice' (pid 14710) exited with status 1
+<14>[ 3128.253065] init: Sending signal 9 to service 'qccsyshalservice' (pid 14710) process group...
+<14>[ 3128.254539] libprocessgroup: Successfully killed process cgroup uid 1000 pid 14710 in 0ms
+<14>[ 3128.288773] init: Service 'qccvndhalservice' (pid 14711) exited with status 1
+<14>[ 3128.288896] init: Sending signal 9 to service 'qccvndhalservice' (pid 14711) process group...
+<14>[ 3128.291124] libprocessgroup: Successfully killed process cgroup uid 1000 pid 14711 in 1ms
+<6>[ 3128.351436] IRQ 6: no longer affine to CPU4
+<6>[ 3131.251061] IRQ 6: no longer affine to CPU4
+<3>[ 3131.256437] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 3131.266753] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 3131.267488] [SDL] se47xx_misc_ioctl ret = -107 
+<3>[ 3131.271005] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 3131.281137] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 3131.286861] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 3131.297241] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 3131.307824] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 3131.318657] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 3131.324735] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 3131.329219] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 3131.422509] [SDL] misc_ioctl msg.len is 3 : 0x77 0x02 0x87 
+<3>[ 3131.424452] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 3131.551108] msm_isp_open_node: reset VFE
+<31>[ 3131.590018] logd: logdr: UID=0 GID=0 PID=14733 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns

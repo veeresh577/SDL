@@ -1,0 +1,1 @@
+<38>[82868.426758] type=1400 audit(1654289736.468:192580): avc: denied { kill } for comm="swapper/2" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1

@@ -1,0 +1,58 @@
+<14>[77810.292245] init: starting service 'smartmu'...
+<14>[77810.360673] init: starting service 'qccvndhalservice'...
+<14>[77810.420709] libprocessgroup: Successfully killed process cgroup uid 0 pid 29409 in 1ms
+<38>[77810.422270] type=1400 audit(1642510728.051:11323): avc: denied { search } for comm="vendor.qti.hard" name="/" dev="sda10" ino=2 scontext=u:r:vendor_hal_qccvndhal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[77810.441349] libprocessgroup: Successfully killed process cgroup uid 1000 pid 29410 in 0ms
+<14>[77810.495572] init: Service 'qccvndhalservice' (pid 29411) exited with status 1
+<14>[77815.328431] init: starting service 'smartmu'...
+<14>[77815.372863] init: starting service 'qccsyshalservice'...
+<14>[77815.404487] init: starting service 'qccvndhalservice'...
+<14>[77815.483320] init: Service 'smartmu' (pid 29415) exited with status 0
+<14>[77815.483416] init: Sending signal 9 to service 'smartmu' (pid 29415) process group...
+<14>[77815.484219] libprocessgroup: Successfully killed process cgroup uid 0 pid 29415 in 0ms
+<14>[77820.371099] init: starting service 'smartmu'...
+<14>[77820.417141] init: starting service 'qccsyshalservice'...
+<14>[77820.452077] init: starting service 'qccvndhalservice'...
+<38>[77820.491016] type=1400 audit(1642510738.101:11324): avc: denied { search } for comm="qccsyshalservic" name="/" dev="sda10" ino=2 scontext=u:r:vendor_qccsyshal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[77820.567812] init: Service 'qccvndhalservice' (pid 29426) exited with status 1
+<14>[77820.567969] init: Sending signal 9 to service 'qccvndhalservice' (pid 29426) process group...
+<14>[77820.583489] init: Service 'qccsyshalservice' (pid 29423) exited with status 1
+<3>[77820.662966] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[77820.664657] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[77820.674038] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[77820.678522] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[77820.684067] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[77820.689269] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[77820.694479] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[77820.705096] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[77820.710712] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[77820.716152] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[77820.721472] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[77820.737272] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[77820.764744] [SDL] misc_ioctl msg.len is 4 : 0x82 0x00 0x00 0x7e 
+<3>[77820.769795] [SDL] misc_ioctl msg.len is 2 : 0x7d 0x80 
+<31>[77820.847465] logd: logdr: UID=0 GID=0 PID=29434 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[77820.853556] [SDL] misc_ioctl msg.len is 3 : 0x77 0x02 0x87 
+<3>[77820.985890] msm_isp_open_node: reset VFE
+<3>[77821.004341] frame_src is 1 frame_id is 1 blackjoe
+<31>[77821.006033] logd: logdr: UID=0 GID=0 PID=29440 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[77821.020922] frame_src is 1 frame_id is 2 blackjoe
+<3>[77821.037547] frame_src is 1 frame_id is 3 blackjoe
+<3>[77821.054153] frame_src is 1 frame_id is 4 blackjoe
+<3>[77821.103746] tavil_codec tavil_codec: ASoC: DAPM unknown pin Lineout_3 amp
+<3>[77821.140475] frame_src is 1 frame_id is 7 blackjoe
+<6>[77821.143832] afe_find_cal: cal block is a match, size is 1372
+<6>[77821.145016] afe_send_hw_delay: port_id 0x4000 rate 48000 delay_usec 474 status 0
+<3>[77821.157094] frame_src is 1 frame_id is 8 blackjoe
+<3>[77821.190340] frame_src is 1 frame_id is 10 blackjoe
+<3>[77821.223585] frame_src is 1 frame_id is 12 blackjoe
+<3>[77821.260843] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[77821.265850] [SDL] se47xx_misc_ioctl ret = -107 
+<3>[77821.275933] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[77821.286792] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[77822.622964] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[77822.624398] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[77822.627957] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[77822.633074] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[77822.638453] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[77822.643713] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 

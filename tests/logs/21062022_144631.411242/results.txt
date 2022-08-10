@@ -1,0 +1,127 @@
+. tests/test_EnableAll.py::test_EnableAll[5001-5000-UPC-A]
+. tests/test_EnableAll.py::test_EnableAll[5001-5000-UPC-E]
+. tests/test_EnableAll.py::test_EnableAll[5001-5000-UPC-E1]
+. tests/test_EnableAll.py::test_EnableAll[5001-5000-EAN-8]
+. tests/test_EnableAll.py::test_EnableAll[5001-5000-EAN-13]
+R tests/test_EnableAll.py::test_EnableAll[5001-5000-ISSN]
+ test_EnableAll.py:51: in test_EnableAll
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['83013016'] == ['8765301X']
+ E     At index 0 diff: '83013016' != '8765301X'
+ E     Full diff:
+ E     - ['83013016']
+ E     + ['8765301X']
+F tests/test_EnableAll.py::test_EnableAll[5001-5000-ISSN]
+ test_EnableAll.py:51: in test_EnableAll
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['83013016'] == ['8765301X']
+ E     At index 0 diff: '83013016' != '8765301X'
+ E     Full diff:
+ E     - ['83013016']
+ E     + ['8765301X']
+R tests/test_EnableAll.py::test_EnableAll[5001-5000-Code 128b]
+ test_EnableAll.py:51: in test_EnableAll
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['abcdefghijklm'] == ['NR']
+ E     At index 0 diff: 'abcdefghijklm' != 'NR'
+ E     Full diff:
+ E     - ['abcdefghijklm']
+ E     + ['NR']
+F tests/test_EnableAll.py::test_EnableAll[5001-5000-Code 128b]
+ test_EnableAll.py:51: in test_EnableAll
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['abcdefghijklm'] == ['NR']
+ E     At index 0 diff: 'abcdefghijklm' != 'NR'
+ E     Full diff:
+ E     - ['abcdefghijklm']
+ E     + ['NR']
+. tests/test_EnableAll.py::test_EnableAll[5001-5000-EAN-128]
+. tests/test_EnableAll.py::test_EnableAll[5001-5000-ISBT-128]
+. tests/test_EnableAll.py::test_EnableAll[5001-5000-Code 39]
+R tests/test_EnableAll.py::test_EnableAll[5001-5000-Code 39 Sample with Full ASCII and the symbology enabled]
+ test_EnableAll.py:51: in test_EnableAll
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['CODE@7'] == ['NR']
+ E     At index 0 diff: 'CODE@7' != 'NR'
+ E     Full diff:
+ E     - ['CODE@7']
+ E     + ['NR']
+F tests/test_EnableAll.py::test_EnableAll[5001-5000-Code 39 Sample with Full ASCII and the symbology enabled]
+ test_EnableAll.py:51: in test_EnableAll
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['CODE@7'] == ['NR']
+ E     At index 0 diff: 'CODE@7' != 'NR'
+ E     Full diff:
+ E     - ['CODE@7']
+ E     + ['NR']
+. tests/test_EnableAll.py::test_EnableAll[5001-5000-Code 93]
+R tests/test_EnableAll.py::test_EnableAll[5001-5000-Interleaved 2 of 5]
+ test_EnableAll.py:51: in test_EnableAll
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['01234567890128'] == ['NR']
+ E     At index 0 diff: '01234567890128' != 'NR'
+ E     Full diff:
+ E     - ['01234567890128']
+ E     + ['NR']
+F tests/test_EnableAll.py::test_EnableAll[5001-5000-Interleaved 2 of 5]
+ test_EnableAll.py:51: in test_EnableAll
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['01234567890128'] == ['NR']
+ E     At index 0 diff: '01234567890128' != 'NR'
+ E     Full diff:
+ E     - ['01234567890128']
+ E     + ['NR']
+. tests/test_EnableAll.py::test_EnableAll[5001-5000-Discrete 2 of 5]
+R tests/test_EnableAll.py::test_EnableAll[5001-5000-Matrix 2 of 5]
+ test_EnableAll.py:51: in test_EnableAll
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['01234567890128'] == ['NR']
+ E     At index 0 diff: '01234567890128' != 'NR'
+ E     Full diff:
+ E     - ['01234567890128']
+ E     + ['NR']
+F tests/test_EnableAll.py::test_EnableAll[5001-5000-Matrix 2 of 5]
+ test_EnableAll.py:51: in test_EnableAll
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['01234567890128'] == ['NR']
+ E     At index 0 diff: '01234567890128' != 'NR'
+ E     Full diff:
+ E     - ['01234567890128']
+ E     + ['NR']
+R tests/test_EnableAll.py::test_EnableAll[5001-5000-Codabar]
+ test_EnableAll.py:51: in test_EnableAll
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['A987654321098B'] == ['NR']
+ E     At index 0 diff: 'A987654321098B' != 'NR'
+ E     Full diff:
+ E     - ['A987654321098B']
+ E     + ['NR']
+F tests/test_EnableAll.py::test_EnableAll[5001-5000-Codabar]
+ test_EnableAll.py:51: in test_EnableAll
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['A987654321098B'] == ['NR']
+ E     At index 0 diff: 'A987654321098B' != 'NR'
+ E     Full diff:
+ E     - ['A987654321098B']
+ E     + ['NR']
+. tests/test_EnableAll.py::test_EnableAll[5001-5000-MSI]
+. tests/test_EnableAll.py::test_EnableAll[5001-5000-GS1 Databar 14]
+. tests/test_EnableAll.py::test_EnableAll[5001-5000-GS1 Databar Limited]
+. tests/test_EnableAll.py::test_EnableAll[5001-5000-PDF417]
+. tests/test_EnableAll.py::test_EnableAll[5001-5000-MicroPDF]
+. tests/test_EnableAll.py::test_EnableAll[5001-5000-Datamatrix]
+. tests/test_EnableAll.py::test_EnableAll[5001-5000-Maxicode]
+. tests/test_EnableAll.py::test_EnableAll[5001-5000-QR Code]
+. tests/test_EnableAll.py::test_EnableAll[5001-5000-MicroQR]
+. tests/test_EnableAll.py::test_EnableAll[5001-5000-Aztec]
+. tests/test_EnableAll.py::test_EnableAll[5001-5000-Han-Xin]
+. tests/test_IgnoreFNC4.py::test_IgnoreFNC4[5001-5000-Code 1280]
+. tests/test_IgnoreFNC4.py::test_IgnoreFNC4[5001-5000-Code 1281]
+. tests/test_IgnoreFNC4.py::test_IgnoreFNC4[5001-5000-Code 1282]
+. tests/test_IgnoreFNC4.py::test_IgnoreFNC4[5001-5000-Code 1283]
+. tests/test_IgnoreFNC4.py::test_IgnoreFNC4[5001-5000-Code 1284]
+. tests/test_IgnoreFNC4.py::test_IgnoreFNC4[5001-5000-Code 1285]
+. tests/test_IgnoreFNC4.py::test_IgnoreFNC4[5001-5000-Code 1286]
+. tests/test_IgnoreFNC4.py::test_IgnoreFNC4[5001-5000-Code 1287]
+. tests/test_IgnoreFNC4.py::test_IgnoreFNC4[5001-5000-Code 1288]
+. tests/test_IgnoreFNC4.py::test_IgnoreFNC4[5001-5000-Code 1289]

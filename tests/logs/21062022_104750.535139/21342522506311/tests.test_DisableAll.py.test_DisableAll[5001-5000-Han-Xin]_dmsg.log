@@ -1,0 +1,53 @@
+<6>[ 3798.911198] IRQ 6: no longer affine to CPU7
+<14>[ 3799.454967] init: starting service 'qccsyshalservice'...
+<38>[ 3799.534613] type=1400 audit(1654199558.695:6180): avc: denied { kill } for comm="swapper/0" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<14>[ 3799.724999] init: Service 'qccvndhalservice' (pid 17768) exited with status 1
+<14>[ 3799.725165] init: Sending signal 9 to service 'qccvndhalservice' (pid 17768) process group...
+<14>[ 3799.727711] libprocessgroup: Successfully killed process cgroup uid 1000 pid 17768 in 1ms
+<14>[ 3804.762640] libprocessgroup: Successfully killed process cgroup uid 1000 pid 17780 in 0ms
+<6>[ 3806.139693] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 
+<12>[ 3806.949872] healthd: battery l=13 v=3271 t=28.0 h=2 st=2 c=-657714 fc=0 cc=7 chg=u
+<3>[ 3808.237445] FUSIONWL: : ==Regulatory_scan_country_list_db_reset==: Reset complete for scan country list 
+<14>[ 3809.551023] init: starting service 'qccsyshalservice'...
+<14>[ 3809.804657] init: Service 'qccvndhalservice' (pid 17785) exited with status 1
+<14>[ 3809.806225] libprocessgroup: Successfully killed process cgroup uid 1000 pid 17785 in 0ms
+<3>[ 3811.298511] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 3811.308835] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 3811.309469] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 3811.318981] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 3811.334909] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 3811.340263] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 3811.351052] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 3811.356315] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 3811.361760] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 3811.456491] [SDL] misc_ioctl msg.len is 3 : 0x77 0x02 0x87 
+<3>[ 3811.457103] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<31>[ 3811.481122] logd: logdr: UID=0 GID=0 PID=17797 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[ 3811.587143] msm_ispif_config:1061 Exit 
+<3>[ 3811.587620] msm_ispif_config2: Exit 
+<3>[ 3811.707483] frame_src is 1 frame_id is 3 blackjoe
+<3>[ 3811.814588] frame_src is 1 frame_id is 5 blackjoe
+<31>[ 3811.873116] logd: logdr: UID=0 GID=0 PID=17813 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[ 3811.956155] frame_src is 1 frame_id is 8 blackjoe
+<3>[ 3812.063320] frame_src is 1 frame_id is 10 blackjoe
+<3>[ 3812.097644] frame_src is 1 frame_id is 11 blackjoe
+<3>[ 3812.204762] frame_src is 1 frame_id is 13 blackjoe
+<3>[ 3812.273432] frame_src is 1 frame_id is 15 blackjoe
+<3>[ 3812.380540] frame_src is 1 frame_id is 17 blackjoe
+<3>[ 3812.487714] frame_src is 1 frame_id is 19 blackjoe
+<3>[ 3812.522036] frame_src is 1 frame_id is 20 blackjoe
+<3>[ 3812.629347] frame_src is 1 frame_id is 22 blackjoe
+<3>[ 3812.698066] frame_src is 1 frame_id is 24 blackjoe
+<3>[ 3812.771138] frame_src is 1 frame_id is 25 blackjoe
+<3>[ 3812.839475] frame_src is 1 frame_id is 27 blackjoe
+<31>[ 3812.872444] logd: logdr: UID=0 GID=0 PID=17819 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[ 3812.946598] frame_src is 1 frame_id is 29 blackjoe
+<3>[ 3813.053832] frame_src is 1 frame_id is 31 blackjoe
+<3>[ 3813.088099] frame_src is 1 frame_id is 32 blackjoe
+<31>[ 3813.187062] logd: logdr: UID=0 GID=0 PID=17822 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[ 3813.195152] frame_src is 1 frame_id is 34 blackjoe
+<3>[ 3813.229395] frame_src is 1 frame_id is 35 blackjoe
+<3>[ 3813.336640] frame_src is 1 frame_id is 37 blackjoe
+<3>[ 3813.371151] frame_src is 1 frame_id is 38 blackjoe
+<3>[ 3813.405283] frame_src is 1 frame_id is 39 blackjoe
+<3>[ 3813.478095] frame_src is 1 frame_id is 40 blackjoe

@@ -1,0 +1,63 @@
+<14>[ 2801.232398] init: starting service 'smartmu'...
+<14>[ 2801.333373] libprocessgroup: Successfully killed process cgroup uid 1000 pid 13766 in 1ms
+<14>[ 2801.389308] init: starting service 'qccvndhalservice'...
+<14>[ 2801.437065] init: Service 'smartmu' (pid 13767) exited with status 0
+<14>[ 2801.437157] init: Sending signal 9 to service 'smartmu' (pid 13767) process group...
+<14>[ 2801.437990] libprocessgroup: Successfully killed process cgroup uid 0 pid 13767 in 0ms
+<6>[ 2801.911524] IRQ 6: no longer affine to CPU5
+<38>[ 2802.024302] type=1400 audit(1642433388.064:4430): avc: denied { kill } for comm="swapper/2" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<14>[ 2806.367701] init: Service 'qccsyshalservice' (pid 13778) exited with status 1
+<14>[ 2806.367885] init: Sending signal 9 to service 'qccsyshalservice' (pid 13778) process group...
+<14>[ 2806.369520] libprocessgroup: Successfully killed process cgroup uid 1000 pid 13778 in 1ms
+<14>[ 2806.427423] init: Service 'smartmu' (pid 13779) exited with status 0
+<14>[ 2806.427555] init: Sending signal 9 to service 'smartmu' (pid 13779) process group...
+<14>[ 2806.428856] libprocessgroup: Successfully killed process cgroup uid 0 pid 13779 in 0ms
+<14>[ 2806.443553] init: starting service 'qccvndhalservice'...
+<14>[ 2811.482797] init: starting service 'qccvndhalservice'...
+<14>[ 2811.594305] init: Service 'qccvndhalservice' (pid 13787) exited with status 1
+<14>[ 2811.594487] init: Sending signal 9 to service 'qccvndhalservice' (pid 13787) process group...
+<3>[ 2812.194650] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 2812.199706] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 2812.205219] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 2812.210311] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 2812.217473] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 2812.221126] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 2812.226445] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 2812.231798] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 2812.237061] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 2812.253032] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 2812.258524] [SDL] misc_ioctl msg.len is 4 : 0x7b 0x00 0x00 0x85 
+<3>[ 2812.263639] [SDL] misc_ioctl msg.len is 2 : 0x84 0x00 
+<3>[ 2812.269591] [SDL] misc_ioctl msg.len is 4 : 0x82 0x00 0x00 0x7e 
+<3>[ 2812.274806] [SDL] misc_ioctl msg.len is 2 : 0x7d 0x80 
+<31>[ 2812.362421] logd: logdr: UID=0 GID=0 PID=13797 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[ 2812.468103] msm_ispif_config:1061 Exit 
+<3>[ 2812.468566] msm_ispif_config2: Exit 
+<3>[ 2812.491545] frame_src is 1 frame_id is 1 blackjoe
+<31>[ 2812.521668] logd: logdr: UID=0 GID=0 PID=13810 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[ 2812.524760] frame_src is 1 frame_id is 3 blackjoe
+<3>[ 2812.541340] frame_src is 1 frame_id is 4 blackjoe
+<3>[ 2812.627608] frame_src is 1 frame_id is 7 blackjoe
+<6>[ 2812.655101] __afe_port_start: port id: 0x4000
+<6>[ 2812.655115] afe_find_cal_topo_id_by_port: port id: 0x4000, dev_acdb_id: 14
+<6>[ 2812.655122] afe_find_cal_topo_id_by_port: top_id:1025e acdb_id:14 afe_port_id:0x4000
+<6>[ 2812.655128] afe_get_cal_topology_id: port_id = 0x4000 acdb_id = 14 topology_id = 0x1025e cal_type_index=8 ret=0
+<6>[ 2812.656422] afe_send_port_topology_id: AFE set topology id 0x1025e  enable for port 0x4000 ret 0
+<6>[ 2812.656429] send_afe_cal_type: cal_index is 0
+<6>[ 2812.656436] send_afe_cal_type: dev_acdb_id[15] is 14
+<6>[ 2812.656442] afe_find_cal: cal_index 0 port_id 0x4000 port_index 15
+<6>[ 2812.656449] afe_find_cal: acdb_id 14 dev_acdb_id 14 sample_rate 48000 afe_sample_rates 48000
+<6>[ 2812.656455] afe_find_cal: cal block is a match, size is 1372
+<6>[ 2812.656461] send_afe_cal_type: Sending cal_index cal 0
+<6>[ 2812.657616] afe_send_hw_delay: port_id 0x4000 rate 48000 delay_usec 474 status 0
+<3>[ 2812.660841] frame_src is 1 frame_id is 9 blackjoe
+<3>[ 2812.677449] frame_src is 1 frame_id is 10 blackjoe
+<31>[ 2812.692502] logd: logdr: UID=0 GID=0 PID=13816 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[ 2812.694082] frame_src is 1 frame_id is 11 blackjoe
+<3>[ 2812.710704] frame_src is 1 frame_id is 12 blackjoe
+<3>[ 2812.756099] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 2812.756678] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 2812.761035] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 2812.766175] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 2812.771672] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 2812.776948] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 

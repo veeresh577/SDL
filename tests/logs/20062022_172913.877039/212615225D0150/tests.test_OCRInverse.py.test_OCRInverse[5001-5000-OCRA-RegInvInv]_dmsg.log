@@ -1,0 +1,53 @@
+<14>[ 3466.662246] init: starting service 'qccsyshalservice'...
+<14>[ 3466.709632] init: starting service 'qccvndhalservice'...
+<38>[ 3466.743165] type=1400 audit(1642434052.784:4551): avc: denied { search } for comm="qccsyshalservic" name="/" dev="sda10" ino=2 scontext=u:r:vendor_qccsyshal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[ 3466.743603] init: starting service 'smartmu'...
+<14>[ 3466.825726] init: Service 'qccsyshalservice' (pid 16864) exited with status 1
+<14>[ 3466.825821] init: Sending signal 9 to service 'qccsyshalservice' (pid 16864) process group...
+<14>[ 3466.827557] libprocessgroup: Successfully killed process cgroup uid 1000 pid 16864 in 1ms
+<14>[ 3466.838972] init: Service 'qccvndhalservice' (pid 16865) exited with status 1
+<14>[ 3466.839063] init: Sending signal 9 to service 'qccvndhalservice' (pid 16865) process group...
+<14>[ 3466.840052] libprocessgroup: Successfully killed process cgroup uid 1000 pid 16865 in 0ms
+<14>[ 3466.902525] init: Service 'smartmu' (pid 16866) exited with status 0
+<6>[ 3466.952115] IRQ 6: no longer affine to CPU7
+<6>[ 3469.571425] IRQ 6: no longer affine to CPU4
+<14>[ 3471.703884] init: starting service 'qccsyshalservice'...
+<14>[ 3471.766150] init: starting service 'qccvndhalservice'...
+<14>[ 3471.798664] init: starting service 'smartmu'...
+<14>[ 3471.846896] init: Service 'qccsyshalservice' (pid 16870) exited with status 1
+<14>[ 3471.846968] init: Sending signal 9 to service 'qccsyshalservice' (pid 16870) process group...
+<14>[ 3471.847540] libprocessgroup: Successfully killed process cgroup uid 1000 pid 16870 in 0ms
+<14>[ 3471.888981] init: Service 'qccvndhalservice' (pid 16871) exited with status 1
+<14>[ 3471.889052] init: Sending signal 9 to service 'qccvndhalservice' (pid 16871) process group...
+<14>[ 3471.889911] libprocessgroup: Successfully killed process cgroup uid 1000 pid 16871 in 0ms
+<14>[ 3471.986990] init: Service 'smartmu' (pid 16872) exited with status 0
+<38>[ 3472.211567] type=1400 audit(1642434058.244:4552): avc: denied { kill } for comm="swapper/3" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<3>[ 3474.282019] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 3474.283618] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 3474.287326] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 3474.292216] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 3474.297803] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 3474.304147] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 3474.308241] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 3474.313635] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 3474.319119] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 3474.324474] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 3474.329670] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 3474.335113] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 3474.340447] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 3474.347085] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 3474.351041] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 3474.356451] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 3474.361777] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 3474.366960] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 3474.372824] [SDL] misc_ioctl msg.len is 4 : 0x7b 0x00 0x00 0x85 
+<3>[ 3474.377648] [SDL] misc_ioctl msg.len is 2 : 0x84 0x00 
+<3>[ 3474.383783] [SDL] misc_ioctl msg.len is 4 : 0x82 0x00 0x00 0x7e 
+<3>[ 3474.388732] [SDL] misc_ioctl msg.len is 2 : 0x7d 0x80 
+<3>[ 3474.469268] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 3474.597486] msm_ispif_config:1061 Exit 
+<3>[ 3474.597960] msm_ispif_config2: Exit 
+<31>[ 3474.619992] logd: logdr: UID=0 GID=0 PID=16890 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[ 3474.634866] frame_src is 1 frame_id is 2 blackjoe
+<3>[ 3474.651506] frame_src is 1 frame_id is 3 blackjoe
+<3>[ 3474.738792] frame_src is 1 frame_id is 6 blackjoe

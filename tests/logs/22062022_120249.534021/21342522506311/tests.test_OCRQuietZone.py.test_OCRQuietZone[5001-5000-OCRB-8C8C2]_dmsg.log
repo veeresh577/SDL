@@ -1,0 +1,5 @@
+<6>[83012.268747] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<6>[83012.268778] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 
+<3>[83014.351392] [schedu][0x173f5ea54a4][20:58:02.402598] wlan: [2028:E:scan] scm_11d_elected_country_algo_fcc: 98: No AP with 11d Country code is present in scan list
+<3>[83014.351554] FUSIONWL: : ==Regulatory_elect_country_db==: No AP with 11d Country code is present in scan list 
+<3>[83014.367305] FUSIONWL: : ==Regulatory_scan_country_list_db_reset==: Reset complete for scan country list 

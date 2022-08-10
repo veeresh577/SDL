@@ -1,0 +1,35 @@
+<6>[ 2015.152804] IRQ 6: no longer affine to CPU4
+<6>[ 2015.719461] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<6>[ 2015.719490] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 
+<3>[ 2017.801421] [schedu][0x11584b7ec8d][19:22:56.967676] wlan: [2070:E:scan] scm_11d_elected_country_algo_fcc: 98: No AP with 11d Country code is present in scan list
+<3>[ 2017.801569] FUSIONWL: : ==Regulatory_elect_country_db==: No AP with 11d Country code is present in scan list 
+<3>[ 2017.815327] FUSIONWL: : ==Regulatory_scan_country_list_db_reset==: Reset complete for scan country list 
+<14>[ 2018.747373] init: starting service 'qccsyshalservice'...
+<14>[ 2018.797585] init: starting service 'qccvndhalservice'...
+<38>[ 2018.857087] type=1400 audit(1654197778.015:5787): avc: denied { search } for comm="vendor.qti.hard" name="/" dev="mmcblk0p37" ino=2 scontext=u:r:vendor_hal_qccvndhal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[ 2018.890301] init: Service 'qccsyshalservice' (pid 9897) exited with status 1
+<14>[ 2018.890404] init: Sending signal 9 to service 'qccsyshalservice' (pid 9897) process group...
+<14>[ 2018.891548] libprocessgroup: Successfully killed process cgroup uid 1000 pid 9897 in 0ms
+<14>[ 2023.793795] init: starting service 'qccsyshalservice'...
+<14>[ 2023.837656] init: starting service 'qccvndhalservice'...
+<38>[ 2023.868542] type=1400 audit(1654197783.025:5788): avc: denied { search } for comm="qccsyshalservic" name="/" dev="mmcblk0p37" ino=2 scontext=u:r:vendor_qccsyshal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[ 2023.938958] init: Service 'qccsyshalservice' (pid 9902) exited with status 1
+<14>[ 2023.939172] init: Sending signal 9 to service 'qccsyshalservice' (pid 9902) process group...
+<14>[ 2023.941228] libprocessgroup: Successfully killed process cgroup uid 1000 pid 9902 in 1ms
+<14>[ 2023.963915] init: Sending signal 9 to service 'qccvndhalservice' (pid 9903) process group...
+<6>[ 2025.716772] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 
+<3>[ 2027.799510] [schedu][0x11590290d24][19:23:06.965764] wlan: [2070:E:scan] scm_11d_elected_country_algo_fcc: 98: No AP with 11d Country code is present in scan list
+<3>[ 2027.799666] FUSIONWL: : ==Regulatory_elect_country_db==: No AP with 11d Country code is present in scan list 
+<3>[ 2027.902527] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 2027.927330] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 2027.932520] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 2027.937571] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 2027.948387] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 2027.953907] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 2027.969694] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 2027.976169] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 2027.980292] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<31>[ 2028.070800] logd: logdr: UID=0 GID=0 PID=9915 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[ 2028.192789] msm_isp_open_node: reset VFE
+<3>[ 2028.256040] frame_src is 1 frame_id is 1 blackjoe
+<3>[ 2028.290361] frame_src is 1 frame_id is 2 blackjoe

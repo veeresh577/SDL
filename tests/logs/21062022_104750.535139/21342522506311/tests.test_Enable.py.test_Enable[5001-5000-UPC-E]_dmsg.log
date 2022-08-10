@@ -1,0 +1,37 @@
+<3>[ 3884.391278] GBSOC->12, GBTemp->280, GBTTE->43, GBTTF->65535
+<12>[ 3884.427556] healthd: battery l=12 v=3280 t=28.0 h=2 st=2 c=-571777 fc=0 cc=7 chg=u
+<38>[ 3884.973560] type=1400 audit(1654199644.135:6192): avc: denied { read } for comm="Binder:569_1" name="wakeup48" dev="sysfs" ino=68359 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=1
+<38>[ 3884.974279] type=1400 audit(1654199644.135:6193): avc: denied { open } for comm="Binder:569_1" path="/sys/devices/virtual/misc/msm_mp3/wakeup48" dev="sysfs" ino=68359 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=1
+<38>[ 3884.974811] type=1400 audit(1654199644.135:6194): avc: denied { read } for comm="Binder:569_1" name="event_count" dev="sysfs" ino=68366 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+<38>[ 3884.974987] type=1400 audit(1654199644.135:6195): avc: denied { open } for comm="Binder:569_1" path="/sys/devices/virtual/misc/msm_mp3/wakeup48/event_count" dev="sysfs" ino=68366 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+<38>[ 3884.975170] type=1400 audit(1654199644.135:6196): avc: denied { getattr } for comm="Binder:569_1" path="/sys/devices/virtual/misc/msm_mp3/wakeup48/event_count" dev="sysfs" ino=68366 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+<14>[ 3885.195339] init: starting service 'qccsyshalservice'...
+<4>[ 3885.206712] audit: audit_lost=3417 audit_rate_limit=5 audit_backlog_limit=64
+<3>[ 3885.206722] audit: rate limit exceeded
+<14>[ 3885.244914] init: starting service 'qccvndhalservice'...
+<14>[ 3885.323232] init: Service 'qccsyshalservice' (pid 18121) exited with status 1
+<14>[ 3885.323315] init: Sending signal 9 to service 'qccsyshalservice' (pid 18121) process group...
+<14>[ 3885.323986] libprocessgroup: Successfully killed process cgroup uid 1000 pid 18121 in 0ms
+<14>[ 3885.369356] init: Service 'qccvndhalservice' (pid 18122) exited with status 1
+<14>[ 3885.369438] init: Sending signal 9 to service 'qccvndhalservice' (pid 18122) process group...
+<38>[ 3889.561565] type=1400 audit(1654199648.725:6202): avc: denied { kill } for comm="swapper/2" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<14>[ 3890.244401] init: starting service 'qccsyshalservice'...
+<38>[ 3890.324354] type=1400 audit(1654199649.485:6203): avc: denied { search } for comm="qccsyshalservic" name="/" dev="mmcblk0p37" ino=2 scontext=u:r:vendor_qccsyshal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[ 3890.417127] init: Service 'qccvndhalservice' (pid 18126) exited with status 1
+<14>[ 3890.417255] init: Sending signal 9 to service 'qccvndhalservice' (pid 18126) process group...
+<14>[ 3890.418419] libprocessgroup: Successfully killed process cgroup uid 1000 pid 18126 in 0ms
+<3>[ 3894.275161] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 3894.275552] [SDL] se47xx_misc_ioctl ret = -107 
+<3>[ 3894.279811] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 3894.285154] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 3894.289513] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 3894.295462] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 3894.300068] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 3894.316524] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 3894.322139] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 3894.326993] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 3894.332353] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 3894.337570] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 3894.343043] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 3894.437789] [SDL] misc_ioctl msg.len is 3 : 0x77 0x02 0x87 
+<3>[ 3894.438290] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 

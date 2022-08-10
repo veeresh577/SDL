@@ -1,0 +1,15 @@
+<6>[ 2034.851823] IRQ 6: no longer affine to CPU7
+<6>[ 2035.720840] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<6>[ 2035.720882] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 
+<3>[ 2037.802940] [schedu][0x1159b9bbe74][19:23:16.969195] wlan: [2070:E:scan] scm_11d_elected_country_algo_fcc: 98: No AP with 11d Country code is present in scan list
+<3>[ 2037.803098] FUSIONWL: : ==Regulatory_elect_country_db==: No AP with 11d Country code is present in scan list 
+<3>[ 2037.822672] FUSIONWL: : ==Regulatory_scan_country_list_db_reset==: Reset complete for scan country list 
+<38>[ 2038.897678] type=1400 audit(1654197798.055:5789): avc: denied { kill } for comm="swapper/3" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<14>[ 2038.902951] init: starting service 'qccsyshalservice'...
+<14>[ 2038.951376] init: starting service 'qccvndhalservice'...
+<14>[ 2039.039124] init: Service 'qccsyshalservice' (pid 9979) exited with status 1
+<14>[ 2039.039270] init: Sending signal 9 to service 'qccsyshalservice' (pid 9979) process group...
+<14>[ 2039.040980] libprocessgroup: Successfully killed process cgroup uid 1000 pid 9979 in 1ms
+<14>[ 2039.082803] init: Service 'qccvndhalservice' (pid 9980) exited with status 1
+<14>[ 2039.082935] init: Sending signal 9 to service 'qccvndhalservice' (pid 9980) process group...
+<14>[ 2039.084267] libprocessgroup: Successfully killed process cgroup uid 1000 pid 9980 in 0ms

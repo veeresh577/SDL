@@ -1,0 +1,73 @@
+<6>[ 3536.076473] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<14>[ 3536.723999] init: starting service 'qccsyshalservice'...
+<14>[ 3536.797762] init: starting service 'qccvndhalservice'...
+<14>[ 3536.871555] init: Service 'qccsyshalservice' (pid 16685) exited with status 1
+<14>[ 3536.871653] init: Sending signal 9 to service 'qccsyshalservice' (pid 16685) process group...
+<14>[ 3536.872468] libprocessgroup: Successfully killed process cgroup uid 1000 pid 16685 in 0ms
+<14>[ 3536.908522] init: Service 'qccvndhalservice' (pid 16686) exited with status 1
+<14>[ 3536.908638] init: Sending signal 9 to service 'qccvndhalservice' (pid 16686) process group...
+<14>[ 3536.909843] libprocessgroup: Successfully killed process cgroup uid 1000 pid 16686 in 0ms
+<3>[ 3538.159408] FUSIONWL: : ==Regulatory_elect_country_db==: No AP with 11d Country code is present in scan list 
+<38>[ 3539.397334] type=1400 audit(1654199298.555:6109): avc: denied { kill } for comm="swapper/0" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<14>[ 3541.771284] init: starting service 'qccsyshalservice'...
+<14>[ 3541.924021] init: Service 'qccsyshalservice' (pid 16690) exited with status 1
+<14>[ 3541.924112] init: Sending signal 9 to service 'qccsyshalservice' (pid 16690) process group...
+<14>[ 3541.924927] libprocessgroup: Successfully killed process cgroup uid 1000 pid 16690 in 0ms
+<14>[ 3541.935613] init: Service 'qccvndhalservice' (pid 16691) exited with status 1
+<14>[ 3541.935688] init: Sending signal 9 to service 'qccvndhalservice' (pid 16691) process group...
+<14>[ 3541.936614] libprocessgroup: Successfully killed process cgroup uid 1000 pid 16691 in 0ms
+<3>[ 3545.297893] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 3545.318202] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 3545.339797] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 3545.345227] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 3545.350451] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 3545.355788] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 3545.361103] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 3545.483767] [SDL] misc_ioctl msg.len is 3 : 0x77 0x02 0x87 
+<3>[ 3545.484889] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<31>[ 3545.532665] logd: logdr: UID=0 GID=0 PID=16702 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[ 3545.715318] msm_ispif_config:1061 Exit 
+<3>[ 3545.715819] msm_ispif_config2: Exit 
+<3>[ 3545.807584] frame_src is 1 frame_id is 2 blackjoe
+<3>[ 3545.876276] frame_src is 1 frame_id is 4 blackjoe
+<31>[ 3545.876380] logd: logdr: UID=0 GID=0 PID=16715 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[ 3545.983378] frame_src is 1 frame_id is 6 blackjoe
+<6>[ 3546.071374] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<6>[ 3546.071394] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 
+<3>[ 3546.124839] frame_src is 1 frame_id is 9 blackjoe
+<3>[ 3546.159183] frame_src is 1 frame_id is 10 blackjoe
+<3>[ 3546.231965] frame_src is 1 frame_id is 11 blackjoe
+<3>[ 3546.300642] frame_src is 1 frame_id is 13 blackjoe
+<3>[ 3546.373353] frame_src is 1 frame_id is 14 blackjoe
+<3>[ 3546.441993] frame_src is 1 frame_id is 16 blackjoe
+<3>[ 3546.549046] frame_src is 1 frame_id is 18 blackjoe
+<3>[ 3546.583393] frame_src is 1 frame_id is 19 blackjoe
+<3>[ 3546.690607] frame_src is 1 frame_id is 21 blackjoe
+<3>[ 3546.724896] frame_src is 1 frame_id is 22 blackjoe
+<14>[ 3546.818262] init: starting service 'qccsyshalservice'...
+<3>[ 3546.831985] frame_src is 1 frame_id is 24 blackjoe
+<3>[ 3546.866521] frame_src is 1 frame_id is 25 blackjoe
+<14>[ 3546.896799] init: starting service 'qccvndhalservice'...
+<3>[ 3546.973463] frame_src is 1 frame_id is 27 blackjoe
+<3>[ 3547.007880] frame_src is 1 frame_id is 28 blackjoe
+<3>[ 3547.114835] frame_src is 1 frame_id is 30 blackjoe
+<31>[ 3547.126658] logd: logdr: UID=0 GID=0 PID=16722 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[ 3547.221850] frame_src is 1 frame_id is 32 blackjoe
+<14>[ 3547.236417] init: Service 'qccvndhalservice' (pid 16723) exited with status 1
+<14>[ 3547.236479] init: Sending signal 9 to service 'qccvndhalservice' (pid 16723) process group...
+<14>[ 3547.237103] libprocessgroup: Successfully killed process cgroup uid 1000 pid 16723 in 0ms
+<3>[ 3547.290581] frame_src is 1 frame_id is 34 blackjoe
+<3>[ 3547.431949] frame_src is 1 frame_id is 37 blackjoe
+<3>[ 3547.504681] frame_src is 1 frame_id is 38 blackjoe
+<3>[ 3547.539002] frame_src is 1 frame_id is 39 blackjoe
+<3>[ 3547.573333] frame_src is 1 frame_id is 40 blackjoe
+<3>[ 3547.646178] frame_src is 1 frame_id is 41 blackjoe
+<3>[ 3547.680567] frame_src is 1 frame_id is 42 blackjoe
+<3>[ 3547.714835] frame_src is 1 frame_id is 43 blackjoe
+<3>[ 3547.787746] frame_src is 1 frame_id is 44 blackjoe
+<3>[ 3547.822040] frame_src is 1 frame_id is 45 blackjoe
+<3>[ 3547.856391] frame_src is 1 frame_id is 46 blackjoe
+<3>[ 3547.929164] frame_src is 1 frame_id is 47 blackjoe
+<3>[ 3547.963456] frame_src is 1 frame_id is 48 blackjoe
+<3>[ 3547.997783] frame_src is 1 frame_id is 49 blackjoe
+<3>[ 3548.139101] frame_src is 1 frame_id is 52 blackjoe

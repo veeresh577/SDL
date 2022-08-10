@@ -1,0 +1,9 @@
+<6>[10295.335598] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<3>[10297.418462] [schedu][0x13a87fcf918][21:40:56.584693] wlan: [2070:E:scan] scm_11d_elected_country_algo_fcc: 98: No AP with 11d Country code is present in scan list
+<3>[10297.418633] FUSIONWL: : ==Regulatory_elect_country_db==: No AP with 11d Country code is present in scan list 
+<14>[10298.034537] init: Service 'qccsyshalservice' (pid 28335) exited with status 1
+<14>[10298.034660] init: Sending signal 9 to service 'qccsyshalservice' (pid 28335) process group...
+<14>[10298.035782] libprocessgroup: Successfully killed process cgroup uid 1000 pid 28335 in 0ms
+<14>[10298.224047] init: Service 'qccvndhalservice' (pid 28336) exited with status 1
+<14>[10298.224171] init: Sending signal 9 to service 'qccvndhalservice' (pid 28336) process group...
+<14>[10298.225495] libprocessgroup: Successfully killed process cgroup uid 1000 pid 28336 in 0ms

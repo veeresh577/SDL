@@ -1,0 +1,37 @@
+<3>[ 2707.974403] [schedu][0x1189a8f09fb][19:34:27.140655] wlan: [2070:E:scan] scm_11d_elected_country_algo_fcc: 98: No AP with 11d Country code is present in scan list
+<3>[ 2707.974547] FUSIONWL: : ==Regulatory_elect_country_db==: No AP with 11d Country code is present in scan list 
+<3>[ 2707.988878] FUSIONWL: : ==Regulatory_scan_country_list_db_reset==: Reset complete for scan country list 
+<38>[ 2709.738637] type=1400 audit(1654198468.895:5933): avc: denied { search } for comm="vendor.qti.hard" name="/" dev="mmcblk0p37" ino=2 scontext=u:r:vendor_hal_qccvndhal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[ 2709.769328] init: Service 'qccsyshalservice' (pid 12981) exited with status 1
+<14>[ 2709.769467] init: Sending signal 9 to service 'qccsyshalservice' (pid 12981) process group...
+<14>[ 2709.770486] libprocessgroup: Successfully killed process cgroup uid 1000 pid 12981 in 0ms
+<6>[ 2709.875716] IRQ 6: no longer affine to CPU6
+<14>[ 2714.823646] init: Service 'qccsyshalservice' (pid 12990) exited with status 1
+<14>[ 2714.823768] init: Sending signal 9 to service 'qccsyshalservice' (pid 12990) process group...
+<14>[ 2714.824725] libprocessgroup: Successfully killed process cgroup uid 1000 pid 12990 in 0ms
+<6>[ 2715.891495] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<6>[ 2715.891520] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 
+<12>[ 2718.395027] healthd: battery l=19 v=3334 t=27.0 h=2 st=2 c=-718749 fc=0 cc=7 chg=u
+<12>[ 2718.486773] healthd: battery l=19 v=3334 t=27.0 h=2 st=2 c=-718749 fc=0 cc=7 chg=u
+<12>[ 2718.553914] healthd: battery l=19 v=3334 t=27.0 h=2 st=2 c=-718749 fc=0 cc=7 chg=u
+<12>[ 2718.603186] healthd: battery l=19 v=3343 t=27.0 h=2 st=2 c=-651855 fc=0 cc=7 chg=u
+<12>[ 2718.619359] healthd: battery l=19 v=3343 t=27.0 h=2 st=2 c=-651855 fc=0 cc=7 chg=u
+<14>[ 2719.732517] init: starting service 'qccsyshalservice'...
+<38>[ 2719.809913] type=1400 audit(1654198478.965:5934): avc: denied { search } for comm="qccsyshalservic" name="/" dev="mmcblk0p37" ino=2 scontext=u:r:vendor_qccsyshal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[ 2719.899013] init: Service 'qccvndhalservice' (pid 12996) exited with status 1
+<14>[ 2719.899087] init: Sending signal 9 to service 'qccvndhalservice' (pid 12996) process group...
+<14>[ 2719.899927] libprocessgroup: Successfully killed process cgroup uid 1000 pid 12996 in 0ms
+<3>[ 2720.127405] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 2720.127966] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 2720.132100] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 2720.137574] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 2720.142834] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 2720.148307] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 2720.153453] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 2720.158926] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 2720.169549] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 2720.174962] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 2720.180309] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 2720.185506] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 2720.273751] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 2720.488899] frame_src is 1 frame_id is 1 blackjoe

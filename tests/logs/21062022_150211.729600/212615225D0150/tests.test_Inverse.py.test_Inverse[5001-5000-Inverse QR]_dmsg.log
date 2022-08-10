@@ -1,0 +1,58 @@
+<14>[77517.968172] init: starting service 'smartmu'...
+<14>[77518.010734] init: starting service 'qccsyshalservice'...
+<14>[77518.043710] init: starting service 'qccvndhalservice'...
+<14>[77518.130922] init: Service 'qccsyshalservice' (pid 28073) exited with status 1
+<14>[77518.131006] init: Sending signal 9 to service 'qccsyshalservice' (pid 28073) process group...
+<14>[77518.131857] libprocessgroup: Successfully killed process cgroup uid 1000 pid 28073 in 0ms
+<14>[77518.170577] init: Service 'qccvndhalservice' (pid 28074) exited with status 1
+<14>[77523.053916] init: starting service 'qccsyshalservice'...
+<14>[77523.171161] init: Service 'qccsyshalservice' (pid 28083) exited with status 1
+<14>[77523.171234] init: Sending signal 9 to service 'qccsyshalservice' (pid 28083) process group...
+<14>[77523.172109] libprocessgroup: Successfully killed process cgroup uid 1000 pid 28083 in 0ms
+<14>[77528.124600] init: starting service 'qccvndhalservice'...
+<14>[77528.197577] init: Service 'smartmu' (pid 28089) exited with status 0
+<14>[77528.197665] init: Sending signal 9 to service 'smartmu' (pid 28089) process group...
+<14>[77528.198530] libprocessgroup: Successfully killed process cgroup uid 0 pid 28089 in 0ms
+<14>[77528.209948] init: Service 'qccsyshalservice' (pid 28090) exited with status 1
+<14>[77528.210039] init: Sending signal 9 to service 'qccsyshalservice' (pid 28090) process group...
+<14>[77528.210961] libprocessgroup: Successfully killed process cgroup uid 1000 pid 28090 in 0ms
+<14>[77528.241896] init: Service 'qccvndhalservice' (pid 28091) exited with status 1
+<3>[77528.941443] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[77528.942932] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[77528.946263] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[77528.956938] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[77528.967636] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[77528.972988] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[77528.978261] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[77528.994276] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[77529.015668] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[77529.021251] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[77529.026346] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[77529.048327] [SDL] misc_ioctl msg.len is 2 : 0x7d 0x80 
+<31>[77529.115490] logd: logdr: UID=0 GID=0 PID=28102 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[77529.131200] [SDL] misc_ioctl msg.len is 3 : 0x77 0x02 0x87 
+<3>[77529.131763] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[77529.251372] msm_isp_open_node: reset VFE
+<3>[77529.261566] msm_ispif_config:1061 Exit 
+<3>[77529.262044] msm_ispif_config2: Exit 
+<31>[77529.285506] logd: logdr: UID=0 GID=0 PID=28108 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[77529.288135] frame_src is 1 frame_id is 1 blackjoe
+<3>[77529.304748] frame_src is 1 frame_id is 2 blackjoe
+<3>[77529.321379] frame_src is 1 frame_id is 3 blackjoe
+<3>[77529.363100] frame_src is 1 frame_id is 4 blackjoe
+<3>[77529.440770] tavil_codec tavil_codec: ASoC: DAPM unknown pin Lineout_3 amp
+<31>[77529.470379] logd: logdr: UID=0 GID=0 PID=28119 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[77529.471753] frame_src is 1 frame_id is 8 blackjoe
+<6>[77529.479792] __afe_port_start: port id: 0x4000
+<6>[77529.479806] afe_find_cal_topo_id_by_port: port id: 0x4000, dev_acdb_id: 14
+<6>[77529.479813] afe_find_cal_topo_id_by_port: top_id:1025e acdb_id:14 afe_port_id:0x4000
+<6>[77529.479819] afe_get_cal_topology_id: port_id = 0x4000 acdb_id = 14 topology_id = 0x1025e cal_type_index=8 ret=0
+<6>[77529.481100] afe_send_port_topology_id: AFE set topology id 0x1025e  enable for port 0x4000 ret 0
+<6>[77529.481107] send_afe_cal_type: cal_index is 0
+<6>[77529.481114] send_afe_cal_type: dev_acdb_id[15] is 14
+<6>[77529.481120] afe_find_cal: cal_index 0 port_id 0x4000 port_index 15
+<6>[77529.481126] afe_find_cal: acdb_id 14 dev_acdb_id 14 sample_rate 48000 afe_sample_rates 48000
+<6>[77529.481132] afe_find_cal: cal block is a match, size is 1372
+<6>[77529.481138] send_afe_cal_type: Sending cal_index cal 0
+<6>[77529.482165] afe_send_hw_delay: port_id 0x4000 rate 48000 delay_usec 474 status 0
+<3>[77529.530091] frame_src is 1 frame_id is 10 blackjoe

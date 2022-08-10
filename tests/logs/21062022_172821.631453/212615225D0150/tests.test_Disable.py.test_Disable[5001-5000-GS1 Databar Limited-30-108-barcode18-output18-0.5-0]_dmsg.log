@@ -1,0 +1,85 @@
+<38>[86729.958467] type=1400 audit(1642519647.581:11963): avc: denied { kill } for comm="swapper/0" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<14>[86731.400814] init: starting service 'qccvndhalservice'...
+<14>[86731.446622] init: Service 'smartmu' (pid 14769) exited with status 0
+<14>[86731.446748] init: Sending signal 9 to service 'smartmu' (pid 14769) process group...
+<14>[86731.447851] libprocessgroup: Successfully killed process cgroup uid 0 pid 14769 in 0ms
+<14>[86731.453980] init: Service 'qccsyshalservice' (pid 14770) exited with status 1
+<14>[86731.454056] init: Sending signal 9 to service 'qccsyshalservice' (pid 14770) process group...
+<14>[86731.454896] libprocessgroup: Successfully killed process cgroup uid 1000 pid 14770 in 0ms
+<14>[86736.360767] init: starting service 'qccsyshalservice'...
+<14>[86736.442554] init: starting service 'qccvndhalservice'...
+<14>[86736.489053] init: Service 'smartmu' (pid 14774) exited with status 0
+<14>[86736.489165] init: Sending signal 9 to service 'smartmu' (pid 14774) process group...
+<14>[86736.490936] libprocessgroup: Successfully killed process cgroup uid 0 pid 14774 in 0ms
+<14>[86736.496753] init: Service 'qccsyshalservice' (pid 14775) exited with status 1
+<14>[86736.496828] init: Sending signal 9 to service 'qccsyshalservice' (pid 14775) process group...
+<14>[86736.497667] libprocessgroup: Successfully killed process cgroup uid 1000 pid 14775 in 0ms
+<3>[86739.992136] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[86740.007773] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[86740.013333] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[86740.018350] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[86740.034154] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[86740.044882] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[86740.050484] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[86740.055486] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[86740.061501] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[86740.066215] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[86740.071778] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[86740.076873] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[86740.082784] [SDL] misc_ioctl msg.len is 4 : 0x7b 0x00 0x00 0x85 
+<3>[86740.087865] [SDL] misc_ioctl msg.len is 2 : 0x84 0x00 
+<3>[86740.098705] [SDL] misc_ioctl msg.len is 2 : 0x7d 0x80 
+<3>[86740.105365] [SDL] misc_ioctl msg.len is 3 : 0x77 0x02 0x87 
+<3>[86740.109892] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[86740.141068] frame_src is 1 frame_id is 20682 blackjoe
+<31>[86740.170119] logd: logdr: UID=0 GID=0 PID=14788 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[86740.174230] frame_src is 1 frame_id is 20684 blackjoe
+<3>[86740.207492] frame_src is 1 frame_id is 20686 blackjoe
+<3>[86740.257889] frame_src is 1 frame_id is 20687 blackjoe
+<3>[86740.274558] frame_src is 1 frame_id is 20688 blackjoe
+<3>[86740.291065] frame_src is 1 frame_id is 20689 blackjoe
+<3>[86740.307690] frame_src is 1 frame_id is 20690 blackjoe
+<31>[86740.381183] logd: logdr: UID=0 GID=0 PID=14792 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[86740.393887] frame_src is 1 frame_id is 20693 blackjoe
+<3>[86740.410505] frame_src is 1 frame_id is 20694 blackjoe
+<3>[86740.443741] frame_src is 1 frame_id is 20696 blackjoe
+<3>[86740.477024] frame_src is 1 frame_id is 20698 blackjoe
+<3>[86740.510267] frame_src is 1 frame_id is 20700 blackjoe
+<3>[86740.548689] frame_src is 1 frame_id is 20702 blackjoe
+<3>[86740.565210] frame_src is 1 frame_id is 20703 blackjoe
+<3>[86740.582489] frame_src is 1 frame_id is 20704 blackjoe
+<3>[86740.598442] frame_src is 1 frame_id is 20705 blackjoe
+<31>[86740.610100] logd: logdr: UID=0 GID=0 PID=14795 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[86740.615048] frame_src is 1 frame_id is 20706 blackjoe
+<3>[86740.631603] frame_src is 1 frame_id is 20707 blackjoe
+<3>[86740.648258] frame_src is 1 frame_id is 20708 blackjoe
+<3>[86740.664853] frame_src is 1 frame_id is 20709 blackjoe
+<3>[86740.681533] frame_src is 1 frame_id is 20710 blackjoe
+<3>[86740.698140] frame_src is 1 frame_id is 20711 blackjoe
+<3>[86740.714864] frame_src is 1 frame_id is 20712 blackjoe
+<3>[86740.731379] frame_src is 1 frame_id is 20713 blackjoe
+<3>[86740.748196] frame_src is 1 frame_id is 20714 blackjoe
+<3>[86740.764586] frame_src is 1 frame_id is 20715 blackjoe
+<3>[86740.781340] frame_src is 1 frame_id is 20716 blackjoe
+<3>[86740.797836] frame_src is 1 frame_id is 20717 blackjoe
+<6>[86740.829350] IRQ 6: no longer affine to CPU5
+<3>[86740.831076] frame_src is 1 frame_id is 20719 blackjoe
+<3>[86740.847715] frame_src is 1 frame_id is 20720 blackjoe
+<3>[86740.864321] frame_src is 1 frame_id is 20721 blackjoe
+<3>[86740.880980] frame_src is 1 frame_id is 20722 blackjoe
+<31>[86740.889684] logd: logdr: UID=0 GID=0 PID=14798 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[86740.897737] frame_src is 1 frame_id is 20723 blackjoe
+<3>[86740.914208] frame_src is 1 frame_id is 20724 blackjoe
+<3>[86740.930868] frame_src is 1 frame_id is 20725 blackjoe
+<3>[86740.981200] frame_src is 1 frame_id is 20726 blackjoe
+<3>[86740.997745] frame_src is 1 frame_id is 20727 blackjoe
+<3>[86741.014381] frame_src is 1 frame_id is 20728 blackjoe
+<3>[86741.065063] frame_src is 1 frame_id is 20729 blackjoe
+<3>[86741.081696] frame_src is 1 frame_id is 20730 blackjoe
+<3>[86741.131647] frame_src is 1 frame_id is 20733 blackjoe
+<3>[86741.201023] frame_src is 1 frame_id is 20735 blackjoe
+<3>[86741.234404] frame_src is 1 frame_id is 20737 blackjoe
+<3>[86741.250837] frame_src is 1 frame_id is 20738 blackjoe
+<3>[86741.284061] frame_src is 1 frame_id is 20740 blackjoe
+<3>[86741.300686] frame_src is 1 frame_id is 20741 blackjoe
+<3>[86741.333927] frame_src is 1 frame_id is 20743 blackjoe

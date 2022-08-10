@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?><testsuite errors="0" failures="20" name="pytest" skips="0" tests="85" time="2524.284"><testcase classname="tests.test_Disable" file="tests/test_Disable.py" line="41" name="test_Disable[5001-5000-UPC-A-34-90-barcode0-output0-0.5-0]" time="25.8637390137"></testcase><testcase classname="tests.test_Disable" file="tests/test_Disable.py" line="41" name="test_Disable[5001-5000-UPC-E-37-91-barcode1-output1-0.5-0]" time="23.3141729832"></testcase><testcase classname="tests.test_Disable" file="tests/test_Disable.py" line="41" name="test_Disable[5001-5000-UPC-E1-Sdl_EnDis_BC3-92-barcode2-output2-0-1]" time="24.7051000595"></testcase><testcase classname="tests.test_Disable" file="tests/test_Disable.py" line="41" name="test_Disable[5001-5000-EAN-8-10-93-barcode3-output3-0.5-0]" time="23.5133371353"></testcase><testcase classname="tests.test_Disable" file="tests/test_Disable.py" line="41" name="test_Disable[5001-5000-EAN-13-13-94-barcode4-output4-0.5-0]" time="24.4438691139"></testcase><testcase classname="tests.test_Disable" file="tests/test_Disable.py" line="41" name="test_Disable[5001-5000-ISSN-26-95-barcode5-output5-0.5-0]" time="40.7441782951"><failure message="AssertionError: assert [&apos;9778765301533&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;9778765301533&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;9778765301533&apos;]
+  + [&apos;NR&apos;]">test_Disable.py:47: in test_Disable
+    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;9778765301533&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;9778765301533&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;9778765301533&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_Disable" file="tests/test_Disable.py" line="41" name="test_Disable[5001-5000-Code 128b-60-96-barcode6-output6-0.4-0]" time="24.430577755"></testcase><testcase classname="tests.test_Disable" file="tests/test_Disable.py" line="41" name="test_Disable[5001-5000-EAN-128-16-97-barcode7-output7-0.5-0]" time="24.2660961151"></testcase><testcase classname="tests.test_Disable" file="tests/test_Disable.py" line="41" name="test_Disable[5001-5000-ISBT-128-Sdl_EnDis_BC9-98-barcode8-output8-0-1]" time="24.2688639164"></testcase><testcase classname="tests.test_Disable" file="tests/test_Disable.py" line="41" name="test_Disable[5001-5000-Code 39-8-99-barcode9-output9-0.5-0]" time="24.0127010345"></testcase><testcase classname="tests.test_Disable" file="tests/test_Disable.py" line="41" name="test_Disable[5001-5000-Code 39 Sample with Full ASCII and the symbology enabled-9-100-barcode10-output10-0.5-0]" time="41.2028458118"><failure message="AssertionError: assert [&apos;CODE%V7&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;CODE%V7&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;CODE%V7&apos;]
+  + [&apos;NR&apos;]">test_Disable.py:47: in test_Disable
+    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;CODE%V7&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;CODE%V7&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;CODE%V7&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_Disable" file="tests/test_Disable.py" line="41" name="test_Disable[5001-5000-Code 93-25-101-barcode11-output11-0.5-0]" time="24.4277839661"></testcase><testcase classname="tests.test_Disable" file="tests/test_Disable.py" line="41" name="test_Disable[5001-5000-Interleaved 2 of 5-3-102-barcode12-output12-0.5-0]" time="24.4056608677"></testcase><testcase classname="tests.test_Disable" file="tests/test_Disable.py" line="41" name="test_Disable[5001-5000-Discrete 2 of 5-Sdl_EnDis_BC14-103-barcode13-output13-0-1]" time="24.2201080322"></testcase><testcase classname="tests.test_Disable" file="tests/test_Disable.py" line="41" name="test_Disable[5001-5000-Matrix 2 of 5-5-104-barcode14-output14-0.5-0]" time="22.7337501049"></testcase><testcase classname="tests.test_Disable" file="tests/test_Disable.py" line="41" name="test_Disable[5001-5000-Codabar-18-105-barcode15-output15-0.4-0]" time="25.3767108917"></testcase><testcase classname="tests.test_Disable" file="tests/test_Disable.py" line="41" name="test_Disable[5001-5000-MSI-47-106-barcode16-output16-0.5-0]" time="23.6799001694"></testcase><testcase classname="tests.test_Disable" file="tests/test_Disable.py" line="41" name="test_Disable[5001-5000-GS1 Databar 14-29-107-barcode17-output17-0.5-0]" time="24.0718419552"></testcase><testcase classname="tests.test_Disable" file="tests/test_Disable.py" line="41" name="test_Disable[5001-5000-GS1 Databar Limited-30-108-barcode18-output18-0.5-0]" time="24.1205341816"></testcase><testcase classname="tests.test_Disable" file="tests/test_Disable.py" line="41" name="test_Disable[5001-5000-PDF417-55-109-barcode19-output19-0.5-0]" time="22.9731032848"></testcase><testcase classname="tests.test_Disable" file="tests/test_Disable.py" line="41" name="test_Disable[5001-5000-MicroPDF-84-110-barcode20-output20-0.5-0]" time="24.720582962"></testcase><testcase classname="tests.test_Disable" file="tests/test_Disable.py" line="41" name="test_Disable[5001-5000-Datamatrix-71-111-barcode21-output21-0.5-0]" time="23.9668457508"></testcase><testcase classname="tests.test_Disable" file="tests/test_Disable.py" line="41" name="test_Disable[5001-5000-Maxicode-Sdl_EnDis_BC23-112-barcode22-output22-0.6-1]" time="24.2257549763"></testcase><testcase classname="tests.test_Disable" file="tests/test_Disable.py" line="41" name="test_Disable[5001-5000-QR Code-112-113-barcode23-output23-0.5-0]" time="24.0250098705"></testcase><testcase classname="tests.test_Disable" file="tests/test_Disable.py" line="41" name="test_Disable[5001-5000-MicroQR-97-114-barcode24-output24-0.5-0]" time="23.1171507835"></testcase><testcase classname="tests.test_Disable" file="tests/test_Disable.py" line="41" name="test_Disable[5001-5000-Aztec-92-115-barcode25-output25-0.5-0]" time="24.7727503777"></testcase><testcase classname="tests.test_Disable" file="tests/test_Disable.py" line="41" name="test_Disable[5001-5000-Han-Xin-116-116-barcode26-output26-0.5-0]" time="23.7873439789"></testcase><testcase classname="tests.test_IgnoreFNC4" file="tests/test_IgnoreFNC4.py" line="22" name="test_IgnoreFNC4[5001-5000-Code 1280]" time="42.9152650833"><failure message="AssertionError: assert [&apos;\xef\xbf\xb...\xbf\xbd\xbd&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;\xef\xbf\xbdBC\xef\xbf\xbdbc\xef\xbf\xbd&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;\xef\xbf\xbdBC\xef\xbf\xbdbc\xef\xbf\xbd&apos;]
+  + [&apos;NR&apos;]">test_IgnoreFNC4.py:28: in test_IgnoreFNC4
+    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;\xef\xbf\xb...\xbf\xbd\xbd&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;\xef\xbf\xbdBC\xef\xbf\xbdbc\xef\xbf\xbd&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;\xef\xbf\xbdBC\xef\xbf\xbdbc\xef\xbf\xbd&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_IgnoreFNC4" file="tests/test_IgnoreFNC4.py" line="22" name="test_IgnoreFNC4[5001-5000-Code 1281]" time="42.2625467777"><failure message="AssertionError: assert [&apos;290000010043\xef\xbf\xbd&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;290000010043\xef\xbf\xbd&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;290000010043\xef\xbf\xbd&apos;]
+  + [&apos;NR&apos;]">test_IgnoreFNC4.py:28: in test_IgnoreFNC4
+    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;290000010043\xef\xbf\xbd&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;290000010043\xef\xbf\xbd&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;290000010043\xef\xbf\xbd&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_IgnoreFNC4" file="tests/test_IgnoreFNC4.py" line="22" name="test_IgnoreFNC4[5001-5000-Code 1282]" time="43.8806593418"><failure message="AssertionError: assert [&apos;290000017635\xef\xbf\xbd&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;290000017635\xef\xbf\xbd&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;290000017635\xef\xbf\xbd&apos;]
+  + [&apos;NR&apos;]">test_IgnoreFNC4.py:28: in test_IgnoreFNC4
+    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;290000017635\xef\xbf\xbd&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;290000017635\xef\xbf\xbd&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;290000017635\xef\xbf\xbd&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_IgnoreFNC4" file="tests/test_IgnoreFNC4.py" line="22" name="test_IgnoreFNC4[5001-5000-Code 1283]" time="41.379683733"><failure message="AssertionError: assert [&apos;290000090100\xef\xbf\xbd&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;290000090100\xef\xbf\xbd&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;290000090100\xef\xbf\xbd&apos;]
+  + [&apos;NR&apos;]">test_IgnoreFNC4.py:28: in test_IgnoreFNC4
+    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;290000090100\xef\xbf\xbd&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;290000090100\xef\xbf\xbd&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;290000090100\xef\xbf\xbd&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_IgnoreFNC4" file="tests/test_IgnoreFNC4.py" line="22" name="test_IgnoreFNC4[5001-5000-Code 1284]" time="42.9939417839"><failure message="AssertionError: assert [&apos;290000028002\xef\xbf\xbd&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;290000028002\xef\xbf\xbd&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;290000028002\xef\xbf\xbd&apos;]
+  + [&apos;NR&apos;]">test_IgnoreFNC4.py:28: in test_IgnoreFNC4
+    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;290000028002\xef\xbf\xbd&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;290000028002\xef\xbf\xbd&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;290000028002\xef\xbf\xbd&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_IgnoreFNC4" file="tests/test_IgnoreFNC4.py" line="22" name="test_IgnoreFNC4[5001-5000-Code 1285]" time="42.7860877514"><failure message="AssertionError: assert [&apos;ABCabcz&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;ABCabcz&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;ABCabcz&apos;]
+  + [&apos;NR&apos;]">test_IgnoreFNC4.py:28: in test_IgnoreFNC4
+    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;ABCabcz&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;ABCabcz&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;ABCabcz&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_IgnoreFNC4" file="tests/test_IgnoreFNC4.py" line="22" name="test_IgnoreFNC4[5001-5000-Code 1286]" time="41.1801531315"><failure message="AssertionError: assert [&apos;2900000100437&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;2900000100437&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;2900000100437&apos;]
+  + [&apos;NR&apos;]">test_IgnoreFNC4.py:28: in test_IgnoreFNC4
+    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;2900000100437&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;2900000100437&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;2900000100437&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_IgnoreFNC4" file="tests/test_IgnoreFNC4.py" line="22" name="test_IgnoreFNC4[5001-5000-Code 1287]" time="43.9496591091"><failure message="AssertionError: assert [&apos;2900000176350&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;2900000176350&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;2900000176350&apos;]
+  + [&apos;NR&apos;]">test_IgnoreFNC4.py:28: in test_IgnoreFNC4
+    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;2900000176350&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;2900000176350&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;2900000176350&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_IgnoreFNC4" file="tests/test_IgnoreFNC4.py" line="22" name="test_IgnoreFNC4[5001-5000-Code 1288]" time="40.3470599651"><failure message="AssertionError: assert [&apos;2900000901004&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;2900000901004&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;2900000901004&apos;]
+  + [&apos;NR&apos;]">test_IgnoreFNC4.py:28: in test_IgnoreFNC4
+    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;2900000901004&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;2900000901004&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;2900000901004&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_IgnoreFNC4" file="tests/test_IgnoreFNC4.py" line="22" name="test_IgnoreFNC4[5001-5000-Code 1289]" time="43.2849619389"><failure message="AssertionError: assert [&apos;2900000280025&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;2900000280025&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;2900000280025&apos;]
+  + [&apos;NR&apos;]">test_IgnoreFNC4.py:28: in test_IgnoreFNC4
+    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;2900000280025&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;2900000280025&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;2900000280025&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_PostalEnable" file="tests/test_PostalEnable.py" line="20" name="test_PostalEnable[5001-5000-Japanese Postal]" time="46.047907114"><failure message="AssertionError: assert [&apos;1234567&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;1234567&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;1234567&apos;]
+  + [&apos;NR&apos;]">test_PostalEnable.py:26: in test_PostalEnable
+    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;1234567&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;1234567&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;1234567&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_PostalEnable" file="tests/test_PostalEnable.py" line="20" name="test_PostalEnable[5001-5000-Korean Postal]" time="38.805120945"><failure message="AssertionError: assert [&apos;123456&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;123456&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;123456&apos;]
+  + [&apos;NR&apos;]">test_PostalEnable.py:26: in test_PostalEnable
+    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;123456&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;123456&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;123456&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_PostalEnable" file="tests/test_PostalEnable.py" line="20" name="test_PostalEnable[5001-5000-US Planet ]" time="44.6413662434"><failure message="AssertionError: assert [&apos;123456789014&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;123456789014&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;123456789014&apos;]
+  + [&apos;NR&apos;]">test_PostalEnable.py:26: in test_PostalEnable
+    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;123456789014&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;123456789014&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;123456789014&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_PostalEnable" file="tests/test_PostalEnable.py" line="20" name="test_PostalEnable[5001-5000-US Postnet]" time="41.3116416931"><failure message="AssertionError: assert [&apos;123455&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;123455&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;123455&apos;]
+  + [&apos;NR&apos;]">test_PostalEnable.py:26: in test_PostalEnable
+    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;123455&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;123455&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;123455&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_PostalEnable" file="tests/test_PostalEnable.py" line="20" name="test_PostalEnable[5001-5000-Netherlands Postal]" time="42.4207780361"><failure message="AssertionError: assert [&apos;2500GG30250&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;2500GG30250&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;2500GG30250&apos;]
+  + [&apos;NR&apos;]">test_PostalEnable.py:26: in test_PostalEnable
+    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;2500GG30250&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;2500GG30250&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;2500GG30250&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_PostalEnable" file="tests/test_PostalEnable.py" line="20" name="test_PostalEnable[5001-5000-Australian Postal]" time="43.1140749454"><failure message="AssertionError: assert [&apos;11,12345678,26 44 19 15&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;11,12345678,26 44 19 15&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;11,12345678,26 44 19 15&apos;]
+  + [&apos;NR&apos;]">test_PostalEnable.py:26: in test_PostalEnable
+    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;11,12345678,26 44 19 15&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;11,12345678,26 44 19 15&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;11,12345678,26 44 19 15&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_PostalEnable" file="tests/test_PostalEnable.py" line="20" name="test_PostalEnable[5001-5000-UK Royal Mail]" time="41.2965371609"><failure message="AssertionError: assert [&apos;12345678P&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;12345678P&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;12345678P&apos;]
+  + [&apos;NR&apos;]">test_PostalEnable.py:26: in test_PostalEnable
+    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;12345678P&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;12345678P&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;12345678P&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_PostalEnable" file="tests/test_PostalEnable.py" line="20" name="test_PostalEnable[5001-5000-Intellimail]" time="44.2783372402"><failure message="AssertionError: assert [&apos;2054398789801234567811788&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;2054398789801234567811788&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;2054398789801234567811788&apos;]
+  + [&apos;NR&apos;]">test_PostalEnable.py:26: in test_PostalEnable
+    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;2054398789801234567811788&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;2054398789801234567811788&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;2054398789801234567811788&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_ReduceQuietZone" file="tests/test_ReduceQuietZone.py" line="49" name="test_ReduceQuietZone[5001-5000-RQZ 1]" time="24.8133220673"></testcase><testcase classname="tests.test_ReduceQuietZone" file="tests/test_ReduceQuietZone.py" line="49" name="test_ReduceQuietZone[5001-5000-RQZ 2]" time="21.2417926788"></testcase><testcase classname="tests.test_ReduceQuietZone" file="tests/test_ReduceQuietZone.py" line="49" name="test_ReduceQuietZone[5001-5000-RQZ 3]" time="25.273045063"></testcase><testcase classname="tests.test_ReduceQuietZone" file="tests/test_ReduceQuietZone.py" line="49" name="test_ReduceQuietZone[5001-5000-RQZ 4]" time="22.9667730331"></testcase><testcase classname="tests.test_ReduceQuietZone" file="tests/test_ReduceQuietZone.py" line="49" name="test_ReduceQuietZone[5001-5000-RQZ 5]" time="25.4615190029"></testcase><testcase classname="tests.test_ReduceQuietZone" file="tests/test_ReduceQuietZone.py" line="49" name="test_ReduceQuietZone[5001-5000-RQZ 6]" time="24.6999304295"></testcase><testcase classname="tests.test_ReduceQuietZone" file="tests/test_ReduceQuietZone.py" line="49" name="test_ReduceQuietZone[5001-5000-RQZ 7]" time="20.7474880219"></testcase><testcase classname="tests.test_ReduceQuietZone" file="tests/test_ReduceQuietZone.py" line="49" name="test_ReduceQuietZone[5001-5000-RQZ 8]" time="23.9371597767"></testcase><testcase classname="tests.test_ReduceQuietZone" file="tests/test_ReduceQuietZone.py" line="49" name="test_ReduceQuietZone[5001-5000-RQZ 9]" time="24.8631567955"></testcase><testcase classname="tests.test_ReduceQuietZone" file="tests/test_ReduceQuietZone.py" line="49" name="test_ReduceQuietZone[5001-5000-RQZ 10]" time="25.3203902245"></testcase><testcase classname="tests.test_ReduceQuietZone" file="tests/test_ReduceQuietZone.py" line="49" name="test_ReduceQuietZone[5001-5000-RQZ 11]" time="25.6412417889"></testcase><testcase classname="tests.test_ReduceQuietZone" file="tests/test_ReduceQuietZone.py" line="49" name="test_ReduceQuietZone[5001-5000-RQZ 12]" time="20.3994679451"></testcase><testcase classname="tests.test_ReduceQuietZone" file="tests/test_ReduceQuietZone.py" line="49" name="test_ReduceQuietZone[5001-5000-RQZ 13]" time="24.4971950054"></testcase><testcase classname="tests.test_ReduceQuietZone" file="tests/test_ReduceQuietZone.py" line="49" name="test_ReduceQuietZone[5001-5000-RQZ 14]" time="24.2465629578"></testcase><testcase classname="tests.test_ReduceQuietZone" file="tests/test_ReduceQuietZone.py" line="49" name="test_ReduceQuietZone[5001-5000-RQZ 15]" time="24.716656208"></testcase><testcase classname="tests.test_ReduceQuietZone" file="tests/test_ReduceQuietZone.py" line="49" name="test_ReduceQuietZone[5001-5000-RQZ 16]" time="25.140805006"></testcase><testcase classname="tests.test_ReduceQuietZone" file="tests/test_ReduceQuietZone.py" line="49" name="test_ReduceQuietZone[5001-5000-RQZ 17]" time="21.6779129505"></testcase><testcase classname="tests.test_ReduceQuietZone" file="tests/test_ReduceQuietZone.py" line="49" name="test_ReduceQuietZone[5001-5000-RQZ 18]" time="24.7547957897"></testcase><testcase classname="tests.test_ReduceQuietZone" file="tests/test_ReduceQuietZone.py" line="49" name="test_ReduceQuietZone[5001-5000-RQZ 19]" time="23.5767319202"></testcase><testcase classname="tests.test_ReduceQuietZone" file="tests/test_ReduceQuietZone.py" line="49" name="test_ReduceQuietZone[5001-5000-RQZ 20]" time="24.3670721054"></testcase><testcase classname="tests.test_ReduceQuietZone" file="tests/test_ReduceQuietZone.py" line="49" name="test_ReduceQuietZone[5001-5000-RQZ 21]" time="24.9988617897"></testcase><testcase classname="tests.test_ReduceQuietZone" file="tests/test_ReduceQuietZone.py" line="49" name="test_ReduceQuietZone[5001-5000-RQZ 22]" time="18.6725649834"></testcase><testcase classname="tests.test_ReduceQuietZone" file="tests/test_ReduceQuietZone.py" line="49" name="test_ReduceQuietZone[5001-5000-RQZ 23]" time="24.4250257015"></testcase><testcase classname="tests.test_ReduceQuietZone" file="tests/test_ReduceQuietZone.py" line="49" name="test_ReduceQuietZone[5001-5000-RQZ 24]" time="24.6097631454"></testcase><testcase classname="tests.test_ReduceQuietZone" file="tests/test_ReduceQuietZone.py" line="49" name="test_ReduceQuietZone[5001-5000-RQZ 25]" time="24.5212190151"></testcase><testcase classname="tests.test_ReduceQuietZone" file="tests/test_ReduceQuietZone.py" line="49" name="test_ReduceQuietZone[5001-5000-RQZ 26]" time="24.3992872238"></testcase><testcase classname="tests.test_ReduceQuietZone" file="tests/test_ReduceQuietZone.py" line="49" name="test_ReduceQuietZone[5001-5000-RQZ 27]" time="25.3295121193"></testcase><testcase classname="tests.test_ReduceQuietZone" file="tests/test_ReduceQuietZone.py" line="49" name="test_ReduceQuietZone[5001-5000-RQZ 28]" time="25.1979029179"></testcase><testcase classname="tests.test_ReduceQuietZone" file="tests/test_ReduceQuietZone.py" line="49" name="test_ReduceQuietZone[5001-5000-RQZ 29]" time="23.3175520897"></testcase><testcase classname="tests.test_ReduceQuietZone" file="tests/test_ReduceQuietZone.py" line="49" name="test_ReduceQuietZone[5001-5000-RQZ 30]" time="25.1282758713"></testcase><testcase classname="tests.test_ReduceQuietZone" file="tests/test_ReduceQuietZone.py" line="49" name="test_ReduceQuietZone[5001-5000-RQZ 31]" time="24.4417340755"></testcase><testcase classname="tests.test_ReduceQuietZone" file="tests/test_ReduceQuietZone.py" line="49" name="test_ReduceQuietZone[5001-5000-RQZ 32]" time="21.2228460312"></testcase><testcase classname="tests.test_ReduceQuietZone" file="tests/test_ReduceQuietZone.py" line="49" name="test_ReduceQuietZone[5001-5000-RQZ 33]" time="24.4163053036"></testcase><testcase classname="tests.test_ReduceQuietZone" file="tests/test_ReduceQuietZone.py" line="49" name="test_ReduceQuietZone[5001-5000-RQZ 34]" time="24.0559477806"></testcase><testcase classname="tests.test_ReduceQuietZone" file="tests/test_ReduceQuietZone.py" line="49" name="test_ReduceQuietZone[5001-5000-RQZ 35]" time="25.7538087368"></testcase><testcase classname="tests.test_ReduceQuietZone" file="tests/test_ReduceQuietZone.py" line="49" name="test_ReduceQuietZone[5001-5000-RQZ 36]" time="24.7428808212"></testcase><testcase classname="tests.test_ReduceQuietZone" file="tests/test_ReduceQuietZone.py" line="49" name="test_ReduceQuietZone[5001-5000-RQZ 37]" time="21.8025739193"></testcase><testcase classname="tests.test_ReduceQuietZone" file="tests/test_ReduceQuietZone.py" line="49" name="test_ReduceQuietZone[5001-5000-RQZ 38]" time="25.2345666885"></testcase><testcase classname="tests.test_ReduceQuietZone" file="tests/test_ReduceQuietZone.py" line="49" name="test_ReduceQuietZone[5001-5000-RQZ 39]" time="23.0614740849"></testcase><testcase classname="tests.test_ReduceQuietZone" file="tests/test_ReduceQuietZone.py" line="49" name="test_ReduceQuietZone[5001-5000-RQZ 40]" time="26.0408382416"></testcase></testsuite>

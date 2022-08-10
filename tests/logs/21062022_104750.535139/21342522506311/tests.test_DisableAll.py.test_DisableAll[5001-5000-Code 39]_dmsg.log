@@ -1,0 +1,25 @@
+<3>[ 3388.127996] [schedu][0x11ba4eec8d9][19:45:47.294239] wlan: [2070:E:scan] scm_11d_elected_country_algo_fcc: 98: No AP with 11d Country code is present in scan list
+<3>[ 3388.128169] FUSIONWL: : ==Regulatory_elect_country_db==: No AP with 11d Country code is present in scan list 
+<14>[ 3390.489637] init: starting service 'qccsyshalservice'...
+<14>[ 3390.536428] init: starting service 'qccvndhalservice'...
+<38>[ 3390.565179] type=1400 audit(1654199149.725:6079): avc: denied { search } for comm="qccsyshalservic" name="/" dev="mmcblk0p37" ino=2 scontext=u:r:vendor_qccsyshal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[ 3390.623406] init: Service 'qccsyshalservice' (pid 15979) exited with status 1
+<14>[ 3390.623572] init: Sending signal 9 to service 'qccsyshalservice' (pid 15979) process group...
+<14>[ 3390.625113] libprocessgroup: Successfully killed process cgroup uid 1000 pid 15979 in 1ms
+<14>[ 3390.669307] init: Sending signal 9 to service 'qccvndhalservice' (pid 15980) process group...
+<6>[ 3394.291108] IRQ 6: no longer affine to CPU7
+<14>[ 3395.535550] init: starting service 'qccsyshalservice'...
+<14>[ 3395.578738] init: starting service 'qccvndhalservice'...
+<14>[ 3395.664397] init: Service 'qccsyshalservice' (pid 15983) exited with status 1
+<14>[ 3395.664592] init: Sending signal 9 to service 'qccsyshalservice' (pid 15983) process group...
+<14>[ 3395.666213] libprocessgroup: Successfully killed process cgroup uid 1000 pid 15983 in 1ms
+<6>[ 3396.046865] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<6>[ 3396.046901] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 
+<3>[ 3398.128423] [schedu][0x11bb0609965][19:45:57.294674] wlan: [2070:E:scan] scm_11d_elected_country_algo_fcc: 98: No AP with 11d Country code is present in scan list
+<3>[ 3398.128565] FUSIONWL: : ==Regulatory_elect_country_db==: No AP with 11d Country code is present in scan list 
+<3>[ 3400.128304] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 3400.138699] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 3400.139423] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 3400.148869] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 3400.155447] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 3400.159638] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 

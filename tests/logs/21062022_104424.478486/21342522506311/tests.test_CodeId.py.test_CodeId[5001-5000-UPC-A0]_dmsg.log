@@ -1,0 +1,15 @@
+<12>[ 1646.944486] healthd: battery l=25 v=3406 t=26.0 h=2 st=2 c=-669921 fc=0 cc=7 chg=u
+<3>[ 1647.692494] [schedu][0x113dd2992f6][19:16:46.858748] wlan: [2070:E:scan] scm_11d_elected_country_algo_fcc: 98: No AP with 11d Country code is present in scan list
+<3>[ 1647.692641] FUSIONWL: : ==Regulatory_elect_country_db==: No AP with 11d Country code is present in scan list 
+<6>[ 1647.851131] IRQ 6: no longer affine to CPU6
+<12>[ 1648.105741] healthd: battery l=25 v=3406 t=26.0 h=2 st=2 c=-669921 fc=0 cc=7 chg=u
+<12>[ 1648.171903] healthd: battery l=25 v=3406 t=26.0 h=2 st=2 c=-669921 fc=0 cc=7 chg=u
+<12>[ 1648.621412] healthd: battery l=25 v=3414 t=26.0 h=2 st=2 c=-623046 fc=0 cc=7 chg=u
+<12>[ 1648.856605] healthd: battery l=25 v=3414 t=26.0 h=2 st=2 c=-623046 fc=0 cc=7 chg=u
+<12>[ 1650.093829] healthd: battery l=25 v=3422 t=26.0 h=2 st=2 c=-560058 fc=0 cc=7 chg=u
+<12>[ 1650.362175] healthd: battery l=25 v=3422 t=26.0 h=2 st=2 c=-560058 fc=0 cc=7 chg=u
+<12>[ 1650.706005] healthd: battery l=25 v=3422 t=26.0 h=2 st=2 c=-560058 fc=0 cc=7 chg=u
+<38>[ 1650.767148] type=1400 audit(1654197409.925:5701): avc: denied { search } for comm="qccsyshalservic" name="/" dev="mmcblk0p37" ino=2 scontext=u:r:vendor_qccsyshal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[ 1650.852053] init: Service 'qccvndhalservice' (pid 8628) exited with status 1
+<14>[ 1650.853556] libprocessgroup: Successfully killed process cgroup uid 1000 pid 8628 in 0ms
+<3>[ 1651.464313] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 

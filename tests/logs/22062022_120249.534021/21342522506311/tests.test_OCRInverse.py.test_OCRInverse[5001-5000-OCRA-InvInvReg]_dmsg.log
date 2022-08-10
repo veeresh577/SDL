@@ -1,0 +1,33 @@
+<38>[81738.051979] type=1400 audit(1654288606.098:192345): avc: denied { kill } for comm="swapper/0" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<14>[81741.213462] init: starting service 'qccsyshalservice'...
+<14>[81741.256297] init: starting service 'qccvndhalservice'...
+<14>[81741.337184] init: Service 'qccsyshalservice' (pid 5809) exited with status 1
+<14>[81741.337369] init: Sending signal 9 to service 'qccsyshalservice' (pid 5809) process group...
+<14>[81741.338732] libprocessgroup: Successfully killed process cgroup uid 1000 pid 5809 in 0ms
+<14>[81741.376068] init: Service 'qccvndhalservice' (pid 5810) exited with status 1
+<14>[81741.377455] libprocessgroup: Successfully killed process cgroup uid 1000 pid 5810 in 0ms
+<6>[81741.957875] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<6>[81741.957913] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 
+<14>[81746.255007] init: starting service 'qccsyshalservice'...
+<14>[81746.297949] init: starting service 'qccvndhalservice'...
+<14>[81746.404177] init: Service 'qccvndhalservice' (pid 5814) exited with status 1
+<14>[81746.404254] init: Sending signal 9 to service 'qccvndhalservice' (pid 5814) process group...
+<14>[81746.405612] libprocessgroup: Successfully killed process cgroup uid 1000 pid 5814 in 0ms
+<3>[81750.022191] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[81750.036503] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[81750.036933] [SDL] se47xx_misc_ioctl ret = -107 
+<3>[81750.040660] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[81750.045639] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[81750.050833] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[81750.066683] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[81750.077569] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[81750.088046] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[81750.098791] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[81750.103985] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[81750.192455] [SDL] misc_ioctl msg.len is 3 : 0x77 0x02 0x87 
+<3>[81750.193072] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[81750.348057] msm_ispif_config:1061 Exit 
+<3>[81750.348524] msm_ispif_config2: Exit 
+<31>[81750.385009] logd: logdr: UID=0 GID=0 PID=5837 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[81750.385199] frame_src is 1 frame_id is 1 blackjoe
+<3>[81750.453898] frame_src is 1 frame_id is 3 blackjoe

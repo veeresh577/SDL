@@ -1,0 +1,14 @@
+F tests/test_EnableAll.py::test_EnableAll[5001-5000-QR Code]
+ tests/test_EnableAll.py:51: in test_EnableAll
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ lib/scanner.py:29: in scan
+     self.device.wait.update(timeout=5000)
+ ../venv27/local/lib/python2.7/site-packages/uiautomator/__init__.py:74: in __call__
+     return self.func(*args, **kwargs)
+ ../venv27/local/lib/python2.7/site-packages/uiautomator/__init__.py:858: in _wait
+     return self.server.jsonrpc_wrap(timeout=http_timeout).waitForWindowUpdate(package_name, timeout)
+ ../venv27/local/lib/python2.7/site-packages/uiautomator/__init__.py:425: in wrapper
+     server.start(timeout=30)
+ ../venv27/local/lib/python2.7/site-packages/uiautomator/__init__.py:481: in start
+     raise IOError("RPC server not started!")
+ E   IOError: RPC server not started!

@@ -1,0 +1,4 @@
+<4>[ 9774.982006] FG: is_batt_empty: batt_soc_rt_sts: 32 vbatt: 3060294 uV msoc:0
+<12>[ 9774.994973] healthd: battery l=0 v=3060 t=28.0 h=2 st=2 c=-317382 fc=0 cc=7 chg=u
+<4>[ 9774.999478] FG: is_batt_empty: batt_soc_rt_sts: 32 vbatt: 3060294 uV msoc:0
+<4>[ 9775.029762] FG: is_batt_empty: batt_soc_rt_sts: 32 vbatt: 3060294 uV msoc:0

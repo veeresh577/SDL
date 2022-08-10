@@ -1,0 +1,36 @@
+<6>[ 3847.591723] IRQ 6: no longer affine to CPU7
+<14>[ 3849.858041] init: starting service 'qccsyshalservice'...
+<14>[ 3849.910000] init: starting service 'qccvndhalservice'...
+<38>[ 3849.941060] type=1400 audit(1642434435.974:4639): avc: denied { search } for comm="qccsyshalservic" name="/" dev="sda10" ino=2 scontext=u:r:vendor_qccsyshal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[ 3849.944114] init: starting service 'smartmu'...
+<14>[ 3850.012513] init: Service 'qccsyshalservice' (pid 18733) exited with status 1
+<14>[ 3850.012613] init: Sending signal 9 to service 'qccsyshalservice' (pid 18733) process group...
+<14>[ 3850.013571] libprocessgroup: Successfully killed process cgroup uid 1000 pid 18733 in 0ms
+<14>[ 3850.036457] init: Service 'qccvndhalservice' (pid 18734) exited with status 1
+<14>[ 3850.036536] init: Sending signal 9 to service 'qccvndhalservice' (pid 18734) process group...
+<14>[ 3850.037335] libprocessgroup: Successfully killed process cgroup uid 1000 pid 18734 in 0ms
+<14>[ 3850.105993] init: Service 'smartmu' (pid 18735) exited with status 0
+<6>[ 3850.132182] IRQ 6: no longer affine to CPU4
+<14>[ 3854.973633] init: starting service 'smartmu'...
+<14>[ 3855.052606] init: Service 'qccvndhalservice' (pid 18741) exited with status 1
+<14>[ 3855.052647] init: Sending signal 9 to service 'qccvndhalservice' (pid 18741) process group...
+<14>[ 3855.053075] libprocessgroup: Successfully killed process cgroup uid 1000 pid 18741 in 0ms
+<14>[ 3855.138772] init: Service 'smartmu' (pid 18742) exited with status 0
+<14>[ 3859.942887] init: starting service 'qccsyshalservice'...
+<14>[ 3860.006614] init: starting service 'smartmu'...
+<3>[ 3860.008776] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 3860.010264] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 3860.013740] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 3860.019652] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 3860.024458] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 3860.029606] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 3860.035191] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 3860.040521] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 3860.051025] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 3860.062310] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 3860.067154] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 3860.076293] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 3860.077712] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 3860.099345] [SDL] misc_ioctl msg.len is 4 : 0x7b 0x00 0x00 0x85 
+<14>[ 3860.100758] init: Service 'qccvndhalservice' (pid 18752) exited with status 1
+<14>[ 3860.104117] init: Sending signal 9 to service 'qccvndhalservice' (pid 18752) process group...

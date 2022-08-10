@@ -1,0 +1,72 @@
+<14>[ 9713.172781] init: starting service 'qccsyshalservice'...
+<14>[ 9713.323586] init: starting service 'qccvndhalservice'...
+<14>[ 9713.357887] init: Service 'qccsyshalservice' (pid 26760) exited with status 1
+<14>[ 9713.357980] init: Sending signal 9 to service 'qccsyshalservice' (pid 26760) process group...
+<14>[ 9713.358838] libprocessgroup: Successfully killed process cgroup uid 1000 pid 26760 in 0ms
+<3>[ 9713.431027] GBSOC->0, GBTemp->280, GBTTE->0, GBTTF->65535
+<4>[ 9713.434278] FG: is_batt_empty: batt_soc_rt_sts: 32 vbatt: 3096915 uV msoc:0
+<4>[ 9713.451871] FG: is_batt_empty: batt_soc_rt_sts: 32 vbatt: 3096915 uV msoc:0
+<12>[ 9713.469910] healthd: battery l=0 v=3096 t=28.0 h=2 st=2 c=-154296 fc=0 cc=7 chg=u
+<4>[ 9713.484364] FG: is_batt_empty: batt_soc_rt_sts: 32 vbatt: 3096915 uV msoc:0
+<4>[ 9713.517686] FG: is_batt_empty: batt_soc_rt_sts: 32 vbatt: 3096915 uV msoc:0
+<38>[ 9714.642275] type=1400 audit(1654205473.805:6653): avc: denied { read } for comm="Binder:569_1" name="wakeup48" dev="sysfs" ino=68359 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=1
+<38>[ 9714.643077] type=1400 audit(1654205473.805:6654): avc: denied { open } for comm="Binder:569_1" path="/sys/devices/virtual/misc/msm_mp3/wakeup48" dev="sysfs" ino=68359 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=1
+<38>[ 9714.643292] type=1400 audit(1654205473.805:6655): avc: denied { read } for comm="Binder:569_1" name="event_count" dev="sysfs" ino=68366 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+<38>[ 9714.643504] type=1400 audit(1654205473.805:6656): avc: denied { open } for comm="Binder:569_1" path="/sys/devices/virtual/misc/msm_mp3/wakeup48/event_count" dev="sysfs" ino=68366 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+<38>[ 9714.643711] type=1400 audit(1654205473.805:6657): avc: denied { getattr } for comm="Binder:569_1" path="/sys/devices/virtual/misc/msm_mp3/wakeup48/event_count" dev="sysfs" ino=68366 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+<4>[ 9714.987345] audit: audit_lost=3463 audit_rate_limit=5 audit_backlog_limit=64
+<3>[ 9714.987371] audit: rate limit exceeded
+<6>[ 9715.203380] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<6>[ 9715.203403] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 
+<3>[ 9717.285946] [schedu][0x137f01446da][21:31:16.452184] wlan: [2070:E:scan] scm_11d_elected_country_algo_fcc: 98: No AP with 11d Country code is present in scan list
+<3>[ 9717.286054] FUSIONWL: : ==Regulatory_elect_country_db==: No AP with 11d Country code is present in scan list 
+<3>[ 9717.299754] FUSIONWL: : ==Regulatory_scan_country_list_db_reset==: Reset complete for scan country list 
+<4>[ 9718.191274] FG: is_batt_empty: batt_soc_rt_sts: 32 vbatt: 3093497 uV msoc:0
+<14>[ 9718.203140] init: starting service 'qccsyshalservice'...
+<38>[ 9718.275932] type=1400 audit(1654205477.435:6663): avc: denied { search } for comm="qccsyshalservic" name="/" dev="mmcblk0p37" ino=2 scontext=u:r:vendor_qccsyshal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[ 9718.353173] init: starting service 'qccvndhalservice'...
+<14>[ 9718.391754] init: Service 'qccsyshalservice' (pid 26764) exited with status 1
+<14>[ 9718.391846] init: Sending signal 9 to service 'qccsyshalservice' (pid 26764) process group...
+<14>[ 9718.392718] libprocessgroup: Successfully killed process cgroup uid 1000 pid 26764 in 0ms
+<38>[ 9718.426237] type=1400 audit(1654205477.585:6664): avc: denied { search } for comm="vendor.qti.hard" name="/" dev="mmcblk0p37" ino=2 scontext=u:r:vendor_hal_qccvndhal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[ 9718.538254] init: Service 'qccvndhalservice' (pid 26765) exited with status 1
+<14>[ 9718.538342] init: Sending signal 9 to service 'qccvndhalservice' (pid 26765) process group...
+<14>[ 9718.539272] libprocessgroup: Successfully killed process cgroup uid 1000 pid 26765 in 0ms
+<3>[ 9721.500471] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 9721.514698] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 9721.516840] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 9721.519303] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 9721.525986] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 9721.532208] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 9721.535587] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 9721.541029] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 9721.546332] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 9721.551338] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 9721.557397] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 9721.566243] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 9721.567532] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 9721.572746] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 9721.738716] [SDL] misc_ioctl msg.len is 3 : 0x77 0x02 0x87 
+<3>[ 9721.739358] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<31>[ 9721.785278] logd: logdr: UID=0 GID=0 PID=26779 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[ 9722.007359] msm_isp_open_node: reset VFE
+<3>[ 9722.042559] msm_ispif_config:1061 Exit 
+<3>[ 9722.043127] msm_ispif_config2: Exit 
+<3>[ 9722.062523] frame_src is 1 frame_id is 1 blackjoe
+<3>[ 9722.097983] frame_src is 1 frame_id is 2 blackjoe
+<3>[ 9722.131240] frame_src is 1 frame_id is 3 blackjoe
+<31>[ 9722.143873] logd: logdr: UID=0 GID=0 PID=26784 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[ 9722.203978] frame_src is 1 frame_id is 4 blackjoe
+<3>[ 9722.238298] frame_src is 1 frame_id is 5 blackjoe
+<3>[ 9722.272685] frame_src is 1 frame_id is 6 blackjoe
+<3>[ 9722.304982] qcom-lpi-pinctrl 15070000.lpi_pinctrl: lpi_pinctrl_runtime_resume: unable to get core clk handle -2
+<6>[ 9722.310083] __afe_port_start: port id: 0x102e
+<6>[ 9722.310128] afe_find_cal_topo_id_by_port: port id: 0x102e, dev_acdb_id: 0
+<6>[ 9722.310144] afe_find_cal_topo_id_by_port: top_id:1025e acdb_id:15 afe_port:0x102e
+<6>[ 9722.310161] afe_get_cal_topology_id: port_id = 0x102e acdb_id = 15 topology_id = 0x1025e cal_type_index=8 ret=0
+<6>[ 9722.311536] afe_send_port_topology_id: AFE set topology id 0x1025e  enable for port 0x102e ret 0
+<6>[ 9722.311555] send_afe_cal_type: cal_index is 0
+<6>[ 9722.311571] send_afe_cal_type: dev_acdb_id[130] is 0
+<6>[ 9722.311586] send_afe_cal_type: Sending cal_index cal 0
+<6>[ 9722.312737] afe_send_hw_delay: port_id 0x102e rate 48000 delay_usec 474 status 0
+<3>[ 9722.345591] frame_src is 1 frame_id is 7 blackjoe

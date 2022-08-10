@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?><testsuite errors="1" failures="2" name="pytest" skips="0" tests="8" time="228.715"><testcase classname="tests.test_OCRBoundary" file="tests/test_OCRBoundary.py" line="20" name="test_OCRBoundary[5001-5000-OCR-B I, One Line]" time="34.2201108932"><failure message="AssertionError: assert [&apos;THIS IS A TEST LINE&apos;] == [&apos;THIS IS A T|ST |IN&apos;]
+  At index 0 diff: &apos;THIS IS A TEST LINE&apos; != &apos;THIS IS A T|ST |IN&apos;
+  Full diff:
+  - [&apos;THIS IS A TEST LINE&apos;]
+  ?              ^   ^  -
+  + [&apos;THIS IS A T|ST |IN&apos;]
+  ?              ^   ^">test_OCRBoundary.py:26: in test_OCRBoundary
+    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;THIS IS A TEST LINE&apos;] == [&apos;THIS IS A T|ST |IN&apos;]
+E     At index 0 diff: &apos;THIS IS A TEST LINE&apos; != &apos;THIS IS A T|ST |IN&apos;
+E     Full diff:
+E     - [&apos;THIS IS A TEST LINE&apos;]
+E     ?              ^   ^  -
+E     + [&apos;THIS IS A T|ST |IN&apos;]
+E     ?              ^   ^</failure></testcase><testcase classname="tests.test_OCRBoundary" file="tests/test_OCRBoundary.py" line="20" name="test_OCRBoundary[5001-5000-OCR-B III, Two Lines]" time="16.2308530807"></testcase><testcase classname="tests.test_OCRBoundary" file="tests/test_OCRBoundary.py" line="20" name="test_OCRBoundary[5001-5000-OCR-B IV, Three Lines]" time="39.572971344"></testcase><testcase classname="tests.test_OCRBoundary" file="tests/test_OCRBoundary.py" line="20" name="test_OCRBoundary[5001-5000-OCR-B I, Three Lines]" time="14.5807640553"></testcase><testcase classname="tests.test_OCRBoundary" file="tests/test_OCRBoundary.py" line="20" name="test_OCRBoundary[5001-5000-OCR-A I, 8 characters0]" time="25.123237133"></testcase><testcase classname="tests.test_OCRBoundary" file="tests/test_OCRBoundary.py" line="20" name="test_OCRBoundary[5001-5000-OCR-A I, 8 characters1]" time="30.4910798073"><failure message="AssertionError: assert [&apos;CROSSBOW&apos;] == [&apos;(ROS$BOU&apos;]
+  At index 0 diff: &apos;CROSSBOW&apos; != &apos;(ROS$BOU&apos;
+  Full diff:
+  - [&apos;CROSSBOW&apos;]
+  ?   ^   ^  ^
+  + [&apos;(ROS$BOU&apos;]
+  ?   ^   ^  ^">test_OCRBoundary.py:26: in test_OCRBoundary
+    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;CROSSBOW&apos;] == [&apos;(ROS$BOU&apos;]
+E     At index 0 diff: &apos;CROSSBOW&apos; != &apos;(ROS$BOU&apos;
+E     Full diff:
+E     - [&apos;CROSSBOW&apos;]
+E     ?   ^   ^  ^
+E     + [&apos;(ROS$BOU&apos;]
+E     ?   ^   ^  ^</failure></testcase><testcase classname="tests.test_OCRBoundary" file="tests/test_OCRBoundary.py" line="20" name="test_OCRBoundary[5001-5000-OCR-A I, 11 characters0]" time="25.4740240574"></testcase><testcase classname="tests.test_OCRBoundary" file="tests/test_OCRBoundary.py" line="20" name="test_OCRBoundary[5001-5000-OCR-A I, 11 characters1]" time="19.0566842556"><error message="test setup failure">../conftest.py:183: in logfolder
+    os.makedirs(logfolder)
+../../venv27/lib/python2.7/os.py:157: in makedirs
+    mkdir(name, mode)
+E   OSError: [Errno 17] File exists: &apos;logs/20062022_171907.551035/212615225D0150&apos;</error></testcase></testsuite>

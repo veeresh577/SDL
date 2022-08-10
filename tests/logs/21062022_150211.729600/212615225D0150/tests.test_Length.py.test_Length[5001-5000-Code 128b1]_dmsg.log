@@ -1,0 +1,2 @@
+<12>[78975.748042] healthd: battery l=35 v=3516 t=44.0 h=2 st=2 c=-312499 fc=4008000 cc=2 chg=u
+<38>[78977.870660] type=1400 audit(1642511895.491:11525): avc: denied { kill } for comm="swapper/3" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1

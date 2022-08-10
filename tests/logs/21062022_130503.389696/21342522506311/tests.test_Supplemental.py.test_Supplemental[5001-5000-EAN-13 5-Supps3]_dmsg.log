@@ -1,0 +1,48 @@
+<14>[10141.241308] init: starting service 'qccsyshalservice'...
+<14>[10141.404758] init: Service 'qccsyshalservice' (pid 27769) exited with status 1
+<14>[10141.404860] init: Sending signal 9 to service 'qccsyshalservice' (pid 27769) process group...
+<14>[10141.405849] libprocessgroup: Successfully killed process cgroup uid 1000 pid 27769 in 0ms
+<14>[10141.429496] init: starting service 'qccvndhalservice'...
+<38>[10141.499011] type=1400 audit(1654205900.655:6694): avc: denied { search } for comm="vendor.qti.hard" name="/" dev="mmcblk0p37" ino=2 scontext=u:r:vendor_hal_qccvndhal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[10141.622421] init: Service 'qccvndhalservice' (pid 27770) exited with status 1
+<14>[10141.622518] init: Sending signal 9 to service 'qccvndhalservice' (pid 27770) process group...
+<14>[10141.623437] libprocessgroup: Successfully killed process cgroup uid 1000 pid 27770 in 0ms
+<6>[10145.287815] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<6>[10145.287837] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 
+<14>[10146.273629] init: starting service 'qccsyshalservice'...
+<38>[10146.353970] type=1400 audit(1654205905.505:6695): avc: denied { search } for comm="qccsyshalservic" name="/" dev="mmcblk0p37" ino=2 scontext=u:r:vendor_qccsyshal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[10146.438411] init: Service 'qccsyshalservice' (pid 27782) exited with status 1
+<14>[10146.438504] init: Sending signal 9 to service 'qccsyshalservice' (pid 27782) process group...
+<14>[10146.439401] libprocessgroup: Successfully killed process cgroup uid 1000 pid 27782 in 0ms
+<14>[10146.457338] init: starting service 'qccvndhalservice'...
+<14>[10146.617904] init: Service 'qccvndhalservice' (pid 27783) exited with status 1
+<14>[10146.618001] init: Sending signal 9 to service 'qccvndhalservice' (pid 27783) process group...
+<14>[10146.618916] libprocessgroup: Successfully killed process cgroup uid 1000 pid 27783 in 0ms
+<3>[10147.370723] [schedu][0x139dc45acfc][21:38:26.536959] wlan: [2070:E:scan] scm_11d_elected_country_algo_fcc: 98: No AP with 11d Country code is present in scan list
+<3>[10147.370833] FUSIONWL: : ==Regulatory_elect_country_db==: No AP with 11d Country code is present in scan list 
+<3>[10147.400792] FUSIONWL: : ==Regulatory_scan_country_list_db_reset==: Reset complete for scan country list 
+<4>[10148.271020] FG: is_batt_empty: batt_soc_rt_sts: 32 vbatt: 3032951 uV msoc:0
+<14>[10151.307985] init: starting service 'qccsyshalservice'...
+<14>[10151.470896] init: Service 'qccsyshalservice' (pid 27787) exited with status 1
+<14>[10151.470990] init: Sending signal 9 to service 'qccsyshalservice' (pid 27787) process group...
+<14>[10151.471981] libprocessgroup: Successfully killed process cgroup uid 1000 pid 27787 in 0ms
+<14>[10151.485440] init: starting service 'qccvndhalservice'...
+<14>[10151.659537] init: Service 'qccvndhalservice' (pid 27788) exited with status 1
+<14>[10151.659675] init: Sending signal 9 to service 'qccvndhalservice' (pid 27788) process group...
+<14>[10151.660927] libprocessgroup: Successfully killed process cgroup uid 1000 pid 27788 in 0ms
+<3>[10152.899959] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[10152.910474] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[10152.911474] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[10152.915148] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[10152.922238] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[10152.925880] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[10152.932821] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[10152.936498] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[10152.944107] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[10152.961052] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[10152.963460] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[10152.968739] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[10153.126177] [SDL] misc_ioctl msg.len is 3 : 0x77 0x02 0x87 
+<3>[10153.126866] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<31>[10153.163703] logd: logdr: UID=0 GID=0 PID=27799 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[10153.398205] msm_isp_open_node: reset VFE

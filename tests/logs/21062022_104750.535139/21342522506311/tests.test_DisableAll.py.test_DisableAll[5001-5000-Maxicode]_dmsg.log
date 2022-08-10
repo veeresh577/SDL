@@ -1,0 +1,37 @@
+<14>[ 3703.560435] init: starting service 'qccsyshalservice'...
+<14>[ 3703.614707] init: starting service 'qccvndhalservice'...
+<14>[ 3703.701062] init: Service 'qccsyshalservice' (pid 17386) exited with status 1
+<14>[ 3703.701211] init: Sending signal 9 to service 'qccsyshalservice' (pid 17386) process group...
+<14>[ 3703.703046] libprocessgroup: Successfully killed process cgroup uid 1000 pid 17386 in 1ms
+<14>[ 3703.737445] libprocessgroup: Successfully killed process cgroup uid 1000 pid 17387 in 1ms
+<6>[ 3704.551019] IRQ 6: no longer affine to CPU7
+<6>[ 3706.118962] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<6>[ 3706.118993] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 
+<3>[ 3708.201539] [schedu][0x11d133a5424][19:51:07.367777] wlan: [2070:E:scan] scm_11d_elected_country_algo_fcc: 98: No AP with 11d Country code is present in scan list
+<3>[ 3708.201684] FUSIONWL: : ==Regulatory_elect_country_db==: No AP with 11d Country code is present in scan list 
+<14>[ 3708.743518] init: Sending signal 9 to service 'qccsyshalservice' (pid 17395) process group...
+<14>[ 3708.784759] init: Service 'qccvndhalservice' (pid 17396) exited with status 1
+<14>[ 3708.784888] init: Sending signal 9 to service 'qccvndhalservice' (pid 17396) process group...
+<14>[ 3708.786315] libprocessgroup: Successfully killed process cgroup uid 1000 pid 17396 in 0ms
+<38>[ 3709.465155] type=1400 audit(1654199468.625:6155): avc: denied { kill } for comm="swapper/0" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<14>[ 3713.651466] init: starting service 'qccsyshalservice'...
+<14>[ 3713.695231] init: starting service 'qccvndhalservice'...
+<14>[ 3713.796675] init: Service 'qccsyshalservice' (pid 17400) exited with status 1
+<14>[ 3713.796756] init: Sending signal 9 to service 'qccsyshalservice' (pid 17400) process group...
+<14>[ 3713.797929] libprocessgroup: Successfully killed process cgroup uid 1000 pid 17400 in 0ms
+<14>[ 3713.816408] init: Service 'qccvndhalservice' (pid 17401) exited with status 1
+<14>[ 3713.816530] init: Sending signal 9 to service 'qccvndhalservice' (pid 17401) process group...
+<14>[ 3713.818071] libprocessgroup: Successfully killed process cgroup uid 1000 pid 17401 in 0ms
+<6>[ 3714.211351] IRQ 6: no longer affine to CPU4
+<3>[ 3714.856365] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 3714.866813] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 3714.867537] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 3714.871443] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 3714.876794] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 3714.882247] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 3714.887636] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 3714.893493] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 3714.898332] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 3714.909165] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 3714.919800] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 3715.020799] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 

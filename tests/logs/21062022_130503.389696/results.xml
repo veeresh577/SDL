@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?><testsuite errors="0" failures="1" name="pytest" skips="0" tests="11" time="268.207"><testcase classname="tests.test_Supplemental" file="tests/test_Supplemental.py" line="33" name="test_Supplemental[5001-5000-EAN-13 5-Supps0]" time="22.1346418858"></testcase><testcase classname="tests.test_Supplemental" file="tests/test_Supplemental.py" line="33" name="test_Supplemental[5001-5000-EAN-13 5-Supps1]" time="20.6358599663"></testcase><testcase classname="tests.test_Supplemental" file="tests/test_Supplemental.py" line="33" name="test_Supplemental[5001-5000-EAN-13 5-Supps2]" time="26.1314401627"></testcase><testcase classname="tests.test_Supplemental" file="tests/test_Supplemental.py" line="33" name="test_Supplemental[5001-5000-EAN-13 5-Supps3]" time="20.314483881"></testcase><testcase classname="tests.test_Supplemental" file="tests/test_Supplemental.py" line="33" name="test_Supplemental[5001-5000-EAN-13 5-Supps4]" time="20.0942559242"></testcase><testcase classname="tests.test_Supplemental" file="tests/test_Supplemental.py" line="33" name="test_Supplemental[5001-5000-EAN-13 5-Supps5]" time="20.1662869453"></testcase><testcase classname="tests.test_Supplemental" file="tests/test_Supplemental.py" line="33" name="test_Supplemental[5001-5000-Bookland]" time="42.6977517605"><failure message="AssertionError: assert [&apos;97934535223280001&apos;] == [&apos;9793453522328&apos;]
+  At index 0 diff: &apos;97934535223280001&apos; != &apos;9793453522328&apos;
+  Full diff:
+  - [&apos;97934535223280001&apos;]
+  ?                ----
+  + [&apos;9793453522328&apos;]">test_Supplemental.py:39: in test_Supplemental
+    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;97934535223280001&apos;] == [&apos;9793453522328&apos;]
+E     At index 0 diff: &apos;97934535223280001&apos; != &apos;9793453522328&apos;
+E     Full diff:
+E     - [&apos;97934535223280001&apos;]
+E     ?                ----
+E     + [&apos;9793453522328&apos;]</failure></testcase><testcase classname="tests.test_Supplemental" file="tests/test_Supplemental.py" line="33" name="test_Supplemental[5001-5000-EAN-13 5-Supps6]" time="21.8645908833"></testcase><testcase classname="tests.test_Supplemental" file="tests/test_Supplemental.py" line="33" name="test_Supplemental[5001-5000-EAN-13 5-Supps7]" time="22.5321912766"></testcase><testcase classname="tests.test_Supplemental" file="tests/test_Supplemental.py" line="33" name="test_Supplemental[5001-5000-EAN-13 5-Supps8]" time="22.0417046547"></testcase><testcase classname="tests.test_Supplemental" file="tests/test_Supplemental.py" line="33" name="test_Supplemental[5001-5000-EAN-13 5-Supps9]" time="22.4128818512"></testcase></testsuite>

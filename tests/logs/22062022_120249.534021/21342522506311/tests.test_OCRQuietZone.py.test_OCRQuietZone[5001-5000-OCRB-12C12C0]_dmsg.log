@@ -1,0 +1,39 @@
+<6>[82652.181694] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<6>[82652.181732] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 
+<14>[82653.310715] init: starting service 'qccsyshalservice'...
+<14>[82653.355833] init: starting service 'qccvndhalservice'...
+<14>[82653.434364] init: Service 'qccsyshalservice' (pid 10125) exited with status 1
+<14>[82653.434513] init: Sending signal 9 to service 'qccsyshalservice' (pid 10125) process group...
+<14>[82653.435966] libprocessgroup: Successfully killed process cgroup uid 1000 pid 10125 in 0ms
+<14>[82653.481414] init: Service 'qccvndhalservice' (pid 10126) exited with status 1
+<14>[82653.481507] init: Sending signal 9 to service 'qccvndhalservice' (pid 10126) process group...
+<14>[82653.482890] libprocessgroup: Successfully killed process cgroup uid 1000 pid 10126 in 1ms
+<3>[82654.264091] [schedu][0x17259d4005e][20:52:02.315288] wlan: [2028:E:scan] scm_11d_elected_country_algo_fcc: 98: No AP with 11d Country code is present in scan list
+<3>[82654.264245] FUSIONWL: : ==Regulatory_elect_country_db==: No AP with 11d Country code is present in scan list 
+<14>[82658.406115] init: starting service 'qccvndhalservice'...
+<14>[82658.514835] init: Service 'qccvndhalservice' (pid 10131) exited with status 1
+<14>[82658.514917] init: Sending signal 9 to service 'qccvndhalservice' (pid 10131) process group...
+<14>[82658.515838] libprocessgroup: Successfully killed process cgroup uid 1000 pid 10131 in 0ms
+<14>[82663.393430] init: starting service 'qccsyshalservice'...
+<38>[82663.525201] type=1400 audit(1654289531.538:192517): avc: denied { search } for comm="vendor.qti.hard" name="/" dev="mmcblk0p37" ino=2 scontext=u:r:vendor_hal_qccvndhal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[82663.560822] init: Service 'qccvndhalservice' (pid 10138) exited with status 1
+<14>[82663.560981] init: Sending signal 9 to service 'qccvndhalservice' (pid 10138) process group...
+<14>[82663.562572] libprocessgroup: Successfully killed process cgroup uid 1000 pid 10138 in 0ms
+<3>[82663.590010] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[82663.604678] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[82663.609346] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[82663.615254] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[82663.620130] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[82663.625545] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[82663.631540] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[82663.641436] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[82663.646516] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[82663.657421] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[82663.667994] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[82663.675008] [SDL] misc_ioctl msg.len is 3 : 0x77 0x02 0x87 
+<3>[82663.678659] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<31>[82663.773852] logd: logdr: UID=0 GID=0 PID=10144 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[82663.787701] frame_src is 1 frame_id is 1097 blackjoe
+<3>[82663.871008] frame_src is 1 frame_id is 1098 blackjoe
+<3>[82663.905428] frame_src is 1 frame_id is 1099 blackjoe
+<3>[82663.939651] frame_src is 1 frame_id is 1100 blackjoe

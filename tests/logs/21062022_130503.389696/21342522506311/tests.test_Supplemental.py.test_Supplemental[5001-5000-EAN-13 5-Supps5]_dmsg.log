@@ -1,0 +1,75 @@
+<38>[10181.072783] type=1400 audit(1654205940.235:6699): avc: denied { kill } for comm="swapper/3" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<14>[10181.711314] init: Service 'qccsyshalservice' (pid 27924) exited with status 1
+<14>[10181.711431] init: Sending signal 9 to service 'qccsyshalservice' (pid 27924) process group...
+<14>[10181.712285] libprocessgroup: Successfully killed process cgroup uid 1000 pid 27924 in 0ms
+<14>[10181.848908] init: Service 'qccvndhalservice' (pid 27925) exited with status 1
+<14>[10181.849003] init: Sending signal 9 to service 'qccvndhalservice' (pid 27925) process group...
+<14>[10181.849963] libprocessgroup: Successfully killed process cgroup uid 1000 pid 27925 in 0ms
+<6>[10185.297604] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<6>[10185.297627] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 
+<14>[10186.705013] init: starting service 'qccvndhalservice'...
+<14>[10186.747269] init: Service 'qccsyshalservice' (pid 27935) exited with status 1
+<14>[10186.748076] libprocessgroup: Successfully killed process cgroup uid 1000 pid 27935 in 0ms
+<38>[10186.780710] type=1400 audit(1654205945.935:6700): avc: denied { search } for comm="vendor.qti.hard" name="/" dev="mmcblk0p37" ino=2 scontext=u:r:vendor_hal_qccvndhal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[10186.883544] init: Service 'qccvndhalservice' (pid 27936) exited with status 1
+<14>[10186.884437] libprocessgroup: Successfully killed process cgroup uid 1000 pid 27936 in 0ms
+<3>[10187.381637] FUSIONWL: : ==Regulatory_elect_country_db==: No AP with 11d Country code is present in scan list 
+<3>[10187.399169] FUSIONWL: : ==Regulatory_scan_country_list_db_reset==: Reset complete for scan country list 
+<14>[10191.602824] init: starting service 'qccsyshalservice'...
+<38>[10191.677506] type=1400 audit(1654205950.835:6701): avc: denied { search } for comm="qccsyshalservic" name="/" dev="mmcblk0p37" ino=2 scontext=u:r:vendor_qccsyshal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[10191.742977] init: starting service 'qccvndhalservice'...
+<14>[10191.784184] init: Service 'qccsyshalservice' (pid 27940) exited with status 1
+<14>[10191.784275] init: Sending signal 9 to service 'qccsyshalservice' (pid 27940) process group...
+<14>[10191.785109] libprocessgroup: Successfully killed process cgroup uid 1000 pid 27940 in 0ms
+<14>[10191.937674] init: Service 'qccvndhalservice' (pid 27941) exited with status 1
+<14>[10191.938645] libprocessgroup: Successfully killed process cgroup uid 1000 pid 27941 in 0ms
+<3>[10193.372965] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[10193.383318] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[10193.383780] [SDL] se47xx_misc_ioctl ret = -107 
+<3>[10193.387674] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[10193.418985] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[10193.428245] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[10193.429630] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[10193.440265] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[10193.445872] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[10193.451086] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<31>[10193.643720] logd: logdr: UID=0 GID=0 PID=27952 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[10193.899770] msm_isp_open_node: reset VFE
+<3>[10193.924714] msm_ispif_config:1061 Exit 
+<3>[10193.925337] msm_ispif_config2: Exit 
+<3>[10193.981339] frame_src is 1 frame_id is 2 blackjoe
+<31>[10194.033870] logd: logdr: UID=0 GID=0 PID=27962 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[10194.087996] frame_src is 1 frame_id is 4 blackjoe
+<3>[10194.156655] frame_src is 1 frame_id is 6 blackjoe
+<3>[10194.194882] qcom-lpi-pinctrl 15070000.lpi_pinctrl: lpi_pinctrl_runtime_resume: unable to get core clk handle -2
+<6>[10194.200398] __afe_port_start: port id: 0x102e
+<6>[10194.200443] afe_find_cal_topo_id_by_port: port id: 0x102e, dev_acdb_id: 0
+<6>[10194.200460] afe_find_cal_topo_id_by_port: top_id:1025e acdb_id:15 afe_port:0x102e
+<6>[10194.200476] afe_get_cal_topology_id: port_id = 0x102e acdb_id = 15 topology_id = 0x1025e cal_type_index=8 ret=0
+<6>[10194.201799] afe_send_port_topology_id: AFE set topology id 0x1025e  enable for port 0x102e ret 0
+<6>[10194.201819] send_afe_cal_type: cal_index is 0
+<6>[10194.201834] send_afe_cal_type: dev_acdb_id[130] is 0
+<6>[10194.201850] send_afe_cal_type: Sending cal_index cal 0
+<6>[10194.203048] afe_send_hw_delay: port_id 0x102e rate 48000 delay_usec 474 status 0
+<3>[10194.263798] frame_src is 1 frame_id is 8 blackjoe
+<3>[10194.298123] frame_src is 1 frame_id is 9 blackjoe
+<3>[10194.370893] frame_src is 1 frame_id is 10 blackjoe
+<3>[10194.405401] frame_src is 1 frame_id is 11 blackjoe
+<3>[10194.439595] frame_src is 1 frame_id is 12 blackjoe
+<3>[10194.493810] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[10194.503046] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[10194.503580] [SDL] se47xx_misc_ioctl ret = -107 
+<3>[10194.509041] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[10194.515105] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<14>[10196.638765] init: starting service 'qccsyshalservice'...
+<14>[10196.819280] init: Service 'qccsyshalservice' (pid 27976) exited with status 1
+<14>[10196.819366] init: Sending signal 9 to service 'qccsyshalservice' (pid 27976) process group...
+<14>[10196.820317] libprocessgroup: Successfully killed process cgroup uid 1000 pid 27976 in 0ms
+<3>[10197.389031] [schedu][0x13a158379f8][21:39:16.555265] wlan: [2070:E:scan] scm_11d_elected_country_algo_fcc: 98: No AP with 11d Country code is present in scan list
+<3>[10197.389138] FUSIONWL: : ==Regulatory_elect_country_db==: No AP with 11d Country code is present in scan list 
+<3>[10197.411119] FUSIONWL: : ==Regulatory_scan_country_list_db_reset==: Reset complete for scan country list 
+<3>[10197.702883] qcom-lpi-pinctrl 15070000.lpi_pinctrl: lpi_pinctrl_runtime_resume: unable to get core clk handle -2
+<6>[10197.705277] afe_close: port_id = 0x102e
+<4>[10199.471103] FG: is_batt_empty: batt_soc_rt_sts: 32 vbatt: 3013420 uV msoc:0
+<3>[10200.161332] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[10200.186384] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 

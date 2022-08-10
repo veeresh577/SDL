@@ -1,0 +1,34 @@
+<14>[ 9461.222941] init: starting service 'qccsyshalservice'...
+<14>[ 9461.407969] init: Service 'qccsyshalservice' (pid 25826) exited with status 1
+<14>[ 9461.408075] init: Sending signal 9 to service 'qccsyshalservice' (pid 25826) process group...
+<14>[ 9461.409034] libprocessgroup: Successfully killed process cgroup uid 1000 pid 25826 in 0ms
+<14>[ 9461.466652] init: starting service 'qccvndhalservice'...
+<14>[ 9461.656436] init: Service 'qccvndhalservice' (pid 25827) exited with status 1
+<14>[ 9461.657474] libprocessgroup: Successfully killed process cgroup uid 1000 pid 25827 in 0ms
+<6>[ 9462.427047] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<6>[ 9462.427068] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 
+<3>[ 9464.510160] [schedu][0x136ceccdec8][21:27:03.676396] wlan: [2070:E:scan] scm_11d_elected_country_algo_fcc: 98: No AP with 11d Country code is present in scan list
+<3>[ 9464.510286] FUSIONWL: : ==Regulatory_elect_country_db==: No AP with 11d Country code is present in scan list 
+<3>[ 9464.540746] FUSIONWL: : ==Regulatory_scan_country_list_db_reset==: Reset complete for scan country list 
+<14>[ 9466.462800] init: Service 'qccsyshalservice' (pid 25830) exited with status 1
+<14>[ 9466.463938] libprocessgroup: Successfully killed process cgroup uid 1000 pid 25830 in 0ms
+<14>[ 9466.499297] init: starting service 'qccvndhalservice'...
+<14>[ 9466.678118] init: Service 'qccvndhalservice' (pid 25831) exited with status 1
+<14>[ 9466.678223] init: Sending signal 9 to service 'qccvndhalservice' (pid 25831) process group...
+<14>[ 9466.679163] libprocessgroup: Successfully killed process cgroup uid 1000 pid 25831 in 0ms
+<12>[ 9470.564487] healthd: battery l=3 v=3115 t=28.0 h=2 st=2 c=-223632 fc=0 cc=7 chg=u
+<4>[ 9470.568639] FG: is_batt_empty: batt_soc_rt_sts: 32 vbatt: 3115958 uV msoc:0
+<4>[ 9470.595755] FG: is_batt_empty: batt_soc_rt_sts: 32 vbatt: 3115958 uV msoc:0
+<4>[ 9470.645788] FG: is_batt_empty: batt_soc_rt_sts: 32 vbatt: 3115958 uV msoc:0
+<4>[ 9470.660322] FG: is_batt_empty: batt_soc_rt_sts: 32 vbatt: 3115958 uV msoc:0
+<4>[ 9470.730265] FG: is_batt_empty: batt_soc_rt_sts: 32 vbatt: 3115958 uV msoc:0
+<4>[ 9470.767486] FG: is_batt_empty: batt_soc_rt_sts: 32 vbatt: 3115958 uV msoc:0
+<4>[ 9470.767820] FG: is_batt_empty: batt_soc_rt_sts: 32 vbatt: 3115958 uV msoc:0
+<12>[ 9470.791714] healthd: battery l=3 v=3115 t=28.0 h=2 st=2 c=-223632 fc=0 cc=7 chg=u
+<4>[ 9470.797057] FG: is_batt_empty: batt_soc_rt_sts: 32 vbatt: 3115958 uV msoc:0
+<4>[ 9470.825501] FG: is_batt_empty: batt_soc_rt_sts: 32 vbatt: 3115958 uV msoc:0
+<4>[ 9470.828134] FG: is_batt_empty: batt_soc_rt_sts: 32 vbatt: 3115958 uV msoc:0
+<4>[ 9470.863864] FG: is_batt_empty: batt_soc_rt_sts: 32 vbatt: 3115958 uV msoc:0
+<4>[ 9470.866852] FG: is_batt_empty: batt_soc_rt_sts: 32 vbatt: 3115958 uV msoc:0
+<12>[ 9470.875115] healthd: battery l=3 v=3115 t=28.0 h=2 st=2 c=-223632 fc=0 cc=7 chg=u
+<4>[ 9470.879955] FG: is_batt_empty: batt_soc_rt_sts: 32 vbatt: 3115958 uV msoc:0

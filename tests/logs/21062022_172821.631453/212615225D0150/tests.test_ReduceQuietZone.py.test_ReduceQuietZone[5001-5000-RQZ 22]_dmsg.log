@@ -1,0 +1,17 @@
+<14>[88313.220416] init: starting service 'smartmu'...
+<14>[88313.370496] init: starting service 'qccsyshalservice'...
+<14>[88313.409302] init: Service 'smartmu' (pid 21228) exited with status 0
+<14>[88313.409390] init: Sending signal 9 to service 'smartmu' (pid 21228) process group...
+<14>[88313.410531] libprocessgroup: Successfully killed process cgroup uid 0 pid 21228 in 0ms
+<12>[88313.475386] healthd: battery l=12 v=3291 t=44.0 h=2 st=2 c=-461425 fc=4008000 cc=2 chg=u
+<14>[88313.491342] init: Service 'qccsyshalservice' (pid 21230) exited with status 1
+<14>[88313.491381] init: Sending signal 9 to service 'qccsyshalservice' (pid 21230) process group...
+<14>[88313.491732] libprocessgroup: Successfully killed process cgroup uid 1000 pid 21230 in 0ms
+<12>[88313.499020] healthd: battery l=12 v=3291 t=44.0 h=2 st=2 c=-461425 fc=4008000 cc=2 chg=u
+<14>[88313.536577] init: starting service 'qccvndhalservice'...
+<12>[88313.551757] healthd: battery l=12 v=3291 t=44.0 h=2 st=2 c=-461425 fc=4008000 cc=2 chg=u
+<12>[88313.573044] healthd: battery l=12 v=3291 t=44.0 h=2 st=2 c=-461425 fc=4008000 cc=2 chg=u
+<12>[88313.589181] healthd: battery l=12 v=3291 t=44.0 h=2 st=2 c=-461425 fc=4008000 cc=2 chg=u
+<12>[88313.605578] healthd: battery l=12 v=3291 t=44.0 h=2 st=2 c=-461425 fc=4008000 cc=2 chg=u
+<14>[88313.615700] init: Service 'qccvndhalservice' (pid 21231) exited with status 1
+<12>[88313.621946] healthd: battery l=12 v=3291 t=44.0 h=2 st=2 c=-461425 fc=4008000 cc=2 chg=u

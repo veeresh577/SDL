@@ -1,0 +1,71 @@
+<3>[88743.468030] tavil_codec tavil_codec: ASoC: DAPM unknown pin Lineout_3 amp
+<12>[88744.423902] healthd: battery l=10 v=3341 t=42.0 h=2 st=2 c=-26855 fc=4008000 cc=2 chg=u
+<12>[88744.485207] healthd: battery l=10 v=3341 t=42.0 h=2 st=2 c=-26855 fc=4008000 cc=2 chg=u
+<12>[88744.516737] healthd: battery l=10 v=3341 t=42.0 h=2 st=2 c=-26855 fc=4008000 cc=2 chg=u
+<12>[88744.544295] healthd: battery l=10 v=3341 t=42.0 h=2 st=2 c=-26855 fc=4008000 cc=2 chg=u
+<12>[88744.579473] healthd: battery l=10 v=3341 t=42.0 h=2 st=2 c=-26855 fc=4008000 cc=2 chg=u
+<12>[88744.636609] healthd: battery l=10 v=3341 t=42.0 h=2 st=2 c=-26855 fc=4008000 cc=2 chg=u
+<12>[88744.666539] healthd: battery l=10 v=3341 t=42.0 h=2 st=2 c=-26855 fc=4008000 cc=2 chg=u
+<12>[88744.695321] healthd: battery l=10 v=3341 t=42.0 h=2 st=2 c=-26855 fc=4008000 cc=2 chg=u
+<14>[88746.335959] init: starting service 'smartmu'...
+<14>[88746.506879] init: Sending signal 9 to service 'smartmu' (pid 22917) process group...
+<14>[88746.635665] init: Service 'qccsyshalservice' (pid 22919) exited with status 1
+<14>[88746.635749] init: Sending signal 9 to service 'qccsyshalservice' (pid 22919) process group...
+<14>[88746.636558] libprocessgroup: Successfully killed process cgroup uid 1000 pid 22919 in 0ms
+<6>[88748.609341] BattMan: Battery Faire
+<3>[88748.609450] GBSOC->11, GBTemp->420, GBTTE->155, GBTTF->65535
+<38>[88750.624380] type=1400 audit(1642521668.251:12297): avc: denied { kill } for comm="swapper/0" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<14>[88751.503541] init: starting service 'qccsyshalservice'...
+<14>[88751.547317] init: Service 'smartmu' (pid 22924) exited with status 0
+<14>[88751.547430] init: Sending signal 9 to service 'smartmu' (pid 22924) process group...
+<14>[88751.548408] libprocessgroup: Successfully killed process cgroup uid 0 pid 22924 in 0ms
+<14>[88751.630318] init: Service 'qccsyshalservice' (pid 22926) exited with status 1
+<14>[88751.630465] init: Sending signal 9 to service 'qccsyshalservice' (pid 22926) process group...
+<14>[88751.631850] libprocessgroup: Successfully killed process cgroup uid 1000 pid 22926 in 0ms
+<14>[88751.645144] init: starting service 'qccvndhalservice'...
+<14>[88751.761136] init: Service 'qccvndhalservice' (pid 22927) exited with status 1
+<12>[88755.747406] healthd: battery l=11 v=3327 t=42.0 h=2 st=2 c=-129882 fc=4008000 cc=2 chg=u
+<38>[88756.238970] type=1400 audit(1642521673.861:12299): avc: denied { read } for comm="Binder:581_1" name="wakeup48" dev="sysfs" ino=61027 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=1
+<38>[88756.239796] type=1400 audit(1642521673.861:12300): avc: denied { open } for comm="Binder:581_1" path="/sys/devices/virtual/misc/msm_mp3/wakeup48" dev="sysfs" ino=61027 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=1
+<38>[88756.239996] type=1400 audit(1642521673.861:12301): avc: denied { read } for comm="Binder:581_1" name="event_count" dev="sysfs" ino=61034 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+<38>[88756.240326] type=1400 audit(1642521673.861:12302): avc: denied { open } for comm="Binder:581_1" path="/sys/devices/virtual/misc/msm_mp3/wakeup48/event_count" dev="sysfs" ino=61034 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+<38>[88756.240520] type=1400 audit(1642521673.861:12303): avc: denied { getattr } for comm="Binder:581_1" path="/sys/devices/virtual/misc/msm_mp3/wakeup48/event_count" dev="sysfs" ino=61034 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+<4>[88756.332485] audit: audit_lost=4292 audit_rate_limit=5 audit_backlog_limit=64
+<3>[88756.332495] audit: rate limit exceeded
+<3>[88756.395083] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[88756.396626] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[88756.400891] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<14>[88756.401333] init: starting service 'smartmu'...
+<3>[88756.405064] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[88756.413384] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[88756.417259] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[88756.422113] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[88756.426905] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[88756.433804] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[88756.437115] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[88756.443412] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[88756.453546] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[88756.464138] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[88756.469612] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[88756.474987] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[88756.486122] [SDL] misc_ioctl msg.len is 4 : 0x7b 0x00 0x00 0x85 
+<3>[88756.490960] [SDL] misc_ioctl msg.len is 2 : 0x84 0x00 
+<3>[88756.496947] [SDL] misc_ioctl msg.len is 4 : 0x82 0x00 0x00 0x7e 
+<3>[88756.513092] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<14>[88756.543539] init: starting service 'qccsyshalservice'...
+<3>[88756.544298] frame_src is 1 frame_id is 42275 blackjoe
+<3>[88756.561107] frame_src is 1 frame_id is 42276 blackjoe
+<14>[88756.577129] init: Service 'smartmu' (pid 22937) exited with status 0
+<14>[88756.577189] init: Sending signal 9 to service 'smartmu' (pid 22937) process group...
+<3>[88756.577500] frame_src is 1 frame_id is 42277 blackjoe
+<14>[88756.577614] libprocessgroup: Successfully killed process cgroup uid 0 pid 22937 in 0ms
+<3>[88756.594552] frame_src is 1 frame_id is 42278 blackjoe
+<31>[88756.597252] logd: logdr: UID=0 GID=0 PID=22939 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[88756.660512] frame_src is 1 frame_id is 42280 blackjoe
+<14>[88756.667617] init: Service 'qccsyshalservice' (pid 22942) exited with status 1
+<14>[88756.667677] init: Sending signal 9 to service 'qccsyshalservice' (pid 22942) process group...
+<14>[88756.668259] libprocessgroup: Successfully killed process cgroup uid 1000 pid 22942 in 0ms
+<14>[88756.675097] init: starting service 'qccvndhalservice'...
+<3>[88756.677054] frame_src is 1 frame_id is 42281 blackjoe
+<3>[88756.693747] frame_src is 1 frame_id is 42282 blackjoe
+<3>[88756.710325] frame_src is 1 frame_id is 42283 blackjoe

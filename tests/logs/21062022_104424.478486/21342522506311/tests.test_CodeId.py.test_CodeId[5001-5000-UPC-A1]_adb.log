@@ -1,0 +1,212 @@
+--------- beginning of system
+06-02 19:16:47.816 D/BatteryService( 1599): level : 25 / status : 2/Health : 2/Decommission : 0
+06-02 19:16:47.819 D/ZebraRttProvider.FusionEngine( 3675): receive broadcast intent, action: android.intent.action.BATTERY_CHANGED
+06-02 19:16:47.819 D/ZebraRttProvider.FusionEngine( 3675): Battery Level = 25
+06-02 19:16:47.819 D/ZebraRttProvider.FusionEngine( 3675): receive broadcast intent, action: android.intent.action.BATTERY_CHANGED
+--------- beginning of main
+06-02 19:16:47.820 D/BatterySwapServ( 3420): onReceive BATTERY_CHANGED
+06-02 19:16:47.820 D/BatterySwapServ( 3420): battery changed: present=true level=25 plugType=2 shutdownLevel=6 batteryType = 201 serialnumber =T5017
+06-02 19:16:47.820 D/com.symbol.dataanalytics.a.a.d.b( 4592): Received battery event
+06-02 19:16:47.820 D/com.symbol.dataanalytics.a.a.d.b( 4592): BatteryFactory event action = android.intent.action.BATTERY_CHANGED
+06-02 19:16:47.821 D/HighTemperatureReceiver( 5142): Receive action: android.intent.action.BATTERY_CHANGED
+06-02 19:16:47.821 D/UsbCradleMode( 5461): onReceive:Battery change, status:2
+06-02 19:16:47.822 W/ContextImpl( 3222): Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1669 android.content.ContextWrapper.startService:720 com.symbol.batterymanager.model.BatteryManagerReceiver.startBatteryApplicationService:81 com.symbol.batterymanager.model.BatteryManagerReceiver.onReceive:47 android.app.LoadedApk$ReceiverDispatcher$Args.lambda$getRunnable$0$LoadedApk$ReceiverDispatcher$Args:1580 
+06-02 19:16:47.822 D/KeyguardUpdateMonitor( 6499): received broadcast android.intent.action.BATTERY_CHANGED
+06-02 19:16:47.825 V/BatteryApplicationService( 3222): BatteryType  201
+06-02 19:16:47.827 D/OSUService( 3163): dev-dbg:is_charging current_now -623046, batteryLevel: 25, isCharging(isCharging): true
+06-02 19:16:47.827 D/OSUService( 3163): dev-dbg:is_charging ADAPTER_CHARGE_LIMIIT 500000
+06-02 19:16:47.827 D/OSUService( 3163): dev-dbg:is_charging current_now > ADAPTER_CHARGE_LIMIIT false
+06-02 19:16:47.827 D/OSUService( 3163): dev-dbg:is_charging conditionCheck false
+06-02 19:16:47.828 D/OSUService( 3163): dev-dbg: battery change intent batteryLevel: 25, is_charging(context): false, STATE: 1
+06-02 19:16:47.832 D/OSUService( 3163): dev-dbg:is_charging current_now -623046, batteryLevel: 25, isCharging(isCharging): true
+06-02 19:16:47.832 D/OSUService( 3163): dev-dbg:is_charging ADAPTER_CHARGE_LIMIIT 500000
+06-02 19:16:47.832 D/OSUService( 3163): dev-dbg:is_charging current_now > ADAPTER_CHARGE_LIMIIT false
+06-02 19:16:47.832 D/OSUService( 3163): dev-dbg:is_charging conditionCheck false
+06-02 19:16:47.832 D/OSUService( 3163): dev-dbg: calling for suspend
+06-02 19:16:47.832 I/OSUService( 3163): handle_ab_suspend -1 2
+06-02 19:16:47.832 E/OSUService( 3163): Can't Suspend - there are no update in progress
+06-02 19:16:47.833 D/OSUService( 3163): dev-dbg: battery change intent finished
+06-02 19:16:47.835 D/KeyguardUpdateMonitor( 6499): handleBatteryUpdate
+--------- beginning of kernel
+06-02 19:16:48.861 W/healthd (    0): battery l=25 v=3422 t=26.0 h=2 st=2 c=-560058 fc=0 cc=7 chg=u
+06-02 19:16:48.937 D/BatteryService( 1599): level : 25 / status : 2/Health : 2/Decommission : 0
+06-02 19:16:48.940 D/ZebraRttProvider.FusionEngine( 3675): receive broadcast intent, action: android.intent.action.BATTERY_CHANGED
+06-02 19:16:48.940 D/ZebraRttProvider.FusionEngine( 3675): Battery Level = 25
+06-02 19:16:48.940 D/ZebraRttProvider.FusionEngine( 3675): receive broadcast intent, action: android.intent.action.BATTERY_CHANGED
+06-02 19:16:48.941 D/BatterySwapServ( 3420): onReceive BATTERY_CHANGED
+06-02 19:16:48.941 D/HighTemperatureReceiver( 5142): Receive action: android.intent.action.BATTERY_CHANGED
+06-02 19:16:48.941 D/BatterySwapServ( 3420): battery changed: present=true level=25 plugType=2 shutdownLevel=6 batteryType = 201 serialnumber =T5017
+06-02 19:16:48.941 D/com.symbol.dataanalytics.a.a.d.b( 4592): Received battery event
+06-02 19:16:48.942 D/com.symbol.dataanalytics.a.a.d.b( 4592): BatteryFactory event action = android.intent.action.BATTERY_CHANGED
+06-02 19:16:48.942 D/UsbCradleMode( 5461): onReceive:Battery change, status:2
+06-02 19:16:48.942 W/ContextImpl( 3222): Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1669 android.content.ContextWrapper.startService:720 com.symbol.batterymanager.model.BatteryManagerReceiver.startBatteryApplicationService:81 com.symbol.batterymanager.model.BatteryManagerReceiver.onReceive:47 android.app.LoadedApk$ReceiverDispatcher$Args.lambda$getRunnable$0$LoadedApk$ReceiverDispatcher$Args:1580 
+06-02 19:16:48.943 D/KeyguardUpdateMonitor( 6499): received broadcast android.intent.action.BATTERY_CHANGED
+06-02 19:16:48.943 D/KeyguardUpdateMonitor( 6499): handleBatteryUpdate
+06-02 19:16:48.945 V/BatteryApplicationService( 3222): BatteryType  201
+06-02 19:16:48.950 D/OSUService( 3163): dev-dbg:is_charging current_now -560058, batteryLevel: 25, isCharging(isCharging): true
+06-02 19:16:48.950 D/OSUService( 3163): dev-dbg:is_charging ADAPTER_CHARGE_LIMIIT 500000
+06-02 19:16:48.950 D/OSUService( 3163): dev-dbg:is_charging current_now > ADAPTER_CHARGE_LIMIIT false
+06-02 19:16:48.951 D/OSUService( 3163): dev-dbg:is_charging conditionCheck false
+06-02 19:16:48.951 D/OSUService( 3163): dev-dbg: battery change intent batteryLevel: 25, is_charging(context): false, STATE: 1
+06-02 19:16:48.955 D/OSUService( 3163): dev-dbg:is_charging current_now -560058, batteryLevel: 25, isCharging(isCharging): true
+06-02 19:16:48.955 D/OSUService( 3163): dev-dbg:is_charging ADAPTER_CHARGE_LIMIIT 500000
+06-02 19:16:48.955 D/OSUService( 3163): dev-dbg:is_charging current_now > ADAPTER_CHARGE_LIMIIT false
+06-02 19:16:48.955 D/OSUService( 3163): dev-dbg:is_charging conditionCheck false
+06-02 19:16:48.955 D/OSUService( 3163): dev-dbg: calling for suspend
+06-02 19:16:48.955 I/OSUService( 3163): handle_ab_suspend -1 2
+06-02 19:16:48.956 E/OSUService( 3163): Can't Suspend - there are no update in progress
+06-02 19:16:48.956 D/OSUService( 3163): dev-dbg: battery change intent finished
+06-02 19:16:49.839 I/init    (    0): starting service 'qccsyshalservice'...
+06-02 19:16:49.859 W/healthd (    0): battery l=25 v=3422 t=26.0 h=2 st=2 c=-560058 fc=0 cc=7 chg=u
+06-02 19:16:49.870 I/init    (    0): starting service 'qccvndhalservice'...
+06-02 19:16:49.925 I/qccsyshalservic( 8627): type=1400 audit(0.0:5701): avc: denied { search } for name="/" dev="mmcblk0p37" ino=2 scontext=u:r:vendor_qccsyshal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+06-02 19:16:49.964 I/qccsyshalservice( 8627): Start with system binder
+06-02 19:16:49.965 I/qccsyshalservice( 8627): Registering qccsyshal service...
+06-02 19:16:49.967 I/hwservicemanager(  501): getTransport: Cannot find entry vendor.qti.hardware.qccsyshal@1.0::IQccsyshal/qccsyshal in either framework or device manifest.
+06-02 19:16:49.969 E/HidlServiceManagement( 8627): Service vendor.qti.hardware.qccsyshal@1.0::IQccsyshal/qccsyshal must be in VINTF manifest in order to register/get.
+06-02 19:16:49.969 E/qccsyshalservice( 8627): [ERROR] registerAsService() failed with status: -2147483648
+06-02 19:16:49.935 I/init    (    0): Service 'qccsyshalservice' (pid 8627) exited with status 1
+06-02 19:16:49.935 I/init    (    0): Sending signal 9 to service 'qccsyshalservice' (pid 8627) process group...
+06-02 19:16:49.936 I/libprocessgroup(    0): Successfully killed process cgroup uid 1000 pid 8627 in 0ms
+06-02 19:16:49.992 I/vendor.qti.hardware.qccvndhal@1.0-service( 8628): Start with vendor binder
+06-02 19:16:49.996 I/vendor.qti.hardware.qccvndhal@1.0-service( 8628): Registering qccvndhal service...
+06-02 19:16:50.001 I/hwservicemanager(  501): getTransport: Cannot find entry vendor.qti.hardware.qccvndhal@1.0::IQccvndhal/qccvndhal in either framework or device manifest.
+06-02 19:16:50.005 E/HidlServiceManagement( 8628): Service vendor.qti.hardware.qccvndhal@1.0::IQccvndhal/qccvndhal must be in VINTF manifest in order to register/get.
+06-02 19:16:50.005 E/vendor.qti.hardware.qccvndhal@1.0-service( 8628): [ERROR] registerAsService() failed with status: -2147483648
+06-02 19:16:49.968 I/init    (    0): Sending signal 9 to service 'qccvndhalservice' (pid 8628) process group...
+06-02 19:16:50.403 D/BatteryService( 1599): level : 25 / status : 2/Health : 2/Decommission : 0
+06-02 19:16:50.406 D/ZebraRttProvider.FusionEngine( 3675): receive broadcast intent, action: android.intent.action.BATTERY_CHANGED
+06-02 19:16:50.406 D/ZebraRttProvider.FusionEngine( 3675): Battery Level = 25
+06-02 19:16:50.406 D/ZebraRttProvider.FusionEngine( 3675): receive broadcast intent, action: android.intent.action.BATTERY_CHANGED
+06-02 19:16:50.408 D/HighTemperatureReceiver( 5142): Receive action: android.intent.action.BATTERY_CHANGED
+06-02 19:16:50.408 D/com.symbol.dataanalytics.a.a.d.b( 4592): Received battery event
+06-02 19:16:50.408 D/com.symbol.dataanalytics.a.a.d.b( 4592): BatteryFactory event action = android.intent.action.BATTERY_CHANGED
+06-02 19:16:50.408 W/ContextImpl( 3222): Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1669 android.content.ContextWrapper.startService:720 com.symbol.batterymanager.model.BatteryManagerReceiver.startBatteryApplicationService:81 com.symbol.batterymanager.model.BatteryManagerReceiver.onReceive:47 android.app.LoadedApk$ReceiverDispatcher$Args.lambda$getRunnable$0$LoadedApk$ReceiverDispatcher$Args:1580 
+06-02 19:16:50.408 D/BatterySwapServ( 3420): onReceive BATTERY_CHANGED
+06-02 19:16:50.409 D/BatterySwapServ( 3420): battery changed: present=true level=25 plugType=2 shutdownLevel=6 batteryType = 201 serialnumber =T5017
+06-02 19:16:50.409 D/UsbCradleMode( 5461): onReceive:Battery change, status:2
+06-02 19:16:50.410 D/KeyguardUpdateMonitor( 6499): received broadcast android.intent.action.BATTERY_CHANGED
+06-02 19:16:50.419 D/OSUService( 3163): dev-dbg:is_charging current_now -522948, batteryLevel: 25, isCharging(isCharging): true
+06-02 19:16:50.419 D/OSUService( 3163): dev-dbg:is_charging ADAPTER_CHARGE_LIMIIT 500000
+06-02 19:16:50.419 D/OSUService( 3163): dev-dbg:is_charging current_now > ADAPTER_CHARGE_LIMIIT false
+06-02 19:16:50.419 D/OSUService( 3163): dev-dbg:is_charging conditionCheck false
+06-02 19:16:50.419 D/OSUService( 3163): dev-dbg: battery change intent batteryLevel: 25, is_charging(context): false, STATE: 1
+06-02 19:16:50.421 D/KeyguardUpdateMonitor( 6499): handleBatteryUpdate
+06-02 19:16:50.423 D/OSUService( 3163): dev-dbg:is_charging current_now -522948, batteryLevel: 25, isCharging(isCharging): true
+06-02 19:16:50.423 D/OSUService( 3163): dev-dbg:is_charging ADAPTER_CHARGE_LIMIIT 500000
+06-02 19:16:50.423 D/OSUService( 3163): dev-dbg:is_charging current_now > ADAPTER_CHARGE_LIMIIT false
+06-02 19:16:50.423 D/OSUService( 3163): dev-dbg:is_charging conditionCheck false
+06-02 19:16:50.423 D/OSUService( 3163): dev-dbg: calling for suspend
+06-02 19:16:50.423 I/OSUService( 3163): handle_ab_suspend -1 2
+06-02 19:16:50.423 V/BatteryApplicationService( 3222): BatteryType  201
+06-02 19:16:50.423 E/OSUService( 3163): Can't Suspend - there are no update in progress
+06-02 19:16:50.423 D/OSUService( 3163): dev-dbg: battery change intent finished
+06-02 19:16:50.613 D/CompatibilityInfo( 1599): mCompatibilityFlags - 4
+06-02 19:16:50.613 D/CompatibilityInfo( 1599): applicationDensity - 240
+06-02 19:16:50.614 D/CompatibilityInfo( 1599): applicationScale - 1.0
+06-02 19:16:50.618 I/NextSubtest service( 7609): hit
+06-02 19:16:50.569 E/        (    0): [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86
+06-02 19:16:50.580 E/        (    0): [SDL] misc_ioctl msg.len is 2 : 0x88 0x00
+06-02 19:16:50.585 E/        (    0): [SDL] misc_ioctl msg.len is 2 : 0x88 0x00
+06-02 19:16:50.590 E/        (    0): [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8
+06-02 19:16:50.595 E/        (    0): [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00
+06-02 19:16:50.601 E/        (    0): [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86
+06-02 19:16:50.606 E/        (    0): [SDL] misc_ioctl msg.len is 2 : 0x88 0x00
+06-02 19:16:50.611 E/        (    0): [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81
+06-02 19:16:50.617 E/        (    0): [SDL] misc_ioctl msg.len is 2 : 0x88 0x00
+06-02 19:16:50.622 E/        (    0): [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8
+06-02 19:16:50.627 E/        (    0): [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00
+06-02 19:16:50.727 I/IRQ 6   (    0): no longer affine to CPU6
+06-02 19:16:51.038 D/logd    (    0): logdr: UID=0 GID=0 PID=8637 b tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+06-02 19:16:51.416 I/ActivityTaskManager( 1599): START u0 {flg=0x10000000 cmp=sdl.android.testapp/.SW_Decode_Android_TestApp_Activity} from uid 0
+06-02 19:16:51.417 D/EventSequenceValidator( 1599): Transition from INTENT_FAILED to INTENT_STARTED
+06-02 19:16:51.421 D/EventSequenceValidator( 1599): Transition from INTENT_STARTED to INTENT_FAILED
+06-02 19:16:52.386 D/BatteryService( 1599): level : 25 / status : 2/Health : 2/Decommission : 0
+06-02 19:16:52.390 D/HighTemperatureReceiver( 5142): Receive action: android.intent.action.BATTERY_CHANGED
+06-02 19:16:52.391 D/UsbCradleMode( 5461): onReceive:Battery change, status:2
+06-02 19:16:52.392 D/com.symbol.dataanalytics.a.a.d.b( 4592): Received battery event
+06-02 19:16:52.392 D/com.symbol.dataanalytics.a.a.d.b( 4592): BatteryFactory event action = android.intent.action.BATTERY_CHANGED
+06-02 19:16:52.393 D/ZebraRttProvider.FusionEngine( 3675): receive broadcast intent, action: android.intent.action.BATTERY_CHANGED
+06-02 19:16:52.393 D/BatterySwapServ( 3420): onReceive BATTERY_CHANGED
+06-02 19:16:52.393 D/ZebraRttProvider.FusionEngine( 3675): Battery Level = 25
+06-02 19:16:52.393 D/BatterySwapServ( 3420): battery changed: present=true level=25 plugType=2 shutdownLevel=6 batteryType = 201 serialnumber =T5017
+06-02 19:16:52.393 D/ZebraRttProvider.FusionEngine( 3675): receive broadcast intent, action: android.intent.action.BATTERY_CHANGED
+06-02 19:16:52.394 W/ContextImpl( 3222): Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1669 android.content.ContextWrapper.startService:720 com.symbol.batterymanager.model.BatteryManagerReceiver.startBatteryApplicationService:81 com.symbol.batterymanager.model.BatteryManagerReceiver.onReceive:47 android.app.LoadedApk$ReceiverDispatcher$Args.lambda$getRunnable$0$LoadedApk$ReceiverDispatcher$Args:1580 
+06-02 19:16:52.394 D/KeyguardUpdateMonitor( 6499): received broadcast android.intent.action.BATTERY_CHANGED
+06-02 19:16:52.396 W/adbd    ( 3608): timeout expired while flushing socket, closing
+06-02 19:16:52.397 V/BatteryApplicationService( 3222): BatteryType  201
+06-02 19:16:52.404 D/KeyguardUpdateMonitor( 6499): handleBatteryUpdate
+06-02 19:16:52.408 D/OSUService( 3163): dev-dbg:is_charging current_now -671874, batteryLevel: 25, isCharging(isCharging): true
+06-02 19:16:52.408 D/OSUService( 3163): dev-dbg:is_charging ADAPTER_CHARGE_LIMIIT 500000
+06-02 19:16:52.408 D/OSUService( 3163): dev-dbg:is_charging current_now > ADAPTER_CHARGE_LIMIIT false
+06-02 19:16:52.408 D/OSUService( 3163): dev-dbg:is_charging conditionCheck false
+06-02 19:16:52.408 D/OSUService( 3163): dev-dbg: battery change intent batteryLevel: 25, is_charging(context): false, STATE: 1
+06-02 19:16:52.413 D/OSUService( 3163): dev-dbg:is_charging current_now -671874, batteryLevel: 25, isCharging(isCharging): true
+06-02 19:16:52.413 D/OSUService( 3163): dev-dbg:is_charging ADAPTER_CHARGE_LIMIIT 500000
+06-02 19:16:52.413 D/OSUService( 3163): dev-dbg:is_charging current_now > ADAPTER_CHARGE_LIMIIT false
+06-02 19:16:52.413 D/OSUService( 3163): dev-dbg:is_charging conditionCheck false
+06-02 19:16:52.413 D/OSUService( 3163): dev-dbg: calling for suspend
+06-02 19:16:52.413 I/OSUService( 3163): handle_ab_suspend -1 2
+06-02 19:16:52.413 E/OSUService( 3163): Can't Suspend - there are no update in progress
+06-02 19:16:52.413 D/OSUService( 3163): dev-dbg: battery change intent finished
+06-02 19:16:53.696 D/BatteryService( 1599): level : 25 / status : 2/Health : 2/Decommission : 0
+06-02 19:16:53.698 D/ZebraRttProvider.FusionEngine( 3675): receive broadcast intent, action: android.intent.action.BATTERY_CHANGED
+06-02 19:16:53.699 D/ZebraRttProvider.FusionEngine( 3675): Battery Level = 25
+06-02 19:16:53.699 D/ZebraRttProvider.FusionEngine( 3675): receive broadcast intent, action: android.intent.action.BATTERY_CHANGED
+06-02 19:16:53.699 D/BatterySwapServ( 3420): onReceive BATTERY_CHANGED
+06-02 19:16:53.700 D/BatterySwapServ( 3420): battery changed: present=true level=25 plugType=2 shutdownLevel=6 batteryType = 201 serialnumber =T5017
+06-02 19:16:53.700 D/HighTemperatureReceiver( 5142): Receive action: android.intent.action.BATTERY_CHANGED
+06-02 19:16:53.701 D/UsbCradleMode( 5461): onReceive:Battery change, status:2
+06-02 19:16:53.701 D/com.symbol.dataanalytics.a.a.d.b( 4592): Received battery event
+06-02 19:16:53.701 D/com.symbol.dataanalytics.a.a.d.b( 4592): BatteryFactory event action = android.intent.action.BATTERY_CHANGED
+06-02 19:16:53.701 D/KeyguardUpdateMonitor( 6499): received broadcast android.intent.action.BATTERY_CHANGED
+06-02 19:16:53.701 W/ContextImpl( 3222): Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1669 android.content.ContextWrapper.startService:720 com.symbol.batterymanager.model.BatteryManagerReceiver.startBatteryApplicationService:81 com.symbol.batterymanager.model.BatteryManagerReceiver.onReceive:47 android.app.LoadedApk$ReceiverDispatcher$Args.lambda$getRunnable$0$LoadedApk$ReceiverDispatcher$Args:1580 
+06-02 19:16:53.705 V/BatteryApplicationService( 3222): BatteryType  201
+06-02 19:16:53.708 D/OSUService( 3163): dev-dbg:is_charging current_now -527343, batteryLevel: 25, isCharging(isCharging): true
+06-02 19:16:53.708 D/OSUService( 3163): dev-dbg:is_charging ADAPTER_CHARGE_LIMIIT 500000
+06-02 19:16:53.708 D/OSUService( 3163): dev-dbg:is_charging current_now > ADAPTER_CHARGE_LIMIIT false
+06-02 19:16:53.708 D/OSUService( 3163): dev-dbg:is_charging conditionCheck false
+06-02 19:16:53.708 D/OSUService( 3163): dev-dbg: battery change intent batteryLevel: 25, is_charging(context): false, STATE: 1
+06-02 19:16:53.713 D/OSUService( 3163): dev-dbg:is_charging current_now -527343, batteryLevel: 25, isCharging(isCharging): true
+06-02 19:16:53.713 D/OSUService( 3163): dev-dbg:is_charging ADAPTER_CHARGE_LIMIIT 500000
+06-02 19:16:53.713 D/OSUService( 3163): dev-dbg:is_charging current_now > ADAPTER_CHARGE_LIMIIT false
+06-02 19:16:53.713 D/OSUService( 3163): dev-dbg:is_charging conditionCheck false
+06-02 19:16:53.713 D/OSUService( 3163): dev-dbg: calling for suspend
+06-02 19:16:53.713 I/OSUService( 3163): handle_ab_suspend -1 2
+06-02 19:16:53.713 E/OSUService( 3163): Can't Suspend - there are no update in progress
+06-02 19:16:53.714 D/OSUService( 3163): dev-dbg: battery change intent finished
+06-02 19:16:53.714 D/KeyguardUpdateMonitor( 6499): handleBatteryUpdate
+06-02 19:16:54.554 W/healthd (    0): battery l=25 v=3426 t=26.0 h=2 st=2 c=-527343 fc=0 cc=7 chg=u
+06-02 19:16:54.754 E/WifiScoringParams( 1599): Invalid frequency(-1), using 5G as default rssi array
+06-02 19:16:54.775 D/WifiNative( 1599): Scan trigered from WifiNative
+06-02 19:16:54.781 V/WifiHAL ( 1348): event received NL80211_CMD_TRIGGER_SCAN
+06-02 19:16:54.728 I/FUSIONWL(    0): : ==ChannelMask_GetChannels==: Dropping channel 144, not valid
+06-02 19:16:54.728 I/FUSIONWL(    0): : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37
+06-02 19:16:54.784 V/WifiHAL (  741): event received NL80211_CMD_TRIGGER_SCAN
+06-02 19:16:54.870 I/init    (    0): starting service 'qccsyshalservice'...
+06-02 19:16:54.916 I/init    (    0): starting service 'qccvndhalservice'...
+06-02 19:16:55.037 I/qccsyshalservice( 8655): Start with system binder
+06-02 19:16:55.038 I/qccsyshalservice( 8655): Registering qccsyshal service...
+06-02 19:16:55.041 I/hwservicemanager(  501): getTransport: Cannot find entry vendor.qti.hardware.qccsyshal@1.0::IQccsyshal/qccsyshal in either framework or device manifest.
+06-02 19:16:55.043 E/HidlServiceManagement( 8655): Service vendor.qti.hardware.qccsyshal@1.0::IQccsyshal/qccsyshal must be in VINTF manifest in order to register/get.
+06-02 19:16:55.043 E/qccsyshalservice( 8655): [ERROR] registerAsService() failed with status: -2147483648
+06-02 19:16:55.003 I/init    (    0): Service 'qccsyshalservice' (pid 8655) exited with status 1
+06-02 19:16:55.003 I/init    (    0): Sending signal 9 to service 'qccsyshalservice' (pid 8655) process group...
+06-02 19:16:55.005 I/libprocessgroup(    0): Successfully killed process cgroup uid 1000 pid 8655 in 1ms
+06-02 19:16:55.079 I/vendor.qti.hardware.qccvndhal@1.0-service( 8656): Start with vendor binder
+06-02 19:16:55.082 I/vendor.qti.hardware.qccvndhal@1.0-service( 8656): Registering qccvndhal service...
+06-02 19:16:55.086 I/hwservicemanager(  501): getTransport: Cannot find entry vendor.qti.hardware.qccvndhal@1.0::IQccvndhal/qccvndhal in either framework or device manifest.
+06-02 19:16:55.088 E/HidlServiceManagement( 8656): Service vendor.qti.hardware.qccvndhal@1.0::IQccvndhal/qccvndhal must be in VINTF manifest in order to register/get.
+06-02 19:16:55.088 E/vendor.qti.hardware.qccvndhal@1.0-service( 8656): [ERROR] registerAsService() failed with status: -2147483648
+06-02 19:16:55.053 I/init    (    0): Service 'qccvndhalservice' (pid 8656) exited with status 1
+06-02 19:16:55.053 I/init    (    0): Sending signal 9 to service 'qccvndhalservice' (pid 8656) process group...
+06-02 19:16:55.054 I/libprocessgroup(    0): Successfully killed process cgroup uid 1000 pid 8656 in 0ms
+06-02 19:16:55.108 I/IRQ 6   (    0): no longer affine to CPU4
+06-02 19:16:56.724 D/CompatibilityInfo( 1599): mCompatibilityFlags - 4
+06-02 19:16:56.725 D/CompatibilityInfo( 1599): applicationDensity - 240
+06-02 19:16:56.725 D/CompatibilityInfo( 1599): applicationScale - 1.0
+06-02 19:16:56.684 E/        (    0): [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86
+06-02 19:16:56.733 I/NextSubtest service( 7609): hit
+06-02 19:16:56.694 E/        (    0): [SDL] misc_ioctl msg.len is 2 : 0x88 0x00
+06-02 19:16:56.697 E/        (    0): [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81
+06-02 19:16:56.699 E/        (    0): [SDL] misc_ioctl msg.len is 2 : 0x88 0x00

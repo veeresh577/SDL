@@ -1,0 +1,245 @@
+R tests/test_OCRTemplate.py::test_OCRTemplate[5001-5000-OCR-AllChar]
+ test_OCRTemplate.py:35: in test_OCRTemplate
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['A3B2C1'] == ['NR']
+ E     At index 0 diff: 'A3B2C1' != 'NR'
+ E     Full diff:
+ E     - ['A3B2C1']
+ E     + ['NR']
+F tests/test_OCRTemplate.py::test_OCRTemplate[5001-5000-OCR-AllChar]
+ test_OCRTemplate.py:35: in test_OCRTemplate
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['A3B2C1'] == ['NR']
+ E     At index 0 diff: 'A3B2C1' != 'NR'
+ E     Full diff:
+ E     - ['A3B2C1']
+ E     + ['NR']
+R tests/test_OCRTemplate.py::test_OCRTemplate[5001-5000-OCR-SomeChar]
+ test_OCRTemplate.py:35: in test_OCRTemplate
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['A2C1'] == ['NR']
+ E     At index 0 diff: 'A2C1' != 'NR'
+ E     Full diff:
+ E     - ['A2C1']
+ E     + ['NR']
+F tests/test_OCRTemplate.py::test_OCRTemplate[5001-5000-OCR-SomeChar]
+ test_OCRTemplate.py:35: in test_OCRTemplate
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['A2C1'] == ['NR']
+ E     At index 0 diff: 'A2C1' != 'NR'
+ E     Full diff:
+ E     - ['A2C1']
+ E     + ['NR']
+. tests/test_OCRTemplate.py::test_OCRTemplate[5001-5000-OCR-OutChar]
+. tests/test_OCRTemplate.py::test_OCRTemplate[5001-5000-OCR-RARDOAnOAInvalid]
+R tests/test_OCRTemplate.py::test_OCRTemplate[5001-5000-OCR-RARDOAnOAValid]
+ test_OCRTemplate.py:35: in test_OCRTemplate
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['AB98C2D'] == ['NR']
+ E     At index 0 diff: 'AB98C2D' != 'NR'
+ E     Full diff:
+ E     - ['AB98C2D']
+ E     + ['NR']
+F tests/test_OCRTemplate.py::test_OCRTemplate[5001-5000-OCR-RARDOAnOAValid]
+ test_OCRTemplate.py:35: in test_OCRTemplate
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['AB98C2D'] == ['NR']
+ E     At index 0 diff: 'AB98C2D' != 'NR'
+ E     Full diff:
+ E     - ['AB98C2D']
+ E     + ['NR']
+. tests/test_OCRTemplate.py::test_OCRTemplate[5001-5000-OCR-AorDOSmallSpecInvalid]
+R tests/test_OCRTemplate.py::test_OCRTemplate[5001-5000-OCR-AorDOSmallSpecValid]
+ test_OCRTemplate.py:35: in test_OCRTemplate
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['TRY1B*-'] == ['NR']
+ E     At index 0 diff: 'TRY1B*-' != 'NR'
+ E     Full diff:
+ E     - ['TRY1B*-']
+ E     + ['NR']
+. tests/test_OCRTemplate.py::test_OCRTemplate[5001-5000-OCR-AorDOSmallSpecValid]
+. tests/test_OCRTemplate.py::test_OCRTemplate[5001-5000-OCR-DOrFAOrFODOSInvalid]
+R tests/test_OCRTemplate.py::test_OCRTemplate[5001-5000-OCR-DOrFAOrFODOSValid]
+ test_OCRTemplate.py:35: in test_OCRTemplate
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['1> R<2'] == ['NR']
+ E     At index 0 diff: '1> R<2' != 'NR'
+ E     Full diff:
+ E     - ['1> R<2']
+ E     + ['NR']
+F tests/test_OCRTemplate.py::test_OCRTemplate[5001-5000-OCR-DOrFAOrFODOSValid]
+ test_OCRTemplate.py:35: in test_OCRTemplate
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['1> R<2'] == ['NR']
+ E     At index 0 diff: '1> R<2' != 'NR'
+ E     Full diff:
+ E     - ['1> R<2']
+ E     + ['NR']
+. tests/test_OCRTemplate.py::test_OCRTemplate[5001-5000-OCR-LStringInvalid]
+R tests/test_OCRTemplate.py::test_OCRTemplate[5001-5000-OCR-LStringValid]
+ test_OCRTemplate.py:35: in test_OCRTemplate
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['AB+XY'] == ['NR']
+ E     At index 0 diff: 'AB+XY' != 'NR'
+ E     Full diff:
+ E     - ['AB+XY']
+ E     + ['NR']
+F tests/test_OCRTemplate.py::test_OCRTemplate[5001-5000-OCR-LStringValid]
+ test_OCRTemplate.py:35: in test_OCRTemplate
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['AB+XY'] == ['NR']
+ E     At index 0 diff: 'AB+XY' != 'NR'
+ E     Full diff:
+ E     - ['AB+XY']
+ E     + ['NR']
+R tests/test_OCRTemplate.py::test_OCRTemplate[5001-5000-OCR-Newline]
+ test_OCRTemplate.py:35: in test_OCRTemplate
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['31498', 'HMSTK'] == ['NR']
+ E     At index 0 diff: '31498' != 'NR'
+ E     Left contains more items, first extra item: 'HMSTK'
+ E     Full diff:
+ E     - ['31498', 'HMSTK']
+ E     + ['NR']
+F tests/test_OCRTemplate.py::test_OCRTemplate[5001-5000-OCR-Newline]
+ test_OCRTemplate.py:35: in test_OCRTemplate
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['31498', 'HMSTK'] == ['NR']
+ E     At index 0 diff: '31498' != 'NR'
+ E     Left contains more items, first extra item: 'HMSTK'
+ E     Full diff:
+ E     - ['31498', 'HMSTK']
+ E     + ['NR']
+R tests/test_OCRTemplate.py::test_OCRTemplate[5001-5000-OCR-StrExtract]
+ test_OCRTemplate.py:35: in test_OCRTemplate
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['>ABCDE>'] == ['NR']
+ E     At index 0 diff: '>ABCDE>' != 'NR'
+ E     Full diff:
+ E     - ['>ABCDE>']
+ E     + ['NR']
+F tests/test_OCRTemplate.py::test_OCRTemplate[5001-5000-OCR-StrExtract]
+ test_OCRTemplate.py:35: in test_OCRTemplate
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['>ABCDE>'] == ['NR']
+ E     At index 0 diff: '>ABCDE>' != 'NR'
+ E     Full diff:
+ E     - ['>ABCDE>']
+ E     + ['NR']
+R tests/test_OCRTemplate.py::test_OCRTemplate[5001-5000-OCR-IgnoretoEnd]
+ test_OCRTemplate.py:35: in test_OCRTemplate
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['31597'] == ['NR']
+ E     At index 0 diff: '31597' != 'NR'
+ E     Full diff:
+ E     - ['31597']
+ E     + ['NR']
+F tests/test_OCRTemplate.py::test_OCRTemplate[5001-5000-OCR-IgnoretoEnd]
+ test_OCRTemplate.py:35: in test_OCRTemplate
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['31597'] == ['NR']
+ E     At index 0 diff: '31597' != 'NR'
+ E     Full diff:
+ E     - ['31597']
+ E     + ['NR']
+R tests/test_OCRTemplate.py::test_OCRTemplate[5001-5000-OCR-SkipUntill]
+ test_OCRTemplate.py:35: in test_OCRTemplate
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['DRMARIO'] == ['NR']
+ E     At index 0 diff: 'DRMARIO' != 'NR'
+ E     Full diff:
+ E     - ['DRMARIO']
+ E     + ['NR']
+F tests/test_OCRTemplate.py::test_OCRTemplate[5001-5000-OCR-SkipUntill]
+ test_OCRTemplate.py:35: in test_OCRTemplate
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['DRMARIO'] == ['NR']
+ E     At index 0 diff: 'DRMARIO' != 'NR'
+ E     Full diff:
+ E     - ['DRMARIO']
+ E     + ['NR']
+R tests/test_OCRTemplate.py::test_OCRTemplate[5001-5000-OCR-SkipUntillNot]
+ test_OCRTemplate.py:35: in test_OCRTemplate
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['ENTERPRISE'] == ['NR']
+ E     At index 0 diff: 'ENTERPRISE' != 'NR'
+ E     Full diff:
+ E     - ['ENTERPRISE']
+ E     + ['NR']
+F tests/test_OCRTemplate.py::test_OCRTemplate[5001-5000-OCR-SkipUntillNot]
+ test_OCRTemplate.py:35: in test_OCRTemplate
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['ENTERPRISE'] == ['NR']
+ E     At index 0 diff: 'ENTERPRISE' != 'NR'
+ E     Full diff:
+ E     - ['ENTERPRISE']
+ E     + ['NR']
+. tests/test_OCRTemplate.py::test_OCRTemplate[5001-5000-OCR-RepeatInvalid]
+R tests/test_OCRTemplate.py::test_OCRTemplate[5001-5000-OCR-RepeatValid]
+ test_OCRTemplate.py:35: in test_OCRTemplate
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['OF10821083'] == ['NR']
+ E     At index 0 diff: 'OF10821083' != 'NR'
+ E     Full diff:
+ E     - ['OF10821083']
+ E     + ['NR']
+F tests/test_OCRTemplate.py::test_OCRTemplate[5001-5000-OCR-RepeatValid]
+ test_OCRTemplate.py:35: in test_OCRTemplate
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['OF10821083'] == ['NR']
+ E     At index 0 diff: 'OF10821083' != 'NR'
+ E     Full diff:
+ E     - ['OF10821083']
+ E     + ['NR']
+R tests/test_OCRTemplate.py::test_OCRTemplate[5001-5000-OCR-Scroll]
+ test_OCRTemplate.py:35: in test_OCRTemplate
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['12345'] == ['NR']
+ E     At index 0 diff: '12345' != 'NR'
+ E     Full diff:
+ E     - ['12345']
+ E     + ['NR']
+F tests/test_OCRTemplate.py::test_OCRTemplate[5001-5000-OCR-Scroll]
+ test_OCRTemplate.py:35: in test_OCRTemplate
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['12345'] == ['NR']
+ E     At index 0 diff: '12345' != 'NR'
+ E     Full diff:
+ E     - ['12345']
+ E     + ['NR']
+. tests/test_PostalDisable.py::test_PostalDisable[5001-5000-Japanese Postal]
+. tests/test_PostalDisable.py::test_PostalDisable[5001-5000-Korean Postal]
+. tests/test_PostalDisable.py::test_PostalDisable[5001-5000-US Planet ]
+. tests/test_PostalDisable.py::test_PostalDisable[5001-5000-US Postnet]
+. tests/test_PostalDisable.py::test_PostalDisable[5001-5000-Netherlands Postal]
+. tests/test_PostalDisable.py::test_PostalDisable[5001-5000-Australian Postal]
+. tests/test_PostalDisable.py::test_PostalDisable[5001-5000-UK Royal Mail]
+. tests/test_PostalDisable.py::test_PostalDisable[5001-5000-Intellimail]
+R tests/test_PostalEnable.py::test_PostalEnable[5001-5000-Japanese Postal]
+ test_PostalEnable.py:26: in test_PostalEnable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['1234567'] == ['NR']
+ E     At index 0 diff: '1234567' != 'NR'
+ E     Full diff:
+ E     - ['1234567']
+ E     + ['NR']
+F tests/test_PostalEnable.py::test_PostalEnable[5001-5000-Japanese Postal]
+ test_PostalEnable.py:26: in test_PostalEnable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['1234567'] == ['NR']
+ E     At index 0 diff: '1234567' != 'NR'
+ E     Full diff:
+ E     - ['1234567']
+ E     + ['NR']
+R tests/test_PostalEnable.py::test_PostalEnable[5001-5000-Korean Postal]
+ test_PostalEnable.py:26: in test_PostalEnable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ ../lib/scanner.py:37: in scan
+     barcodes = self.device.server.adb.cmd('logcat -d | grep -i', 'SDL_SCAN').communicate()[0]
+ /usr/lib/python2.7/subprocess.py:479: in communicate
+     return self._communicate(input)
+ /usr/lib/python2.7/subprocess.py:1098: in _communicate
+     stdout, stderr = self._communicate_with_poll(input)
+ /usr/lib/python2.7/subprocess.py:1152: in _communicate_with_poll
+     ready = poller.poll()
+ E   Failed: Timeout >45.0s

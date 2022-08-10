@@ -1,0 +1,2 @@
+<3>[ 4298.339248] [schedu][0x11fb6963c87][20:00:57.505488] wlan: [2070:E:scan] scm_11d_elected_country_algo_fcc: 98: No AP with 11d Country code is present in scan list
+<3>[ 4298.339402] FUSIONWL: : ==Regulatory_elect_country_db==: No AP with 11d Country code is present in scan list 

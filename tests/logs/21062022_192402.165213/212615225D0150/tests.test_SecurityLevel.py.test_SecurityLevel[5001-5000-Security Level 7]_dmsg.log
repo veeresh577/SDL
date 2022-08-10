@@ -1,0 +1,2 @@
+<14>[95359.126308] init: Service 'smartmu' (pid 4212) exited with status 0
+<14>[95359.127439] libprocessgroup: Successfully killed process cgroup uid 0 pid 4212 in 0ms

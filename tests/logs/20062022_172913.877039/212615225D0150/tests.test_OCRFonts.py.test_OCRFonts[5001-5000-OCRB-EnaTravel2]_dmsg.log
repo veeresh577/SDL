@@ -1,0 +1,91 @@
+<6>[ 2966.011510] IRQ 6: no longer affine to CPU6
+<14>[ 2967.642919] init: starting service 'smartmu'...
+<14>[ 2967.674424] init: starting service 'qccvndhalservice'...
+<6>[ 2967.892135] IRQ 6: no longer affine to CPU4
+<12>[ 2970.802030] healthd: battery l=91 v=3911 t=47.0 h=2 st=2 c=-220703 fc=4008000 cc=2 chg=u
+<14>[ 2972.689613] init: starting service 'smartmu'...
+<14>[ 2972.721289] init: starting service 'qccvndhalservice'...
+<14>[ 2972.791683] libprocessgroup: Successfully killed process cgroup uid 1000 pid 14542 in 1ms
+<14>[ 2972.834684] init: Sending signal 9 to service 'smartmu' (pid 14543) process group...
+<6>[ 2972.932217] IRQ 6: no longer affine to CPU6
+<14>[ 2977.731147] init: starting service 'smartmu'...
+<14>[ 2977.762762] init: starting service 'qccvndhalservice'...
+<14>[ 2977.864299] init: Service 'smartmu' (pid 14549) exited with status 0
+<14>[ 2977.864450] init: Sending signal 9 to service 'smartmu' (pid 14549) process group...
+<14>[ 2977.866059] libprocessgroup: Successfully killed process cgroup uid 0 pid 14549 in 1ms
+<6>[ 2977.952094] IRQ 6: no longer affine to CPU7
+<3>[ 2979.032392] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 2979.033920] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 2979.037301] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 2979.058736] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 2979.069258] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 2979.080035] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 2979.090766] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 2979.101442] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 2979.112131] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 2979.117250] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 2979.123077] [SDL] misc_ioctl msg.len is 4 : 0x7b 0x00 0x00 0x85 
+<3>[ 2979.128062] [SDL] misc_ioctl msg.len is 2 : 0x84 0x00 
+<31>[ 2979.212723] logd: logdr: UID=0 GID=0 PID=14561 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[ 2979.215475] [SDL] misc_ioctl msg.len is 3 : 0x77 0x02 0x87 
+<3>[ 2979.216308] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 2979.343695] msm_isp_open_node: reset VFE
+<3>[ 2979.353579] msm_ispif_config:1061 Exit 
+<3>[ 2979.354047] msm_ispif_config2: Exit 
+<31>[ 2979.370081] logd: logdr: UID=0 GID=0 PID=14567 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[ 2979.380231] frame_src is 1 frame_id is 2 blackjoe
+<3>[ 2979.396887] frame_src is 1 frame_id is 3 blackjoe
+<3>[ 2979.430093] frame_src is 1 frame_id is 5 blackjoe
+<3>[ 2979.483238] frame_src is 1 frame_id is 6 blackjoe
+<3>[ 2979.516482] frame_src is 1 frame_id is 8 blackjoe
+<3>[ 2979.533085] frame_src is 1 frame_id is 9 blackjoe
+<3>[ 2979.549705] frame_src is 1 frame_id is 10 blackjoe
+<31>[ 2979.555857] logd: logdr: UID=0 GID=0 PID=14578 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[ 2979.566331] frame_src is 1 frame_id is 11 blackjoe
+<3>[ 2979.582939] frame_src is 1 frame_id is 12 blackjoe
+<3>[ 2979.599563] frame_src is 1 frame_id is 13 blackjoe
+<3>[ 2979.616210] frame_src is 1 frame_id is 14 blackjoe
+<3>[ 2979.632818] frame_src is 1 frame_id is 15 blackjoe
+<3>[ 2979.653884] frame_src is 1 frame_id is 16 blackjoe
+<3>[ 2979.670495] frame_src is 1 frame_id is 17 blackjoe
+<3>[ 2979.687128] frame_src is 1 frame_id is 18 blackjoe
+<3>[ 2979.703733] frame_src is 1 frame_id is 19 blackjoe
+<3>[ 2979.720359] frame_src is 1 frame_id is 20 blackjoe
+<3>[ 2979.736986] frame_src is 1 frame_id is 21 blackjoe
+<3>[ 2979.753605] frame_src is 1 frame_id is 22 blackjoe
+<3>[ 2979.786879] frame_src is 1 frame_id is 24 blackjoe
+<3>[ 2979.820110] frame_src is 1 frame_id is 26 blackjoe
+<3>[ 2979.853349] frame_src is 1 frame_id is 28 blackjoe
+<3>[ 2979.953066] frame_src is 1 frame_id is 34 blackjoe
+<3>[ 2979.969691] frame_src is 1 frame_id is 35 blackjoe
+<3>[ 2980.002937] frame_src is 1 frame_id is 37 blackjoe
+<3>[ 2980.019556] frame_src is 1 frame_id is 38 blackjoe
+<3>[ 2980.086455] frame_src is 1 frame_id is 40 blackjoe
+<3>[ 2980.119693] frame_src is 1 frame_id is 42 blackjoe
+<3>[ 2980.186310] frame_src is 1 frame_id is 44 blackjoe
+<3>[ 2980.219528] frame_src is 1 frame_id is 46 blackjoe
+<3>[ 2980.236154] frame_src is 1 frame_id is 47 blackjoe
+<3>[ 2980.289563] frame_src is 1 frame_id is 48 blackjoe
+<3>[ 2980.322580] frame_src is 1 frame_id is 50 blackjoe
+<3>[ 2980.339190] frame_src is 1 frame_id is 51 blackjoe
+<3>[ 2980.355850] frame_src is 1 frame_id is 52 blackjoe
+<3>[ 2980.372485] frame_src is 1 frame_id is 53 blackjoe
+<3>[ 2980.389052] frame_src is 1 frame_id is 54 blackjoe
+<3>[ 2980.405704] frame_src is 1 frame_id is 55 blackjoe
+<3>[ 2980.422832] frame_src is 1 frame_id is 56 blackjoe
+<31>[ 2980.446155] logd: logdr: UID=0 GID=0 PID=14588 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[ 2980.476639] frame_src is 1 frame_id is 59 blackjoe
+<3>[ 2980.493240] frame_src is 1 frame_id is 60 blackjoe
+<3>[ 2980.509893] frame_src is 1 frame_id is 61 blackjoe
+<3>[ 2980.543132] frame_src is 1 frame_id is 63 blackjoe
+<3>[ 2980.559761] frame_src is 1 frame_id is 64 blackjoe
+<3>[ 2980.576350] frame_src is 1 frame_id is 65 blackjoe
+<3>[ 2980.626275] frame_src is 1 frame_id is 68 blackjoe
+<3>[ 2980.643005] frame_src is 1 frame_id is 69 blackjoe
+<3>[ 2980.660052] frame_src is 1 frame_id is 70 blackjoe
+<3>[ 2980.759214] frame_src is 1 frame_id is 76 blackjoe
+<3>[ 2980.792503] frame_src is 1 frame_id is 78 blackjoe
+<3>[ 2980.809048] frame_src is 1 frame_id is 79 blackjoe
+<3>[ 2980.842378] frame_src is 1 frame_id is 81 blackjoe
+<3>[ 2980.892763] frame_src is 1 frame_id is 82 blackjoe
+<3>[ 2980.909329] frame_src is 1 frame_id is 83 blackjoe

@@ -1,0 +1,26 @@
+<14>[81721.055512] init: starting service 'qccsyshalservice'...
+<14>[81721.097446] init: starting service 'qccvndhalservice'...
+<38>[81721.132497] type=1400 audit(1654288589.168:192341): avc: denied { search } for comm="qccsyshalservic" name="/" dev="mmcblk0p37" ino=2 scontext=u:r:vendor_qccsyshal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[81721.179086] init: Service 'qccsyshalservice' (pid 5722) exited with status 1
+<14>[81721.179254] init: Sending signal 9 to service 'qccsyshalservice' (pid 5722) process group...
+<14>[81721.211929] init: Service 'qccvndhalservice' (pid 5723) exited with status 1
+<14>[81721.213411] libprocessgroup: Successfully killed process cgroup uid 1000 pid 5723 in 0ms
+<6>[81721.950772] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<6>[81721.950803] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 
+<3>[81724.047423] FUSIONWL: : ==Regulatory_scan_country_list_db_reset==: Reset complete for scan country list 
+<14>[81726.138359] init: starting service 'qccvndhalservice'...
+<14>[81726.255117] init: Service 'qccvndhalservice' (pid 5729) exited with status 1
+<14>[81726.255245] init: Sending signal 9 to service 'qccvndhalservice' (pid 5729) process group...
+<14>[81726.256564] libprocessgroup: Successfully killed process cgroup uid 1000 pid 5729 in 0ms
+<3>[81730.323010] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[81730.333244] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[81730.333621] [SDL] se47xx_misc_ioctl ret = -107 
+<3>[81730.337436] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[81730.347403] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[81730.352875] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[81730.358191] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[81730.368795] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[81730.374543] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[81730.379776] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[81730.400856] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[81730.669690] msm_isp_open_node: reset VFE

@@ -1,0 +1,31 @@
+<14>[77054.161998] init: starting service 'smartmu'...
+<14>[77054.207807] init: starting service 'qccsyshalservice'...
+<14>[77054.239621] init: starting service 'qccvndhalservice'...
+<14>[77054.314470] init: Service 'smartmu' (pid 26143) exited with status 0
+<14>[77054.314574] init: Sending signal 9 to service 'smartmu' (pid 26143) process group...
+<14>[77054.315480] libprocessgroup: Successfully killed process cgroup uid 0 pid 26143 in 0ms
+<14>[77054.325347] init: Service 'qccsyshalservice' (pid 26144) exited with status 1
+<14>[77054.325432] init: Sending signal 9 to service 'qccsyshalservice' (pid 26144) process group...
+<14>[77054.326330] libprocessgroup: Successfully killed process cgroup uid 1000 pid 26144 in 0ms
+<14>[77054.365189] init: Service 'qccvndhalservice' (pid 26145) exited with status 1
+<14>[77059.250349] init: starting service 'qccsyshalservice'...
+<3>[77062.003949] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[77062.005443] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[77062.014085] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[77062.025150] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[77062.035563] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[77062.041545] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[77062.046162] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[77062.051696] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[77062.056878] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[77062.062600] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[77062.067601] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[77062.073079] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[77062.078251] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[77062.083719] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[77062.089086] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[77062.099612] [SDL] misc_ioctl msg.len is 2 : 0x84 0x00 
+<3>[77062.105610] [SDL] misc_ioctl msg.len is 4 : 0x82 0x00 0x00 0x7e 
+<3>[77062.110799] [SDL] misc_ioctl msg.len is 2 : 0x7d 0x80 
+<3>[77062.212457] [SDL] misc_ioctl msg.len is 3 : 0x77 0x02 0x87 
+<3>[77062.213160] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 

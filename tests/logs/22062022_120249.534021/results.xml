@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?><testsuite errors="1" failures="21" name="pytest" skips="0" tests="48" time="1670.263"><testcase classname="tests.test_OCRInverse" file="tests/test_OCRInverse.py" line="15" name="test_OCRInverse[5001-5000-OCRA-RegInvReg]" time="53.1023068428"><failure message="AssertionError: assert [&apos;29487901&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;29487901&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;29487901&apos;]
+  + [&apos;NR&apos;]">test_OCRInverse.py:21: in test_OCRInverse
+    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;29487901&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;29487901&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;29487901&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_OCRInverse" file="tests/test_OCRInverse.py" line="15" name="test_OCRInverse[5001-5000-OCRA-RegInvInv]" time="25.2092599869"></testcase><testcase classname="tests.test_OCRInverse" file="tests/test_OCRInverse.py" line="15" name="test_OCRInverse[5001-5000-OCRA-RegInvAuto]" time="19.0887801647"></testcase><testcase classname="tests.test_OCRInverse" file="tests/test_OCRInverse.py" line="15" name="test_OCRInverse[5001-5000-OCRA-InvInvReg]" time="25.3317167759"></testcase><testcase classname="tests.test_OCRInverse" file="tests/test_OCRInverse.py" line="15" name="test_OCRInverse[5001-5000-OCRA-InvInvInv]" time="22.5336859226"></testcase><testcase classname="tests.test_OCRInverse" file="tests/test_OCRInverse.py" line="15" name="test_OCRInverse[5001-5000-OCRA-InvInvAuto]" time="19.4850711823"></testcase><testcase classname="tests.test_OCRQuietZone" file="tests/test_OCRQuietZone.py" line="51" name="test_OCRQuietZone[5001-5000-OCRA-2C3C0]" time="24.6936118603"></testcase><testcase classname="tests.test_OCRQuietZone" file="tests/test_OCRQuietZone.py" line="51" name="test_OCRQuietZone[5001-5000-OCRA-6C3C0]" time="43.5805690289"><failure message="AssertionError: assert [&apos;TESTSTRING&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;TESTSTRING&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;TESTSTRING&apos;]
+  + [&apos;NR&apos;]">test_OCRQuietZone.py:58: in test_OCRQuietZone
+    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;TESTSTRING&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;TESTSTRING&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;TESTSTRING&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_OCRQuietZone" file="tests/test_OCRQuietZone.py" line="51" name="test_OCRQuietZone[5001-5000-OCRA-6C8C0]" time="25.3367569447"></testcase><testcase classname="tests.test_OCRQuietZone" file="tests/test_OCRQuietZone.py" line="51" name="test_OCRQuietZone[5001-5000-OCRA-8C8C0]" time="35.0470948219"><failure message="AssertionError: assert [&apos;TESTSTRING&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;TESTSTRING&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;TESTSTRING&apos;]
+  + [&apos;NR&apos;]">test_OCRQuietZone.py:58: in test_OCRQuietZone
+    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;TESTSTRING&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;TESTSTRING&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;TESTSTRING&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_OCRQuietZone" file="tests/test_OCRQuietZone.py" line="51" name="test_OCRQuietZone[5001-5000-OCRA-8C12C0]" time="24.6891758442"></testcase><testcase classname="tests.test_OCRQuietZone" file="tests/test_OCRQuietZone.py" line="51" name="test_OCRQuietZone[5001-5000-OCRA-12C12C0]" time="43.6793458462"><failure message="AssertionError: assert [&apos;TESTSTRING&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;TESTSTRING&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;TESTSTRING&apos;]
+  + [&apos;NR&apos;]">test_OCRQuietZone.py:58: in test_OCRQuietZone
+    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;TESTSTRING&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;TESTSTRING&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;TESTSTRING&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_OCRQuietZone" file="tests/test_OCRQuietZone.py" line="51" name="test_OCRQuietZone[5001-5000-OCRA-2C3C1]" time="24.8379187584"></testcase><testcase classname="tests.test_OCRQuietZone" file="tests/test_OCRQuietZone.py" line="51" name="test_OCRQuietZone[5001-5000-OCRA-6C3C1]" time="41.4232833385"><failure message="AssertionError: assert [&apos;TESTSTRING&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;TESTSTRING&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;TESTSTRING&apos;]
+  + [&apos;NR&apos;]">test_OCRQuietZone.py:58: in test_OCRQuietZone
+    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;TESTSTRING&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;TESTSTRING&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;TESTSTRING&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_OCRQuietZone" file="tests/test_OCRQuietZone.py" line="51" name="test_OCRQuietZone[5001-5000-OCRA-6C8C1]" time="23.0213830471"></testcase><testcase classname="tests.test_OCRQuietZone" file="tests/test_OCRQuietZone.py" line="51" name="test_OCRQuietZone[5001-5000-OCRA-8C8C1]" time="44.9468507767"><failure message="AssertionError: assert [&apos;TESTSTRING&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;TESTSTRING&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;TESTSTRING&apos;]
+  + [&apos;NR&apos;]">test_OCRQuietZone.py:58: in test_OCRQuietZone
+    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;TESTSTRING&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;TESTSTRING&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;TESTSTRING&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_OCRQuietZone" file="tests/test_OCRQuietZone.py" line="51" name="test_OCRQuietZone[5001-5000-OCRA-8C12C1]" time="21.160389185"></testcase><testcase classname="tests.test_OCRQuietZone" file="tests/test_OCRQuietZone.py" line="51" name="test_OCRQuietZone[5001-5000-OCRA-12C12C1]" time="42.3799772263"><failure message="AssertionError: assert [&apos;TESTSTRING&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;TESTSTRING&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;TESTSTRING&apos;]
+  + [&apos;NR&apos;]">test_OCRQuietZone.py:58: in test_OCRQuietZone
+    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;TESTSTRING&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;TESTSTRING&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;TESTSTRING&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_OCRQuietZone" file="tests/test_OCRQuietZone.py" line="51" name="test_OCRQuietZone[5001-5000-OCRA-2C3C2]" time="25.2999808788"></testcase><testcase classname="tests.test_OCRQuietZone" file="tests/test_OCRQuietZone.py" line="51" name="test_OCRQuietZone[5001-5000-OCRA-6C3C2]" time="40.2098441124"><failure message="AssertionError: assert [&apos;TESTSTRING&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;TESTSTRING&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;TESTSTRING&apos;]
+  + [&apos;NR&apos;]">test_OCRQuietZone.py:58: in test_OCRQuietZone
+    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;TESTSTRING&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;TESTSTRING&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;TESTSTRING&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_OCRQuietZone" file="tests/test_OCRQuietZone.py" line="51" name="test_OCRQuietZone[5001-5000-OCRA-6C8C2]" time="24.4930899143"></testcase><testcase classname="tests.test_OCRQuietZone" file="tests/test_OCRQuietZone.py" line="51" name="test_OCRQuietZone[5001-5000-OCRA-8C8C2]" time="43.6555058956"><failure message="AssertionError: assert [&apos;TESTSTRING&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;TESTSTRING&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;TESTSTRING&apos;]
+  + [&apos;NR&apos;]">test_OCRQuietZone.py:58: in test_OCRQuietZone
+    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;TESTSTRING&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;TESTSTRING&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;TESTSTRING&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_OCRQuietZone" file="tests/test_OCRQuietZone.py" line="51" name="test_OCRQuietZone[5001-5000-OCRA-8C12C2]" time="25.0458319187"></testcase><testcase classname="tests.test_OCRQuietZone" file="tests/test_OCRQuietZone.py" line="51" name="test_OCRQuietZone[5001-5000-OCRA-12C12C2]" time="40.8192296028"><failure message="AssertionError: assert [&apos;TESTSTRING&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;TESTSTRING&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;TESTSTRING&apos;]
+  + [&apos;NR&apos;]">test_OCRQuietZone.py:58: in test_OCRQuietZone
+    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;TESTSTRING&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;TESTSTRING&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;TESTSTRING&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_OCRQuietZone" file="tests/test_OCRQuietZone.py" line="51" name="test_OCRQuietZone[5001-5000-OCRB-2C3C0]" time="30.5705499649"></testcase><testcase classname="tests.test_OCRQuietZone" file="tests/test_OCRQuietZone.py" line="51" name="test_OCRQuietZone[5001-5000-OCRB-6C3C0]" time="43.7164208889"><failure message="AssertionError: assert [&apos;TESTSTRING&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;TESTSTRING&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;TESTSTRING&apos;]
+  + [&apos;NR&apos;]">test_OCRQuietZone.py:58: in test_OCRQuietZone
+    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;TESTSTRING&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;TESTSTRING&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;TESTSTRING&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_OCRQuietZone" file="tests/test_OCRQuietZone.py" line="51" name="test_OCRQuietZone[5001-5000-OCRB-6C8C0]" time="24.2141387463"></testcase><testcase classname="tests.test_OCRQuietZone" file="tests/test_OCRQuietZone.py" line="51" name="test_OCRQuietZone[5001-5000-OCRB-8C8C0]" time="42.8688020706"><failure message="AssertionError: assert [&apos;TESTSTRING&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;TESTSTRING&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;TESTSTRING&apos;]
+  + [&apos;NR&apos;]">test_OCRQuietZone.py:58: in test_OCRQuietZone
+    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;TESTSTRING&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;TESTSTRING&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;TESTSTRING&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_OCRQuietZone" file="tests/test_OCRQuietZone.py" line="51" name="test_OCRQuietZone[5001-5000-OCRB-8C12C0]" time="24.4274733067"></testcase><testcase classname="tests.test_OCRQuietZone" file="tests/test_OCRQuietZone.py" line="51" name="test_OCRQuietZone[5001-5000-OCRB-12C12C0]" time="42.7060523033"><failure message="AssertionError: assert [&apos;TESTSTRING&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;TESTSTRING&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;TESTSTRING&apos;]
+  + [&apos;NR&apos;]">test_OCRQuietZone.py:58: in test_OCRQuietZone
+    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;TESTSTRING&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;TESTSTRING&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;TESTSTRING&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_OCRQuietZone" file="tests/test_OCRQuietZone.py" line="51" name="test_OCRQuietZone[5001-5000-OCRB-2C3C1]" time="24.7230091095"></testcase><testcase classname="tests.test_OCRQuietZone" file="tests/test_OCRQuietZone.py" line="51" name="test_OCRQuietZone[5001-5000-OCRB-6C3C1]" time="40.6220867634"><failure message="AssertionError: assert [&apos;TESTSTRING&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;TESTSTRING&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;TESTSTRING&apos;]
+  + [&apos;NR&apos;]">test_OCRQuietZone.py:58: in test_OCRQuietZone
+    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;TESTSTRING&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;TESTSTRING&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;TESTSTRING&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_OCRQuietZone" file="tests/test_OCRQuietZone.py" line="51" name="test_OCRQuietZone[5001-5000-OCRB-6C8C1]" time="24.2897531986"></testcase><testcase classname="tests.test_OCRQuietZone" file="tests/test_OCRQuietZone.py" line="51" name="test_OCRQuietZone[5001-5000-OCRB-8C8C1]" time="43.5892117023"><failure message="AssertionError: assert [&apos;TESTSTRING&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;TESTSTRING&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;TESTSTRING&apos;]
+  + [&apos;NR&apos;]">test_OCRQuietZone.py:58: in test_OCRQuietZone
+    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;TESTSTRING&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;TESTSTRING&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;TESTSTRING&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_OCRQuietZone" file="tests/test_OCRQuietZone.py" line="51" name="test_OCRQuietZone[5001-5000-OCRB-8C12C1]" time="23.9160346985"></testcase><testcase classname="tests.test_OCRQuietZone" file="tests/test_OCRQuietZone.py" line="51" name="test_OCRQuietZone[5001-5000-OCRB-12C12C1]" time="43.0676310062"><failure message="AssertionError: assert [&apos;TESTSTRING&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;TESTSTRING&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;TESTSTRING&apos;]
+  + [&apos;NR&apos;]">test_OCRQuietZone.py:58: in test_OCRQuietZone
+    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;TESTSTRING&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;TESTSTRING&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;TESTSTRING&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_OCRQuietZone" file="tests/test_OCRQuietZone.py" line="51" name="test_OCRQuietZone[5001-5000-OCRB-2C3C2]" time="24.7438588142"></testcase><testcase classname="tests.test_OCRQuietZone" file="tests/test_OCRQuietZone.py" line="51" name="test_OCRQuietZone[5001-5000-OCRB-6C3C2]" time="40.8985271454"><failure message="AssertionError: assert [&apos;TESTSTRING&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;TESTSTRING&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;TESTSTRING&apos;]
+  + [&apos;NR&apos;]">test_OCRQuietZone.py:58: in test_OCRQuietZone
+    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;TESTSTRING&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;TESTSTRING&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;TESTSTRING&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_OCRQuietZone" file="tests/test_OCRQuietZone.py" line="51" name="test_OCRQuietZone[5001-5000-OCRB-6C8C2]" time="23.0432088375"></testcase><testcase classname="tests.test_OCRQuietZone" file="tests/test_OCRQuietZone.py" line="51" name="test_OCRQuietZone[5001-5000-OCRB-8C8C2]" time="42.8881559372"><failure message="AssertionError: assert [&apos;TESTSTRING&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;TESTSTRING&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;TESTSTRING&apos;]
+  + [&apos;NR&apos;]">test_OCRQuietZone.py:58: in test_OCRQuietZone
+    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;TESTSTRING&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;TESTSTRING&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;TESTSTRING&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_OCRQuietZone" file="tests/test_OCRQuietZone.py" line="51" name="test_OCRQuietZone[5001-5000-OCRB-8C12C2]" time="23.9390342236"></testcase><testcase classname="tests.test_OCRQuietZone" file="tests/test_OCRQuietZone.py" line="51" name="test_OCRQuietZone[5001-5000-OCRB-12C12C2]" time="42.3067336082"><failure message="AssertionError: assert [&apos;TESTSTRING&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;TESTSTRING&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;TESTSTRING&apos;]
+  + [&apos;NR&apos;]">test_OCRQuietZone.py:58: in test_OCRQuietZone
+    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;TESTSTRING&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;TESTSTRING&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;TESTSTRING&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_OCRQuietZone" file="tests/test_OCRQuietZone.py" line="51" name="test_OCRQuietZone[5001-5000-MICR-2C3C]" time="24.145181179"></testcase><testcase classname="tests.test_OCRQuietZone" file="tests/test_OCRQuietZone.py" line="51" name="test_OCRQuietZone[5001-5000-MICR-6C3C]" time="42.9326469898"><failure message="AssertionError: assert [&apos;987656789&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;987656789&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;987656789&apos;]
+  + [&apos;NR&apos;]">test_OCRQuietZone.py:58: in test_OCRQuietZone
+    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;987656789&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;987656789&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;987656789&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_OCRQuietZone" file="tests/test_OCRQuietZone.py" line="51" name="test_OCRQuietZone[5001-5000-MICR-6C8C]" time="22.9465079308"></testcase><testcase classname="tests.test_OCRQuietZone" file="tests/test_OCRQuietZone.py" line="51" name="test_OCRQuietZone[5001-5000-MICR-8C8C]" time="43.2870788574"><failure message="AssertionError: assert [&apos;987656789&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;987656789&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;987656789&apos;]
+  + [&apos;NR&apos;]">test_OCRQuietZone.py:58: in test_OCRQuietZone
+    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;987656789&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;987656789&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;987656789&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_OCRQuietZone" file="tests/test_OCRQuietZone.py" line="51" name="test_OCRQuietZone[5001-5000-MICR-8C12C]" time="24.5135009289"></testcase><testcase classname="tests.test_OCRQuietZone" file="tests/test_OCRQuietZone.py" line="51" name="test_OCRQuietZone[5001-5000-MICR-12C12C]" time="20.1743383408"><error message="test setup failure">../conftest.py:183: in logfolder
+    os.makedirs(logfolder)
+../../venv27/lib/python2.7/os.py:157: in makedirs
+    mkdir(name, mode)
+E   OSError: [Errno 17] File exists: &apos;logs/22062022_120249.534021/21342522506311&apos;</error></testcase></testsuite>

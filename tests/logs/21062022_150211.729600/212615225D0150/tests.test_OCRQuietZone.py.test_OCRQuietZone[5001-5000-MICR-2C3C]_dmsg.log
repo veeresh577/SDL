@@ -1,0 +1,80 @@
+<38>[78687.782354] type=1400 audit(1642511605.411:11461): avc: denied { kill } for comm="swapper/1" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<14>[78691.572606] init: starting service 'smartmu'...
+<14>[78691.615975] init: starting service 'qccsyshalservice'...
+<14>[78691.720730] init: Service 'smartmu' (pid 1119) exited with status 0
+<14>[78691.720873] init: Sending signal 9 to service 'smartmu' (pid 1119) process group...
+<14>[78691.722029] libprocessgroup: Successfully killed process cgroup uid 0 pid 1119 in 0ms
+<14>[78691.769584] init: Service 'qccvndhalservice' (pid 1121) exited with status 1
+<12>[78693.282151] healthd: battery l=36 v=3509 t=44.0 h=2 st=2 c=-428710 fc=4008000 cc=2 chg=u
+<4>[78693.884080] audit: audit_lost=4204 audit_rate_limit=5 audit_backlog_limit=64
+<3>[78693.884089] audit: rate limit exceeded
+<38>[78693.884643] type=1400 audit(1642511611.511:11467): avc: denied { read } for comm="Binder:581_1" name="wakeup27" dev="sysfs" ino=52502 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs_battery_supply:s0 tclass=dir permissive=1
+<38>[78693.885149] type=1400 audit(1642511611.511:11468): avc: denied { open } for comm="Binder:581_1" path="/sys/devices/platform/soc/800f000.qcom,spmi/spmi-0/spmi0-00/800f000.qcom,spmi:qcom,pm660@0:qcom,qpnp-smb2/power_supply/battery/wakeup27" dev="sysfs" ino=52502 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs_battery_supply:s0 tclass=dir permissive=1
+<38>[78693.885518] type=1400 audit(1642511611.511:11469): avc: denied { read } for comm="Binder:581_1" name="event_count" dev="sysfs" ino=52509 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs_battery_supply:s0 tclass=file permissive=1
+<38>[78693.886408] type=1400 audit(1642511611.511:11470): avc: denied { open } for comm="Binder:581_1" path="/sys/devices/platform/soc/800f000.qcom,spmi/spmi-0/spmi0-00/800f000.qcom,spmi:qcom,pm660@0:qcom,qpnp-smb2/power_supply/battery/wakeup27/event_count" dev="sysfs" ino=52509 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs_battery_supply:s0 tclass=file permissive=1
+<14>[78696.655457] init: starting service 'qccsyshalservice'...
+<14>[78696.686869] init: starting service 'qccvndhalservice'...
+<38>[78696.715578] type=1400 audit(1642511614.341:11472): avc: denied { search } for comm="qccsyshalservic" name="/" dev="sda10" ino=2 scontext=u:r:vendor_qccsyshal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[78696.755570] init: Service 'smartmu' (pid 1125) exited with status 0
+<14>[78696.755651] init: Sending signal 9 to service 'smartmu' (pid 1125) process group...
+<14>[78696.756497] libprocessgroup: Successfully killed process cgroup uid 0 pid 1125 in 0ms
+<14>[78696.805403] init: Service 'qccvndhalservice' (pid 1127) exited with status 1
+<3>[78700.148693] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[78700.164141] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[78700.169548] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[78700.174955] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[78700.180299] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[78700.185567] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[78700.190849] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[78700.196198] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[78700.206890] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[78700.217580] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[78700.222932] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[78700.228213] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[78700.239290] [SDL] misc_ioctl msg.len is 4 : 0x7b 0x00 0x00 0x85 
+<3>[78700.244247] [SDL] misc_ioctl msg.len is 2 : 0x84 0x00 
+<3>[78700.250407] [SDL] misc_ioctl msg.len is 4 : 0x82 0x00 0x00 0x7e 
+<3>[78700.255303] [SDL] misc_ioctl msg.len is 2 : 0x7d 0x80 
+<3>[78700.297797] frame_src is 1 frame_id is 9091 blackjoe
+<3>[78700.330935] frame_src is 1 frame_id is 9093 blackjoe
+<31>[78700.332129] logd: logdr: UID=0 GID=0 PID=1140 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[78700.347516] frame_src is 1 frame_id is 9094 blackjoe
+<3>[78700.414900] frame_src is 1 frame_id is 9096 blackjoe
+<3>[78700.431530] frame_src is 1 frame_id is 9097 blackjoe
+<3>[78700.448076] frame_src is 1 frame_id is 9098 blackjoe
+<3>[78700.464703] frame_src is 1 frame_id is 9099 blackjoe
+<3>[78700.534451] frame_src is 1 frame_id is 9101 blackjoe
+<31>[78700.553009] logd: logdr: UID=0 GID=0 PID=1143 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[78700.567627] frame_src is 1 frame_id is 9103 blackjoe
+<3>[78700.584217] frame_src is 1 frame_id is 9104 blackjoe
+<3>[78700.600701] frame_src is 1 frame_id is 9105 blackjoe
+<3>[78700.617331] frame_src is 1 frame_id is 9106 blackjoe
+<3>[78700.633966] frame_src is 1 frame_id is 9107 blackjoe
+<3>[78700.667194] frame_src is 1 frame_id is 9109 blackjoe
+<3>[78700.683988] frame_src is 1 frame_id is 9110 blackjoe
+<3>[78700.704578] frame_src is 1 frame_id is 9111 blackjoe
+<3>[78700.721249] frame_src is 1 frame_id is 9112 blackjoe
+<3>[78700.737754] frame_src is 1 frame_id is 9113 blackjoe
+<3>[78700.754363] frame_src is 1 frame_id is 9114 blackjoe
+<3>[78700.770953] frame_src is 1 frame_id is 9115 blackjoe
+<3>[78700.787610] frame_src is 1 frame_id is 9116 blackjoe
+<31>[78700.800733] logd: logdr: UID=0 GID=0 PID=1146 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[78700.804244] frame_src is 1 frame_id is 9117 blackjoe
+<3>[78700.820873] frame_src is 1 frame_id is 9118 blackjoe
+<3>[78700.837500] frame_src is 1 frame_id is 9119 blackjoe
+<3>[78700.870699] frame_src is 1 frame_id is 9121 blackjoe
+<3>[78700.887330] frame_src is 1 frame_id is 9122 blackjoe
+<3>[78700.920579] frame_src is 1 frame_id is 9124 blackjoe
+<3>[78700.953831] frame_src is 1 frame_id is 9126 blackjoe
+<3>[78700.970423] frame_src is 1 frame_id is 9127 blackjoe
+<3>[78701.020302] frame_src is 1 frame_id is 9130 blackjoe
+<6>[78701.030409] IRQ 6: no longer affine to CPU5
+<3>[78701.036956] frame_src is 1 frame_id is 9131 blackjoe
+<3>[78701.053670] frame_src is 1 frame_id is 9132 blackjoe
+<3>[78701.086851] frame_src is 1 frame_id is 9134 blackjoe
+<31>[78701.106827] logd: logdr: UID=0 GID=0 PID=1149 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[78701.236406] frame_src is 1 frame_id is 9139 blackjoe
+<3>[78701.269874] frame_src is 1 frame_id is 9141 blackjoe
+<3>[78701.355986] frame_src is 1 frame_id is 9144 blackjoe
+<3>[78701.389179] frame_src is 1 frame_id is 9146 blackjoe
+<3>[78701.405773] frame_src is 1 frame_id is 9147 blackjoe

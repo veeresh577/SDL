@@ -1,0 +1,21 @@
+<14>[ 4218.057545] init: starting service 'qccvndhalservice'...
+<14>[ 4218.178377] init: Service 'qccvndhalservice' (pid 19443) exited with status 1
+<14>[ 4218.178515] init: Sending signal 9 to service 'qccvndhalservice' (pid 19443) process group...
+<14>[ 4218.179978] libprocessgroup: Successfully killed process cgroup uid 1000 pid 19443 in 0ms
+<3>[ 4218.319332] [schedu][0x11f5b02e6e2][19:59:37.485573] wlan: [2070:E:scan] scm_11d_elected_country_algo_fcc: 98: No AP with 11d Country code is present in scan list
+<3>[ 4218.319500] FUSIONWL: : ==Regulatory_elect_country_db==: No AP with 11d Country code is present in scan list 
+<14>[ 4223.025971] init: starting service 'qccsyshalservice'...
+<14>[ 4223.163075] init: Service 'qccsyshalservice' (pid 19456) exited with status 1
+<14>[ 4223.163242] init: Sending signal 9 to service 'qccsyshalservice' (pid 19456) process group...
+<14>[ 4223.164569] libprocessgroup: Successfully killed process cgroup uid 1000 pid 19456 in 0ms
+<6>[ 4223.252336] IRQ 6: no longer affine to CPU4
+<14>[ 4228.209998] init: Service 'qccsyshalservice' (pid 19459) exited with status 1
+<14>[ 4228.210173] init: Sending signal 9 to service 'qccsyshalservice' (pid 19459) process group...
+<14>[ 4228.247891] init: Service 'qccvndhalservice' (pid 19460) exited with status 1
+<14>[ 4228.247976] init: Sending signal 9 to service 'qccvndhalservice' (pid 19460) process group...
+<14>[ 4228.249005] libprocessgroup: Successfully killed process cgroup uid 1000 pid 19460 in 0ms
+<3>[ 4228.338709] FUSIONWL: : ==Regulatory_scan_country_list_db_reset==: Reset complete for scan country list 
+<12>[ 4230.381205] healthd: battery l=11 v=3266 t=28.0 h=2 st=2 c=-574706 fc=0 cc=7 chg=u
+<12>[ 4230.410312] healthd: battery l=11 v=3266 t=28.0 h=2 st=2 c=-574706 fc=0 cc=7 chg=u
+<12>[ 4230.468407] healthd: battery l=11 v=3266 t=28.0 h=2 st=2 c=-574706 fc=0 cc=7 chg=u
+<12>[ 4230.507020] healthd: battery l=11 v=3266 t=28.0 h=2 st=2 c=-574706 fc=0 cc=7 chg=u

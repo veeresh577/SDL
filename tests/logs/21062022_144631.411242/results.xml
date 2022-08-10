@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?><testsuite errors="0" failures="6" name="pytest" skips="0" tests="37" time="874.701"><testcase classname="tests.test_EnableAll" file="tests/test_EnableAll.py" line="45" name="test_EnableAll[5001-5000-UPC-A]" time="27.1233389378"></testcase><testcase classname="tests.test_EnableAll" file="tests/test_EnableAll.py" line="45" name="test_EnableAll[5001-5000-UPC-E]" time="19.2496011257"></testcase><testcase classname="tests.test_EnableAll" file="tests/test_EnableAll.py" line="45" name="test_EnableAll[5001-5000-UPC-E1]" time="19.1887090206"></testcase><testcase classname="tests.test_EnableAll" file="tests/test_EnableAll.py" line="45" name="test_EnableAll[5001-5000-EAN-8]" time="19.24640131"></testcase><testcase classname="tests.test_EnableAll" file="tests/test_EnableAll.py" line="45" name="test_EnableAll[5001-5000-EAN-13]" time="19.2838110924"></testcase><testcase classname="tests.test_EnableAll" file="tests/test_EnableAll.py" line="45" name="test_EnableAll[5001-5000-ISSN]" time="33.1956372261"><failure message="AssertionError: assert [&apos;83013016&apos;] == [&apos;8765301X&apos;]
+  At index 0 diff: &apos;83013016&apos; != &apos;8765301X&apos;
+  Full diff:
+  - [&apos;83013016&apos;]
+  + [&apos;8765301X&apos;]">test_EnableAll.py:51: in test_EnableAll
+    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;83013016&apos;] == [&apos;8765301X&apos;]
+E     At index 0 diff: &apos;83013016&apos; != &apos;8765301X&apos;
+E     Full diff:
+E     - [&apos;83013016&apos;]
+E     + [&apos;8765301X&apos;]</failure></testcase><testcase classname="tests.test_EnableAll" file="tests/test_EnableAll.py" line="45" name="test_EnableAll[5001-5000-Code 128b]" time="44.0629298687"><failure message="AssertionError: assert [&apos;abcdefghijklm&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;abcdefghijklm&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;abcdefghijklm&apos;]
+  + [&apos;NR&apos;]">test_EnableAll.py:51: in test_EnableAll
+    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;abcdefghijklm&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;abcdefghijklm&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;abcdefghijklm&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_EnableAll" file="tests/test_EnableAll.py" line="45" name="test_EnableAll[5001-5000-EAN-128]" time="14.4291031361"></testcase><testcase classname="tests.test_EnableAll" file="tests/test_EnableAll.py" line="45" name="test_EnableAll[5001-5000-ISBT-128]" time="19.166975975"></testcase><testcase classname="tests.test_EnableAll" file="tests/test_EnableAll.py" line="45" name="test_EnableAll[5001-5000-Code 39]" time="19.3057992458"></testcase><testcase classname="tests.test_EnableAll" file="tests/test_EnableAll.py" line="45" name="test_EnableAll[5001-5000-Code 39 Sample with Full ASCII and the symbology enabled]" time="44.1608159542"><failure message="AssertionError: assert [&apos;CODE@7&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;CODE@7&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;CODE@7&apos;]
+  + [&apos;NR&apos;]">test_EnableAll.py:51: in test_EnableAll
+    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;CODE@7&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;CODE@7&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;CODE@7&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_EnableAll" file="tests/test_EnableAll.py" line="45" name="test_EnableAll[5001-5000-Code 93]" time="19.2558701038"></testcase><testcase classname="tests.test_EnableAll" file="tests/test_EnableAll.py" line="45" name="test_EnableAll[5001-5000-Interleaved 2 of 5]" time="44.2027740479"><failure message="AssertionError: assert [&apos;01234567890128&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;01234567890128&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;01234567890128&apos;]
+  + [&apos;NR&apos;]">test_EnableAll.py:51: in test_EnableAll
+    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;01234567890128&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;01234567890128&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;01234567890128&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_EnableAll" file="tests/test_EnableAll.py" line="45" name="test_EnableAll[5001-5000-Discrete 2 of 5]" time="19.3230021"></testcase><testcase classname="tests.test_EnableAll" file="tests/test_EnableAll.py" line="45" name="test_EnableAll[5001-5000-Matrix 2 of 5]" time="43.9326028824"><failure message="AssertionError: assert [&apos;01234567890128&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;01234567890128&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;01234567890128&apos;]
+  + [&apos;NR&apos;]">test_EnableAll.py:51: in test_EnableAll
+    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;01234567890128&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;01234567890128&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;01234567890128&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_EnableAll" file="tests/test_EnableAll.py" line="45" name="test_EnableAll[5001-5000-Codabar]" time="43.7174789906"><failure message="AssertionError: assert [&apos;A987654321098B&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;A987654321098B&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;A987654321098B&apos;]
+  + [&apos;NR&apos;]">test_EnableAll.py:51: in test_EnableAll
+    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;A987654321098B&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;A987654321098B&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;A987654321098B&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_EnableAll" file="tests/test_EnableAll.py" line="45" name="test_EnableAll[5001-5000-MSI]" time="19.2516140938"></testcase><testcase classname="tests.test_EnableAll" file="tests/test_EnableAll.py" line="45" name="test_EnableAll[5001-5000-GS1 Databar 14]" time="14.2576172352"></testcase><testcase classname="tests.test_EnableAll" file="tests/test_EnableAll.py" line="45" name="test_EnableAll[5001-5000-GS1 Databar Limited]" time="19.4544472694"></testcase><testcase classname="tests.test_EnableAll" file="tests/test_EnableAll.py" line="45" name="test_EnableAll[5001-5000-PDF417]" time="19.2296597958"></testcase><testcase classname="tests.test_EnableAll" file="tests/test_EnableAll.py" line="45" name="test_EnableAll[5001-5000-MicroPDF]" time="15.0322980881"></testcase><testcase classname="tests.test_EnableAll" file="tests/test_EnableAll.py" line="45" name="test_EnableAll[5001-5000-Datamatrix]" time="19.1121311188"></testcase><testcase classname="tests.test_EnableAll" file="tests/test_EnableAll.py" line="45" name="test_EnableAll[5001-5000-Maxicode]" time="21.5684080124"></testcase><testcase classname="tests.test_EnableAll" file="tests/test_EnableAll.py" line="45" name="test_EnableAll[5001-5000-QR Code]" time="19.2032928467"></testcase><testcase classname="tests.test_EnableAll" file="tests/test_EnableAll.py" line="45" name="test_EnableAll[5001-5000-MicroQR]" time="19.224323988"></testcase><testcase classname="tests.test_EnableAll" file="tests/test_EnableAll.py" line="45" name="test_EnableAll[5001-5000-Aztec]" time="19.1932759285"></testcase><testcase classname="tests.test_EnableAll" file="tests/test_EnableAll.py" line="45" name="test_EnableAll[5001-5000-Han-Xin]" time="19.2162263393"></testcase><testcase classname="tests.test_IgnoreFNC4" file="tests/test_IgnoreFNC4.py" line="22" name="test_IgnoreFNC4[5001-5000-Code 1280]" time="19.1611657143"></testcase><testcase classname="tests.test_IgnoreFNC4" file="tests/test_IgnoreFNC4.py" line="22" name="test_IgnoreFNC4[5001-5000-Code 1281]" time="19.2406179905"></testcase><testcase classname="tests.test_IgnoreFNC4" file="tests/test_IgnoreFNC4.py" line="22" name="test_IgnoreFNC4[5001-5000-Code 1282]" time="19.2923102379"></testcase><testcase classname="tests.test_IgnoreFNC4" file="tests/test_IgnoreFNC4.py" line="22" name="test_IgnoreFNC4[5001-5000-Code 1283]" time="19.3851559162"></testcase><testcase classname="tests.test_IgnoreFNC4" file="tests/test_IgnoreFNC4.py" line="22" name="test_IgnoreFNC4[5001-5000-Code 1284]" time="19.3883538246"></testcase><testcase classname="tests.test_IgnoreFNC4" file="tests/test_IgnoreFNC4.py" line="22" name="test_IgnoreFNC4[5001-5000-Code 1285]" time="19.1931698322"></testcase><testcase classname="tests.test_IgnoreFNC4" file="tests/test_IgnoreFNC4.py" line="22" name="test_IgnoreFNC4[5001-5000-Code 1286]" time="19.341894865"></testcase><testcase classname="tests.test_IgnoreFNC4" file="tests/test_IgnoreFNC4.py" line="22" name="test_IgnoreFNC4[5001-5000-Code 1287]" time="18.6310777664"></testcase><testcase classname="tests.test_IgnoreFNC4" file="tests/test_IgnoreFNC4.py" line="22" name="test_IgnoreFNC4[5001-5000-Code 1288]" time="19.6073410511"></testcase><testcase classname="tests.test_IgnoreFNC4" file="tests/test_IgnoreFNC4.py" line="22" name="test_IgnoreFNC4[5001-5000-Code 1289]" time="15.452354908"></testcase></testsuite>

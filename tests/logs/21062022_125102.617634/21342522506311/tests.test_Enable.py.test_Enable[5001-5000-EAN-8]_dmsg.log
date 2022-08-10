@@ -1,0 +1,65 @@
+<4>[ 9318.831013] FG: is_batt_empty: batt_soc_rt_sts: 32 vbatt: 3119376 uV msoc:0
+<14>[ 9320.142868] init: starting service 'qccsyshalservice'...
+<14>[ 9320.305047] init: Service 'qccsyshalservice' (pid 25292) exited with status 1
+<14>[ 9320.305155] init: Sending signal 9 to service 'qccsyshalservice' (pid 25292) process group...
+<14>[ 9320.306094] libprocessgroup: Successfully killed process cgroup uid 1000 pid 25292 in 0ms
+<14>[ 9320.342118] init: starting service 'qccvndhalservice'...
+<14>[ 9320.510332] init: Service 'qccvndhalservice' (pid 25293) exited with status 1
+<14>[ 9320.510434] init: Sending signal 9 to service 'qccvndhalservice' (pid 25293) process group...
+<3>[ 9324.493524] [schedu][0x1362e905f2e][21:24:43.659762] wlan: [2070:E:scan] scm_11d_elected_country_algo_fcc: 98: No AP with 11d Country code is present in scan list
+<3>[ 9324.493635] FUSIONWL: : ==Regulatory_elect_country_db==: No AP with 11d Country code is present in scan list 
+<3>[ 9324.511377] FUSIONWL: : ==Regulatory_scan_country_list_db_reset==: Reset complete for scan country list 
+<14>[ 9325.348942] init: Service 'qccsyshalservice' (pid 25297) exited with status 1
+<14>[ 9325.349053] init: Sending signal 9 to service 'qccsyshalservice' (pid 25297) process group...
+<14>[ 9325.350027] libprocessgroup: Successfully killed process cgroup uid 1000 pid 25297 in 0ms
+<14>[ 9325.373926] init: starting service 'qccvndhalservice'...
+<14>[ 9325.558584] init: Service 'qccvndhalservice' (pid 25298) exited with status 1
+<14>[ 9325.558685] init: Sending signal 9 to service 'qccvndhalservice' (pid 25298) process group...
+<14>[ 9325.559654] libprocessgroup: Successfully killed process cgroup uid 1000 pid 25298 in 0ms
+<4>[ 9326.935301] FG: is_batt_empty: batt_soc_rt_sts: 36 vbatt: 3135001 uV msoc:0
+<12>[ 9326.946010] healthd: battery l=3 v=3135 t=28.0 h=2 st=2 c=-221191 fc=0 cc=7 chg=u
+<4>[ 9326.950315] FG: is_batt_empty: batt_soc_rt_sts: 36 vbatt: 3135001 uV msoc:0
+<3>[ 9328.422017] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 9328.422919] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 9328.427200] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 9328.433053] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 9328.437556] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 9328.454155] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 9328.458969] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 9328.464436] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 9328.469372] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 9328.476183] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 9328.480015] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<31>[ 9328.639373] logd: logdr: UID=0 GID=0 PID=25309 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[ 9328.652513] [SDL] misc_ioctl msg.len is 3 : 0x77 0x02 0x87 
+<3>[ 9328.653109] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 9328.900727] msm_isp_open_node: reset VFE
+<31>[ 9328.964415] logd: logdr: UID=0 GID=0 PID=25314 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[ 9328.976209] frame_src is 1 frame_id is 1 blackjoe
+<3>[ 9329.010603] frame_src is 1 frame_id is 2 blackjoe
+<3>[ 9329.044936] frame_src is 1 frame_id is 3 blackjoe
+<4>[ 9329.070955] FG: is_batt_empty: batt_soc_rt_sts: 32 vbatt: 3133536 uV msoc:0
+<3>[ 9329.117679] frame_src is 1 frame_id is 4 blackjoe
+<3>[ 9329.186343] frame_src is 1 frame_id is 6 blackjoe
+<6>[ 9329.215680] __afe_port_start: port id: 0x102e
+<6>[ 9329.215726] afe_find_cal_topo_id_by_port: port id: 0x102e, dev_acdb_id: 0
+<6>[ 9329.215743] afe_find_cal_topo_id_by_port: top_id:1025e acdb_id:15 afe_port:0x102e
+<6>[ 9329.215759] afe_get_cal_topology_id: port_id = 0x102e acdb_id = 15 topology_id = 0x1025e cal_type_index=8 ret=0
+<6>[ 9329.217076] afe_send_port_topology_id: AFE set topology id 0x1025e  enable for port 0x102e ret 0
+<6>[ 9329.217095] send_afe_cal_type: cal_index is 0
+<6>[ 9329.217110] send_afe_cal_type: dev_acdb_id[130] is 0
+<6>[ 9329.217126] send_afe_cal_type: Sending cal_index cal 0
+<6>[ 9329.218307] afe_send_hw_delay: port_id 0x102e rate 48000 delay_usec 474 status 0
+<3>[ 9329.293414] frame_src is 1 frame_id is 8 blackjoe
+<3>[ 9329.400491] frame_src is 1 frame_id is 10 blackjoe
+<3>[ 9329.434811] frame_src is 1 frame_id is 11 blackjoe
+<3>[ 9329.469196] frame_src is 1 frame_id is 12 blackjoe
+<3>[ 9329.523204] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 9329.524584] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 9329.528843] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 9329.544291] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<14>[ 9330.213283] init: starting service 'qccsyshalservice'...
+<14>[ 9330.389962] init: Service 'qccsyshalservice' (pid 25336) exited with status 1
+<14>[ 9330.390058] init: Sending signal 9 to service 'qccsyshalservice' (pid 25336) process group...
+<14>[ 9330.391262] libprocessgroup: Successfully killed process cgroup uid 1000 pid 25336 in 0ms
+<38>[ 9330.491735] type=1400 audit(1654205089.645:6582): avc: denied { search } for comm="vendor.qti.hard" name="/" dev="mmcblk0p37" ino=2 scontext=u:r:vendor_hal_qccvndhal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1

@@ -1,0 +1,85 @@
+<14>[77643.964005] init: starting service 'smartmu'...
+<14>[77644.011945] init: starting service 'qccsyshalservice'...
+<14>[77644.043686] init: starting service 'qccvndhalservice'...
+<14>[77644.109451] init: Service 'qccsyshalservice' (pid 28661) exited with status 1
+<14>[77644.109547] init: Sending signal 9 to service 'qccsyshalservice' (pid 28661) process group...
+<14>[77644.110492] libprocessgroup: Successfully killed process cgroup uid 1000 pid 28661 in 0ms
+<14>[77644.117546] init: Service 'smartmu' (pid 28660) exited with status 0
+<14>[77644.117627] init: Sending signal 9 to service 'smartmu' (pid 28660) process group...
+<14>[77644.119371] libprocessgroup: Successfully killed process cgroup uid 0 pid 28660 in 0ms
+<14>[77644.144165] init: Service 'qccvndhalservice' (pid 28662) exited with status 1
+<6>[77644.935130] afe_close: port_id = 0x4000
+<14>[77649.010286] init: starting service 'smartmu'...
+<14>[77649.051272] init: starting service 'qccsyshalservice'...
+<38>[77649.139804] type=1400 audit(1642510566.761:11290): avc: denied { search } for comm="vendor.qti.hard" name="/" dev="sda10" ino=2 scontext=u:r:vendor_hal_qccvndhal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[77649.160968] libprocessgroup: Successfully killed process cgroup uid 0 pid 28674 in 0ms
+<14>[77649.167959] libprocessgroup: Successfully killed process cgroup uid 1000 pid 28675 in 0ms
+<14>[77649.196392] init: Service 'qccvndhalservice' (pid 28676) exited with status 1
+<14>[77654.049897] init: starting service 'smartmu'...
+<14>[77654.092073] init: starting service 'qccsyshalservice'...
+<14>[77654.203417] init: Service 'smartmu' (pid 28680) exited with status 0
+<14>[77654.203526] init: Sending signal 9 to service 'smartmu' (pid 28680) process group...
+<14>[77654.204458] libprocessgroup: Successfully killed process cgroup uid 0 pid 28680 in 0ms
+<14>[77654.210842] init: Service 'qccsyshalservice' (pid 28681) exited with status 1
+<14>[77654.210929] init: Sending signal 9 to service 'qccsyshalservice' (pid 28681) process group...
+<14>[77654.211864] libprocessgroup: Successfully killed process cgroup uid 1000 pid 28681 in 0ms
+<12>[77655.745989] healthd: battery l=41 v=3534 t=42.0 h=2 st=2 c=-455077 fc=4008000 cc=2 chg=u
+<3>[77655.807156] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[77655.823474] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[77655.828533] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[77655.839257] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[77655.860697] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[77655.865909] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[77655.871278] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[77655.876735] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[77655.887573] [SDL] misc_ioctl msg.len is 4 : 0x7b 0x00 0x00 0x85 
+<3>[77655.898875] [SDL] misc_ioctl msg.len is 4 : 0x82 0x00 0x00 0x7e 
+<3>[77655.903837] [SDL] misc_ioctl msg.len is 2 : 0x7d 0x80 
+<31>[77656.106174] logd: logdr: UID=0 GID=0 PID=28699 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[77656.141117] msm_ispif_config:1061 Exit 
+<3>[77656.141588] msm_ispif_config2: Exit 
+<3>[77656.144437] frame_src is 1 frame_id is 1 blackjoe
+<3>[77656.177727] frame_src is 1 frame_id is 3 blackjoe
+<3>[77656.194303] frame_src is 1 frame_id is 4 blackjoe
+<3>[77656.210938] frame_src is 1 frame_id is 5 blackjoe
+<3>[77656.250117] tavil_codec tavil_codec: ASoC: DAPM unknown pin Lineout_3 amp
+<3>[77656.280590] frame_src is 1 frame_id is 7 blackjoe
+<31>[77656.281055] logd: logdr: UID=0 GID=0 PID=28710 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<6>[77656.289695] __afe_port_start: port id: 0x4000
+<6>[77656.289709] afe_find_cal_topo_id_by_port: port id: 0x4000, dev_acdb_id: 14
+<6>[77656.289716] afe_find_cal_topo_id_by_port: top_id:1025e acdb_id:14 afe_port_id:0x4000
+<6>[77656.289723] afe_get_cal_topology_id: port_id = 0x4000 acdb_id = 14 topology_id = 0x1025e cal_type_index=8 ret=0
+<6>[77656.290990] afe_send_port_topology_id: AFE set topology id 0x1025e  enable for port 0x4000 ret 0
+<6>[77656.290999] send_afe_cal_type: cal_index is 0
+<6>[77656.291005] send_afe_cal_type: dev_acdb_id[15] is 14
+<6>[77656.291011] afe_find_cal: cal_index 0 port_id 0x4000 port_index 15
+<6>[77656.291018] afe_find_cal: acdb_id 14 dev_acdb_id 14 sample_rate 48000 afe_sample_rates 48000
+<6>[77656.291024] afe_find_cal: cal block is a match, size is 1372
+<6>[77656.291030] send_afe_cal_type: Sending cal_index cal 0
+<6>[77656.292165] afe_send_hw_delay: port_id 0x4000 rate 48000 delay_usec 474 status 0
+<3>[77656.297180] frame_src is 1 frame_id is 8 blackjoe
+<3>[77656.347058] frame_src is 1 frame_id is 11 blackjoe
+<3>[77656.403755] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[77656.408534] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[77656.413838] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[77656.419220] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[77656.424397] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<6>[77657.470541] IRQ 6: no longer affine to CPU5
+<38>[77657.494663] type=1400 audit(1642510575.121:11291): avc: denied { kill } for comm="swapper/3" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<14>[77659.090626] init: starting service 'smartmu'...
+<14>[77659.133753] init: starting service 'qccsyshalservice'...
+<14>[77659.164389] init: starting service 'qccvndhalservice'...
+<38>[77659.195405] type=1400 audit(1642510576.821:11292): avc: denied { search } for comm="qccsyshalservic" name="/" dev="sda10" ino=2 scontext=u:r:vendor_qccsyshal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[77659.234998] init: Service 'smartmu' (pid 28726) exited with status 0
+<14>[77659.235080] init: Sending signal 9 to service 'smartmu' (pid 28726) process group...
+<14>[77659.236764] libprocessgroup: Successfully killed process cgroup uid 0 pid 28726 in 0ms
+<14>[77659.243611] init: Service 'qccsyshalservice' (pid 28727) exited with status 1
+<14>[77659.243692] init: Sending signal 9 to service 'qccsyshalservice' (pid 28727) process group...
+<14>[77659.244470] libprocessgroup: Successfully killed process cgroup uid 1000 pid 28727 in 0ms
+<14>[77659.263399] init: Service 'qccvndhalservice' (pid 28728) exited with status 1
+<6>[77659.776761] afe_close: port_id = 0x4000
+<3>[77659.805933] tavil_codec tavil_codec: ASoC: DAPM unknown pin Lineout_3 amp
+<3>[77661.840940] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[77661.842453] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[77661.845707] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[77661.856675] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 

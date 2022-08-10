@@ -1,0 +1,4 @@
+<38>[82578.330650] type=1400 audit(1654289446.368:192506): avc: denied { kill } for comm="swapper/2" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<6>[82582.164800] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<6>[82582.164833] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 
+<14>[82582.822595] init: starting service 'qccvndhalservice'...

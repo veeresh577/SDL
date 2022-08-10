@@ -1,0 +1,75 @@
+<14>[ 7262.125387] init: starting service 'qccsyshalservice'...
+<14>[ 7262.171842] init: starting service 'qccvndhalservice'...
+<14>[ 7262.205313] init: starting service 'smartmu'...
+<14>[ 7262.247172] init: Service 'qccsyshalservice' (pid 6219) exited with status 1
+<14>[ 7262.247244] init: Sending signal 9 to service 'qccsyshalservice' (pid 6219) process group...
+<14>[ 7262.248059] libprocessgroup: Successfully killed process cgroup uid 1000 pid 6219 in 0ms
+<14>[ 7262.288524] init: Service 'qccvndhalservice' (pid 6220) exited with status 1
+<14>[ 7262.288663] init: Sending signal 9 to service 'qccvndhalservice' (pid 6220) process group...
+<14>[ 7262.290085] libprocessgroup: Successfully killed process cgroup uid 1000 pid 6220 in 0ms
+<14>[ 7262.345835] init: Service 'smartmu' (pid 6221) exited with status 0
+<38>[ 7263.437327] type=1400 audit(1642437849.474:5184): avc: denied { kill } for comm="swapper/0" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<14>[ 7267.169897] init: starting service 'qccsyshalservice'...
+<14>[ 7267.215371] init: starting service 'qccvndhalservice'...
+<14>[ 7267.247015] init: starting service 'smartmu'...
+<38>[ 7267.274944] type=1400 audit(1642437853.314:5185): avc: denied { search } for comm="vendor.qti.hard" name="/" dev="sda10" ino=2 scontext=u:r:vendor_hal_qccvndhal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[ 7267.303853] init: Service 'qccsyshalservice' (pid 6233) exited with status 1
+<14>[ 7267.303965] init: Sending signal 9 to service 'qccsyshalservice' (pid 6233) process group...
+<14>[ 7267.304891] libprocessgroup: Successfully killed process cgroup uid 1000 pid 6233 in 0ms
+<14>[ 7267.333407] init: Service 'qccvndhalservice' (pid 6234) exited with status 1
+<14>[ 7267.333475] init: Sending signal 9 to service 'qccvndhalservice' (pid 6234) process group...
+<14>[ 7267.334170] libprocessgroup: Successfully killed process cgroup uid 1000 pid 6234 in 0ms
+<14>[ 7267.377978] init: Service 'smartmu' (pid 6235) exited with status 0
+<14>[ 7272.214825] init: starting service 'qccsyshalservice'...
+<14>[ 7272.256774] init: starting service 'qccvndhalservice'...
+<14>[ 7272.288192] init: starting service 'smartmu'...
+<14>[ 7272.335048] init: Service 'qccsyshalservice' (pid 6239) exited with status 1
+<14>[ 7272.335165] init: Sending signal 9 to service 'qccsyshalservice' (pid 6239) process group...
+<14>[ 7272.336183] libprocessgroup: Successfully killed process cgroup uid 1000 pid 6239 in 0ms
+<14>[ 7272.364756] init: Service 'qccvndhalservice' (pid 6240) exited with status 1
+<14>[ 7272.364909] init: Sending signal 9 to service 'qccvndhalservice' (pid 6240) process group...
+<14>[ 7272.366338] libprocessgroup: Successfully killed process cgroup uid 1000 pid 6240 in 0ms
+<14>[ 7272.426938] init: Service 'smartmu' (pid 6241) exited with status 0
+<3>[ 7272.851710] GBSOC->74, GBTemp->470, GBTTE->435, GBTTF->65535
+<12>[ 7272.886737] healthd: battery l=74 v=3773 t=47.0 h=2 st=2 c=-443359 fc=4008000 cc=2 chg=u
+<38>[ 7273.022811] type=1400 audit(1642437859.064:5186): avc: denied { read } for comm="Binder:581_2" name="wakeup48" dev="sysfs" ino=61027 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=1
+<38>[ 7273.023580] type=1400 audit(1642437859.064:5187): avc: denied { open } for comm="Binder:581_2" path="/sys/devices/virtual/misc/msm_mp3/wakeup48" dev="sysfs" ino=61027 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=1
+<38>[ 7273.024259] type=1400 audit(1642437859.064:5188): avc: denied { read } for comm="Binder:581_2" name="event_count" dev="sysfs" ino=61034 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+<38>[ 7273.024540] type=1400 audit(1642437859.064:5189): avc: denied { open } for comm="Binder:581_2" path="/sys/devices/virtual/misc/msm_mp3/wakeup48/event_count" dev="sysfs" ino=61034 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+<38>[ 7273.024829] type=1400 audit(1642437859.064:5190): avc: denied { getattr } for comm="Binder:581_2" path="/sys/devices/virtual/misc/msm_mp3/wakeup48/event_count" dev="sysfs" ino=61034 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+<4>[ 7273.126078] audit: audit_lost=2985 audit_rate_limit=5 audit_backlog_limit=64
+<3>[ 7273.126092] audit: rate limit exceeded
+<38>[ 7273.127090] type=1400 audit(1642437859.164:5191): avc: denied { read } for comm="Binder:581_2" name="wakeup27" dev="sysfs" ino=52502 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs_battery_supply:s0 tclass=dir permissive=1
+<3>[ 7273.260143] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 7273.261810] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 7273.265491] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 7273.272131] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 7273.277753] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 7273.281054] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 7273.286685] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 7273.291660] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 7273.324194] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 7273.329361] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 7273.339818] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 7273.345242] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 7273.355796] [SDL] misc_ioctl msg.len is 2 : 0x84 0x00 
+<3>[ 7273.362089] [SDL] misc_ioctl msg.len is 4 : 0x82 0x00 0x00 0x7e 
+<3>[ 7273.366941] [SDL] misc_ioctl msg.len is 2 : 0x7d 0x80 
+<31>[ 7273.444361] logd: logdr: UID=0 GID=0 PID=6254 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[ 7273.471314] [SDL] misc_ioctl msg.len is 3 : 0x77 0x02 0x87 
+<3>[ 7273.471936] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 7273.586817] msm_isp_open_node: reset VFE
+<31>[ 7273.588066] logd: logdr: UID=0 GID=0 PID=6261 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[ 7273.599346] msm_ispif_config:1061 Exit 
+<3>[ 7273.599815] msm_ispif_config2: Exit 
+<3>[ 7273.618834] frame_src is 1 frame_id is 1 blackjoe
+<3>[ 7273.635460] frame_src is 1 frame_id is 2 blackjoe
+<3>[ 7273.652109] frame_src is 1 frame_id is 3 blackjoe
+<3>[ 7273.668694] frame_src is 1 frame_id is 4 blackjoe
+<3>[ 7273.737415] frame_src is 1 frame_id is 6 blackjoe
+<3>[ 7273.754007] frame_src is 1 frame_id is 7 blackjoe
+<31>[ 7273.766573] logd: logdr: UID=0 GID=0 PID=6272 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[ 7273.770634] frame_src is 1 frame_id is 8 blackjoe
+<3>[ 7273.787304] frame_src is 1 frame_id is 9 blackjoe
+<3>[ 7273.803876] frame_src is 1 frame_id is 10 blackjoe
+<3>[ 7273.820551] frame_src is 1 frame_id is 11 blackjoe

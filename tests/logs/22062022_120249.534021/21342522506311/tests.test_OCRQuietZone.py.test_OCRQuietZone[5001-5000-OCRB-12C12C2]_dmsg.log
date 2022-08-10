@@ -1,0 +1,91 @@
+<3>[83084.367704] [schedu][0x174460aebf1][20:59:12.418909] wlan: [2028:E:scan] scm_11d_elected_country_algo_fcc: 98: No AP with 11d Country code is present in scan list
+<3>[83084.367856] FUSIONWL: : ==Regulatory_elect_country_db==: No AP with 11d Country code is present in scan list 
+<3>[83084.383332] FUSIONWL: : ==Regulatory_scan_country_list_db_reset==: Reset complete for scan country list 
+<12>[83084.431438] healthd: battery l=40 v=3468 t=27.0 h=2 st=2 c=-962890 fc=0 cc=8 chg=u
+<14>[83086.637616] init: starting service 'qccsyshalservice'...
+<14>[83086.686541] init: starting service 'qccvndhalservice'...
+<38>[83086.718712] type=1400 audit(1654289954.758:192642): avc: denied { search } for comm="qccsyshalservic" name="/" dev="mmcblk0p37" ino=2 scontext=u:r:vendor_qccsyshal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[83086.787018] init: Service 'qccsyshalservice' (pid 11964) exited with status 1
+<14>[83086.787179] init: Sending signal 9 to service 'qccsyshalservice' (pid 11964) process group...
+<14>[83086.789542] libprocessgroup: Successfully killed process cgroup uid 1000 pid 11964 in 1ms
+<14>[83086.800112] init: Service 'qccvndhalservice' (pid 11965) exited with status 1
+<14>[83086.800240] init: Sending signal 9 to service 'qccvndhalservice' (pid 11965) process group...
+<14>[83086.802692] libprocessgroup: Successfully killed process cgroup uid 1000 pid 11965 in 2ms
+<38>[83088.519683] type=1400 audit(1654289956.558:192643): avc: denied { kill } for comm="swapper/2" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<14>[83091.681663] init: starting service 'qccsyshalservice'...
+<14>[83091.812792] init: Service 'qccsyshalservice' (pid 11969) exited with status 1
+<14>[83091.812948] init: Sending signal 9 to service 'qccsyshalservice' (pid 11969) process group...
+<14>[83091.814403] libprocessgroup: Successfully killed process cgroup uid 1000 pid 11969 in 0ms
+<14>[83091.858433] init: Service 'qccvndhalservice' (pid 11970) exited with status 1
+<14>[83091.858555] init: Sending signal 9 to service 'qccvndhalservice' (pid 11970) process group...
+<6>[83092.285921] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<6>[83092.285960] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 
+<3>[83094.368145] [schedu][0x174517cb753][20:59:22.419274] wlan: [2028:E:scan] scm_11d_elected_country_algo_fcc: 98: No AP with 11d Country code is present in scan list
+<3>[83094.368306] FUSIONWL: : ==Regulatory_elect_country_db==: No AP with 11d Country code is present in scan list 
+<3>[83094.382570] FUSIONWL: : ==Regulatory_scan_country_list_db_reset==: Reset complete for scan country list 
+<3>[83096.532145] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[83096.542566] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[83096.543159] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[83096.546994] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[83096.557922] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[83096.563407] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[83096.574103] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[83096.579421] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[83096.585475] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[83096.589931] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[83096.595564] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[83096.651658] frame_src is 1 frame_id is 3523 blackjoe
+<3>[83096.686014] frame_src is 1 frame_id is 3524 blackjoe
+<31>[83096.715352] logd: logdr: UID=0 GID=0 PID=11981 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<14>[83096.723835] init: starting service 'qccsyshalservice'...
+<14>[83096.765183] init: starting service 'qccvndhalservice'...
+<3>[83096.837926] frame_src is 1 frame_id is 3527 blackjoe
+<14>[83096.844333] init: Service 'qccvndhalservice' (pid 11985) exited with status 1
+<14>[83096.844386] init: Sending signal 9 to service 'qccvndhalservice' (pid 11985) process group...
+<14>[83096.845150] libprocessgroup: Successfully killed process cgroup uid 1000 pid 11985 in 0ms
+<14>[83096.854155] init: Service 'qccsyshalservice' (pid 11984) exited with status 1
+<14>[83096.854237] init: Sending signal 9 to service 'qccsyshalservice' (pid 11984) process group...
+<14>[83096.854999] libprocessgroup: Successfully killed process cgroup uid 1000 pid 11984 in 0ms
+<3>[83096.908753] frame_src is 1 frame_id is 3529 blackjoe
+<3>[83096.946239] frame_src is 1 frame_id is 3531 blackjoe
+<3>[83096.983970] frame_src is 1 frame_id is 3533 blackjoe
+<3>[83097.120863] frame_src is 1 frame_id is 3536 blackjoe
+<3>[83097.204789] frame_src is 1 frame_id is 3537 blackjoe
+<31>[83097.218528] logd: logdr: UID=0 GID=0 PID=11989 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[83097.273352] frame_src is 1 frame_id is 3539 blackjoe
+<3>[83097.330105] frame_src is 1 frame_id is 3541 blackjoe
+<3>[83097.367844] frame_src is 1 frame_id is 3543 blackjoe
+<3>[83097.456028] frame_src is 1 frame_id is 3545 blackjoe
+<31>[83097.494548] logd: logdr: UID=0 GID=0 PID=11992 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[83097.524860] frame_src is 1 frame_id is 3547 blackjoe
+<3>[83097.642440] frame_src is 1 frame_id is 3549 blackjoe
+<3>[83097.714778] frame_src is 1 frame_id is 3551 blackjoe
+<3>[83097.753218] frame_src is 1 frame_id is 3553 blackjoe
+<31>[83097.786290] logd: logdr: UID=0 GID=0 PID=11995 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[83097.790103] frame_src is 1 frame_id is 3555 blackjoe
+<3>[83097.858443] frame_src is 1 frame_id is 3556 blackjoe
+<3>[83098.010898] frame_src is 1 frame_id is 3559 blackjoe
+<3>[83098.045232] frame_src is 1 frame_id is 3560 blackjoe
+<3>[83098.079557] frame_src is 1 frame_id is 3561 blackjoe
+<31>[83098.110670] logd: logdr: UID=0 GID=0 PID=11998 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[83098.117477] frame_src is 1 frame_id is 3562 blackjoe
+<3>[83098.136420] frame_src is 1 frame_id is 3563 blackjoe
+<3>[83098.155238] frame_src is 1 frame_id is 3564 blackjoe
+<3>[83098.174198] frame_src is 1 frame_id is 3565 blackjoe
+<3>[83098.192843] frame_src is 1 frame_id is 3566 blackjoe
+<3>[83098.262470] frame_src is 1 frame_id is 3567 blackjoe
+<3>[83098.296907] frame_src is 1 frame_id is 3568 blackjoe
+<3>[83098.331502] frame_src is 1 frame_id is 3569 blackjoe
+<3>[83098.414920] frame_src is 1 frame_id is 3570 blackjoe
+<31>[83098.432655] logd: logdr: UID=0 GID=0 PID=12001 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[83098.449333] frame_src is 1 frame_id is 3571 blackjoe
+<3>[83098.483671] frame_src is 1 frame_id is 3572 blackjoe
+<3>[83098.521533] frame_src is 1 frame_id is 3573 blackjoe
+<3>[83098.540386] frame_src is 1 frame_id is 3574 blackjoe
+<3>[83098.559254] frame_src is 1 frame_id is 3575 blackjoe
+<3>[83098.578119] frame_src is 1 frame_id is 3576 blackjoe
+<3>[83098.596997] frame_src is 1 frame_id is 3577 blackjoe
+<12>[83098.626168] healthd: battery l=40 v=3471 t=27.0 h=2 st=2 c=-953124 fc=0 cc=8 chg=u
+<31>[83098.757912] logd: logdr: UID=0 GID=0 PID=12005 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[83098.886856] frame_src is 1 frame_id is 3583 blackjoe
+<3>[83098.962541] frame_src is 1 frame_id is 3586 blackjoe

@@ -1,0 +1,40 @@
+For SDL Test Application Installation :
+------------------------------
+
+1> Create Signed apk using Android source code (Location : SDL\Oreo\apps\o\Full_auto_testapp)
+	or use alraedy created SDL_Testapp_Oreo.apk (Location : SDL\Oreo\apps\o).
+2> Load apk to device, steps are:
+	a) adb remount
+	b) adb push SDL_Testapp_Oreo.apk /system/priv-app/SDLTest/ or adb push SDL_Testapp_Oreo.apk /system/priv-app/SDLGui/
+		[make sure there is no other apk in that folder.]
+	c) adb shell sync
+	d) adb reboot
+	e) adb shell setenforce 0
+
+3> 	In device Go to Settings>>Apps & notifications>>SDL TestApp>>Permissions and Enable Camera and Storage 
+
+##########################################################################################################################
+
+For SDL library :
+-----------------
+
+1> Load SDL library to device location /system/lib64/
+	Example: (libSDL.so, libIAL.so, libbarcodereader80.so )
+	
+###########################################################################################################################
+
+For Environment setup :
+-----------------------
+
+1> Use python 2.7 only.
+2> Create environment for project
+3> Need to install requirement.txt file.
+4> For Kindle setup refer TUSC Guideline from doc folder
+
+###########################################################################################################################
+
+For Automation Update :
+-----------------------
+
+1> For Subtest number in the Script and Android source code refer SDL Automation report from docs/SDL_Automation_report.
+

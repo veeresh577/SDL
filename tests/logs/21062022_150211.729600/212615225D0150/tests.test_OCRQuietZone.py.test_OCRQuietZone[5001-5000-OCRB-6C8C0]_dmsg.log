@@ -1,0 +1,55 @@
+<14>[78112.484181] init: starting service 'smartmu'...
+<14>[78112.532759] init: starting service 'qccsyshalservice'...
+<14>[78112.568728] init: starting service 'qccvndhalservice'...
+<14>[78112.635966] libprocessgroup: Successfully killed process cgroup uid 0 pid 30735 in 0ms
+<14>[78112.647838] init: Service 'qccsyshalservice' (pid 30736) exited with status 1
+<14>[78112.647900] init: Sending signal 9 to service 'qccsyshalservice' (pid 30736) process group...
+<14>[78112.648652] libprocessgroup: Successfully killed process cgroup uid 1000 pid 30736 in 0ms
+<14>[78117.531314] init: starting service 'smartmu'...
+<14>[78117.572976] init: starting service 'qccsyshalservice'...
+<38>[78117.631307] type=1400 audit(1642511035.261:11371): avc: denied { kill } for comm="kworker/u16:15" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<14>[78117.678153] init: Service 'smartmu' (pid 30748) exited with status 0
+<14>[78117.678240] init: Sending signal 9 to service 'smartmu' (pid 30748) process group...
+<14>[78117.679326] libprocessgroup: Successfully killed process cgroup uid 0 pid 30748 in 0ms
+<14>[78117.733128] init: Service 'qccvndhalservice' (pid 30750) exited with status 1
+<6>[78117.789736] IRQ 6: no longer affine to CPU6
+<14>[78122.609053] init: starting service 'qccsyshalservice'...
+<3>[78122.675302] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[78122.676846] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[78122.691333] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[78122.696000] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[78122.706774] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[78122.728264] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<14>[78122.729474] init: Service 'qccsyshalservice' (pid 30761) exited with status 1
+<14>[78122.733416] init: Sending signal 9 to service 'qccsyshalservice' (pid 30761) process group...
+<14>[78122.734453] libprocessgroup: Successfully killed process cgroup uid 1000 pid 30761 in 0ms
+<3>[78122.738900] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[78122.754696] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[78122.755405] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[78122.771695] [SDL] misc_ioctl msg.len is 2 : 0x84 0x00 
+<3>[78122.777034] [SDL] misc_ioctl msg.len is 4 : 0x82 0x00 0x00 0x7e 
+<3>[78122.823988] frame_src is 1 frame_id is 2899 blackjoe
+<3>[78122.857035] frame_src is 1 frame_id is 2901 blackjoe
+<3>[78122.890326] frame_src is 1 frame_id is 2903 blackjoe
+<3>[78122.940416] frame_src is 1 frame_id is 2904 blackjoe
+<3>[78122.956867] frame_src is 1 frame_id is 2905 blackjoe
+<3>[78122.973458] frame_src is 1 frame_id is 2906 blackjoe
+<3>[78122.990101] frame_src is 1 frame_id is 2907 blackjoe
+<3>[78123.006758] frame_src is 1 frame_id is 2908 blackjoe
+<3>[78123.075403] frame_src is 1 frame_id is 2910 blackjoe
+<3>[78123.092134] frame_src is 1 frame_id is 2911 blackjoe
+<3>[78123.108646] frame_src is 1 frame_id is 2912 blackjoe
+<3>[78123.125283] frame_src is 1 frame_id is 2913 blackjoe
+<3>[78123.141965] frame_src is 1 frame_id is 2914 blackjoe
+<3>[78123.158491] frame_src is 1 frame_id is 2915 blackjoe
+<3>[78123.191840] frame_src is 1 frame_id is 2917 blackjoe
+<3>[78123.208405] frame_src is 1 frame_id is 2918 blackjoe
+<3>[78123.228990] frame_src is 1 frame_id is 2919 blackjoe
+<3>[78123.245590] frame_src is 1 frame_id is 2920 blackjoe
+<3>[78123.262064] frame_src is 1 frame_id is 2921 blackjoe
+<3>[78123.278757] frame_src is 1 frame_id is 2922 blackjoe
+<3>[78123.295316] frame_src is 1 frame_id is 2923 blackjoe
+<3>[78123.311954] frame_src is 1 frame_id is 2924 blackjoe
+<3>[78123.328581] frame_src is 1 frame_id is 2925 blackjoe
+<3>[78123.345171] frame_src is 1 frame_id is 2926 blackjoe
+<3>[78123.378424] frame_src is 1 frame_id is 2928 blackjoe

@@ -1,0 +1,46 @@
+<12>[78735.749488] healthd: battery l=36 v=3508 t=44.0 h=2 st=2 c=-431152 fc=4008000 cc=2 chg=u
+<14>[78736.894960] init: starting service 'smartmu'...
+<14>[78736.940577] init: starting service 'qccsyshalservice'...
+<14>[78736.972374] init: starting service 'qccvndhalservice'...
+<14>[78737.051193] init: Service 'qccsyshalservice' (pid 1381) exited with status 1
+<14>[78737.051280] init: Sending signal 9 to service 'qccsyshalservice' (pid 1381) process group...
+<14>[78737.052164] libprocessgroup: Successfully killed process cgroup uid 1000 pid 1381 in 0ms
+<38>[78737.798275] type=1400 audit(1642511655.421:11481): avc: denied { kill } for comm="swapper/2" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<14>[78742.020987] init: starting service 'qccvndhalservice'...
+<14>[78742.102869] init: Service 'smartmu' (pid 1397) exited with status 0
+<14>[78742.102943] init: Sending signal 9 to service 'smartmu' (pid 1397) process group...
+<14>[78742.103808] libprocessgroup: Successfully killed process cgroup uid 0 pid 1397 in 0ms
+<14>[78742.146657] init: Service 'qccvndhalservice' (pid 1399) exited with status 1
+<3>[78746.944198] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[78746.945828] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[78746.948996] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[78746.954297] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[78746.971067] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[78746.975589] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<14>[78746.980529] init: starting service 'smartmu'...
+<3>[78746.986295] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[78746.991909] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[78746.997013] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[78747.002629] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[78747.007554] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[78747.013065] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<14>[78747.015094] init: starting service 'qccsyshalservice'...
+<3>[78747.018322] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[78747.023819] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[78747.029060] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<14>[78747.044939] init: starting service 'qccvndhalservice'...
+<3>[78747.045716] [SDL] misc_ioctl msg.len is 4 : 0x82 0x00 0x00 0x7e 
+<3>[78747.058143] [SDL] misc_ioctl msg.len is 3 : 0x77 0x02 0x87 
+<3>[78747.062230] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<31>[78747.103548] logd: logdr: UID=0 GID=0 PID=1465 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[78747.109351] frame_src is 1 frame_id is 9607 blackjoe
+<14>[78747.128155] init: Service 'qccsyshalservice' (pid 1467) exited with status 1
+<14>[78747.130668] libprocessgroup: Successfully killed process cgroup uid 1000 pid 1467 in 1ms
+<3>[78747.142601] frame_src is 1 frame_id is 9609 blackjoe
+<3>[78747.209152] frame_src is 1 frame_id is 9611 blackjoe
+<3>[78747.275601] frame_src is 1 frame_id is 9615 blackjoe
+<3>[78747.327891] frame_src is 1 frame_id is 9616 blackjoe
+<3>[78747.344259] frame_src is 1 frame_id is 9617 blackjoe
+<3>[78747.377512] frame_src is 1 frame_id is 9619 blackjoe
+<3>[78747.410716] frame_src is 1 frame_id is 9621 blackjoe
+<3>[78747.443996] frame_src is 1 frame_id is 9623 blackjoe

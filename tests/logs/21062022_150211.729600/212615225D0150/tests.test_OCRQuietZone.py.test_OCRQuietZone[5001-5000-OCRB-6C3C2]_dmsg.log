@@ -1,0 +1,56 @@
+<38>[78517.733480] type=1400 audit(1642511435.361:11441): avc: denied { kill } for comm="swapper/0" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<14>[78520.403223] init: starting service 'smartmu'...
+<14>[78520.449125] init: starting service 'qccsyshalservice'...
+<14>[78520.482564] init: starting service 'qccvndhalservice'...
+<14>[78520.568358] init: Service 'qccsyshalservice' (pid 32445) exited with status 1
+<14>[78520.568442] init: Sending signal 9 to service 'qccsyshalservice' (pid 32445) process group...
+<14>[78520.598503] init: Service 'qccvndhalservice' (pid 32446) exited with status 1
+<14>[78525.489196] init: starting service 'qccsyshalservice'...
+<14>[78525.595018] init: Service 'smartmu' (pid 32450) exited with status 0
+<14>[78525.595106] init: Sending signal 9 to service 'smartmu' (pid 32450) process group...
+<14>[78525.595922] libprocessgroup: Successfully killed process cgroup uid 0 pid 32450 in 0ms
+<14>[78525.607656] init: Service 'qccsyshalservice' (pid 32451) exited with status 1
+<14>[78525.607724] init: Sending signal 9 to service 'qccsyshalservice' (pid 32451) process group...
+<14>[78525.608539] libprocessgroup: Successfully killed process cgroup uid 1000 pid 32451 in 0ms
+<3>[78530.085993] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[78530.087529] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[78530.090999] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[78530.096183] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[78530.117489] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[78530.123100] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[78530.128119] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[78530.144370] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[78530.150139] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[78530.155080] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[78530.160416] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[78530.165744] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[78530.170995] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[78530.176804] [SDL] misc_ioctl msg.len is 4 : 0x7b 0x00 0x00 0x85 
+<3>[78530.181829] [SDL] misc_ioctl msg.len is 2 : 0x84 0x00 
+<3>[78530.187799] [SDL] misc_ioctl msg.len is 4 : 0x82 0x00 0x00 0x7e 
+<3>[78530.234524] frame_src is 1 frame_id is 7285 blackjoe
+<3>[78530.250977] frame_src is 1 frame_id is 7286 blackjoe
+<3>[78530.284309] frame_src is 1 frame_id is 7288 blackjoe
+<3>[78530.350939] frame_src is 1 frame_id is 7290 blackjoe
+<3>[78530.367515] frame_src is 1 frame_id is 7291 blackjoe
+<3>[78530.400758] frame_src is 1 frame_id is 7293 blackjoe
+<3>[78530.417349] frame_src is 1 frame_id is 7294 blackjoe
+<3>[78530.469403] frame_src is 1 frame_id is 7295 blackjoe
+<31>[78530.496541] logd: logdr: UID=0 GID=0 PID=32468 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[78530.519403] frame_src is 1 frame_id is 7298 blackjoe
+<14>[78530.543273] init: starting service 'qccvndhalservice'...
+<3>[78530.569125] frame_src is 1 frame_id is 7301 blackjoe
+<3>[78530.602365] frame_src is 1 frame_id is 7303 blackjoe
+<14>[78530.624150] init: Service 'qccsyshalservice' (pid 32472) exited with status 1
+<14>[78530.624187] init: Sending signal 9 to service 'qccsyshalservice' (pid 32472) process group...
+<14>[78530.624586] libprocessgroup: Successfully killed process cgroup uid 1000 pid 32472 in 0ms
+<14>[78530.634137] init: Service 'smartmu' (pid 32471) exited with status 0
+<14>[78530.634190] init: Sending signal 9 to service 'smartmu' (pid 32471) process group...
+<14>[78530.634811] libprocessgroup: Successfully killed process cgroup uid 0 pid 32471 in 0ms
+<3>[78530.639385] frame_src is 1 frame_id is 7305 blackjoe
+<3>[78530.656118] frame_src is 1 frame_id is 7306 blackjoe
+<3>[78530.689245] frame_src is 1 frame_id is 7308 blackjoe
+<3>[78530.705886] frame_src is 1 frame_id is 7309 blackjoe
+<3>[78530.739171] frame_src is 1 frame_id is 7311 blackjoe
+<3>[78530.755883] frame_src is 1 frame_id is 7312 blackjoe
+<3>[78530.772418] frame_src is 1 frame_id is 7313 blackjoe

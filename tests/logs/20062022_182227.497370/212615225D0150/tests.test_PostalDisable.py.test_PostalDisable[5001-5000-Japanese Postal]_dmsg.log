@@ -1,0 +1,14 @@
+<3>[ 6203.171751] GBSOC->78, GBTemp->470, GBTTE->355, GBTTF->65535
+<38>[ 6203.357840] type=1400 audit(1642436789.394:5023): avc: denied { read } for comm="Binder:581_2" name="wakeup48" dev="sysfs" ino=61027 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=1
+<38>[ 6203.358650] type=1400 audit(1642436789.394:5024): avc: denied { open } for comm="Binder:581_2" path="/sys/devices/virtual/misc/msm_mp3/wakeup48" dev="sysfs" ino=61027 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=1
+<38>[ 6203.358841] type=1400 audit(1642436789.394:5025): avc: denied { read } for comm="Binder:581_2" name="event_count" dev="sysfs" ino=61034 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+<38>[ 6203.359017] type=1400 audit(1642436789.394:5026): avc: denied { open } for comm="Binder:581_2" path="/sys/devices/virtual/misc/msm_mp3/wakeup48/event_count" dev="sysfs" ino=61034 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+<38>[ 6203.360597] type=1400 audit(1642436789.394:5027): avc: denied { getattr } for comm="Binder:581_2" path="/sys/devices/virtual/misc/msm_mp3/wakeup48/event_count" dev="sysfs" ino=61034 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+<4>[ 6203.481510] audit: audit_lost=2963 audit_rate_limit=5 audit_backlog_limit=64
+<3>[ 6203.481522] audit: rate limit exceeded
+<38>[ 6203.481882] type=1400 audit(1642436789.514:5028): avc: denied { read } for comm="Binder:581_2" name="wakeup27" dev="sysfs" ino=52502 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs_battery_supply:s0 tclass=dir permissive=1
+<14>[ 6204.136894] init: starting service 'qccvndhalservice'...
+<14>[ 6204.258044] init: Service 'qccvndhalservice' (pid 29073) exited with status 1
+<14>[ 6204.258131] init: Sending signal 9 to service 'qccvndhalservice' (pid 29073) process group...
+<14>[ 6204.259025] libprocessgroup: Successfully killed process cgroup uid 1000 pid 29073 in 0ms
+<14>[ 6204.308737] init: Service 'smartmu' (pid 29074) exited with status 0

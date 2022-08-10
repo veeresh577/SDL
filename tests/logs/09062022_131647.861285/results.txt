@@ -1,0 +1,31 @@
+. tests/test_PostalEnable.py::test_PostalEnable[5001-5000-Japanese Postal]
+R tests/test_PostalEnable.py::test_PostalEnable[5001-5000-Korean Postal]
+ test_PostalEnable.py:26: in test_PostalEnable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['123456'] == ['NR']
+ E     At index 0 diff: '123456' != 'NR'
+ E     Full diff:
+ E     - ['123456']
+ E     + ['NR']
+R tests/test_PostalEnable.py::test_PostalEnable[5001-5000-Korean Postal]
+ test_PostalEnable.py:26: in test_PostalEnable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['123456'] == ['NR']
+ E     At index 0 diff: '123456' != 'NR'
+ E     Full diff:
+ E     - ['123456']
+ E     + ['NR']
+F tests/test_PostalEnable.py::test_PostalEnable[5001-5000-Korean Postal]
+ test_PostalEnable.py:26: in test_PostalEnable
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['123456'] == ['NR']
+ E     At index 0 diff: '123456' != 'NR'
+ E     Full diff:
+ E     - ['123456']
+ E     + ['NR']
+. tests/test_PostalEnable.py::test_PostalEnable[5001-5000-US Planet ]
+. tests/test_PostalEnable.py::test_PostalEnable[5001-5000-US Postnet]
+. tests/test_PostalEnable.py::test_PostalEnable[5001-5000-Netherlands Postal]
+. tests/test_PostalEnable.py::test_PostalEnable[5001-5000-Australian Postal]
+. tests/test_PostalEnable.py::test_PostalEnable[5001-5000-UK Royal Mail]
+. tests/test_PostalEnable.py::test_PostalEnable[5001-5000-Intellimail]

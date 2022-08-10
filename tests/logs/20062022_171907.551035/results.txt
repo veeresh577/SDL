@@ -1,0 +1,65 @@
+R tests/test_OCRBoundary.py::test_OCRBoundary[5001-5000-OCR-B I, One Line]
+ test_OCRBoundary.py:26: in test_OCRBoundary
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['THIS IS A TEST LINE'] == ['THIS IS A TEST LIN']
+ E     At index 0 diff: 'THIS IS A TEST LINE' != 'THIS IS A TEST LIN'
+ E     Full diff:
+ E     - ['THIS IS A TEST LINE']
+ E     ?                     -
+ E     + ['THIS IS A TEST LIN']
+F tests/test_OCRBoundary.py::test_OCRBoundary[5001-5000-OCR-B I, One Line]
+ test_OCRBoundary.py:26: in test_OCRBoundary
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['THIS IS A TEST LINE'] == ['THIS IS A T|ST |IN']
+ E     At index 0 diff: 'THIS IS A TEST LINE' != 'THIS IS A T|ST |IN'
+ E     Full diff:
+ E     - ['THIS IS A TEST LINE']
+ E     ?              ^   ^  -
+ E     + ['THIS IS A T|ST |IN']
+ E     ?              ^   ^
+. tests/test_OCRBoundary.py::test_OCRBoundary[5001-5000-OCR-B III, Two Lines]
+R tests/test_OCRBoundary.py::test_OCRBoundary[5001-5000-OCR-B IV, Three Lines]
+ test_OCRBoundary.py:26: in test_OCRBoundary
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['YOU MUST AN...IDE YOUD SEE'] == ['NR']
+ E     At index 0 diff: 'YOU MUST ANSWER ME' != 'NR'
+ E     Left contains more items, first extra item: 'THESE QUESTIONS THREE'
+ E     Full diff:
+ E     - ['YOU MUST ANSWER ME', 'THESE QUESTIONS THREE', 'IF THE OTHER SIDE YOUD SEE']
+ E     + ['NR']
+. tests/test_OCRBoundary.py::test_OCRBoundary[5001-5000-OCR-B IV, Three Lines]
+. tests/test_OCRBoundary.py::test_OCRBoundary[5001-5000-OCR-B I, Three Lines]
+. tests/test_OCRBoundary.py::test_OCRBoundary[5001-5000-OCR-A I, 8 characters0]
+R tests/test_OCRBoundary.py::test_OCRBoundary[5001-5000-OCR-A I, 8 characters1]
+ test_OCRBoundary.py:26: in test_OCRBoundary
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['CROSSBOW'] == ['\xef\xbf\xbd . |']
+ E     At index 0 diff: 'CROSSBOW' != '\xef\xbf\xbd . |'
+ E     Full diff:
+ E     - ['CROSSBOW']
+ E     + ['\xef\xbf\xbd . |']
+F tests/test_OCRBoundary.py::test_OCRBoundary[5001-5000-OCR-A I, 8 characters1]
+ test_OCRBoundary.py:26: in test_OCRBoundary
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['CROSSBOW'] == ['(ROS$BOU']
+ E     At index 0 diff: 'CROSSBOW' != '(ROS$BOU'
+ E     Full diff:
+ E     - ['CROSSBOW']
+ E     ?   ^   ^  ^
+ E     + ['(ROS$BOU']
+ E     ?   ^   ^  ^
+. tests/test_OCRBoundary.py::test_OCRBoundary[5001-5000-OCR-A I, 11 characters0]
+R tests/test_OCRBoundary.py::test_OCRBoundary[5001-5000-OCR-A I, 11 characters1]
+ test_OCRBoundary.py:26: in test_OCRBoundary
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['ZWEIHANDERS'] == ['|TWANDER$']
+ E     At index 0 diff: 'ZWEIHANDERS' != '|TWANDER$'
+ E     Full diff:
+ E     - ['ZWEIHANDERS']
+ E     + ['|TWANDER$']
+E tests/test_OCRBoundary.py::test_OCRBoundary[5001-5000-OCR-A I, 11 characters1]
+ ../conftest.py:183: in logfolder
+     os.makedirs(logfolder)
+ ../../venv27/lib/python2.7/os.py:157: in makedirs
+     mkdir(name, mode)
+ E   OSError: [Errno 17] File exists: 'logs/20062022_171907.551035/212615225D0150'

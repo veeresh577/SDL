@@ -1,0 +1,59 @@
+<6>[ 3206.611405] IRQ 6: no longer affine to CPU7
+<14>[ 3209.594153] init: starting service 'qccsyshalservice'...
+<14>[ 3209.638938] init: starting service 'qccvndhalservice'...
+<14>[ 3209.671208] init: starting service 'smartmu'...
+<14>[ 3209.752321] init: Service 'qccvndhalservice' (pid 15668) exited with status 1
+<14>[ 3209.752428] init: Sending signal 9 to service 'qccvndhalservice' (pid 15668) process group...
+<14>[ 3209.753494] libprocessgroup: Successfully killed process cgroup uid 1000 pid 15668 in 0ms
+<12>[ 3210.801895] healthd: battery l=90 v=3878 t=47.0 h=2 st=2 c=-403320 fc=4008000 cc=2 chg=u
+<6>[ 3212.511453] IRQ 6: no longer affine to CPU5
+<14>[ 3214.689293] init: starting service 'qccvndhalservice'...
+<14>[ 3214.723567] init: starting service 'smartmu'...
+<14>[ 3214.779625] init: Service 'qccsyshalservice' (pid 15674) exited with status 1
+<14>[ 3214.779730] init: Sending signal 9 to service 'qccsyshalservice' (pid 15674) process group...
+<14>[ 3214.780607] libprocessgroup: Successfully killed process cgroup uid 1000 pid 15674 in 0ms
+<14>[ 3214.865075] init: Service 'smartmu' (pid 15676) exited with status 0
+<3>[ 3219.528399] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 3219.530202] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 3219.533233] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 3219.538574] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 3219.554898] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 3219.559819] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 3219.565451] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 3219.576066] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 3219.581239] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 3219.586599] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 3219.591893] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 3219.597289] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 3219.602426] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 3219.607937] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 3219.613380] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 3219.618994] [SDL] misc_ioctl msg.len is 4 : 0x7b 0x00 0x00 0x85 
+<3>[ 3219.635045] [SDL] misc_ioctl msg.len is 2 : 0x7d 0x80 
+<31>[ 3219.707249] logd: logdr: UID=0 GID=0 PID=15688 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[ 3219.732439] [SDL] misc_ioctl msg.len is 3 : 0x77 0x02 0x87 
+<3>[ 3219.732914] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<38>[ 3219.741067] type=1400 audit(1642433805.774:4506): avc: denied { search } for comm="qccsyshalservic" name="/" dev="sda10" ino=2 scontext=u:r:vendor_qccsyshal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[ 3219.772868] init: Service 'qccsyshalservice' (pid 15691) exited with status 1
+<14>[ 3219.772938] init: Sending signal 9 to service 'qccsyshalservice' (pid 15691) process group...
+<14>[ 3219.773683] libprocessgroup: Successfully killed process cgroup uid 1000 pid 15691 in 0ms
+<14>[ 3219.857879] init: Service 'smartmu' (pid 15696) exited with status 0
+<3>[ 3219.860413] msm_ispif_config:1061 Exit 
+<3>[ 3219.861038] msm_ispif_config2: Exit 
+<3>[ 3219.900711] frame_src is 1 frame_id is 2 blackjoe
+<3>[ 3219.933932] frame_src is 1 frame_id is 4 blackjoe
+<3>[ 3220.003721] frame_src is 1 frame_id is 6 blackjoe
+<3>[ 3220.036950] frame_src is 1 frame_id is 8 blackjoe
+<3>[ 3220.070223] frame_src is 1 frame_id is 10 blackjoe
+<3>[ 3220.086816] frame_src is 1 frame_id is 11 blackjoe
+<3>[ 3220.174798] frame_src is 1 frame_id is 16 blackjoe
+<3>[ 3220.191410] frame_src is 1 frame_id is 17 blackjoe
+<3>[ 3220.224652] frame_src is 1 frame_id is 19 blackjoe
+<3>[ 3220.257898] frame_src is 1 frame_id is 21 blackjoe
+<3>[ 3220.291145] frame_src is 1 frame_id is 23 blackjoe
+<3>[ 3220.307767] frame_src is 1 frame_id is 24 blackjoe
+<3>[ 3220.324391] frame_src is 1 frame_id is 25 blackjoe
+<3>[ 3220.340995] frame_src is 1 frame_id is 26 blackjoe
+<3>[ 3220.374279] frame_src is 1 frame_id is 28 blackjoe
+<3>[ 3220.407498] frame_src is 1 frame_id is 30 blackjoe
+<3>[ 3220.440737] frame_src is 1 frame_id is 32 blackjoe

@@ -1,0 +1,33 @@
+<14>[ 4162.396440] init: starting service 'qccsyshalservice'...
+<14>[ 4162.446329] init: starting service 'qccvndhalservice'...
+<14>[ 4162.481450] init: starting service 'smartmu'...
+<14>[ 4162.557477] init: Service 'qccsyshalservice' (pid 20229) exited with status 1
+<14>[ 4162.557568] init: Sending signal 9 to service 'qccsyshalservice' (pid 20229) process group...
+<14>[ 4162.558390] libprocessgroup: Successfully killed process cgroup uid 1000 pid 20229 in 0ms
+<14>[ 4162.579478] init: Service 'qccvndhalservice' (pid 20231) exited with status 1
+<14>[ 4162.579561] init: Sending signal 9 to service 'qccvndhalservice' (pid 20231) process group...
+<14>[ 4162.580430] libprocessgroup: Successfully killed process cgroup uid 1000 pid 20231 in 0ms
+<14>[ 4162.632044] init: Service 'smartmu' (pid 20232) exited with status 0
+<6>[ 4162.693012] IRQ 6: no longer affine to CPU4
+<14>[ 4167.443832] init: starting service 'qccsyshalservice'...
+<14>[ 4167.493535] init: starting service 'qccvndhalservice'...
+<14>[ 4167.528969] init: starting service 'smartmu'...
+<14>[ 4167.597417] init: Service 'qccsyshalservice' (pid 20236) exited with status 1
+<14>[ 4167.597534] init: Sending signal 9 to service 'qccsyshalservice' (pid 20236) process group...
+<14>[ 4167.600481] libprocessgroup: Successfully killed process cgroup uid 1000 pid 20236 in 2ms
+<14>[ 4167.609903] init: Service 'qccvndhalservice' (pid 20237) exited with status 1
+<14>[ 4167.609993] init: Sending signal 9 to service 'qccvndhalservice' (pid 20237) process group...
+<14>[ 4167.611491] libprocessgroup: Successfully killed process cgroup uid 1000 pid 20237 in 1ms
+<14>[ 4167.677604] init: Service 'smartmu' (pid 20238) exited with status 0
+<6>[ 4167.712395] IRQ 6: no longer affine to CPU6
+<12>[ 4170.801817] healthd: battery l=87 v=3854 t=47.0 h=2 st=2 c=-386230 fc=4008000 cc=2 chg=u
+<3>[ 4172.230161] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 4172.231774] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 4172.235058] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 4172.240612] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 4172.245720] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 4172.251190] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 4172.261971] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 4172.267381] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 4172.288521] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 4172.293860] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 

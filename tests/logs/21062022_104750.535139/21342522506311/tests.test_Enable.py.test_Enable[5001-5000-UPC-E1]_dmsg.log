@@ -1,0 +1,15 @@
+<12>[ 3923.676072] healthd: battery l=12 v=3278 t=28.0 h=2 st=2 c=-573730 fc=0 cc=7 chg=u
+<12>[ 3923.708054] healthd: battery l=12 v=3278 t=28.0 h=2 st=2 c=-573730 fc=0 cc=7 chg=u
+<12>[ 3923.734376] healthd: battery l=12 v=3278 t=28.0 h=2 st=2 c=-573730 fc=0 cc=7 chg=u
+<12>[ 3923.765937] healthd: battery l=12 v=3278 t=28.0 h=2 st=2 c=-573730 fc=0 cc=7 chg=u
+<12>[ 3923.831223] healthd: battery l=12 v=3278 t=28.0 h=2 st=2 c=-573730 fc=0 cc=7 chg=u
+<12>[ 3923.953050] healthd: battery l=12 v=3278 t=28.0 h=2 st=2 c=-573730 fc=0 cc=7 chg=u
+<6>[ 3924.011175] IRQ 6: no longer affine to CPU5
+<14>[ 3925.559421] init: starting service 'qccvndhalservice'...
+<38>[ 3925.584400] type=1400 audit(1654199684.745:6208): avc: denied { search } for comm="qccsyshalservic" name="/" dev="mmcblk0p37" ino=2 scontext=u:r:vendor_qccsyshal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<6>[ 3926.167344] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<6>[ 3926.167377] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 
+<3>[ 3928.265344] FUSIONWL: : ==Regulatory_scan_country_list_db_reset==: Reset complete for scan country list 
+<14>[ 3930.705320] init: Service 'qccsyshalservice' (pid 18283) exited with status 1
+<14>[ 3930.705495] init: Sending signal 9 to service 'qccsyshalservice' (pid 18283) process group...
+<14>[ 3930.707123] libprocessgroup: Successfully killed process cgroup uid 1000 pid 18283 in 0ms

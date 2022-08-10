@@ -1,0 +1,352 @@
+R tests/test_Supplemental.py::test_Supplemental[5001-5000-EAN-13 5-Supps0]
+ test_Supplemental.py:39: in test_Supplemental
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['4498765301535'] == ['NR']
+ E     At index 0 diff: '4498765301535' != 'NR'
+ E     Full diff:
+ E     - ['4498765301535']
+ E     + ['NR']
+F tests/test_Supplemental.py::test_Supplemental[5001-5000-EAN-13 5-Supps0]
+ test_Supplemental.py:39: in test_Supplemental
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['4498765301535'] == ['NR']
+ E     At index 0 diff: '4498765301535' != 'NR'
+ E     Full diff:
+ E     - ['4498765301535']
+ E     + ['NR']
+R tests/test_Supplemental.py::test_Supplemental[5001-5000-EAN-13 5-Supps1]
+ test_Supplemental.py:39: in test_Supplemental
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['449876530153512345'] == ['NR']
+ E     At index 0 diff: '449876530153512345' != 'NR'
+ E     Full diff:
+ E     - ['449876530153512345']
+ E     + ['NR']
+F tests/test_Supplemental.py::test_Supplemental[5001-5000-EAN-13 5-Supps1]
+ test_Supplemental.py:39: in test_Supplemental
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['449876530153512345'] == ['NR']
+ E     At index 0 diff: '449876530153512345' != 'NR'
+ E     Full diff:
+ E     - ['449876530153512345']
+ E     + ['NR']
+. tests/test_Supplemental.py::test_Supplemental[5001-5000-EAN-13 5-Supps2]
+R tests/test_Supplemental.py::test_Supplemental[5001-5000-EAN-13 5-Supps3]
+ test_Supplemental.py:39: in test_Supplemental
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['449876530153512345'] == ['NR']
+ E     At index 0 diff: '449876530153512345' != 'NR'
+ E     Full diff:
+ E     - ['449876530153512345']
+ E     + ['NR']
+F tests/test_Supplemental.py::test_Supplemental[5001-5000-EAN-13 5-Supps3]
+ test_Supplemental.py:39: in test_Supplemental
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['449876530153512345'] == ['NR']
+ E     At index 0 diff: '449876530153512345' != 'NR'
+ E     Full diff:
+ E     - ['449876530153512345']
+ E     + ['NR']
+R tests/test_Supplemental.py::test_Supplemental[5001-5000-EAN-13 5-Supps4]
+ test_Supplemental.py:39: in test_Supplemental
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['4498765301535'] == ['NR']
+ E     At index 0 diff: '4498765301535' != 'NR'
+ E     Full diff:
+ E     - ['4498765301535']
+ E     + ['NR']
+F tests/test_Supplemental.py::test_Supplemental[5001-5000-EAN-13 5-Supps4]
+ test_Supplemental.py:39: in test_Supplemental
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['4498765301535'] == ['NR']
+ E     At index 0 diff: '4498765301535' != 'NR'
+ E     Full diff:
+ E     - ['4498765301535']
+ E     + ['NR']
+R tests/test_Supplemental.py::test_Supplemental[5001-5000-EAN-13 5-Supps5]
+ test_Supplemental.py:39: in test_Supplemental
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['414123456789412345'] == ['NR']
+ E     At index 0 diff: '414123456789412345' != 'NR'
+ E     Full diff:
+ E     - ['414123456789412345']
+ E     + ['NR']
+F tests/test_Supplemental.py::test_Supplemental[5001-5000-EAN-13 5-Supps5]
+ test_Supplemental.py:39: in test_Supplemental
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['414123456789412345'] == ['NR']
+ E     At index 0 diff: '414123456789412345' != 'NR'
+ E     Full diff:
+ E     - ['414123456789412345']
+ E     + ['NR']
+R tests/test_Supplemental.py::test_Supplemental[5001-5000-Bookland]
+ test_Supplemental.py:39: in test_Supplemental
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['97934535223280001'] == ['NR']
+ E     At index 0 diff: '97934535223280001' != 'NR'
+ E     Full diff:
+ E     - ['97934535223280001']
+ E     + ['NR']
+F tests/test_Supplemental.py::test_Supplemental[5001-5000-Bookland]
+ test_Supplemental.py:39: in test_Supplemental
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['97934535223280001'] == ['NR']
+ E     At index 0 diff: '97934535223280001' != 'NR'
+ E     Full diff:
+ E     - ['97934535223280001']
+ E     + ['NR']
+R tests/test_Supplemental.py::test_Supplemental[5001-5000-EAN-13 5-Supps6]
+ test_Supplemental.py:39: in test_Supplemental
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['414123456789412345'] == ['NR']
+ E     At index 0 diff: '414123456789412345' != 'NR'
+ E     Full diff:
+ E     - ['414123456789412345']
+ E     + ['NR']
+F tests/test_Supplemental.py::test_Supplemental[5001-5000-EAN-13 5-Supps6]
+ test_Supplemental.py:39: in test_Supplemental
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['414123456789412345'] == ['NR']
+ E     At index 0 diff: '414123456789412345' != 'NR'
+ E     Full diff:
+ E     - ['414123456789412345']
+ E     + ['NR']
+R tests/test_Supplemental.py::test_Supplemental[5001-5000-EAN-13 5-Supps7]
+ test_Supplemental.py:39: in test_Supplemental
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['977123456789812345'] == ['NR']
+ E     At index 0 diff: '977123456789812345' != 'NR'
+ E     Full diff:
+ E     - ['977123456789812345']
+ E     + ['NR']
+F tests/test_Supplemental.py::test_Supplemental[5001-5000-EAN-13 5-Supps7]
+ test_Supplemental.py:39: in test_Supplemental
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['977123456789812345'] == ['NR']
+ E     At index 0 diff: '977123456789812345' != 'NR'
+ E     Full diff:
+ E     - ['977123456789812345']
+ E     + ['NR']
+R tests/test_Supplemental.py::test_Supplemental[5001-5000-EAN-13 5-Supps8]
+ test_Supplemental.py:39: in test_Supplemental
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['449876530153512345'] == ['NR']
+ E     At index 0 diff: '449876530153512345' != 'NR'
+ E     Full diff:
+ E     - ['449876530153512345']
+ E     + ['NR']
+F tests/test_Supplemental.py::test_Supplemental[5001-5000-EAN-13 5-Supps8]
+ test_Supplemental.py:39: in test_Supplemental
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['449876530153512345'] == ['NR']
+ E     At index 0 diff: '449876530153512345' != 'NR'
+ E     Full diff:
+ E     - ['449876530153512345']
+ E     + ['NR']
+R tests/test_Supplemental.py::test_Supplemental[5001-5000-EAN-13 5-Supps9]
+ test_Supplemental.py:39: in test_Supplemental
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['414123456789412345'] == ['NR']
+ E     At index 0 diff: '414123456789412345' != 'NR'
+ E     Full diff:
+ E     - ['414123456789412345']
+ E     + ['NR']
+F tests/test_Supplemental.py::test_Supplemental[5001-5000-EAN-13 5-Supps9]
+ test_Supplemental.py:39: in test_Supplemental
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['414123456789412345'] == ['NR']
+ E     At index 0 diff: '414123456789412345' != 'NR'
+ E     Full diff:
+ E     - ['414123456789412345']
+ E     + ['NR']
+R tests/test_SecurityLevel.py::test_SecurityLevel[5001-5000-Security Level 1]
+ test_SecurityLevel.py:36: in test_SecurityLevel
+     if barcode not in device.scanner.scan(symbology_num, subtest, barcode[0], size, use):
+ ../lib/scanner.py:32: in scan
+     self.device.wait.update(timeout=5000)
+ ../../venv27/local/lib/python2.7/site-packages/uiautomator/__init__.py:74: in __call__
+     return self.func(*args, **kwargs)
+ ../../venv27/local/lib/python2.7/site-packages/uiautomator/__init__.py:858: in _wait
+     return self.server.jsonrpc_wrap(timeout=http_timeout).waitForWindowUpdate(package_name, timeout)
+ ../../venv27/local/lib/python2.7/site-packages/uiautomator/__init__.py:421: in wrapper
+     return _method_obj(*args, **kwargs)
+ ../../venv27/local/lib/python2.7/site-packages/uiautomator/__init__.py:124: in __call__
+     result = urllib2.urlopen(req, timeout=self.timeout)
+ /usr/lib/python2.7/urllib2.py:154: in urlopen
+     return opener.open(url, data, timeout)
+ /usr/lib/python2.7/urllib2.py:429: in open
+     response = self._open(req, data)
+ /usr/lib/python2.7/urllib2.py:447: in _open
+     '_open', req)
+ /usr/lib/python2.7/urllib2.py:407: in _call_chain
+     result = func(*args)
+ /usr/lib/python2.7/urllib2.py:1228: in http_open
+     return self.do_open(httplib.HTTPConnection, req)
+ /usr/lib/python2.7/urllib2.py:1201: in do_open
+     r = h.getresponse(buffering=True)
+ /usr/lib/python2.7/httplib.py:1121: in getresponse
+     response.begin()
+ /usr/lib/python2.7/httplib.py:438: in begin
+     version, status, reason = self._read_status()
+ /usr/lib/python2.7/httplib.py:394: in _read_status
+     line = self.fp.readline(_MAXLINE + 1)
+ /usr/lib/python2.7/socket.py:480: in readline
+     data = self._sock.recv(self._rbufsize)
+ E   Failed: Timeout >45.0s
+. tests/test_SecurityLevel.py::test_SecurityLevel[5001-5000-Security Level 1]
+R tests/test_SecurityLevel.py::test_SecurityLevel[5001-5000-Security Level 2]
+ test_SecurityLevel.py:36: in test_SecurityLevel
+     if barcode not in device.scanner.scan(symbology_num, subtest, barcode[0], size, use):
+ ../lib/scanner.py:30: in scan
+     time.sleep(5)
+ E   Failed: Timeout >45.0s
+. tests/test_SecurityLevel.py::test_SecurityLevel[5001-5000-Security Level 2]
+R tests/test_SecurityLevel.py::test_SecurityLevel[5001-5000-Security Level 3]
+ test_SecurityLevel.py:36: in test_SecurityLevel
+     if barcode not in device.scanner.scan(symbology_num, subtest, barcode[0], size, use):
+ ../lib/scanner.py:30: in scan
+     time.sleep(5)
+ E   Failed: Timeout >45.0s
+. tests/test_SecurityLevel.py::test_SecurityLevel[5001-5000-Security Level 3]
+R tests/test_SecurityLevel.py::test_SecurityLevel[5001-5000-Security Level 4]
+ test_SecurityLevel.py:36: in test_SecurityLevel
+     if barcode not in device.scanner.scan(symbology_num, subtest, barcode[0], size, use):
+ ../lib/scanner.py:32: in scan
+     self.device.wait.update(timeout=5000)
+ ../../venv27/local/lib/python2.7/site-packages/uiautomator/__init__.py:74: in __call__
+     return self.func(*args, **kwargs)
+ ../../venv27/local/lib/python2.7/site-packages/uiautomator/__init__.py:858: in _wait
+     return self.server.jsonrpc_wrap(timeout=http_timeout).waitForWindowUpdate(package_name, timeout)
+ ../../venv27/local/lib/python2.7/site-packages/uiautomator/__init__.py:421: in wrapper
+     return _method_obj(*args, **kwargs)
+ ../../venv27/local/lib/python2.7/site-packages/uiautomator/__init__.py:124: in __call__
+     result = urllib2.urlopen(req, timeout=self.timeout)
+ /usr/lib/python2.7/urllib2.py:154: in urlopen
+     return opener.open(url, data, timeout)
+ /usr/lib/python2.7/urllib2.py:429: in open
+     response = self._open(req, data)
+ /usr/lib/python2.7/urllib2.py:447: in _open
+     '_open', req)
+ /usr/lib/python2.7/urllib2.py:407: in _call_chain
+     result = func(*args)
+ /usr/lib/python2.7/urllib2.py:1228: in http_open
+     return self.do_open(httplib.HTTPConnection, req)
+ /usr/lib/python2.7/urllib2.py:1201: in do_open
+     r = h.getresponse(buffering=True)
+ /usr/lib/python2.7/httplib.py:1121: in getresponse
+     response.begin()
+ /usr/lib/python2.7/httplib.py:438: in begin
+     version, status, reason = self._read_status()
+ /usr/lib/python2.7/httplib.py:394: in _read_status
+     line = self.fp.readline(_MAXLINE + 1)
+ /usr/lib/python2.7/socket.py:480: in readline
+     data = self._sock.recv(self._rbufsize)
+ E   Failed: Timeout >45.0s
+. tests/test_SecurityLevel.py::test_SecurityLevel[5001-5000-Security Level 4]
+R tests/test_SecurityLevel.py::test_SecurityLevel[5001-5000-Security Level 5]
+ test_SecurityLevel.py:36: in test_SecurityLevel
+     if barcode not in device.scanner.scan(symbology_num, subtest, barcode[0], size, use):
+ ../lib/scanner.py:30: in scan
+     time.sleep(5)
+ E   Failed: Timeout >45.0s
+F tests/test_SecurityLevel.py::test_SecurityLevel[5001-5000-Security Level 5]
+ test_SecurityLevel.py:36: in test_SecurityLevel
+     if barcode not in device.scanner.scan(symbology_num, subtest, barcode[0], size, use):
+ ../lib/scanner.py:32: in scan
+     self.device.wait.update(timeout=5000)
+ ../../venv27/local/lib/python2.7/site-packages/uiautomator/__init__.py:74: in __call__
+     return self.func(*args, **kwargs)
+ ../../venv27/local/lib/python2.7/site-packages/uiautomator/__init__.py:858: in _wait
+     return self.server.jsonrpc_wrap(timeout=http_timeout).waitForWindowUpdate(package_name, timeout)
+ ../../venv27/local/lib/python2.7/site-packages/uiautomator/__init__.py:425: in wrapper
+     server.start(timeout=30)
+ ../../venv27/local/lib/python2.7/site-packages/uiautomator/__init__.py:481: in start
+     raise IOError("RPC server not started!")
+ E   IOError: RPC server not started!
+E tests/test_SecurityLevel.py::test_SecurityLevel[5001-5000-Security Level 5]
+ ../conftest.py:215: in func
+     device.scanner.setparam(request.param)
+ ../lib/scanner.py:53: in setparam
+     self.device.wait.update(timeout=5000)
+ ../../venv27/local/lib/python2.7/site-packages/uiautomator/__init__.py:74: in __call__
+     return self.func(*args, **kwargs)
+ ../../venv27/local/lib/python2.7/site-packages/uiautomator/__init__.py:858: in _wait
+     return self.server.jsonrpc_wrap(timeout=http_timeout).waitForWindowUpdate(package_name, timeout)
+ ../../venv27/local/lib/python2.7/site-packages/uiautomator/__init__.py:425: in wrapper
+     server.start(timeout=30)
+ ../../venv27/local/lib/python2.7/site-packages/uiautomator/__init__.py:481: in start
+     raise IOError("RPC server not started!")
+ E   IOError: RPC server not started!
+R tests/test_SecurityLevel.py::test_SecurityLevel[5001-5000-Security Level 6]
+ test_SecurityLevel.py:36: in test_SecurityLevel
+     if barcode not in device.scanner.scan(symbology_num, subtest, barcode[0], size, use):
+ ../lib/scanner.py:26: in scan
+     self.kindle.image(symbology_num + ".png")
+ ../lib/kindle.py:137: in image
+     self.kindle_send(file_to_send, False)
+ ../lib/kindle.py:53: in kindle_send
+     self.port.write(msg)
+ ../../venv27/local/lib/python2.7/site-packages/serial/serialposix.py:556: in write
+     abort, ready, _ = select.select([self.pipe_abort_write_r], [self.fd], [], None)
+ E   Failed: Timeout >45.0s
+. tests/test_SecurityLevel.py::test_SecurityLevel[5001-5000-Security Level 6]
+R tests/test_SecurityLevel.py::test_SecurityLevel[5001-5000-Security Level 7]
+ test_SecurityLevel.py:36: in test_SecurityLevel
+     if barcode not in device.scanner.scan(symbology_num, subtest, barcode[0], size, use):
+ ../lib/scanner.py:26: in scan
+     self.kindle.image(symbology_num + ".png")
+ ../lib/kindle.py:153: in image
+     time.sleep(DISPLAY_SLEEP)
+ E   Failed: Timeout >45.0s
+. tests/test_SecurityLevel.py::test_SecurityLevel[5001-5000-Security Level 7]
+R tests/test_SecurityLevel.py::test_SecurityLevel[5001-5000-Security Level 8]
+ test_SecurityLevel.py:36: in test_SecurityLevel
+     if barcode not in device.scanner.scan(symbology_num, subtest, barcode[0], size, use):
+ ../lib/scanner.py:30: in scan
+     time.sleep(5)
+ E   Failed: Timeout >45.0s
+. tests/test_SecurityLevel.py::test_SecurityLevel[5001-5000-Security Level 8]
+R tests/test_SecurityLevel.py::test_SecurityLevel[5001-5000-Security Level 9]
+ test_SecurityLevel.py:36: in test_SecurityLevel
+     if barcode not in device.scanner.scan(symbology_num, subtest, barcode[0], size, use):
+ ../lib/scanner.py:40: in scan
+     barcodes = self.device.server.adb.cmd('logcat -d | grep -i', 'SDL_SCAN').communicate()[0]
+ /usr/lib/python2.7/subprocess.py:479: in communicate
+     return self._communicate(input)
+ /usr/lib/python2.7/subprocess.py:1098: in _communicate
+     stdout, stderr = self._communicate_with_poll(input)
+ /usr/lib/python2.7/subprocess.py:1152: in _communicate_with_poll
+     ready = poller.poll()
+ E   Failed: Timeout >45.0s
+. tests/test_SecurityLevel.py::test_SecurityLevel[5001-5000-Security Level 9]
+R tests/test_SecurityLevel.py::test_SecurityLevel[5001-5000-Security Level 10]
+ test_SecurityLevel.py:36: in test_SecurityLevel
+     if barcode not in device.scanner.scan(symbology_num, subtest, barcode[0], size, use):
+ ../lib/scanner.py:40: in scan
+     barcodes = self.device.server.adb.cmd('logcat -d | grep -i', 'SDL_SCAN').communicate()[0]
+ /usr/lib/python2.7/subprocess.py:479: in communicate
+     return self._communicate(input)
+ /usr/lib/python2.7/subprocess.py:1098: in _communicate
+     stdout, stderr = self._communicate_with_poll(input)
+ /usr/lib/python2.7/subprocess.py:1152: in _communicate_with_poll
+     ready = poller.poll()
+ E   Failed: Timeout >45.0s
+. tests/test_SecurityLevel.py::test_SecurityLevel[5001-5000-Security Level 10]
+R tests/test_SecurityLevel.py::test_SecurityLevel[5001-5000-Security Level 11]
+ test_SecurityLevel.py:36: in test_SecurityLevel
+     if barcode not in device.scanner.scan(symbology_num, subtest, barcode[0], size, use):
+ ../lib/scanner.py:40: in scan
+     barcodes = self.device.server.adb.cmd('logcat -d | grep -i', 'SDL_SCAN').communicate()[0]
+ /usr/lib/python2.7/subprocess.py:479: in communicate
+     return self._communicate(input)
+ /usr/lib/python2.7/subprocess.py:1098: in _communicate
+     stdout, stderr = self._communicate_with_poll(input)
+ /usr/lib/python2.7/subprocess.py:1152: in _communicate_with_poll
+     ready = poller.poll()
+ E   Failed: Timeout >45.0s
+E tests/test_SecurityLevel.py::test_SecurityLevel[5001-5000-Security Level 11]
+ ../conftest.py:183: in logfolder
+     os.makedirs(logfolder)
+ ../../venv27/lib/python2.7/os.py:157: in makedirs
+     mkdir(name, mode)
+ E   OSError: [Errno 17] File exists: 'logs/21062022_192402.165213/212615225D0150'

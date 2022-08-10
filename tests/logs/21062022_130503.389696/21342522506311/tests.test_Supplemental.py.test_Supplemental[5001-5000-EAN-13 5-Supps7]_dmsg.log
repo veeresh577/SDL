@@ -1,0 +1,21 @@
+<4>[10272.636570] FG: is_batt_empty: batt_soc_rt_sts: 32 vbatt: 2950431 uV msoc:0
+<12>[10272.683643] healthd: battery l=0 v=2950 t=28.0 h=2 st=2 c=-495605 fc=0 cc=7 chg=u
+<4>[10272.702338] FG: is_batt_empty: batt_soc_rt_sts: 32 vbatt: 2950431 uV msoc:0
+<14>[10272.705049] init: starting service 'qccvndhalservice'...
+<14>[10272.833948] init: Service 'qccsyshalservice' (pid 28244) exited with status 1
+<14>[10272.834073] init: Sending signal 9 to service 'qccsyshalservice' (pid 28244) process group...
+<14>[10272.835224] libprocessgroup: Successfully killed process cgroup uid 1000 pid 28244 in 0ms
+<14>[10273.019047] init: Service 'qccvndhalservice' (pid 28246) exited with status 1
+<14>[10273.019159] init: Sending signal 9 to service 'qccvndhalservice' (pid 28246) process group...
+<14>[10273.020370] libprocessgroup: Successfully killed process cgroup uid 1000 pid 28246 in 0ms
+<4>[10274.734804] FG: is_batt_empty: batt_soc_rt_sts: 32 vbatt: 2970451 uV msoc:0
+<4>[10274.762842] FG: is_batt_empty: batt_soc_rt_sts: 32 vbatt: 2970451 uV msoc:0
+<12>[10274.784602] healthd: battery l=0 v=2970 t=28.0 h=2 st=2 c=-384277 fc=0 cc=7 chg=u
+<4>[10274.802148] FG: is_batt_empty: batt_soc_rt_sts: 32 vbatt: 2970451 uV msoc:0
+<4>[10274.849248] FG: is_batt_empty: batt_soc_rt_sts: 32 vbatt: 2970451 uV msoc:0
+<6>[10275.329545] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<6>[10275.329578] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 
+<4>[10275.984081] FG: is_batt_empty: batt_soc_rt_sts: 32 vbatt: 2910637 uV msoc:0
+<4>[10276.007000] FG: is_batt_empty: batt_soc_rt_sts: 32 vbatt: 2910637 uV msoc:0
+<12>[10276.043705] healthd: battery l=0 v=2910 t=28.0 h=2 st=2 c=-733886 fc=0 cc=7 chg=u
+<4>[10276.086483] FG: is_batt_empty: batt_soc_rt_sts: 32 vbatt: 2910637 uV msoc:0

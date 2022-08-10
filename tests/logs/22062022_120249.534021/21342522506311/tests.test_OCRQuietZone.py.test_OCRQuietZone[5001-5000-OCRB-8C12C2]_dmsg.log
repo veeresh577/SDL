@@ -1,0 +1,32 @@
+<14>[83036.257892] init: starting service 'qccsyshalservice'...
+<14>[83036.400423] init: Service 'qccsyshalservice' (pid 11749) exited with status 1
+<14>[83036.400539] init: Sending signal 9 to service 'qccsyshalservice' (pid 11749) process group...
+<14>[83036.426637] init: Service 'qccvndhalservice' (pid 11750) exited with status 1
+<14>[83036.426713] init: Sending signal 9 to service 'qccvndhalservice' (pid 11750) process group...
+<14>[83036.427588] libprocessgroup: Successfully killed process cgroup uid 1000 pid 11750 in 0ms
+<14>[83041.439580] init: Service 'qccsyshalservice' (pid 11763) exited with status 1
+<14>[83041.440551] libprocessgroup: Successfully killed process cgroup uid 1000 pid 11763 in 0ms
+<14>[83041.468257] init: Service 'qccvndhalservice' (pid 11764) exited with status 1
+<14>[83041.468358] init: Sending signal 9 to service 'qccvndhalservice' (pid 11764) process group...
+<14>[83041.469460] libprocessgroup: Successfully killed process cgroup uid 1000 pid 11764 in 0ms
+<6>[83042.273161] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<6>[83042.273184] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 
+<3>[83044.354646] [schedu][0x174184058f8][20:58:32.405856] wlan: [2028:E:scan] scm_11d_elected_country_algo_fcc: 98: No AP with 11d Country code is present in scan list
+<3>[83044.354787] FUSIONWL: : ==Regulatory_elect_country_db==: No AP with 11d Country code is present in scan list 
+<3>[83044.370323] FUSIONWL: : ==Regulatory_scan_country_list_db_reset==: Reset complete for scan country list 
+<14>[83046.348084] init: starting service 'qccsyshalservice'...
+<14>[83046.395954] init: starting service 'qccvndhalservice'...
+<38>[83046.427912] type=1400 audit(1654289914.468:192637): avc: denied { search } for comm="qccsyshalservic" name="/" dev="mmcblk0p37" ino=2 scontext=u:r:vendor_qccsyshal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[83046.482015] init: Service 'qccsyshalservice' (pid 11767) exited with status 1
+<14>[83046.482115] init: Sending signal 9 to service 'qccsyshalservice' (pid 11767) process group...
+<14>[83046.482954] libprocessgroup: Successfully killed process cgroup uid 1000 pid 11767 in 0ms
+<14>[83046.514353] init: Service 'qccvndhalservice' (pid 11768) exited with status 1
+<14>[83046.514476] init: Sending signal 9 to service 'qccvndhalservice' (pid 11768) process group...
+<14>[83046.515853] libprocessgroup: Successfully killed process cgroup uid 1000 pid 11768 in 0ms
+<3>[83048.483591] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[83048.493903] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[83048.494407] [SDL] se47xx_misc_ioctl ret = -107 
+<3>[83048.498119] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[83048.503084] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[83048.508323] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[83048.513745] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 

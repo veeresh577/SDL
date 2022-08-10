@@ -1,0 +1,34 @@
+<14>[ 6178.896331] init: starting service 'qccsyshalservice'...
+<14>[ 6178.946599] init: starting service 'qccvndhalservice'...
+<14>[ 6179.060510] init: Service 'qccsyshalservice' (pid 28950) exited with status 1
+<14>[ 6179.060659] init: Sending signal 9 to service 'qccsyshalservice' (pid 28950) process group...
+<14>[ 6179.062394] libprocessgroup: Successfully killed process cgroup uid 1000 pid 28950 in 0ms
+<14>[ 6179.100556] init: Service 'qccvndhalservice' (pid 28951) exited with status 1
+<14>[ 6179.100651] init: Sending signal 9 to service 'qccvndhalservice' (pid 28951) process group...
+<14>[ 6179.103130] libprocessgroup: Successfully killed process cgroup uid 1000 pid 28951 in 1ms
+<14>[ 6183.944482] init: starting service 'qccsyshalservice'...
+<14>[ 6184.027740] init: starting service 'smartmu'...
+<14>[ 6184.106518] init: Service 'qccsyshalservice' (pid 28957) exited with status 1
+<14>[ 6184.106603] init: Sending signal 9 to service 'qccsyshalservice' (pid 28957) process group...
+<14>[ 6184.107357] libprocessgroup: Successfully killed process cgroup uid 1000 pid 28957 in 0ms
+<6>[ 6186.971364] IRQ 6: no longer affine to CPU7
+<3>[ 6187.584595] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 6187.602953] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 6187.614357] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 6187.619007] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 6187.627398] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 6187.629432] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 6187.635938] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 6187.640713] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 6187.645701] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 6187.650777] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 6187.656677] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 6187.661799] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 6187.672162] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 6187.678201] [SDL] misc_ioctl msg.len is 4 : 0x7b 0x00 0x00 0x85 
+<3>[ 6187.683229] [SDL] misc_ioctl msg.len is 2 : 0x84 0x00 
+<3>[ 6187.694228] [SDL] misc_ioctl msg.len is 2 : 0x7d 0x80 
+<3>[ 6187.798095] [SDL] misc_ioctl msg.len is 3 : 0x77 0x02 0x87 
+<3>[ 6187.798707] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 6187.984876] msm_ispif_config:1061 Exit 
+<3>[ 6187.985382] msm_ispif_config2: Exit 

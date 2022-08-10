@@ -1,0 +1,8 @@
+<6>[ 9755.199090] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<6>[ 9755.199112] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 
+<3>[ 9757.283716] [schedu][0x1381dda5f75][21:31:56.449952] wlan: [2070:E:scan] scm_11d_elected_country_algo_fcc: 98: No AP with 11d Country code is present in scan list
+<3>[ 9757.283827] FUSIONWL: : ==Regulatory_elect_country_db==: No AP with 11d Country code is present in scan list 
+<3>[ 9757.300464] FUSIONWL: : ==Regulatory_scan_country_list_db_reset==: Reset complete for scan country list 
+<14>[ 9758.493871] init: starting service 'qccsyshalservice'...
+<14>[ 9758.702019] init: starting service 'qccvndhalservice'...
+<38>[ 9760.930399] type=1400 audit(1654205520.085:6670): avc: denied { kill } for comm="swapper/3" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1

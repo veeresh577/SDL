@@ -1,0 +1,32 @@
+<6>[ 1795.648441] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<6>[ 1795.648472] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 
+<14>[ 1796.987550] init: starting service 'qccvndhalservice'...
+<3>[ 1797.745819] FUSIONWL: : ==Regulatory_scan_country_list_db_reset==: Reset complete for scan country list 
+<38>[ 1800.793752] type=1400 audit(1654197559.955:5725): avc: denied { read } for comm="Binder:569_1" name="wakeup48" dev="sysfs" ino=68359 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=1
+<38>[ 1800.797362] type=1400 audit(1654197559.955:5726): avc: denied { open } for comm="Binder:569_1" path="/sys/devices/virtual/misc/msm_mp3/wakeup48" dev="sysfs" ino=68359 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=1
+<38>[ 1800.797617] type=1400 audit(1654197559.955:5727): avc: denied { read } for comm="Binder:569_1" name="event_count" dev="sysfs" ino=68366 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+<38>[ 1800.797840] type=1400 audit(1654197559.955:5728): avc: denied { open } for comm="Binder:569_1" path="/sys/devices/virtual/misc/msm_mp3/wakeup48/event_count" dev="sysfs" ino=68366 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+<38>[ 1800.798054] type=1400 audit(1654197559.955:5729): avc: denied { getattr } for comm="Binder:569_1" path="/sys/devices/virtual/misc/msm_mp3/wakeup48/event_count" dev="sysfs" ino=68366 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+<14>[ 1801.987866] init: starting service 'qccsyshalservice'...
+<14>[ 1802.034648] init: starting service 'qccvndhalservice'...
+<14>[ 1802.183783] init: Service 'qccvndhalservice' (pid 9023) exited with status 1
+<14>[ 1802.183931] init: Sending signal 9 to service 'qccvndhalservice' (pid 9023) process group...
+<14>[ 1802.185353] libprocessgroup: Successfully killed process cgroup uid 1000 pid 9023 in 0ms
+<6>[ 1803.910988] IRQ 6: no longer affine to CPU4
+<3>[ 1806.133195] [SDL] se47xx_misc_ioctl ret = -107 
+<3>[ 1806.152773] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 1806.157830] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 1806.174379] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 1806.179085] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 1806.189767] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 1806.196557] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 1806.200672] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 1806.294951] [SDL] misc_ioctl msg.len is 3 : 0x77 0x02 0x87 
+<3>[ 1806.295323] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<31>[ 1806.310008] logd: logdr: UID=0 GID=0 PID=9035 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[ 1806.414096] msm_isp_open_node: reset VFE
+<3>[ 1806.426178] msm_ispif_config:1061 Exit 
+<3>[ 1806.426535] msm_ispif_config2: Exit 
+<31>[ 1806.449381] logd: logdr: UID=0 GID=0 PID=9040 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[ 1806.476610] frame_src is 1 frame_id is 1 blackjoe
+<3>[ 1806.545356] frame_src is 1 frame_id is 3 blackjoe

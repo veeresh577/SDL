@@ -1,0 +1,3 @@
+<31>[ 2333.362902] logd: Skipping 18446744073709551601 entries from slow reader, pid 11284, from LogBuffer::kickMe()
+<6>[ 2335.798584] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<6>[ 2335.798615] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 

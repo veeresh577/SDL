@@ -1,0 +1,6 @@
+<14>[87855.060410] init: Service 'qccvndhalservice' (pid 19462) exited with status 1
+<6>[87855.129496] IRQ 6: no longer affine to CPU4
+<12>[87855.748775] healthd: battery l=14 v=3292 t=44.0 h=2 st=2 c=-535155 fc=4008000 cc=2 chg=u
+<14>[87859.893011] init: starting service 'smartmu'...
+<14>[87859.935325] init: starting service 'qccsyshalservice'...
+<38>[87859.997719] type=1400 audit(1642520777.621:12141): avc: denied { search } for comm="qccsyshalservic" name="/" dev="sda10" ino=2 scontext=u:r:vendor_qccsyshal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1

@@ -1,0 +1,30 @@
+<38>[ 9520.812371] type=1400 audit(1654205279.975:6605): avc: denied { kill } for comm="swapper/3" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<3>[ 9521.591380] GBSOC->2, GBTemp->280, GBTTE->17, GBTTF->65535
+<4>[ 9521.594057] FG: is_batt_empty: batt_soc_rt_sts: 32 vbatt: 3100822 uV msoc:0
+<4>[ 9521.613630] FG: is_batt_empty: batt_soc_rt_sts: 32 vbatt: 3100822 uV msoc:0
+<12>[ 9521.633917] healthd: battery l=2 v=3100 t=28.0 h=2 st=2 c=-282226 fc=0 cc=7 chg=u
+<4>[ 9521.642010] FG: is_batt_empty: batt_soc_rt_sts: 32 vbatt: 3100822 uV msoc:0
+<14>[ 9521.669978] init: starting service 'qccsyshalservice'...
+<14>[ 9521.865147] init: starting service 'qccvndhalservice'...
+<14>[ 9521.923582] init: Service 'qccsyshalservice' (pid 26045) exited with status 1
+<14>[ 9521.923674] init: Sending signal 9 to service 'qccsyshalservice' (pid 26045) process group...
+<14>[ 9521.924531] libprocessgroup: Successfully killed process cgroup uid 1000 pid 26045 in 0ms
+<14>[ 9522.048975] init: Service 'qccvndhalservice' (pid 26046) exited with status 1
+<14>[ 9522.049056] init: Sending signal 9 to service 'qccvndhalservice' (pid 26046) process group...
+<14>[ 9522.049921] libprocessgroup: Successfully killed process cgroup uid 1000 pid 26046 in 0ms
+<38>[ 9522.885011] type=1400 audit(1654205282.045:6606): avc: denied { read } for comm="Binder:569_1" name="wakeup48" dev="sysfs" ino=68359 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=1
+<38>[ 9522.888573] type=1400 audit(1654205282.045:6607): avc: denied { open } for comm="Binder:569_1" path="/sys/devices/virtual/misc/msm_mp3/wakeup48" dev="sysfs" ino=68359 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=1
+<38>[ 9522.888877] type=1400 audit(1654205282.045:6608): avc: denied { read } for comm="Binder:569_1" name="event_count" dev="sysfs" ino=68366 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+<38>[ 9522.889130] type=1400 audit(1654205282.045:6609): avc: denied { open } for comm="Binder:569_1" path="/sys/devices/virtual/misc/msm_mp3/wakeup48/event_count" dev="sysfs" ino=68366 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+<38>[ 9522.889356] type=1400 audit(1654205282.045:6610): avc: denied { getattr } for comm="Binder:569_1" path="/sys/devices/virtual/misc/msm_mp3/wakeup48/event_count" dev="sysfs" ino=68366 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+<3>[ 9523.375605] audit: rate limit exceeded
+<6>[ 9523.662338] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<6>[ 9523.662360] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 
+<3>[ 9525.744326] [schedu][0x13714e0914a][21:28:04.910563] wlan: [2070:E:scan] scm_11d_elected_country_algo_fcc: 98: No AP with 11d Country code is present in scan list
+<3>[ 9525.744445] FUSIONWL: : ==Regulatory_elect_country_db==: No AP with 11d Country code is present in scan list 
+<3>[ 9525.757954] FUSIONWL: : ==Regulatory_scan_country_list_db_reset==: Reset complete for scan country list 
+<14>[ 9526.743244] init: starting service 'qccsyshalservice'...
+<14>[ 9526.904792] init: starting service 'qccvndhalservice'...
+<14>[ 9526.953808] init: Service 'qccsyshalservice' (pid 26055) exited with status 1
+<14>[ 9526.953927] init: Sending signal 9 to service 'qccsyshalservice' (pid 26055) process group...
+<14>[ 9526.954831] libprocessgroup: Successfully killed process cgroup uid 1000 pid 26055 in 0ms

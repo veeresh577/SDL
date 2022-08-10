@@ -1,0 +1,29 @@
+<6>[ 3705.071717] IRQ 6: no longer affine to CPU7
+<6>[ 3708.171445] IRQ 6: no longer affine to CPU7
+<14>[ 3708.655458] init: starting service 'qccsyshalservice'...
+<14>[ 3708.700957] init: starting service 'qccvndhalservice'...
+<14>[ 3708.736633] init: starting service 'smartmu'...
+<14>[ 3708.841296] init: Service 'qccvndhalservice' (pid 18035) exited with status 1
+<14>[ 3708.841450] init: Sending signal 9 to service 'qccvndhalservice' (pid 18035) process group...
+<14>[ 3708.843852] libprocessgroup: Successfully killed process cgroup uid 1000 pid 18035 in 1ms
+<14>[ 3713.699874] init: starting service 'qccsyshalservice'...
+<14>[ 3713.786614] init: starting service 'smartmu'...
+<3>[ 3714.324198] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 3714.326177] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 3714.329149] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 3714.355616] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 3714.361225] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 3714.366459] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 3714.377146] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 3714.387862] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 3714.398430] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 3714.409229] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 3714.415114] [SDL] misc_ioctl msg.len is 4 : 0x7b 0x00 0x00 0x85 
+<3>[ 3714.419893] [SDL] misc_ioctl msg.len is 2 : 0x84 0x00 
+<3>[ 3714.426068] [SDL] misc_ioctl msg.len is 4 : 0x82 0x00 0x00 0x7e 
+<3>[ 3714.431045] [SDL] misc_ioctl msg.len is 2 : 0x7d 0x80 
+<3>[ 3714.524347] [SDL] misc_ioctl msg.len is 3 : 0x77 0x02 0x87 
+<3>[ 3714.524920] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 3714.672369] msm_ispif_config:1061 Exit 
+<3>[ 3714.672862] msm_ispif_config2: Exit 
+<3>[ 3714.708245] frame_src is 1 frame_id is 2 blackjoe

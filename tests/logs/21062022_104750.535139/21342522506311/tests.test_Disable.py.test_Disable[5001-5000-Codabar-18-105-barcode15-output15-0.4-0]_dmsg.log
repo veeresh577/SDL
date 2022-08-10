@@ -1,0 +1,8 @@
+<6>[ 2741.671146] IRQ 6: no longer affine to CPU5
+<3>[ 2743.604365] qcom-lpi-pinctrl 15070000.lpi_pinctrl: lpi_pinctrl_runtime_resume: unable to get core clk handle -2
+<6>[ 2743.608681] afe_close: port_id = 0x102e
+<3>[ 2743.700863] qcom-lpi-pinctrl 15070000.lpi_pinctrl: lpi_pinctrl_runtime_suspend: unable to get core clk handle -2
+<14>[ 2744.940495] init: starting service 'qccsyshalservice'...
+<14>[ 2745.083479] init: Service 'qccsyshalservice' (pid 13151) exited with status 1
+<14>[ 2745.083671] init: Sending signal 9 to service 'qccsyshalservice' (pid 13151) process group...
+<14>[ 2745.085434] libprocessgroup: Successfully killed process cgroup uid 1000 pid 13151 in 1ms

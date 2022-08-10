@@ -1,0 +1,44 @@
+<38>[ 7384.126397] type=1400 audit(1653169861.174:11107): avc: denied { kill } for comm="swapper/2" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<3>[ 7384.204533] qcom-lpi-pinctrl 15070000.lpi_pinctrl: lpi_pinctrl_runtime_resume: unable to get core clk handle -2
+<6>[ 7384.207607] afe_close: port_id = 0x102e
+<3>[ 7384.301246] qcom-lpi-pinctrl 15070000.lpi_pinctrl: lpi_pinctrl_runtime_suspend: unable to get core clk handle -2
+<6>[ 7386.973293] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<6>[ 7386.973317] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 
+<14>[ 7388.198346] init: starting service 'qccvndhalservice'...
+<38>[ 7388.265110] type=1400 audit(1653169865.314:11108): avc: denied { search } for comm="vendor.qti.hard" name="/" dev="mmcblk0p37" ino=2 scontext=u:r:vendor_hal_qccvndhal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[ 7388.313510] init: Service 'qccvndhalservice' (pid 15778) exited with status 1
+<14>[ 7388.313627] init: Sending signal 9 to service 'qccvndhalservice' (pid 15778) process group...
+<14>[ 7388.314924] libprocessgroup: Successfully killed process cgroup uid 1000 pid 15778 in 0ms
+<3>[ 7389.071199] FUSIONWL: : ==Regulatory_scan_country_list_db_reset==: Reset complete for scan country list 
+<38>[ 7390.402991] type=1400 audit(1653169867.444:11111): avc: denied { associate } for comm="Binder:2004_4" name="globalAlert" scontext=u:object_r:proc_net:s0 tcontext=u:object_r:proc:s0 tclass=filesystem permissive=1
+<14>[ 7393.239310] init: starting service 'qccvndhalservice'...
+<14>[ 7393.322782] libprocessgroup: Successfully killed process cgroup uid 1000 pid 15781 in 0ms
+<14>[ 7393.351393] init: Service 'qccvndhalservice' (pid 15782) exited with status 1
+<14>[ 7393.351537] init: Sending signal 9 to service 'qccvndhalservice' (pid 15782) process group...
+<14>[ 7393.353374] libprocessgroup: Successfully killed process cgroup uid 1000 pid 15782 in 1ms
+<38>[ 7394.130433] type=1400 audit(1653169871.174:11112): avc: denied { kill } for comm="swapper/2" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<3>[ 7396.272227] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 7396.282517] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 7396.282825] [SDL] se47xx_misc_ioctl ret = -107 
+<3>[ 7396.286660] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 7396.291565] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 7396.296878] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 7396.307243] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 7396.312822] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 7396.317947] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 7396.379665] msm_isp_open_node: reset VFE
+<31>[ 7396.574138] logd: logdr: UID=0 GID=0 PID=15798 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[ 7396.591066] moto_se4750_sensor_config32:2407 se475x CFGTYPE : 2  
+<3>[ 7396.591173] moto_se4750_sensor_config32 CFG_WRITE_I2C_ARRAY size= 0
+<3>[ 7396.650615] moto_se4750_sensor_config32 CFG_WRITE_I2C_ARRAY size= 0
+<3>[ 7396.659120] [SDL] misc_ioctl msg.len is 3 : 0x77 0x02 0x87 
+<3>[ 7396.663085] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 7396.737417] frame_src is 1 frame_id is 2 blackjoe
+<31>[ 7396.740496] logd: logdr: UID=0 GID=0 PID=15811 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[ 7396.838115] qcom-lpi-pinctrl 15070000.lpi_pinctrl: lpi_pinctrl_runtime_resume: unable to get core clk handle -2
+<3>[ 7396.851453] moto_se4750_sensor_config32:2407 se475x CFGTYPE : 2  
+<3>[ 7396.851500] moto_se4750_sensor_config32 CFG_WRITE_I2C_ARRAY size= 0
+<3>[ 7396.856600] moto_se4750_sensor_config32:2477 se475x failed
+<3>[ 7396.887516] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 7396.887851] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 7396.899119] [SDL] se47xx_misc_ioctl ret = -107 

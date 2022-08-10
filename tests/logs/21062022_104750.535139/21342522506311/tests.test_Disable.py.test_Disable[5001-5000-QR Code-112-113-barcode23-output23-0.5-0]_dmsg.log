@@ -1,0 +1,9 @@
+<6>[ 3041.731223] IRQ 6: no longer affine to CPU4
+<14>[ 3042.418174] init: starting service 'qccsyshalservice'...
+<14>[ 3042.466739] init: starting service 'qccvndhalservice'...
+<38>[ 3042.535183] type=1400 audit(1654198801.695:5992): avc: denied { search } for comm="vendor.qti.hard" name="/" dev="mmcblk0p37" ino=2 scontext=u:r:vendor_hal_qccvndhal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[ 3042.609571] init: Service 'qccvndhalservice' (pid 14386) exited with status 1
+<14>[ 3042.609702] init: Sending signal 9 to service 'qccvndhalservice' (pid 14386) process group...
+<14>[ 3042.611781] libprocessgroup: Successfully killed process cgroup uid 1000 pid 14386 in 1ms
+<3>[ 3043.874437] qcom-lpi-pinctrl 15070000.lpi_pinctrl: lpi_pinctrl_runtime_resume: unable to get core clk handle -2
+<6>[ 3043.877777] afe_close: port_id = 0x102e

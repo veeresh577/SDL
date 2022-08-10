@@ -1,0 +1,4 @@
+<14>[ 9652.728838] init: starting service 'qccsyshalservice'...
+<3>[ 9652.791396] GBSOC->1, GBTemp->280, GBTTE->0, GBTTF->65535
+<4>[ 9652.794409] FG: is_batt_empty: batt_soc_rt_sts: 32 vbatt: 3068839 uV msoc:0
+<4>[ 9652.815132] FG: is_batt_empty: batt_soc_rt_sts: 32 vbatt: 3068839 uV msoc:0

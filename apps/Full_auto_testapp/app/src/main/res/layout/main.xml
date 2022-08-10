@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+	android:paddingLeft="@dimen/activity_horizontal_margin"
+	android:paddingRight="@dimen/activity_horizontal_margin"
+    android:orientation="vertical" >
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="58dp"
+		android:orientation="horizontal"
+		android:layout_marginTop="5dp"
+		android:visibility="visible">
+
+		<Button
+			android:id="@+id/clear"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="0.3"
+			android:background="@drawable/custom_buttom"
+			android:text="Clear"
+
+			android:textColor="@android:color/black" />
+		<Space
+			android:layout_width="5dp"
+			android:layout_height="match_parent" />
+		<Button
+			android:id="@+id/exit"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="0.3"
+			android:onClick="exitClick"
+			android:background="@drawable/custom_buttom"
+			android:textColor="@android:color/black"
+			android:padding="5dp"
+			android:paddingRight="5dp"
+			android:text="EXIT" />
+		<Space
+			android:layout_width="5dp"
+			android:layout_height="match_parent" />
+		<Button
+			android:id="@+id/decode"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="0.3"
+			android:background="@drawable/custom_buttom"
+			android:textColor="@android:color/black"
+			android:padding="5dp"
+			android:paddingRight="5dp"
+			android:text="Scan" />
+         <Space
+			 android:layout_width="5dp"
+			 android:layout_height="match_parent" />
+		<Button
+			android:id="@+id/last_image"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="0.3"
+			android:background="@drawable/custom_buttom"
+			android:textColor="@android:color/black"
+			android:padding="5dp"
+			android:text="Image" />
+	</LinearLayout>
+
+	<EditText
+		android:id="@+id/output"
+		android:layout_width="match_parent"
+		android:layout_height="168dp"
+		android:cursorVisible="false"
+		android:ems="10"
+		android:inputType="textMultiLine"
+		android:scrollbars="vertical"
+		android:singleLine="false">
+
+	</EditText>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:visibility="gone"
+		android:paddingBottom="@dimen/activity_my_margin" >
+
+		<!--         <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Test Case ID"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@android:color/background_dark" /> -->
+		<TextView
+			android:id="@+id/tv_test_case_id"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="Test Case ID"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			  />
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text=": "
+
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+
+		<TextView
+			android:id="@+id/txt_testResult"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="Result"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			  />
+
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:paddingBottom="@dimen/activity_my_margin" >
+
+		<TextView
+
+			android:id="@+id/textView"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="Expected Result"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			  />
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text=": "
+
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+
+		<TextView
+
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="Scanned Data"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			  />
+
+
+		<!--   <TextView
+              android:id="@+id/scannedData"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:text=""
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:textColor="@android:color/background_dark" /> -->
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:paddingBottom="@dimen/activity_my_margin" >
+
+		<TextView
+			android:id="@+id/expectedresult"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="NA"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			 />
+
+
+		<!--
+                <TextView
+                    android:id="@+id/lbl_expectedresulr"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Expected Result"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@android:color/background_dark" /> -->
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text=": "
+
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+		<TextView
+			android:id="@+id/scannedData"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+		  />
+
+
+	</LinearLayout>
+
+
+
+	<TextView
+		android:id="@+id/textView8"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:paddingBottom="@dimen/activity_my_margin"
+		android:visibility="gone"
+		android:text="P:0   F:0   ND:0   PD:0   I:0"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		  />
+
+
+	<ProgressBar
+		android:id="@+id/progressBar1"
+		style="?android:attr/progressBarStyleHorizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+
+		android:indeterminate="false" />
+
+	<ImageView
+		android:id="@+id/image_view_sdl"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:contentDescription="@string/last_decoded_image"
+		tools:src="@drawable/ic_launcher" />
+</LinearLayout>

@@ -1,0 +1,35 @@
+<14>[ 3270.089341] init: starting service 'qccsyshalservice'...
+<14>[ 3270.135106] init: starting service 'qccvndhalservice'...
+<14>[ 3270.167796] init: starting service 'smartmu'...
+<14>[ 3270.269861] init: Service 'qccvndhalservice' (pid 15936) exited with status 1
+<14>[ 3270.269965] init: Sending signal 9 to service 'qccvndhalservice' (pid 15936) process group...
+<14>[ 3270.304000] init: Service 'smartmu' (pid 15937) exited with status 0
+<6>[ 3270.372233] IRQ 6: no longer affine to CPU4
+<12>[ 3270.801070] healthd: battery l=90 v=3909 t=47.0 h=2 st=2 c=-154296 fc=4008000 cc=2 chg=u
+<14>[ 3275.134536] init: starting service 'qccsyshalservice'...
+<14>[ 3275.177636] init: starting service 'qccvndhalservice'...
+<14>[ 3275.209197] init: starting service 'smartmu'...
+<14>[ 3275.266532] init: Service 'qccsyshalservice' (pid 15942) exited with status 1
+<14>[ 3275.266576] init: Sending signal 9 to service 'qccsyshalservice' (pid 15942) process group...
+<14>[ 3275.266992] libprocessgroup: Successfully killed process cgroup uid 1000 pid 15942 in 0ms
+<14>[ 3275.310168] init: Service 'qccvndhalservice' (pid 15943) exited with status 1
+<14>[ 3275.310315] init: Sending signal 9 to service 'qccvndhalservice' (pid 15943) process group...
+<14>[ 3275.311882] libprocessgroup: Successfully killed process cgroup uid 1000 pid 15943 in 1ms
+<14>[ 3275.317832] init: Service 'smartmu' (pid 15944) exited with status 0
+<6>[ 3279.591610] IRQ 6: no longer affine to CPU6
+<3>[ 3279.598372] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 3279.599948] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 3279.603195] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 3279.608435] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 3279.619157] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 3279.651379] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 3279.656669] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 3279.662008] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 3279.667245] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 3279.678010] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 3279.689123] [SDL] misc_ioctl msg.len is 4 : 0x7b 0x00 0x00 0x85 
+<3>[ 3279.694276] [SDL] misc_ioctl msg.len is 2 : 0x84 0x00 
+<3>[ 3279.700034] [SDL] misc_ioctl msg.len is 4 : 0x82 0x00 0x00 0x7e 
+<3>[ 3279.906159] msm_isp_open_node: reset VFE
+<3>[ 3279.946266] frame_src is 1 frame_id is 1 blackjoe
+<3>[ 3279.962917] frame_src is 1 frame_id is 2 blackjoe

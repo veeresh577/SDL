@@ -1,0 +1,7 @@
+<6>[ 1652.231321] IRQ 6: no longer affine to CPU4
+<12>[ 1653.188462] healthd: battery l=25 v=3405 t=26.0 h=2 st=2 c=-671874 fc=0 cc=7 chg=u
+<12>[ 1653.529088] healthd: battery l=25 v=3405 t=26.0 h=2 st=2 c=-671874 fc=0 cc=7 chg=u
+<12>[ 1654.503064] healthd: battery l=25 v=3426 t=26.0 h=2 st=2 c=-527343 fc=0 cc=7 chg=u
+<6>[ 1654.671115] IRQ 6: no longer affine to CPU6
+<12>[ 1654.732499] healthd: battery l=25 v=3426 t=26.0 h=2 st=2 c=-527343 fc=0 cc=7 chg=u
+<12>[ 1655.207060] healthd: battery l=25 v=3426 t=26.0 h=2 st=2 c=-527343 fc=0 cc=7 chg=u

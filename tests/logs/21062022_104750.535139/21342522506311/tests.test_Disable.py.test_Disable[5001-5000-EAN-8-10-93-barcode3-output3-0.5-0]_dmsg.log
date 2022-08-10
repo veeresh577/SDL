@@ -1,0 +1,6 @@
+<38>[ 2359.002442] type=1400 audit(1654198118.155:5860): avc: denied { kill } for comm="swapper/0" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<14>[ 2361.817248] init: starting service 'qccvndhalservice'...
+<14>[ 2361.904987] init: Service 'qccsyshalservice' (pid 11429) exited with status 1
+<14>[ 2361.905155] init: Sending signal 9 to service 'qccsyshalservice' (pid 11429) process group...
+<14>[ 2361.907267] libprocessgroup: Successfully killed process cgroup uid 1000 pid 11429 in 1ms
+<14>[ 2361.955243] libprocessgroup: Successfully killed process cgroup uid 1000 pid 11430 in 0ms

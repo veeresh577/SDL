@@ -1,0 +1,43 @@
+<6>[77298.209543] IRQ 6: no longer affine to CPU4
+<14>[77301.183700] init: starting service 'smartmu'...
+<14>[77301.227995] init: starting service 'qccsyshalservice'...
+<14>[77301.259226] init: starting service 'qccvndhalservice'...
+<14>[77301.329226] init: Service 'smartmu' (pid 27297) exited with status 0
+<14>[77301.329399] init: Sending signal 9 to service 'smartmu' (pid 27297) process group...
+<14>[77301.330998] libprocessgroup: Successfully killed process cgroup uid 0 pid 27297 in 1ms
+<14>[77301.360507] init: Service 'qccsyshalservice' (pid 27298) exited with status 1
+<14>[77301.360629] init: Sending signal 9 to service 'qccsyshalservice' (pid 27298) process group...
+<14>[77301.361914] libprocessgroup: Successfully killed process cgroup uid 1000 pid 27298 in 0ms
+<14>[77301.383209] init: Service 'qccvndhalservice' (pid 27299) exited with status 1
+<14>[77306.225833] init: starting service 'smartmu'...
+<14>[77306.271135] init: starting service 'qccsyshalservice'...
+<14>[77306.305539] init: starting service 'qccvndhalservice'...
+<14>[77306.372079] init: Service 'smartmu' (pid 27303) exited with status 0
+<14>[77306.372241] init: Sending signal 9 to service 'smartmu' (pid 27303) process group...
+<14>[77306.373818] libprocessgroup: Successfully killed process cgroup uid 0 pid 27303 in 1ms
+<14>[77306.387134] init: Service 'qccsyshalservice' (pid 27304) exited with status 1
+<14>[77306.387260] init: Sending signal 9 to service 'qccsyshalservice' (pid 27304) process group...
+<14>[77306.389070] libprocessgroup: Successfully killed process cgroup uid 1000 pid 27304 in 1ms
+<14>[77306.451294] init: Service 'qccvndhalservice' (pid 27305) exited with status 1
+<38>[77307.369668] type=1400 audit(1642510224.991:11221): avc: denied { kill } for comm="swapper/3" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<12>[77310.536895] healthd: battery l=42 v=3546 t=42.0 h=2 st=2 c=-383788 fc=4008000 cc=2 chg=u
+<12>[77310.573770] healthd: battery l=42 v=3546 t=42.0 h=2 st=2 c=-383788 fc=4008000 cc=2 chg=u
+<12>[77310.605283] healthd: battery l=42 v=3546 t=42.0 h=2 st=2 c=-383788 fc=4008000 cc=2 chg=u
+<12>[77310.640432] healthd: battery l=42 v=3546 t=42.0 h=2 st=2 c=-383788 fc=4008000 cc=2 chg=u
+<12>[77310.662815] healthd: battery l=42 v=3546 t=42.0 h=2 st=2 c=-383788 fc=4008000 cc=2 chg=u
+<12>[77310.681792] healthd: battery l=42 v=3546 t=42.0 h=2 st=2 c=-383788 fc=4008000 cc=2 chg=u
+<12>[77310.702292] healthd: battery l=42 v=3546 t=42.0 h=2 st=2 c=-383788 fc=4008000 cc=2 chg=u
+<12>[77310.725425] healthd: battery l=42 v=3546 t=42.0 h=2 st=2 c=-383788 fc=4008000 cc=2 chg=u
+<12>[77310.743805] healthd: battery l=42 v=3490 t=42.0 h=2 st=2 c=-835448 fc=4008000 cc=2 chg=u
+<3>[77310.762654] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<12>[77310.765184] healthd: battery l=42 v=3490 t=42.0 h=2 st=2 c=-835448 fc=4008000 cc=2 chg=u
+<3>[77310.779692] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[77310.780106] [SDL] se47xx_misc_ioctl ret = -107 
+<3>[77310.783884] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[77310.788918] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[77310.793942] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[77310.799303] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[77310.815284] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[77310.836689] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[77310.842721] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[77310.847386] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 

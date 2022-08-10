@@ -1,0 +1,116 @@
+<14>[96582.440331] init: starting service 'smartmu'...
+<14>[96582.581324] init: starting service 'qccsyshalservice'...
+<14>[96582.614074] init: Service 'smartmu' (pid 7880) exited with status 0
+<14>[96582.614210] init: Sending signal 9 to service 'smartmu' (pid 7880) process group...
+<14>[96582.615122] libprocessgroup: Successfully killed process cgroup uid 0 pid 7880 in 0ms
+<14>[96582.741567] init: starting service 'qccvndhalservice'...
+<38>[96585.387558] type=1400 audit(1642529503.011:15089): avc: denied { kill } for comm="swapper/2" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<14>[96587.609855] init: starting service 'qccsyshalservice'...
+<14>[96587.653389] init: Service 'smartmu' (pid 7885) exited with status 0
+<14>[96587.653477] init: Sending signal 9 to service 'smartmu' (pid 7885) process group...
+<14>[96587.654205] libprocessgroup: Successfully killed process cgroup uid 0 pid 7885 in 0ms
+<14>[96587.768041] init: starting service 'qccvndhalservice'...
+<14>[96587.912501] init: Service 'qccvndhalservice' (pid 7889) exited with status 1
+<14>[96592.500805] init: starting service 'smartmu'...
+<14>[96592.636628] init: starting service 'qccsyshalservice'...
+<14>[96592.673238] init: Service 'smartmu' (pid 7900) exited with status 0
+<14>[96592.673365] init: Sending signal 9 to service 'smartmu' (pid 7900) process group...
+<14>[96592.674307] libprocessgroup: Successfully killed process cgroup uid 0 pid 7900 in 0ms
+<14>[96592.793448] init: starting service 'qccvndhalservice'...
+<38>[96592.854684] type=1400 audit(1642529510.481:15090): avc: denied { search } for comm="vendor.qti.hard" name="/" dev="sda10" ino=2 scontext=u:r:vendor_hal_qccvndhal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[96592.954426] init: Service 'qccvndhalservice' (pid 7904) exited with status 1
+<14>[96597.531845] init: starting service 'smartmu'...
+<14>[96597.667903] init: starting service 'qccsyshalservice'...
+<14>[96597.713359] init: Service 'smartmu' (pid 7909) exited with status 0
+<14>[96597.713450] init: Sending signal 9 to service 'smartmu' (pid 7909) process group...
+<14>[96597.714332] libprocessgroup: Successfully killed process cgroup uid 0 pid 7909 in 0ms
+<14>[96597.805522] init: Service 'qccsyshalservice' (pid 7911) exited with status 1
+<14>[96597.805609] init: Sending signal 9 to service 'qccsyshalservice' (pid 7911) process group...
+<14>[96597.806446] libprocessgroup: Successfully killed process cgroup uid 1000 pid 7911 in 0ms
+<14>[96597.818389] init: starting service 'qccvndhalservice'...
+<14>[96597.969298] init: Service 'qccvndhalservice' (pid 7927) exited with status 1
+<3>[96599.123097] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[96599.124812] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[96599.128710] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[96599.134763] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[96599.138817] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[96599.143899] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[96599.150279] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[96599.155221] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[96599.160582] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[96599.165639] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[96599.171330] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[96599.176126] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[96599.181623] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[96599.186603] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[96599.193604] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[96599.197379] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[96599.203515] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[96599.208055] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[96599.215333] [SDL] misc_ioctl msg.len is 4 : 0x7b 0x00 0x00 0x85 
+<3>[96599.218793] [SDL] misc_ioctl msg.len is 2 : 0x84 0x00 
+<3>[96599.225265] [SDL] misc_ioctl msg.len is 4 : 0x82 0x00 0x00 0x7e 
+<3>[96599.229961] [SDL] misc_ioctl msg.len is 2 : 0x7d 0x80 
+<3>[96599.236936] [SDL] misc_ioctl msg.len is 3 : 0x77 0x02 0x87 
+<3>[96599.299773] frame_src is 1 frame_id is 81456 blackjoe
+<3>[96599.333038] frame_src is 1 frame_id is 81458 blackjoe
+<31>[96599.366319] logd: logdr: UID=0 GID=0 PID=7937 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[96599.376701] frame_src is 1 frame_id is 81460 blackjoe
+<3>[96599.409844] frame_src is 1 frame_id is 81462 blackjoe
+<3>[96599.484330] frame_src is 1 frame_id is 81464 blackjoe
+<3>[96599.500952] frame_src is 1 frame_id is 81465 blackjoe
+<3>[96599.517591] frame_src is 1 frame_id is 81466 blackjoe
+<3>[96599.534191] frame_src is 1 frame_id is 81467 blackjoe
+<3>[96599.561164] frame_src is 1 frame_id is 81468 blackjoe
+<3>[96599.577782] frame_src is 1 frame_id is 81469 blackjoe
+<3>[96599.594406] frame_src is 1 frame_id is 81470 blackjoe
+<3>[96599.611076] frame_src is 1 frame_id is 81471 blackjoe
+<31>[96599.612993] logd: logdr: UID=0 GID=0 PID=7941 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[96599.627690] frame_src is 1 frame_id is 81472 blackjoe
+<3>[96599.685370] frame_src is 1 frame_id is 81473 blackjoe
+<3>[96599.701991] frame_src is 1 frame_id is 81474 blackjoe
+<3>[96599.718608] frame_src is 1 frame_id is 81475 blackjoe
+<3>[96599.735322] frame_src is 1 frame_id is 81476 blackjoe
+<3>[96599.751910] frame_src is 1 frame_id is 81477 blackjoe
+<3>[96599.768475] frame_src is 1 frame_id is 81478 blackjoe
+<3>[96599.785127] frame_src is 1 frame_id is 81479 blackjoe
+<3>[96599.801721] frame_src is 1 frame_id is 81480 blackjoe
+<3>[96599.818334] frame_src is 1 frame_id is 81481 blackjoe
+<3>[96599.834932] frame_src is 1 frame_id is 81482 blackjoe
+<3>[96599.862146] frame_src is 1 frame_id is 81483 blackjoe
+<3>[96599.895412] frame_src is 1 frame_id is 81485 blackjoe
+<3>[96599.912074] frame_src is 1 frame_id is 81486 blackjoe
+<3>[96599.928652] frame_src is 1 frame_id is 81487 blackjoe
+<3>[96599.961882] frame_src is 1 frame_id is 81489 blackjoe
+<3>[96599.978532] frame_src is 1 frame_id is 81490 blackjoe
+<3>[96599.995121] frame_src is 1 frame_id is 81491 blackjoe
+<3>[96600.028386] frame_src is 1 frame_id is 81493 blackjoe
+<3>[96600.061609] frame_src is 1 frame_id is 81495 blackjoe
+<3>[96600.094876] frame_src is 1 frame_id is 81497 blackjoe
+<3>[96600.144711] frame_src is 1 frame_id is 81500 blackjoe
+<31>[96600.148682] logd: logdr: UID=0 GID=0 PID=7945 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[96600.177987] frame_src is 1 frame_id is 81502 blackjoe
+<3>[96600.211210] frame_src is 1 frame_id is 81504 blackjoe
+<3>[96600.244479] frame_src is 1 frame_id is 81506 blackjoe
+<3>[96600.302395] frame_src is 1 frame_id is 81507 blackjoe
+<3>[96600.319013] frame_src is 1 frame_id is 81508 blackjoe
+<3>[96600.335649] frame_src is 1 frame_id is 81509 blackjoe
+<3>[96600.362605] frame_src is 1 frame_id is 81510 blackjoe
+<3>[96600.379239] frame_src is 1 frame_id is 81511 blackjoe
+<3>[96600.395859] frame_src is 1 frame_id is 81512 blackjoe
+<3>[96600.454147] frame_src is 1 frame_id is 81513 blackjoe
+<3>[96600.487306] frame_src is 1 frame_id is 81515 blackjoe
+<3>[96600.520561] frame_src is 1 frame_id is 81517 blackjoe
+<3>[96600.547617] frame_src is 1 frame_id is 81518 blackjoe
+<31>[96600.548752] logd: logdr: UID=0 GID=0 PID=7964 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[96600.614022] frame_src is 1 frame_id is 81522 blackjoe
+<3>[96600.689146] frame_src is 1 frame_id is 81524 blackjoe
+<3>[96600.705765] frame_src is 1 frame_id is 81525 blackjoe
+<3>[96600.739033] frame_src is 1 frame_id is 81527 blackjoe
+<3>[96600.755583] frame_src is 1 frame_id is 81528 blackjoe
+<3>[96600.772265] frame_src is 1 frame_id is 81529 blackjoe
+<3>[96600.788987] frame_src is 1 frame_id is 81530 blackjoe
+<3>[96600.805449] frame_src is 1 frame_id is 81531 blackjoe
+<3>[96600.822074] frame_src is 1 frame_id is 81532 blackjoe
+<3>[96600.849294] frame_src is 1 frame_id is 81533 blackjoe
+<3>[96600.882527] frame_src is 1 frame_id is 81535 blackjoe

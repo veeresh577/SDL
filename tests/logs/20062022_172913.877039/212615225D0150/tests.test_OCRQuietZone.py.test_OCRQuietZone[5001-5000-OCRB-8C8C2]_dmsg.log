@@ -1,0 +1,29 @@
+<6>[ 4857.331630] IRQ 6: no longer affine to CPU4
+<14>[ 4857.968134] init: starting service 'qccsyshalservice'...
+<14>[ 4858.016119] init: starting service 'qccvndhalservice'...
+<14>[ 4858.048643] init: starting service 'smartmu'...
+<14>[ 4858.119555] init: Service 'qccsyshalservice' (pid 23589) exited with status 1
+<14>[ 4858.119676] init: Sending signal 9 to service 'qccsyshalservice' (pid 23589) process group...
+<14>[ 4858.120678] libprocessgroup: Successfully killed process cgroup uid 1000 pid 23589 in 0ms
+<14>[ 4858.152837] init: Service 'qccvndhalservice' (pid 23590) exited with status 1
+<14>[ 4858.152960] init: Sending signal 9 to service 'qccvndhalservice' (pid 23590) process group...
+<14>[ 4858.154222] libprocessgroup: Successfully killed process cgroup uid 1000 pid 23590 in 0ms
+<14>[ 4858.192102] init: Service 'smartmu' (pid 23591) exited with status 0
+<12>[ 4858.295813] healthd: battery l=84 v=3834 t=47.0 h=2 st=2 c=-393554 fc=4008000 cc=2 chg=u
+<12>[ 4858.327666] healthd: battery l=84 v=3834 t=47.0 h=2 st=2 c=-393554 fc=4008000 cc=2 chg=u
+<12>[ 4858.370580] healthd: battery l=84 v=3834 t=47.0 h=2 st=2 c=-393554 fc=4008000 cc=2 chg=u
+<12>[ 4858.427066] healthd: battery l=84 v=3834 t=47.0 h=2 st=2 c=-393554 fc=4008000 cc=2 chg=u
+<12>[ 4858.468939] healthd: battery l=84 v=3834 t=47.0 h=2 st=2 c=-393554 fc=4008000 cc=2 chg=u
+<12>[ 4858.497388] healthd: battery l=84 v=3834 t=47.0 h=2 st=2 c=-393554 fc=4008000 cc=2 chg=u
+<12>[ 4858.530049] healthd: battery l=84 v=3834 t=47.0 h=2 st=2 c=-393554 fc=4008000 cc=2 chg=u
+<12>[ 4858.557267] healthd: battery l=84 v=3834 t=47.0 h=2 st=2 c=-393554 fc=4008000 cc=2 chg=u
+<12>[ 4858.584661] healthd: battery l=84 v=3834 t=47.0 h=2 st=2 c=-393554 fc=4008000 cc=2 chg=u
+<12>[ 4858.619067] healthd: battery l=84 v=3874 t=47.0 h=2 st=2 c=-50292 fc=4008000 cc=2 chg=u
+<14>[ 4863.014670] init: starting service 'qccsyshalservice'...
+<14>[ 4863.059372] init: starting service 'qccvndhalservice'...
+<14>[ 4863.092421] init: starting service 'smartmu'...
+<38>[ 4863.120063] type=1400 audit(1642435449.154:4803): avc: denied { search } for comm="vendor.qti.hard" name="/" dev="sda10" ino=2 scontext=u:r:vendor_hal_qccvndhal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[ 4863.156407] init: Service 'qccsyshalservice' (pid 23596) exited with status 1
+<14>[ 4863.156528] init: Sending signal 9 to service 'qccsyshalservice' (pid 23596) process group...
+<14>[ 4863.157447] libprocessgroup: Successfully killed process cgroup uid 1000 pid 23596 in 0ms
+<14>[ 4863.193327] libprocessgroup: Successfully killed process cgroup uid 1000 pid 23597 in 1ms

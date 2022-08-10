@@ -1,0 +1,3 @@
+<6>[ 3656.096611] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<6>[ 3656.096637] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 
+<14>[ 3658.015188] init: starting service 'qccvndhalservice'...

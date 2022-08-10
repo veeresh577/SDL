@@ -1,0 +1,75 @@
+<6>[ 2055.725974] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<6>[ 2055.726005] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 
+<3>[ 2057.808356] [schedu][0x115b280b46f][19:23:36.974608] wlan: [2070:E:scan] scm_11d_elected_country_algo_fcc: 98: No AP with 11d Country code is present in scan list
+<3>[ 2057.808507] FUSIONWL: : ==Regulatory_elect_country_db==: No AP with 11d Country code is present in scan list 
+<3>[ 2057.824485] FUSIONWL: : ==Regulatory_scan_country_list_db_reset==: Reset complete for scan country list 
+<6>[ 2057.992486] IRQ 6: no longer affine to CPU4
+<38>[ 2058.902371] type=1400 audit(1654197818.065:5792): avc: denied { kill } for comm="swapper/0" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<38>[ 2059.179268] type=1400 audit(1654197818.335:5793): avc: denied { search } for comm="vendor.qti.hard" name="/" dev="mmcblk0p37" ino=2 scontext=u:r:vendor_hal_qccvndhal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[ 2059.211245] init: Service 'qccsyshalservice' (pid 10067) exited with status 1
+<14>[ 2059.211343] init: Sending signal 9 to service 'qccsyshalservice' (pid 10067) process group...
+<14>[ 2059.212378] libprocessgroup: Successfully killed process cgroup uid 1000 pid 10067 in 0ms
+<14>[ 2059.234902] init: Service 'qccvndhalservice' (pid 10068) exited with status 1
+<14>[ 2059.235019] init: Sending signal 9 to service 'qccvndhalservice' (pid 10068) process group...
+<14>[ 2059.236926] libprocessgroup: Successfully killed process cgroup uid 1000 pid 10068 in 0ms
+<14>[ 2064.116321] init: starting service 'qccsyshalservice'...
+<3>[ 2064.151145] GBSOC->22, GBTemp->260, GBTTE->59, GBTTF->65535
+<38>[ 2064.198808] type=1400 audit(1654197823.355:5794): avc: denied { search } for comm="qccsyshalservic" name="/" dev="mmcblk0p37" ino=2 scontext=u:r:vendor_qccsyshal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[ 2064.268830] init: Service 'qccsyshalservice' (pid 10071) exited with status 1
+<14>[ 2064.268962] init: Sending signal 9 to service 'qccsyshalservice' (pid 10071) process group...
+<14>[ 2064.269879] libprocessgroup: Successfully killed process cgroup uid 1000 pid 10071 in 0ms
+<14>[ 2064.315598] init: Service 'qccvndhalservice' (pid 10072) exited with status 1
+<14>[ 2064.315670] init: Sending signal 9 to service 'qccvndhalservice' (pid 10072) process group...
+<14>[ 2064.316421] libprocessgroup: Successfully killed process cgroup uid 1000 pid 10072 in 0ms
+<38>[ 2064.788989] type=1400 audit(1654197823.945:5795): avc: denied { read } for comm="Binder:569_1" name="wakeup48" dev="sysfs" ino=68359 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=1
+<3>[ 2064.789205] audit: rate limit exceeded
+<38>[ 2064.790997] type=1400 audit(1654197823.945:5797): avc: denied { read } for comm="Binder:569_1" name="event_count" dev="sysfs" ino=68366 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+<38>[ 2064.791193] type=1400 audit(1654197823.945:5798): avc: denied { open } for comm="Binder:569_1" path="/sys/devices/virtual/misc/msm_mp3/wakeup48/event_count" dev="sysfs" ino=68366 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+<3>[ 2065.044401] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 2065.055066] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 2065.065149] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 2065.070460] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 2065.076189] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 2065.086862] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 2065.092036] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 2065.097228] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 2065.102448] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 2065.107953] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 2065.113651] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 2065.208526] [SDL] misc_ioctl msg.len is 3 : 0x77 0x02 0x87 
+<3>[ 2065.209139] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<31>[ 2065.227401] logd: logdr: UID=0 GID=0 PID=10083 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[ 2065.310855] msm_isp_open_node: reset VFE
+<3>[ 2065.319206] msm_ispif_config:1061 Exit 
+<3>[ 2065.319671] msm_ispif_config2: Exit 
+<31>[ 2065.376388] logd: logdr: UID=0 GID=0 PID=10096 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[ 2065.390835] frame_src is 1 frame_id is 1 blackjoe
+<3>[ 2065.425188] frame_src is 1 frame_id is 2 blackjoe
+<3>[ 2065.459546] frame_src is 1 frame_id is 3 blackjoe
+<31>[ 2065.556767] logd: logdr: UID=0 GID=0 PID=10099 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[ 2065.566781] frame_src is 1 frame_id is 5 blackjoe
+<3>[ 2065.595775] qcom-lpi-pinctrl 15070000.lpi_pinctrl: lpi_pinctrl_runtime_resume: unable to get core clk handle -2
+<6>[ 2065.600345] __afe_port_start: port id: 0x102e
+<6>[ 2065.600362] afe_find_cal_topo_id_by_port: port id: 0x102e, dev_acdb_id: 0
+<6>[ 2065.600369] afe_find_cal_topo_id_by_port: top_id:1025e acdb_id:15 afe_port:0x102e
+<6>[ 2065.600376] afe_get_cal_topology_id: port_id = 0x102e acdb_id = 15 topology_id = 0x1025e cal_type_index=8 ret=0
+<3>[ 2065.601152] frame_src is 1 frame_id is 6 blackjoe
+<6>[ 2065.604835] afe_send_port_topology_id: AFE set topology id 0x1025e  enable for port 0x102e ret 0
+<6>[ 2065.604850] send_afe_cal_type: cal_index is 0
+<6>[ 2065.604863] send_afe_cal_type: dev_acdb_id[130] is 0
+<6>[ 2065.604875] send_afe_cal_type: Sending cal_index cal 0
+<6>[ 2065.605933] afe_send_hw_delay: port_id 0x102e rate 48000 delay_usec 474 status 0
+<3>[ 2065.673781] frame_src is 1 frame_id is 7 blackjoe
+<3>[ 2065.690752] qcom-lpi-pinctrl 15070000.lpi_pinctrl: lpi_pinctrl_runtime_suspend: unable to get core clk handle -2
+<3>[ 2065.708185] frame_src is 1 frame_id is 8 blackjoe
+<6>[ 2065.717137] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<6>[ 2065.717154] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 
+<3>[ 2065.742434] frame_src is 1 frame_id is 9 blackjoe
+<3>[ 2065.849570] frame_src is 1 frame_id is 11 blackjoe
+<3>[ 2065.884236] frame_src is 1 frame_id is 12 blackjoe
+<3>[ 2065.938144] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 2065.938815] [SDL] se47xx_misc_ioctl ret = -107 
+<3>[ 2065.945202] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 2065.948756] [SDL] se47xx_misc_ioctl ret = -107 
+<3>[ 2065.954928] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 2065.958854] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 

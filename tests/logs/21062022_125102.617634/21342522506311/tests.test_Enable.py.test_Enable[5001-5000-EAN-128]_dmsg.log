@@ -1,0 +1,80 @@
+<38>[ 9420.770513] type=1400 audit(1654205179.925:6593): avc: denied { kill } for comm="swapper/2" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<14>[ 9420.931079] init: starting service 'qccsyshalservice'...
+<14>[ 9421.106698] init: starting service 'qccvndhalservice'...
+<14>[ 9421.146176] init: Service 'qccsyshalservice' (pid 25672) exited with status 1
+<14>[ 9421.146298] init: Sending signal 9 to service 'qccsyshalservice' (pid 25672) process group...
+<14>[ 9421.147137] libprocessgroup: Successfully killed process cgroup uid 1000 pid 25672 in 0ms
+<4>[ 9421.231193] FG: is_batt_empty: batt_soc_rt_sts: 32 vbatt: 3123283 uV msoc:0
+<14>[ 9421.292479] init: Service 'qccvndhalservice' (pid 25673) exited with status 1
+<14>[ 9421.292565] init: Sending signal 9 to service 'qccvndhalservice' (pid 25673) process group...
+<14>[ 9421.293450] libprocessgroup: Successfully killed process cgroup uid 1000 pid 25673 in 0ms
+<3>[ 9424.506284] [schedu][0x136a104fc35][21:26:23.672522] wlan: [2070:E:scan] scm_11d_elected_country_algo_fcc: 98: No AP with 11d Country code is present in scan list
+<3>[ 9424.506392] FUSIONWL: : ==Regulatory_elect_country_db==: No AP with 11d Country code is present in scan list 
+<3>[ 9424.520157] FUSIONWL: : ==Regulatory_scan_country_list_db_reset==: Reset complete for scan country list 
+<14>[ 9425.967931] init: starting service 'qccsyshalservice'...
+<14>[ 9426.326266] init: Service 'qccvndhalservice' (pid 25677) exited with status 1
+<14>[ 9426.326366] init: Sending signal 9 to service 'qccvndhalservice' (pid 25677) process group...
+<14>[ 9426.327411] libprocessgroup: Successfully killed process cgroup uid 1000 pid 25677 in 0ms
+<3>[ 9430.738079] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 9430.748459] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 9430.748988] [SDL] se47xx_misc_ioctl ret = -107 
+<3>[ 9430.754321] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 9430.757600] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 9430.765509] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 9430.768942] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 9430.774764] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 9430.779093] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 9430.801735] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 9430.805525] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 9430.816172] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 9430.966609] [SDL] misc_ioctl msg.len is 3 : 0x77 0x02 0x87 
+<3>[ 9430.967236] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<31>[ 9431.060888] logd: logdr: UID=0 GID=0 PID=25690 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<14>[ 9431.186718] init: starting service 'qccvndhalservice'...
+<3>[ 9431.233217] msm_isp_open_node: reset VFE
+<3>[ 9431.252164] msm_ispif_config:1061 Exit 
+<3>[ 9431.252720] msm_ispif_config2: Exit 
+<14>[ 9431.272426] init: Service 'qccsyshalservice' (pid 25694) exited with status 1
+<14>[ 9431.272550] init: Sending signal 9 to service 'qccsyshalservice' (pid 25694) process group...
+<14>[ 9431.273465] libprocessgroup: Successfully killed process cgroup uid 1000 pid 25694 in 0ms
+<3>[ 9431.324101] frame_src is 1 frame_id is 2 blackjoe
+<3>[ 9431.358494] frame_src is 1 frame_id is 3 blackjoe
+<3>[ 9431.431071] frame_src is 1 frame_id is 4 blackjoe
+<3>[ 9431.499781] frame_src is 1 frame_id is 6 blackjoe
+<31>[ 9431.524070] logd: logdr: UID=0 GID=0 PID=25705 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<6>[ 9431.540839] __afe_port_start: port id: 0x102e
+<6>[ 9431.540885] afe_find_cal_topo_id_by_port: port id: 0x102e, dev_acdb_id: 0
+<6>[ 9431.540901] afe_find_cal_topo_id_by_port: top_id:1025e acdb_id:15 afe_port:0x102e
+<6>[ 9431.540917] afe_get_cal_topology_id: port_id = 0x102e acdb_id = 15 topology_id = 0x1025e cal_type_index=8 ret=0
+<6>[ 9431.542255] afe_send_port_topology_id: AFE set topology id 0x1025e  enable for port 0x102e ret 0
+<6>[ 9431.542396] send_afe_cal_type: cal_index is 0
+<6>[ 9431.542412] send_afe_cal_type: dev_acdb_id[130] is 0
+<6>[ 9431.542427] send_afe_cal_type: Sending cal_index cal 0
+<6>[ 9431.543628] afe_send_hw_delay: port_id 0x102e rate 48000 delay_usec 474 status 0
+<14>[ 9431.544823] libprocessgroup: Successfully killed process cgroup uid 1000 pid 25704 in 7ms
+<3>[ 9431.572551] frame_src is 1 frame_id is 7 blackjoe
+<3>[ 9431.606945] frame_src is 1 frame_id is 8 blackjoe
+<3>[ 9431.631034] qcom-lpi-pinctrl 15070000.lpi_pinctrl: lpi_pinctrl_runtime_suspend: unable to get core clk handle -2
+<3>[ 9431.713678] frame_src is 1 frame_id is 10 blackjoe
+<3>[ 9431.846361] [SDL] se47xx_misc_ioctl ret = -107 
+<6>[ 9432.433794] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<6>[ 9432.434203] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 
+<3>[ 9434.516891] [schedu][0x136ac79c01d][21:26:33.683027] wlan: [2070:E:scan] scm_11d_elected_country_algo_fcc: 98: No AP with 11d Country code is present in scan list
+<3>[ 9434.517014] FUSIONWL: : ==Regulatory_elect_country_db==: No AP with 11d Country code is present in scan list 
+<3>[ 9434.532579] FUSIONWL: : ==Regulatory_scan_country_list_db_reset==: Reset complete for scan country list 
+<6>[ 9435.035070] afe_close: port_id = 0x102e
+<3>[ 9435.131171] qcom-lpi-pinctrl 15070000.lpi_pinctrl: lpi_pinctrl_runtime_suspend: unable to get core clk handle -2
+<14>[ 9436.042897] init: starting service 'qccsyshalservice'...
+<38>[ 9436.117220] type=1400 audit(1654205195.275:6594): avc: denied { search } for comm="qccsyshalservic" name="/" dev="mmcblk0p37" ino=2 scontext=u:r:vendor_qccsyshal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[ 9436.217817] init: Service 'qccsyshalservice' (pid 25720) exited with status 1
+<14>[ 9436.217940] init: Sending signal 9 to service 'qccsyshalservice' (pid 25720) process group...
+<14>[ 9436.219015] libprocessgroup: Successfully killed process cgroup uid 1000 pid 25720 in 0ms
+<14>[ 9436.265933] init: starting service 'qccvndhalservice'...
+<38>[ 9436.339834] type=1400 audit(1654205195.495:6595): avc: denied { search } for comm="vendor.qti.hard" name="/" dev="mmcblk0p37" ino=2 scontext=u:r:vendor_hal_qccvndhal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[ 9436.455302] init: Service 'qccvndhalservice' (pid 25721) exited with status 1
+<14>[ 9436.455400] init: Sending signal 9 to service 'qccvndhalservice' (pid 25721) process group...
+<14>[ 9436.456351] libprocessgroup: Successfully killed process cgroup uid 1000 pid 25721 in 0ms
+<3>[ 9437.780259] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 9437.790914] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 9437.791635] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 9437.795556] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 

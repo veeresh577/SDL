@@ -1,0 +1,57 @@
+<14>[ 7463.786112] init: starting service 'qccsyshalservice'...
+<38>[ 7463.856532] type=1400 audit(1653169940.904:11121): avc: denied { search } for comm="qccsyshalservic" name="/" dev="mmcblk0p37" ino=2 scontext=u:r:vendor_qccsyshal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<38>[ 7463.884633] type=1400 audit(1653169940.934:11122): avc: denied { search } for comm="vendor.qti.hard" name="/" dev="mmcblk0p37" ino=2 scontext=u:r:vendor_hal_qccvndhal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[ 7463.912308] init: Service 'qccsyshalservice' (pid 16088) exited with status 1
+<14>[ 7463.912470] init: Sending signal 9 to service 'qccsyshalservice' (pid 16088) process group...
+<14>[ 7463.913888] libprocessgroup: Successfully killed process cgroup uid 1000 pid 16088 in 0ms
+<14>[ 7463.974783] init: Service 'qccvndhalservice' (pid 16089) exited with status 1
+<14>[ 7463.974914] init: Sending signal 9 to service 'qccvndhalservice' (pid 16089) process group...
+<14>[ 7463.976202] libprocessgroup: Successfully killed process cgroup uid 1000 pid 16089 in 0ms
+<6>[ 7466.988970] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<6>[ 7466.989004] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 
+<14>[ 7468.944025] init: Service 'qccsyshalservice' (pid 16092) exited with status 1
+<14>[ 7468.944111] init: Sending signal 9 to service 'qccsyshalservice' (pid 16092) process group...
+<14>[ 7468.944940] libprocessgroup: Successfully killed process cgroup uid 1000 pid 16092 in 0ms
+<14>[ 7468.972690] init: Service 'qccvndhalservice' (pid 16093) exited with status 1
+<14>[ 7468.972797] init: Sending signal 9 to service 'qccvndhalservice' (pid 16093) process group...
+<14>[ 7468.973777] libprocessgroup: Successfully killed process cgroup uid 1000 pid 16093 in 0ms
+<14>[ 7473.907101] init: starting service 'qccvndhalservice'...
+<14>[ 7473.994179] init: Service 'qccsyshalservice' (pid 16095) exited with status 1
+<14>[ 7473.994303] init: Sending signal 9 to service 'qccsyshalservice' (pid 16095) process group...
+<14>[ 7473.995440] libprocessgroup: Successfully killed process cgroup uid 1000 pid 16095 in 0ms
+<14>[ 7474.030744] init: Service 'qccvndhalservice' (pid 16097) exited with status 1
+<14>[ 7474.031307] init: Sending signal 9 to service 'qccvndhalservice' (pid 16097) process group...
+<14>[ 7474.032687] libprocessgroup: Successfully killed process cgroup uid 1000 pid 16097 in 0ms
+<6>[ 7474.112742] IRQ 6: no longer affine to CPU5
+<3>[ 7474.139969] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 7474.150153] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 7474.150438] [SDL] se47xx_misc_ioctl ret = -107 
+<3>[ 7474.159158] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 7474.165195] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 7474.169900] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 7474.175222] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 7474.196575] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 7474.203038] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 7474.207105] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 7474.212661] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 7474.217791] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 7474.243230] msm_isp_open_node: reset VFE
+<3>[ 7474.523112] msm_ispif_config:1061 Exit 
+<3>[ 7474.523489] msm_ispif_config2: Exit 
+<3>[ 7474.526352] moto_se4750_sensor_config32:2407 se475x CFGTYPE : 2  
+<3>[ 7474.529595] moto_se4750_sensor_config32 CFG_WRITE_I2C_ARRAY size= 0
+<3>[ 7474.582121] frame_src is 1 frame_id is 1 blackjoe
+<3>[ 7474.616460] frame_src is 1 frame_id is 2 blackjoe
+<3>[ 7474.650844] frame_src is 1 frame_id is 3 blackjoe
+<3>[ 7474.714655] qcom-lpi-pinctrl 15070000.lpi_pinctrl: lpi_pinctrl_runtime_resume: unable to get core clk handle -2
+<6>[ 7474.721590] afe_send_hw_delay: port_id 0x102e rate 48000 delay_usec 474 status 0
+<3>[ 7474.743199] moto_se4750_sensor_config32:2407 se475x CFGTYPE : 2  
+<3>[ 7474.743255] moto_se4750_sensor_config32 CFG_WRITE_I2C_ARRAY size= 0
+<3>[ 7474.748297] moto_se4750_sensor_config32:2477 se475x failed
+<3>[ 7474.781337] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 7474.785966] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 7474.791306] [SDL] se47xx_misc_ioctl ret = -107 
+<3>[ 7474.796494] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 7474.801369] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 7474.811469] qcom-lpi-pinctrl 15070000.lpi_pinctrl: lpi_pinctrl_runtime_suspend: unable to get core clk handle -2
+<6>[ 7476.992925] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 

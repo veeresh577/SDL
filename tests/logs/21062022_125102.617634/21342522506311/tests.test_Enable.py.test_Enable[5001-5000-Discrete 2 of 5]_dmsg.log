@@ -1,0 +1,41 @@
+<14>[ 9541.852784] init: starting service 'qccsyshalservice'...
+<14>[ 9542.026352] init: Service 'qccsyshalservice' (pid 26121) exited with status 1
+<14>[ 9542.026463] init: Sending signal 9 to service 'qccsyshalservice' (pid 26121) process group...
+<14>[ 9542.027493] libprocessgroup: Successfully killed process cgroup uid 1000 pid 26121 in 0ms
+<14>[ 9542.208099] init: Service 'qccvndhalservice' (pid 26122) exited with status 1
+<14>[ 9542.208223] init: Sending signal 9 to service 'qccvndhalservice' (pid 26122) process group...
+<14>[ 9542.209207] libprocessgroup: Successfully killed process cgroup uid 1000 pid 26122 in 0ms
+<4>[ 9544.110963] FG: is_batt_empty: batt_soc_rt_sts: 32 vbatt: 3090324 uV msoc:0
+<3>[ 9545.751468] FUSIONWL: : ==Regulatory_scan_country_list_db_reset==: Reset complete for scan country list 
+<14>[ 9546.888747] init: starting service 'qccsyshalservice'...
+<14>[ 9547.070060] init: starting service 'qccvndhalservice'...
+<14>[ 9547.248418] init: Service 'qccvndhalservice' (pid 26135) exited with status 1
+<14>[ 9547.248526] init: Sending signal 9 to service 'qccvndhalservice' (pid 26135) process group...
+<14>[ 9547.249550] libprocessgroup: Successfully killed process cgroup uid 1000 pid 26135 in 0ms
+<14>[ 9551.922957] init: starting service 'qccsyshalservice'...
+<14>[ 9552.086834] init: Service 'qccsyshalservice' (pid 26139) exited with status 1
+<14>[ 9552.086938] init: Sending signal 9 to service 'qccsyshalservice' (pid 26139) process group...
+<14>[ 9552.087910] libprocessgroup: Successfully killed process cgroup uid 1000 pid 26139 in 0ms
+<14>[ 9552.102802] init: starting service 'qccvndhalservice'...
+<14>[ 9552.285903] init: Sending signal 9 to service 'qccvndhalservice' (pid 26140) process group...
+<3>[ 9553.298973] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 9553.309348] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 9553.309811] [SDL] se47xx_misc_ioctl ret = -107 
+<3>[ 9553.314234] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 9553.319839] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 9553.324401] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 9553.333972] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 9553.334603] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 9553.341644] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 9553.350452] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 9553.366461] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 9553.373026] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 9553.377083] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 9553.539398] [SDL] misc_ioctl msg.len is 3 : 0x77 0x02 0x87 
+<31>[ 9553.587075] logd: logdr: UID=0 GID=0 PID=26152 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<6>[ 9553.653906] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<6>[ 9553.653929] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 
+<3>[ 9553.897443] frame_src is 1 frame_id is 2 blackjoe
+<3>[ 9553.931793] frame_src is 1 frame_id is 3 blackjoe
+<31>[ 9553.953282] logd: logdr: UID=0 GID=0 PID=26161 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[ 9554.038755] frame_src is 1 frame_id is 5 blackjoe

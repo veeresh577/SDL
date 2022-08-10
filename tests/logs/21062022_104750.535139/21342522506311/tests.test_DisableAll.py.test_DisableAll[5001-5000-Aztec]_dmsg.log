@@ -1,0 +1,9 @@
+<14>[ 3774.224998] init: starting service 'qccsyshalservice'...
+<14>[ 3774.365594] init: Service 'qccsyshalservice' (pid 17673) exited with status 1
+<14>[ 3774.365775] init: Sending signal 9 to service 'qccsyshalservice' (pid 17673) process group...
+<14>[ 3774.367378] libprocessgroup: Successfully killed process cgroup uid 1000 pid 17673 in 0ms
+<14>[ 3774.504412] libprocessgroup: Successfully killed process cgroup uid 1000 pid 17674 in 0ms
+<6>[ 3774.710968] IRQ 6: no longer affine to CPU4
+<6>[ 3776.130128] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<6>[ 3776.130159] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 
+<3>[ 3778.212147] FUSIONWL: : ==Regulatory_elect_country_db==: No AP with 11d Country code is present in scan list 

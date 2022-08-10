@@ -1,0 +1,28 @@
+<6>[77717.161272] afe_close: port_id = 0x4000
+<3>[77717.191790] tavil_codec tavil_codec: ASoC: DAPM unknown pin Lineout_3 amp
+<14>[77719.562466] init: starting service 'smartmu'...
+<14>[77719.610584] init: starting service 'qccsyshalservice'...
+<14>[77719.641245] init: starting service 'qccvndhalservice'...
+<38>[77719.704151] type=1400 audit(1642510637.331:11310): avc: denied { search } for comm="vendor.qti.hard" name="/" dev="sda10" ino=2 scontext=u:r:vendor_hal_qccvndhal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[77719.776245] init: Service 'qccvndhalservice' (pid 29005) exited with status 1
+<14>[77724.605186] init: starting service 'smartmu'...
+<14>[77724.649361] init: starting service 'qccsyshalservice'...
+<14>[77724.758669] init: Service 'smartmu' (pid 29008) exited with status 0
+<14>[77724.759020] init: Sending signal 9 to service 'smartmu' (pid 29008) process group...
+<14>[77724.760066] libprocessgroup: Successfully killed process cgroup uid 0 pid 29008 in 0ms
+<3>[77729.079287] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[77729.080894] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[77729.084035] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[77729.094714] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[77729.100006] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[77729.105439] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[77729.110890] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[77729.116077] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[77729.126842] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[77729.132192] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[77729.137470] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[77729.148259] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[77729.158893] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[77729.180979] [SDL] misc_ioctl msg.len is 4 : 0x82 0x00 0x00 0x7e 
+<3>[77729.186043] [SDL] misc_ioctl msg.len is 2 : 0x7d 0x80 
+<31>[77729.405776] logd: logdr: UID=0 GID=0 PID=29029 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns

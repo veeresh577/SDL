@@ -1,0 +1,3 @@
+<38>[ 2321.869007] type=1400 audit(1642432907.904:4346): avc: denied { kill } for comm="swapper/1" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<14>[ 2322.250526] init: starting service 'smartmu'...
+<14>[ 2322.340736] init: Service 'qccsyshalservice' (pid 11552) exited with status 1

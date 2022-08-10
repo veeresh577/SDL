@@ -1,0 +1,31 @@
+<14>[81857.173232] init: starting service 'qccsyshalservice'...
+<14>[81857.216163] init: starting service 'qccvndhalservice'...
+<14>[81857.296973] libprocessgroup: Successfully killed process cgroup uid 1000 pid 6397 in 0ms
+<38>[81858.086941] type=1400 audit(1654288726.128:192363): avc: denied { kill } for comm="swapper/0" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<6>[81861.989708] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<6>[81861.989746] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 
+<14>[81862.208600] init: starting service 'qccsyshalservice'...
+<14>[81862.326400] init: Service 'qccsyshalservice' (pid 6402) exited with status 1
+<14>[81862.326499] init: Sending signal 9 to service 'qccsyshalservice' (pid 6402) process group...
+<14>[81862.327432] libprocessgroup: Successfully killed process cgroup uid 1000 pid 6402 in 0ms
+<14>[81862.353426] init: Service 'qccvndhalservice' (pid 6403) exited with status 1
+<14>[81862.353535] init: Sending signal 9 to service 'qccvndhalservice' (pid 6403) process group...
+<14>[81862.354658] libprocessgroup: Successfully killed process cgroup uid 1000 pid 6403 in 0ms
+<3>[81866.590916] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[81866.595553] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[81866.601358] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[81866.606427] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[81866.633065] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[81866.638391] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[81866.644759] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<6>[81866.728770] IRQ 6: no longer affine to CPU7
+<3>[81866.732138] [SDL] misc_ioctl msg.len is 3 : 0x77 0x02 0x87 
+<3>[81866.732559] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<31>[81866.733680] logd: logdr: UID=0 GID=0 PID=6415 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[81866.898144] msm_isp_open_node: reset VFE
+<3>[81866.948548] frame_src is 1 frame_id is 2 blackjoe
+<3>[81866.982863] frame_src is 1 frame_id is 3 blackjoe
+<3>[81867.090150] frame_src is 1 frame_id is 5 blackjoe
+<3>[81867.124289] frame_src is 1 frame_id is 6 blackjoe
+<31>[81867.146328] logd: logdr: UID=0 GID=0 PID=6431 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[81867.196961] frame_src is 1 frame_id is 7 blackjoe

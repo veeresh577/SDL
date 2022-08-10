@@ -1,0 +1,67 @@
+{
+    "logs": [
+        {
+            "outputFile": "D:\\SDL_SDC\\SDL\\Oreo\\apps\\Full_auto_testapp\\app\\build\\intermediates\\res\\merged\\release\\values-sw720dp-land-v13_values-sw720dp-land-v13.arsc.flat",
+            "map": [
+                {
+                    "source": "D:\\SDL_SDC\\SDL\\Oreo\\apps\\Full_auto_testapp\\app\\src\\main\\res\\values-sw720dp-land\\dimens.xml",
+                    "from": {
+                        "startLines": "6",
+                        "startColumns": "4",
+                        "startOffsets": "206",
+                        "endColumns": "58",
+                        "endOffsets": "260"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "58",
+                        "endOffsets": "109"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "D:\\SDL_SDC\\SDL\\Oreo\\apps\\Full_auto_testapp\\app\\build\\intermediates\\res\\merged\\release\\values_values.arsc.flat",
+            "map": [
+                {
+                    "source": "D:\\SDL_SDC\\SDL\\Oreo\\apps\\Full_auto_testapp\\app\\src\\main\\res\\values\\dimens.xml",
+                    "from": {
+                        "startLines": "3,5,7,9,12,14,13,15,6,8,11,10",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "92,153,252,343,493,579,536,622,204,300,445,397",
+                        "endColumns": "57,49,46,52,41,41,41,42,46,41,46,46",
+                        "endOffsets": "145,198,294,391,530,616,573,660,246,337,487,439"
+                    },
+                    "to": {
+                        "startLines": "30,31,32,33,34,35,36,37,38,39,40,41",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "1018,1076,1126,1173,1225,1267,1309,1351,1394,1439,1479,1526",
+                        "endColumns": "57,49,46,51,41,41,41,42,44,39,46,46",
+                        "endOffsets": "1071,1121,1168,1220,1262,1304,1346,1389,1434,1474,1521,1568"
+                    }
+                },
+                {
+                    "source": "D:\\SDL_SDC\\SDL\\Oreo\\apps\\Full_auto_testapp\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "33,8,5,40,4,3,41,39,6,38",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "1171,294,194,1467,143,59,1521,1388,249,1293",
+                        "endLines": "36,31,5,40,4,3,41,39,6,38",
+                        "endColumns": "19,19,53,52,49,82,52,77,41,93",
+                        "endOffsets": "1285,1159,243,1515,188,137,1569,1461,286,1382"
+                    },
+                    "to": {
+                        "startLines": "2,6,42,43,44,45,46,47,48,49",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,171,1573,1627,1680,1730,1813,1866,1944,1986",
+                        "endLines": "5,29,42,43,44,45,46,47,48,49",
+                        "endColumns": "19,19,53,52,49,82,52,77,41,93",
+                        "endOffsets": "166,1013,1622,1675,1725,1808,1861,1939,1981,2075"
+                    }
+                }
+            ]
+        }
+    ]
+}

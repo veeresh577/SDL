@@ -1,0 +1,49 @@
+<14>[ 2715.487856] init: starting service 'smartmu'...
+<38>[ 2715.518737] type=1400 audit(1642433301.554:4417): avc: denied { search } for comm="qccsyshalservic" name="/" dev="sda10" ino=2 scontext=u:r:vendor_qccsyshal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[ 2715.583429] init: Service 'qccsyshalservice' (pid 13357) exited with status 1
+<14>[ 2715.583585] init: Sending signal 9 to service 'qccsyshalservice' (pid 13357) process group...
+<14>[ 2715.585003] libprocessgroup: Successfully killed process cgroup uid 1000 pid 13357 in 0ms
+<14>[ 2715.645902] init: Service 'smartmu' (pid 13359) exited with status 0
+<14>[ 2715.646026] init: Sending signal 9 to service 'smartmu' (pid 13359) process group...
+<14>[ 2715.647212] libprocessgroup: Successfully killed process cgroup uid 0 pid 13359 in 0ms
+<14>[ 2715.843149] init: Service 'qccvndhalservice' (pid 13367) exited with status 1
+<14>[ 2715.843494] init: Sending signal 9 to service 'qccvndhalservice' (pid 13367) process group...
+<6>[ 2717.031447] IRQ 6: no longer affine to CPU6
+<14>[ 2720.534383] init: starting service 'smartmu'...
+<14>[ 2720.624776] init: Service 'qccsyshalservice' (pid 13370) exited with status 1
+<14>[ 2720.624832] init: Sending signal 9 to service 'qccsyshalservice' (pid 13370) process group...
+<14>[ 2720.625288] libprocessgroup: Successfully killed process cgroup uid 1000 pid 13370 in 0ms
+<14>[ 2720.685425] init: Service 'smartmu' (pid 13371) exited with status 0
+<14>[ 2720.685581] init: Sending signal 9 to service 'smartmu' (pid 13371) process group...
+<14>[ 2720.687068] libprocessgroup: Successfully killed process cgroup uid 0 pid 13371 in 0ms
+<14>[ 2720.752246] init: starting service 'qccvndhalservice'...
+<14>[ 2720.892759] init: Service 'qccvndhalservice' (pid 13374) exited with status 1
+<14>[ 2720.892932] init: Sending signal 9 to service 'qccvndhalservice' (pid 13374) process group...
+<6>[ 2720.991493] IRQ 6: no longer affine to CPU7
+<38>[ 2722.001454] type=1400 audit(1642433308.034:4418): avc: denied { kill } for comm="swapper/2" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<14>[ 2725.575630] init: starting service 'smartmu'...
+<14>[ 2725.663454] init: Service 'qccsyshalservice' (pid 13377) exited with status 1
+<14>[ 2725.663663] init: Sending signal 9 to service 'qccsyshalservice' (pid 13377) process group...
+<14>[ 2725.665315] libprocessgroup: Successfully killed process cgroup uid 1000 pid 13377 in 1ms
+<14>[ 2725.723781] init: Service 'smartmu' (pid 13378) exited with status 0
+<14>[ 2725.723841] init: Sending signal 9 to service 'smartmu' (pid 13378) process group...
+<14>[ 2725.724442] libprocessgroup: Successfully killed process cgroup uid 0 pid 13378 in 0ms
+<14>[ 2725.795779] init: starting service 'qccvndhalservice'...
+<14>[ 2725.927121] init: Service 'qccvndhalservice' (pid 13380) exited with status 1
+<14>[ 2725.927226] init: Sending signal 9 to service 'qccvndhalservice' (pid 13380) process group...
+<3>[ 2726.092583] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 2726.094040] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 2726.097762] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 2726.118932] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 2726.124309] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 2726.129568] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 2726.134908] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 2726.140232] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 2726.145676] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 2726.151131] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 2726.156268] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 2726.161626] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 2726.166904] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 2726.172525] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 2726.177669] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 2726.188346] [SDL] misc_ioctl msg.len is 2 : 0x84 0x00 

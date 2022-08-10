@@ -1,0 +1,24 @@
+R tests/test_CodeId.py::test_CodeId[5001-5000-UPC-A0]
+ test_CodeId.py:17: in test_CodeId
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ ../lib/scanner.py:20: in scan
+     self.kindle_send(msg, True)
+ E   AttributeError: 'Scanner' object has no attribute 'kindle_send'
+F tests/test_CodeId.py::test_CodeId[5001-5000-UPC-A0]
+ test_CodeId.py:17: in test_CodeId
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ ../lib/scanner.py:20: in scan
+     self.kindle_send(msg, True)
+ E   AttributeError: 'Scanner' object has no attribute 'kindle_send'
+R tests/test_CodeId.py::test_CodeId[5001-5000-UPC-A1]
+ test_CodeId.py:17: in test_CodeId
+     assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+ ../lib/scanner.py:20: in scan
+     self.kindle_send(msg, True)
+ E   AttributeError: 'Scanner' object has no attribute 'kindle_send'
+E tests/test_CodeId.py::test_CodeId[5001-5000-UPC-A1]
+ ../conftest.py:183: in logfolder
+     os.makedirs(logfolder)
+ ../../venv27/lib/python2.7/os.py:157: in makedirs
+     mkdir(name, mode)
+ E   OSError: [Errno 17] File exists: 'logs/21062022_104537.658745/21342522506311'

@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Test Report</title>
+    <link href="assets/style.css" rel="stylesheet" type="text/css"/></head>
+  <body onLoad="init()">
+    <script>/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this file,
+ * You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+
+function toArray(iter) {
+    if (iter === null) {
+        return null;
+    }
+    return Array.prototype.slice.call(iter);
+}
+
+function find(selector, elem) {
+    if (!elem) {
+        elem = document;
+    }
+    return elem.querySelector(selector);
+}
+
+function find_all(selector, elem) {
+    if (!elem) {
+        elem = document;
+    }
+    return toArray(elem.querySelectorAll(selector));
+}
+
+function sort_column(elem) {
+    toggle_sort_states(elem);
+    var colIndex = toArray(elem.parentNode.childNodes).indexOf(elem);
+    var key;
+    if (elem.classList.contains('numeric')) {
+        key = key_num;
+    } else if (elem.classList.contains('result')) {
+        key = key_result;
+    } else {
+        key = key_alpha;
+    }
+    sort_table(elem, key(colIndex));
+}
+
+function show_all_extras() {
+    find_all('.col-result').forEach(show_extras);
+}
+
+function hide_all_extras() {
+    find_all('.col-result').forEach(hide_extras);
+}
+
+function show_extras(colresult_elem) {
+    var extras = colresult_elem.parentNode.nextElementSibling;
+    var expandcollapse = colresult_elem.firstElementChild;
+    extras.classList.remove("collapsed");
+    expandcollapse.classList.remove("expander");
+    expandcollapse.classList.add("collapser");
+}
+
+function hide_extras(colresult_elem) {
+    var extras = colresult_elem.parentNode.nextElementSibling;
+    var expandcollapse = colresult_elem.firstElementChild;
+    extras.classList.add("collapsed");
+    expandcollapse.classList.remove("collapser");
+    expandcollapse.classList.add("expander");
+}
+
+function show_filters() {
+    var filter_items = document.getElementsByClassName('filter');
+    for (var i = 0; i < filter_items.length; i++)
+        filter_items[i].hidden = false;
+}
+
+function add_collapse() {
+    // Add links for show/hide all
+    var resulttable = find('table#results-table');
+    var showhideall = document.createElement("p");
+    showhideall.innerHTML = '<a href="javascript:show_all_extras()">Show all details</a> / ' +
+                            '<a href="javascript:hide_all_extras()">Hide all details</a>';
+    resulttable.parentElement.insertBefore(showhideall, resulttable);
+
+    // Add show/hide link to each result
+    find_all('.col-result').forEach(function(elem) {
+        var extras = elem.parentNode.nextElementSibling;
+        var expandcollapse = document.createElement("span");
+        if (elem.innerHTML === 'Passed') {
+            extras.classList.add("collapsed");
+            expandcollapse.classList.add("expander");
+        } else {
+            expandcollapse.classList.add("collapser");
+        }
+        elem.appendChild(expandcollapse);
+
+        elem.addEventListener("click", function(event) {
+            if (event.currentTarget.parentNode.nextElementSibling.classList.contains("collapsed")) {
+                show_extras(event.currentTarget);
+            } else {
+                hide_extras(event.currentTarget);
+            }
+        });
+    })
+}
+
+function init () {
+    reset_sort_headers();
+
+    add_collapse();
+
+    show_filters();
+
+    toggle_sort_states(find('.initial-sort'));
+
+    find_all('.sortable').forEach(function(elem) {
+        elem.addEventListener("click",
+                              function(event) {
+                                  sort_column(elem);
+                              }, false)
+    });
+
+};
+
+function sort_table(clicked, key_func) {
+    var rows = find_all('.results-table-row');
+    var reversed = !clicked.classList.contains('asc');
+    var sorted_rows = sort(rows, key_func, reversed);
+    /* Whole table is removed here because browsers acts much slower
+     * when appending existing elements.
+     */
+    var thead = document.getElementById("results-table-head");
+    document.getElementById('results-table').remove();
+    var parent = document.createElement("table");
+    parent.id = "results-table";
+    parent.appendChild(thead);
+    sorted_rows.forEach(function(elem) {
+        parent.appendChild(elem);
+    });
+    document.getElementsByTagName("BODY")[0].appendChild(parent);
+}
+
+function sort(items, key_func, reversed) {
+    var sort_array = items.map(function(item, i) {
+        return [key_func(item), i];
+    });
+    var multiplier = reversed ? -1 : 1;
+
+    sort_array.sort(function(a, b) {
+        var key_a = a[0];
+        var key_b = b[0];
+        return multiplier * (key_a >= key_b ? 1 : -1);
+    });
+
+    return sort_array.map(function(item) {
+        var index = item[1];
+        return items[index];
+    });
+}
+
+function key_alpha(col_index) {
+    return function(elem) {
+        return elem.childNodes[1].childNodes[col_index].firstChild.data.toLowerCase();
+    };
+}
+
+function key_num(col_index) {
+    return function(elem) {
+        return parseFloat(elem.childNodes[1].childNodes[col_index].firstChild.data);
+    };
+}
+
+function key_result(col_index) {
+    return function(elem) {
+        var strings = ['Error', 'Failed', 'Rerun', 'XFailed', 'XPassed',
+                       'Skipped', 'Passed'];
+        return strings.indexOf(elem.childNodes[1].childNodes[col_index].firstChild.data);
+    };
+}
+
+function reset_sort_headers() {
+    find_all('.sort-icon').forEach(function(elem) {
+        elem.parentNode.removeChild(elem);
+    });
+    find_all('.sortable').forEach(function(elem) {
+        var icon = document.createElement("div");
+        icon.className = "sort-icon";
+        icon.textContent = "vvv";
+        elem.insertBefore(icon, elem.firstChild);
+        elem.classList.remove("desc", "active");
+        elem.classList.add("asc", "inactive");
+    });
+}
+
+function toggle_sort_states(elem) {
+    //if active, toggle between asc and desc
+    if (elem.classList.contains('active')) {
+        elem.classList.toggle('asc');
+        elem.classList.toggle('desc');
+    }
+
+    //if inactive, reset all other functions and add ascending active
+    if (elem.classList.contains('inactive')) {
+        reset_sort_headers();
+        elem.classList.remove('inactive');
+        elem.classList.add('active');
+    }
+}
+
+function is_all_rows_hidden(value) {
+  return value.hidden == false;
+}
+
+function filter_table(elem) {
+    var outcome_att = "data-test-result";
+    var outcome = elem.getAttribute(outcome_att);
+    class_outcome = outcome + " results-table-row";
+    var outcome_rows = document.getElementsByClassName(class_outcome);
+
+    for(var i = 0; i < outcome_rows.length; i++){
+        outcome_rows[i].hidden = !elem.checked;
+    }
+
+    var rows = find_all('.results-table-row').filter(is_all_rows_hidden);
+    var all_rows_hidden = rows.length == 0 ? true : false;
+    var not_found_message = document.getElementById("not-found-message");
+    not_found_message.hidden = !all_rows_hidden;
+}
+</script>
+    <p>Report generated on 21-Jun-2022 at 20:21:28 by<a href="https://pypi.python.org/pypi/pytest-html"> pytest-html</a> v1.16.1</p>
+    <h2>Environment</h2>
+    <table id="environment">
+      <tr>
+        <td>Packages</td>
+        <td>{&apos;py&apos;: &apos;1.8.0&apos;, &apos;pytest&apos;: &apos;3.6.1&apos;, &apos;pluggy&apos;: &apos;0.6.0&apos;}</td></tr>
+      <tr>
+        <td>Platform</td>
+        <td>Linux-4.19.66-v7+-armv7l-with-debian-9.11</td></tr>
+      <tr>
+        <td>Plugins</td>
+        <td>{&apos;repeater&apos;: &apos;0.1.1&apos;, &apos;cov&apos;: &apos;2.7.1&apos;, &apos;random&apos;: &apos;0.2&apos;, &apos;xdist&apos;: &apos;1.22.2&apos;, &apos;allure-pytest&apos;: &apos;2.5.0&apos;, &apos;remove-stale-bytecode&apos;: &apos;3.0&apos;, &apos;rerunfailures&apos;: &apos;4.0&apos;, &apos;html&apos;: &apos;1.16.1&apos;, &apos;timeout&apos;: &apos;1.2.1&apos;, &apos;forked&apos;: &apos;1.0.2&apos;, &apos;logger&apos;: &apos;0.3.0&apos;, &apos;instafail&apos;: &apos;0.3.0&apos;, &apos;metadata&apos;: &apos;1.8.0&apos;}</td></tr>
+      <tr>
+        <td>Python</td>
+        <td>2.7.13</td></tr></table>
+    <h2>Summary</h2>
+    <p>21 tests ran in 3446.44 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">10 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">11 failed</span>, <input checked="true" class="filter" data-test-result="error" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">2 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>, <input checked="true" class="filter" data-test-result="rerun" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="rerun">21 rerun</span>
+    <h2>Results</h2>
+    <table id="results-table">
+      <thead id="results-table-head">
+        <tr>
+          <th class="sortable result initial-sort" col="result">Result</th>
+          <th class="sortable" col="name">Test</th>
+          <th class="sortable numeric" col="duration">Duration</th>
+          <th>Links</th></tr>
+        <tr hidden="true" id="not-found-message">
+          <th colspan="4">No results found. Try to check the filters</th></tr></thead>
+      <tbody class="error results-table-row">
+        <tr>
+          <td class="col-result">Error</td>
+          <td class="col-name">tests/test_SecurityLevel.py::test_SecurityLevel[5001-5000-Security Level 5]::teardown</td>
+          <td class="col-duration">31.46</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">../conftest.py:215: in func<br/>    device.scanner.setparam(request.param)<br/>../lib/scanner.py:53: in setparam<br/>    self.device.wait.update(timeout=5000)<br/>../../venv27/local/lib/python2.7/site-packages/uiautomator/__init__.py:74: in __call__<br/>    return self.func(*args, **kwargs)<br/>../../venv27/local/lib/python2.7/site-packages/uiautomator/__init__.py:858: in _wait<br/>    return self.server.jsonrpc_wrap(timeout=http_timeout).waitForWindowUpdate(package_name, timeout)<br/>../../venv27/local/lib/python2.7/site-packages/uiautomator/__init__.py:425: in wrapper<br/>    server.start(timeout=30)<br/>../../venv27/local/lib/python2.7/site-packages/uiautomator/__init__.py:481: in start<br/>    raise IOError("RPC server not started!")<br/><span class="error">E   IOError: RPC server not started!</span><br/></div></td></tr></tbody>
+      <tbody class="error results-table-row">
+        <tr>
+          <td class="col-result">Error</td>
+          <td class="col-name">tests/test_SecurityLevel.py::test_SecurityLevel[5001-5000-Security Level 11]::setup</td>
+          <td class="col-duration">1.44</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">../conftest.py:183: in logfolder<br/>    os.makedirs(logfolder)<br/>../../venv27/lib/python2.7/os.py:157: in makedirs<br/>    mkdir(name, mode)<br/><span class="error">E   OSError: [Errno 17] File exists: 'logs/21062022_192402.165213/212615225D0150'</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_Supplemental.py::test_Supplemental[5001-5000-EAN-13 5-Supps0]</td>
+          <td class="col-duration">18.20</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_Supplemental.py:39: in test_Supplemental<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['4498765301535'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '4498765301535' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['4498765301535']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_Supplemental.py::test_Supplemental[5001-5000-EAN-13 5-Supps1]</td>
+          <td class="col-duration">18.25</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_Supplemental.py:39: in test_Supplemental<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['449876530153512345'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '449876530153512345' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['449876530153512345']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_Supplemental.py::test_Supplemental[5001-5000-EAN-13 5-Supps3]</td>
+          <td class="col-duration">18.18</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_Supplemental.py:39: in test_Supplemental<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['449876530153512345'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '449876530153512345' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['449876530153512345']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_Supplemental.py::test_Supplemental[5001-5000-EAN-13 5-Supps4]</td>
+          <td class="col-duration">18.18</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_Supplemental.py:39: in test_Supplemental<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['4498765301535'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '4498765301535' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['4498765301535']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_Supplemental.py::test_Supplemental[5001-5000-EAN-13 5-Supps5]</td>
+          <td class="col-duration">19.06</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_Supplemental.py:39: in test_Supplemental<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['414123456789412345'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '414123456789412345' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['414123456789412345']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_Supplemental.py::test_Supplemental[5001-5000-Bookland]</td>
+          <td class="col-duration">18.31</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_Supplemental.py:39: in test_Supplemental<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['97934535223280001'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '97934535223280001' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['97934535223280001']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_Supplemental.py::test_Supplemental[5001-5000-EAN-13 5-Supps6]</td>
+          <td class="col-duration">14.55</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_Supplemental.py:39: in test_Supplemental<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['414123456789412345'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '414123456789412345' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['414123456789412345']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_Supplemental.py::test_Supplemental[5001-5000-EAN-13 5-Supps7]</td>
+          <td class="col-duration">19.32</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_Supplemental.py:39: in test_Supplemental<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['977123456789812345'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '977123456789812345' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['977123456789812345']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_Supplemental.py::test_Supplemental[5001-5000-EAN-13 5-Supps8]</td>
+          <td class="col-duration">18.21</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_Supplemental.py:39: in test_Supplemental<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['449876530153512345'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '449876530153512345' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['449876530153512345']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_Supplemental.py::test_Supplemental[5001-5000-EAN-13 5-Supps9]</td>
+          <td class="col-duration">18.19</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_Supplemental.py:39: in test_Supplemental<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['414123456789412345'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '414123456789412345' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['414123456789412345']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_SecurityLevel.py::test_SecurityLevel[5001-5000-Security Level 5]</td>
+          <td class="col-duration">116.49</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_SecurityLevel.py:36: in test_SecurityLevel<br/>    if barcode not in device.scanner.scan(symbology_num, subtest, barcode[0], size, use):<br/>../lib/scanner.py:32: in scan<br/>    self.device.wait.update(timeout=5000)<br/>../../venv27/local/lib/python2.7/site-packages/uiautomator/__init__.py:74: in __call__<br/>    return self.func(*args, **kwargs)<br/>../../venv27/local/lib/python2.7/site-packages/uiautomator/__init__.py:858: in _wait<br/>    return self.server.jsonrpc_wrap(timeout=http_timeout).waitForWindowUpdate(package_name, timeout)<br/>../../venv27/local/lib/python2.7/site-packages/uiautomator/__init__.py:425: in wrapper<br/>    server.start(timeout=30)<br/>../../venv27/local/lib/python2.7/site-packages/uiautomator/__init__.py:481: in start<br/>    raise IOError("RPC server not started!")<br/><span class="error">E   IOError: RPC server not started!</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_Supplemental.py::test_Supplemental[5001-5000-EAN-13 5-Supps0]</td>
+          <td class="col-duration">19.45</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_Supplemental.py:39: in test_Supplemental<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['4498765301535'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '4498765301535' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['4498765301535']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_Supplemental.py::test_Supplemental[5001-5000-EAN-13 5-Supps1]</td>
+          <td class="col-duration">18.48</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_Supplemental.py:39: in test_Supplemental<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['449876530153512345'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '449876530153512345' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['449876530153512345']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_Supplemental.py::test_Supplemental[5001-5000-EAN-13 5-Supps3]</td>
+          <td class="col-duration">19.15</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_Supplemental.py:39: in test_Supplemental<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['449876530153512345'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '449876530153512345' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['449876530153512345']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_Supplemental.py::test_Supplemental[5001-5000-EAN-13 5-Supps4]</td>
+          <td class="col-duration">18.87</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_Supplemental.py:39: in test_Supplemental<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['4498765301535'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '4498765301535' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['4498765301535']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_Supplemental.py::test_Supplemental[5001-5000-EAN-13 5-Supps5]</td>
+          <td class="col-duration">18.29</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_Supplemental.py:39: in test_Supplemental<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['414123456789412345'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '414123456789412345' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['414123456789412345']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_Supplemental.py::test_Supplemental[5001-5000-Bookland]</td>
+          <td class="col-duration">20.09</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_Supplemental.py:39: in test_Supplemental<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['97934535223280001'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '97934535223280001' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['97934535223280001']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_Supplemental.py::test_Supplemental[5001-5000-EAN-13 5-Supps6]</td>
+          <td class="col-duration">19.59</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_Supplemental.py:39: in test_Supplemental<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['414123456789412345'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '414123456789412345' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['414123456789412345']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_Supplemental.py::test_Supplemental[5001-5000-EAN-13 5-Supps7]</td>
+          <td class="col-duration">18.15</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_Supplemental.py:39: in test_Supplemental<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['977123456789812345'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '977123456789812345' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['977123456789812345']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_Supplemental.py::test_Supplemental[5001-5000-EAN-13 5-Supps8]</td>
+          <td class="col-duration">18.07</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_Supplemental.py:39: in test_Supplemental<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['449876530153512345'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '449876530153512345' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['449876530153512345']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_Supplemental.py::test_Supplemental[5001-5000-EAN-13 5-Supps9]</td>
+          <td class="col-duration">16.88</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_Supplemental.py:39: in test_Supplemental<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['414123456789412345'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '414123456789412345' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['414123456789412345']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_SecurityLevel.py::test_SecurityLevel[5001-5000-Security Level 1]</td>
+          <td class="col-duration">44.49</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_SecurityLevel.py:36: in test_SecurityLevel<br/>    if barcode not in device.scanner.scan(symbology_num, subtest, barcode[0], size, use):<br/>../lib/scanner.py:32: in scan<br/>    self.device.wait.update(timeout=5000)<br/>../../venv27/local/lib/python2.7/site-packages/uiautomator/__init__.py:74: in __call__<br/>    return self.func(*args, **kwargs)<br/>../../venv27/local/lib/python2.7/site-packages/uiautomator/__init__.py:858: in _wait<br/>    return self.server.jsonrpc_wrap(timeout=http_timeout).waitForWindowUpdate(package_name, timeout)<br/>../../venv27/local/lib/python2.7/site-packages/uiautomator/__init__.py:421: in wrapper<br/>    return _method_obj(*args, **kwargs)<br/>../../venv27/local/lib/python2.7/site-packages/uiautomator/__init__.py:124: in __call__<br/>    result = urllib2.urlopen(req, timeout=self.timeout)<br/>/usr/lib/python2.7/urllib2.py:154: in urlopen<br/>    return opener.open(url, data, timeout)<br/>/usr/lib/python2.7/urllib2.py:429: in open<br/>    response = self._open(req, data)<br/>/usr/lib/python2.7/urllib2.py:447: in _open<br/>    '_open', req)<br/>/usr/lib/python2.7/urllib2.py:407: in _call_chain<br/>    result = func(*args)<br/>/usr/lib/python2.7/urllib2.py:1228: in http_open<br/>    return self.do_open(httplib.HTTPConnection, req)<br/>/usr/lib/python2.7/urllib2.py:1201: in do_open<br/>    r = h.getresponse(buffering=True)<br/>/usr/lib/python2.7/httplib.py:1121: in getresponse<br/>    response.begin()<br/>/usr/lib/python2.7/httplib.py:438: in begin<br/>    version, status, reason = self._read_status()<br/>/usr/lib/python2.7/httplib.py:394: in _read_status<br/>    line = self.fp.readline(_MAXLINE + 1)<br/>/usr/lib/python2.7/socket.py:480: in readline<br/>    data = self._sock.recv(self._rbufsize)<br/><span class="error">E   Failed: Timeout &gt;45.0s</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_SecurityLevel.py::test_SecurityLevel[5001-5000-Security Level 2]</td>
+          <td class="col-duration">44.51</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_SecurityLevel.py:36: in test_SecurityLevel<br/>    if barcode not in device.scanner.scan(symbology_num, subtest, barcode[0], size, use):<br/>../lib/scanner.py:30: in scan<br/>    time.sleep(5)<br/><span class="error">E   Failed: Timeout &gt;45.0s</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_SecurityLevel.py::test_SecurityLevel[5001-5000-Security Level 3]</td>
+          <td class="col-duration">44.49</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_SecurityLevel.py:36: in test_SecurityLevel<br/>    if barcode not in device.scanner.scan(symbology_num, subtest, barcode[0], size, use):<br/>../lib/scanner.py:30: in scan<br/>    time.sleep(5)<br/><span class="error">E   Failed: Timeout &gt;45.0s</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_SecurityLevel.py::test_SecurityLevel[5001-5000-Security Level 4]</td>
+          <td class="col-duration">44.47</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_SecurityLevel.py:36: in test_SecurityLevel<br/>    if barcode not in device.scanner.scan(symbology_num, subtest, barcode[0], size, use):<br/>../lib/scanner.py:32: in scan<br/>    self.device.wait.update(timeout=5000)<br/>../../venv27/local/lib/python2.7/site-packages/uiautomator/__init__.py:74: in __call__<br/>    return self.func(*args, **kwargs)<br/>../../venv27/local/lib/python2.7/site-packages/uiautomator/__init__.py:858: in _wait<br/>    return self.server.jsonrpc_wrap(timeout=http_timeout).waitForWindowUpdate(package_name, timeout)<br/>../../venv27/local/lib/python2.7/site-packages/uiautomator/__init__.py:421: in wrapper<br/>    return _method_obj(*args, **kwargs)<br/>../../venv27/local/lib/python2.7/site-packages/uiautomator/__init__.py:124: in __call__<br/>    result = urllib2.urlopen(req, timeout=self.timeout)<br/>/usr/lib/python2.7/urllib2.py:154: in urlopen<br/>    return opener.open(url, data, timeout)<br/>/usr/lib/python2.7/urllib2.py:429: in open<br/>    response = self._open(req, data)<br/>/usr/lib/python2.7/urllib2.py:447: in _open<br/>    '_open', req)<br/>/usr/lib/python2.7/urllib2.py:407: in _call_chain<br/>    result = func(*args)<br/>/usr/lib/python2.7/urllib2.py:1228: in http_open<br/>    return self.do_open(httplib.HTTPConnection, req)<br/>/usr/lib/python2.7/urllib2.py:1201: in do_open<br/>    r = h.getresponse(buffering=True)<br/>/usr/lib/python2.7/httplib.py:1121: in getresponse<br/>    response.begin()<br/>/usr/lib/python2.7/httplib.py:438: in begin<br/>    version, status, reason = self._read_status()<br/>/usr/lib/python2.7/httplib.py:394: in _read_status<br/>    line = self.fp.readline(_MAXLINE + 1)<br/>/usr/lib/python2.7/socket.py:480: in readline<br/>    data = self._sock.recv(self._rbufsize)<br/><span class="error">E   Failed: Timeout &gt;45.0s</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_SecurityLevel.py::test_SecurityLevel[5001-5000-Security Level 5]</td>
+          <td class="col-duration">44.53</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_SecurityLevel.py:36: in test_SecurityLevel<br/>    if barcode not in device.scanner.scan(symbology_num, subtest, barcode[0], size, use):<br/>../lib/scanner.py:30: in scan<br/>    time.sleep(5)<br/><span class="error">E   Failed: Timeout &gt;45.0s</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_SecurityLevel.py::test_SecurityLevel[5001-5000-Security Level 6]</td>
+          <td class="col-duration">44.55</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_SecurityLevel.py:36: in test_SecurityLevel<br/>    if barcode not in device.scanner.scan(symbology_num, subtest, barcode[0], size, use):<br/>../lib/scanner.py:26: in scan<br/>    self.kindle.image(symbology_num + ".png")<br/>../lib/kindle.py:137: in image<br/>    self.kindle_send(file_to_send, False)<br/>../lib/kindle.py:53: in kindle_send<br/>    self.port.write(msg)<br/>../../venv27/local/lib/python2.7/site-packages/serial/serialposix.py:556: in write<br/>    abort, ready, _ = select.select([self.pipe_abort_write_r], [self.fd], [], None)<br/><span class="error">E   Failed: Timeout &gt;45.0s</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_SecurityLevel.py::test_SecurityLevel[5001-5000-Security Level 7]</td>
+          <td class="col-duration">44.47</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_SecurityLevel.py:36: in test_SecurityLevel<br/>    if barcode not in device.scanner.scan(symbology_num, subtest, barcode[0], size, use):<br/>../lib/scanner.py:26: in scan<br/>    self.kindle.image(symbology_num + ".png")<br/>../lib/kindle.py:153: in image<br/>    time.sleep(DISPLAY_SLEEP)<br/><span class="error">E   Failed: Timeout &gt;45.0s</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_SecurityLevel.py::test_SecurityLevel[5001-5000-Security Level 8]</td>
+          <td class="col-duration">44.47</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_SecurityLevel.py:36: in test_SecurityLevel<br/>    if barcode not in device.scanner.scan(symbology_num, subtest, barcode[0], size, use):<br/>../lib/scanner.py:30: in scan<br/>    time.sleep(5)<br/><span class="error">E   Failed: Timeout &gt;45.0s</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_SecurityLevel.py::test_SecurityLevel[5001-5000-Security Level 9]</td>
+          <td class="col-duration">44.48</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_SecurityLevel.py:36: in test_SecurityLevel<br/>    if barcode not in device.scanner.scan(symbology_num, subtest, barcode[0], size, use):<br/>../lib/scanner.py:40: in scan<br/>    barcodes = self.device.server.adb.cmd('logcat -d | grep -i', 'SDL_SCAN').communicate()[0]<br/>/usr/lib/python2.7/subprocess.py:479: in communicate<br/>    return self._communicate(input)<br/>/usr/lib/python2.7/subprocess.py:1098: in _communicate<br/>    stdout, stderr = self._communicate_with_poll(input)<br/>/usr/lib/python2.7/subprocess.py:1152: in _communicate_with_poll<br/>    ready = poller.poll()<br/><span class="error">E   Failed: Timeout &gt;45.0s</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_SecurityLevel.py::test_SecurityLevel[5001-5000-Security Level 10]</td>
+          <td class="col-duration">44.47</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_SecurityLevel.py:36: in test_SecurityLevel<br/>    if barcode not in device.scanner.scan(symbology_num, subtest, barcode[0], size, use):<br/>../lib/scanner.py:40: in scan<br/>    barcodes = self.device.server.adb.cmd('logcat -d | grep -i', 'SDL_SCAN').communicate()[0]<br/>/usr/lib/python2.7/subprocess.py:479: in communicate<br/>    return self._communicate(input)<br/>/usr/lib/python2.7/subprocess.py:1098: in _communicate<br/>    stdout, stderr = self._communicate_with_poll(input)<br/>/usr/lib/python2.7/subprocess.py:1152: in _communicate_with_poll<br/>    ready = poller.poll()<br/><span class="error">E   Failed: Timeout &gt;45.0s</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_SecurityLevel.py::test_SecurityLevel[5001-5000-Security Level 11]</td>
+          <td class="col-duration">44.50</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_SecurityLevel.py:36: in test_SecurityLevel<br/>    if barcode not in device.scanner.scan(symbology_num, subtest, barcode[0], size, use):<br/>../lib/scanner.py:40: in scan<br/>    barcodes = self.device.server.adb.cmd('logcat -d | grep -i', 'SDL_SCAN').communicate()[0]<br/>/usr/lib/python2.7/subprocess.py:479: in communicate<br/>    return self._communicate(input)<br/>/usr/lib/python2.7/subprocess.py:1098: in _communicate<br/>    stdout, stderr = self._communicate_with_poll(input)<br/>/usr/lib/python2.7/subprocess.py:1152: in _communicate_with_poll<br/>    ready = poller.poll()<br/><span class="error">E   Failed: Timeout &gt;45.0s</span><br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_Supplemental.py::test_Supplemental[5001-5000-EAN-13 5-Supps2]</td>
+          <td class="col-duration">18.16</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_SecurityLevel.py::test_SecurityLevel[5001-5000-Security Level 1]</td>
+          <td class="col-duration">224.93</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_SecurityLevel.py::test_SecurityLevel[5001-5000-Security Level 2]</td>
+          <td class="col-duration">223.82</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_SecurityLevel.py::test_SecurityLevel[5001-5000-Security Level 3]</td>
+          <td class="col-duration">222.12</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_SecurityLevel.py::test_SecurityLevel[5001-5000-Security Level 4]</td>
+          <td class="col-duration">220.78</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_SecurityLevel.py::test_SecurityLevel[5001-5000-Security Level 6]</td>
+          <td class="col-duration">226.02</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_SecurityLevel.py::test_SecurityLevel[5001-5000-Security Level 7]</td>
+          <td class="col-duration">247.70</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_SecurityLevel.py::test_SecurityLevel[5001-5000-Security Level 8]</td>
+          <td class="col-duration">247.98</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_SecurityLevel.py::test_SecurityLevel[5001-5000-Security Level 9]</td>
+          <td class="col-duration">267.70</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_SecurityLevel.py::test_SecurityLevel[5001-5000-Security Level 10]</td>
+          <td class="col-duration">285.64</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody></table></body></html>

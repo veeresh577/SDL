@@ -1,0 +1,26 @@
+<6>[10115.286559] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<6>[10115.286582] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 
+<14>[10116.052173] init: starting service 'qccsyshalservice'...
+<38>[10116.313052] type=1400 audit(1654205875.475:6691): avc: denied { search } for comm="vendor.qti.hard" name="/" dev="mmcblk0p37" ino=2 scontext=u:r:vendor_hal_qccvndhal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[10116.411575] init: Service 'qccvndhalservice' (pid 27683) exited with status 1
+<14>[10116.411665] init: Sending signal 9 to service 'qccvndhalservice' (pid 27683) process group...
+<14>[10116.412548] libprocessgroup: Successfully killed process cgroup uid 1000 pid 27683 in 0ms
+<3>[10117.368775] [schedu][0x139b9f00af0][21:37:56.535011] wlan: [2070:E:scan] scm_11d_elected_country_algo_fcc: 98: No AP with 11d Country code is present in scan list
+<3>[10117.368893] FUSIONWL: : ==Regulatory_elect_country_db==: No AP with 11d Country code is present in scan list 
+<38>[10121.053358] type=1400 audit(1654205880.215:6692): avc: denied { kill } for comm="kworker/u16:7" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<38>[10121.164205] type=1400 audit(1654205880.325:6693): avc: denied { search } for comm="qccsyshalservic" name="/" dev="mmcblk0p37" ino=2 scontext=u:r:vendor_qccsyshal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<6>[10125.289024] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<14>[10126.288863] init: Service 'qccsyshalservice' (pid 27690) exited with status 1
+<14>[10126.288957] init: Sending signal 9 to service 'qccsyshalservice' (pid 27690) process group...
+<14>[10126.289778] libprocessgroup: Successfully killed process cgroup uid 1000 pid 27690 in 0ms
+<14>[10126.504715] init: Service 'qccvndhalservice' (pid 27691) exited with status 1
+<14>[10126.504800] init: Sending signal 9 to service 'qccvndhalservice' (pid 27691) process group...
+<14>[10126.505545] libprocessgroup: Successfully killed process cgroup uid 1000 pid 27691 in 0ms
+<3>[10126.710373] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[10126.720891] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[10126.721264] [SDL] se47xx_misc_ioctl ret = -107 
+<3>[10126.725340] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[10126.729813] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[10126.735046] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[10126.740753] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[10126.745663] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 

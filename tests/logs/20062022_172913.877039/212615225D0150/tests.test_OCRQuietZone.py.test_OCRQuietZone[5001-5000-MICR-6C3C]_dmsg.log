@@ -1,0 +1,54 @@
+<6>[ 5002.411494] IRQ 6: no longer affine to CPU4
+<14>[ 5004.143995] init: starting service 'qccsyshalservice'...
+<14>[ 5004.192469] init: starting service 'qccvndhalservice'...
+<14>[ 5004.229334] init: starting service 'smartmu'...
+<38>[ 5004.252553] type=1400 audit(1642435590.284:4834): avc: denied { search } for comm="vendor.qti.hard" name="/" dev="sda10" ino=2 scontext=u:r:vendor_hal_qccvndhal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[ 5004.296575] init: Service 'qccsyshalservice' (pid 24292) exited with status 1
+<14>[ 5004.296687] init: Sending signal 9 to service 'qccsyshalservice' (pid 24292) process group...
+<14>[ 5004.297644] libprocessgroup: Successfully killed process cgroup uid 1000 pid 24292 in 0ms
+<14>[ 5004.328929] init: Service 'qccvndhalservice' (pid 24293) exited with status 1
+<14>[ 5004.329060] init: Sending signal 9 to service 'qccvndhalservice' (pid 24293) process group...
+<14>[ 5004.330342] libprocessgroup: Successfully killed process cgroup uid 1000 pid 24293 in 0ms
+<14>[ 5004.373098] init: Service 'smartmu' (pid 24294) exited with status 0
+<14>[ 5009.190552] init: starting service 'qccsyshalservice'...
+<38>[ 5009.265342] type=1400 audit(1642435595.304:4835): avc: denied { search } for comm="qccsyshalservic" name="/" dev="sda10" ino=2 scontext=u:r:vendor_qccsyshal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[ 5009.272212] init: starting service 'smartmu'...
+<14>[ 5009.328699] init: Service 'qccsyshalservice' (pid 24298) exited with status 1
+<14>[ 5009.328817] init: Sending signal 9 to service 'qccsyshalservice' (pid 24298) process group...
+<14>[ 5009.329861] libprocessgroup: Successfully killed process cgroup uid 1000 pid 24298 in 0ms
+<14>[ 5009.439958] init: Service 'smartmu' (pid 24300) exited with status 0
+<12>[ 5010.801944] healthd: battery l=83 v=3813 t=47.0 h=2 st=2 c=-543456 fc=4008000 cc=2 chg=u
+<6>[ 5012.011415] IRQ 6: no longer affine to CPU4
+<3>[ 5012.693182] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 5012.694680] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 5012.697967] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 5012.703381] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 5012.708715] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 5012.714135] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 5012.719546] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 5012.724933] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 5012.730214] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 5012.735597] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 5012.751535] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 5012.756849] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 5012.762282] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 5012.767498] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 5012.778151] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 5012.784063] [SDL] misc_ioctl msg.len is 4 : 0x7b 0x00 0x00 0x85 
+<3>[ 5012.788783] [SDL] misc_ioctl msg.len is 2 : 0x84 0x00 
+<3>[ 5012.794957] [SDL] misc_ioctl msg.len is 4 : 0x82 0x00 0x00 0x7e 
+<3>[ 5012.800013] [SDL] misc_ioctl msg.len is 2 : 0x7d 0x80 
+<31>[ 5012.868185] logd: logdr: UID=0 GID=0 PID=24313 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[ 5012.889039] [SDL] misc_ioctl msg.len is 3 : 0x77 0x02 0x87 
+<3>[ 5012.889759] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 5013.004373] msm_isp_open_node: reset VFE
+<31>[ 5013.026191] logd: logdr: UID=0 GID=0 PID=24319 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[ 5013.055348] frame_src is 1 frame_id is 2 blackjoe
+<3>[ 5013.071916] frame_src is 1 frame_id is 3 blackjoe
+<3>[ 5013.088523] frame_src is 1 frame_id is 4 blackjoe
+<3>[ 5013.105149] frame_src is 1 frame_id is 5 blackjoe
+<3>[ 5013.157228] frame_src is 1 frame_id is 6 blackjoe
+<3>[ 5013.173837] frame_src is 1 frame_id is 7 blackjoe
+<3>[ 5013.190484] frame_src is 1 frame_id is 8 blackjoe
+<31>[ 5013.206175] logd: logdr: UID=0 GID=0 PID=24330 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[ 5013.207079] frame_src is 1 frame_id is 9 blackjoe

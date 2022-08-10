@@ -1,0 +1,41 @@
+<38>[ 7793.610155] type=1400 audit(1642438379.644:5291): avc: denied { kill } for comm="swapper/2" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<14>[ 7796.217909] init: starting service 'qccsyshalservice'...
+<14>[ 7796.269668] init: starting service 'qccvndhalservice'...
+<38>[ 7796.302201] type=1400 audit(1642438382.334:5292): avc: denied { search } for comm="qccsyshalservic" name="/" dev="sda10" ino=2 scontext=u:r:vendor_qccsyshal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[ 7796.304044] init: starting service 'smartmu'...
+<38>[ 7796.336435] type=1400 audit(1642438382.374:5293): avc: denied { search } for comm="vendor.qti.hard" name="/" dev="sda10" ino=2 scontext=u:r:vendor_hal_qccvndhal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[ 7796.386009] init: Service 'qccvndhalservice' (pid 8840) exited with status 1
+<14>[ 7796.386104] init: Sending signal 9 to service 'qccvndhalservice' (pid 8840) process group...
+<14>[ 7796.387227] libprocessgroup: Successfully killed process cgroup uid 1000 pid 8840 in 0ms
+<14>[ 7796.469738] init: Service 'smartmu' (pid 8841) exited with status 0
+<14>[ 7801.346213] init: starting service 'smartmu'...
+<14>[ 7801.430420] init: Service 'qccvndhalservice' (pid 8846) exited with status 1
+<14>[ 7801.430507] init: Sending signal 9 to service 'qccvndhalservice' (pid 8846) process group...
+<14>[ 7801.509287] init: Service 'smartmu' (pid 8847) exited with status 0
+<3>[ 7804.884879] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 7804.886358] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 7804.889827] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 7804.895104] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 7804.900545] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 7804.905868] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 7804.937839] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 7804.943522] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 7804.948508] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 7804.954029] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 7804.959151] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 7804.964573] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 7804.969809] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 7804.975636] [SDL] misc_ioctl msg.len is 4 : 0x7b 0x00 0x00 0x85 
+<3>[ 7804.980499] [SDL] misc_ioctl msg.len is 2 : 0x84 0x00 
+<3>[ 7804.986642] [SDL] misc_ioctl msg.len is 4 : 0x82 0x00 0x00 0x7e 
+<3>[ 7804.991591] [SDL] misc_ioctl msg.len is 2 : 0x7d 0x80 
+<31>[ 7805.059348] logd: logdr: UID=0 GID=0 PID=8859 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<6>[ 7805.074110] IRQ 6: no longer affine to CPU5
+<3>[ 7805.079144] [SDL] misc_ioctl msg.len is 3 : 0x77 0x02 0x87 
+<3>[ 7805.079728] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<31>[ 7805.205180] logd: logdr: UID=0 GID=0 PID=8865 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[ 7805.241638] msm_isp_open_node: reset VFE
+<3>[ 7805.252517] msm_ispif_config:1061 Exit 
+<3>[ 7805.252998] msm_ispif_config2: Exit 
+<3>[ 7805.262885] frame_src is 1 frame_id is 1 blackjoe
+<3>[ 7805.279527] frame_src is 1 frame_id is 2 blackjoe

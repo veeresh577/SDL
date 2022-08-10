@@ -1,0 +1,27 @@
+. tests/test_Supplemental.py::test_Supplemental[5001-5000-EAN-13 5-Supps0]
+. tests/test_Supplemental.py::test_Supplemental[5001-5000-EAN-13 5-Supps1]
+. tests/test_Supplemental.py::test_Supplemental[5001-5000-EAN-13 5-Supps2]
+. tests/test_Supplemental.py::test_Supplemental[5001-5000-EAN-13 5-Supps3]
+. tests/test_Supplemental.py::test_Supplemental[5001-5000-EAN-13 5-Supps4]
+. tests/test_Supplemental.py::test_Supplemental[5001-5000-EAN-13 5-Supps5]
+R tests/test_Supplemental.py::test_Supplemental[5001-5000-Bookland]
+ test_Supplemental.py:39: in test_Supplemental
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['97934535223280001'] == ['NR']
+ E     At index 0 diff: '97934535223280001' != 'NR'
+ E     Full diff:
+ E     - ['97934535223280001']
+ E     + ['NR']
+F tests/test_Supplemental.py::test_Supplemental[5001-5000-Bookland]
+ test_Supplemental.py:39: in test_Supplemental
+     assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+ E   AssertionError: assert ['97934535223280001'] == ['9793453522328']
+ E     At index 0 diff: '97934535223280001' != '9793453522328'
+ E     Full diff:
+ E     - ['97934535223280001']
+ E     ?                ----
+ E     + ['9793453522328']
+. tests/test_Supplemental.py::test_Supplemental[5001-5000-EAN-13 5-Supps6]
+. tests/test_Supplemental.py::test_Supplemental[5001-5000-EAN-13 5-Supps7]
+. tests/test_Supplemental.py::test_Supplemental[5001-5000-EAN-13 5-Supps8]
+. tests/test_Supplemental.py::test_Supplemental[5001-5000-EAN-13 5-Supps9]

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?><testsuite errors="0" failures="11" name="pytest" skips="0" tests="27" time="919.472"><testcase classname="tests.test_OCRTemplate" file="tests/test_OCRTemplate.py" line="29" name="test_OCRTemplate[5001-5000-OCR-AllChar]" time="44.9152109623"><failure message="AssertionError: assert [&apos;A3B2C1&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;A3B2C1&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;A3B2C1&apos;]
+  + [&apos;NR&apos;]">test_OCRTemplate.py:35: in test_OCRTemplate
+    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;A3B2C1&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;A3B2C1&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;A3B2C1&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_OCRTemplate" file="tests/test_OCRTemplate.py" line="29" name="test_OCRTemplate[5001-5000-OCR-SomeChar]" time="41.8442590237"><failure message="AssertionError: assert [&apos;A2C1&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;A2C1&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;A2C1&apos;]
+  + [&apos;NR&apos;]">test_OCRTemplate.py:35: in test_OCRTemplate
+    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;A2C1&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;A2C1&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;A2C1&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_OCRTemplate" file="tests/test_OCRTemplate.py" line="29" name="test_OCRTemplate[5001-5000-OCR-OutChar]" time="27.9071469307"></testcase><testcase classname="tests.test_OCRTemplate" file="tests/test_OCRTemplate.py" line="29" name="test_OCRTemplate[5001-5000-OCR-RARDOAnOAInvalid]" time="25.1469290257"></testcase><testcase classname="tests.test_OCRTemplate" file="tests/test_OCRTemplate.py" line="29" name="test_OCRTemplate[5001-5000-OCR-RARDOAnOAValid]" time="41.7055103779"><failure message="AssertionError: assert [&apos;AB98C2D&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;AB98C2D&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;AB98C2D&apos;]
+  + [&apos;NR&apos;]">test_OCRTemplate.py:35: in test_OCRTemplate
+    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;AB98C2D&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;AB98C2D&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;AB98C2D&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_OCRTemplate" file="tests/test_OCRTemplate.py" line="29" name="test_OCRTemplate[5001-5000-OCR-AorDOSmallSpecInvalid]" time="24.9371292591"></testcase><testcase classname="tests.test_OCRTemplate" file="tests/test_OCRTemplate.py" line="29" name="test_OCRTemplate[5001-5000-OCR-AorDOSmallSpecValid]" time="44.4320991039"><failure message="AssertionError: assert [&apos;TRY1B*-&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;TRY1B*-&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;TRY1B*-&apos;]
+  + [&apos;NR&apos;]">test_OCRTemplate.py:35: in test_OCRTemplate
+    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;TRY1B*-&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;TRY1B*-&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;TRY1B*-&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_OCRTemplate" file="tests/test_OCRTemplate.py" line="29" name="test_OCRTemplate[5001-5000-OCR-DOrFAOrFODOSInvalid]" time="24.7045531273"></testcase><testcase classname="tests.test_OCRTemplate" file="tests/test_OCRTemplate.py" line="29" name="test_OCRTemplate[5001-5000-OCR-DOrFAOrFODOSValid]" time="16.5478792191"></testcase><testcase classname="tests.test_OCRTemplate" file="tests/test_OCRTemplate.py" line="29" name="test_OCRTemplate[5001-5000-OCR-LStringInvalid]" time="25.0270371437"></testcase><testcase classname="tests.test_OCRTemplate" file="tests/test_OCRTemplate.py" line="29" name="test_OCRTemplate[5001-5000-OCR-LStringValid]" time="44.5859360695"><failure message="AssertionError: assert [&apos;AB+XY&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;AB+XY&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;AB+XY&apos;]
+  + [&apos;NR&apos;]">test_OCRTemplate.py:35: in test_OCRTemplate
+    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;AB+XY&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;AB+XY&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;AB+XY&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_OCRTemplate" file="tests/test_OCRTemplate.py" line="29" name="test_OCRTemplate[5001-5000-OCR-Newline]" time="44.2285430431"><failure message="AssertionError: assert [&apos;31498&apos;, &apos;HMSTK&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;31498&apos; != &apos;NR&apos;
+  Left contains more items, first extra item: &apos;HMSTK&apos;
+  Full diff:
+  - [&apos;31498&apos;, &apos;HMSTK&apos;]
+  + [&apos;NR&apos;]">test_OCRTemplate.py:35: in test_OCRTemplate
+    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;31498&apos;, &apos;HMSTK&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;31498&apos; != &apos;NR&apos;
+E     Left contains more items, first extra item: &apos;HMSTK&apos;
+E     Full diff:
+E     - [&apos;31498&apos;, &apos;HMSTK&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_OCRTemplate" file="tests/test_OCRTemplate.py" line="29" name="test_OCRTemplate[5001-5000-OCR-StrExtract]" time="42.6011199951"><failure message="AssertionError: assert [&apos;&gt;ABCDE&gt;&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;&gt;ABCDE&gt;&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;&gt;ABCDE&gt;&apos;]
+  + [&apos;NR&apos;]">test_OCRTemplate.py:35: in test_OCRTemplate
+    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;&gt;ABCDE&gt;&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;&gt;ABCDE&gt;&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;&gt;ABCDE&gt;&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_OCRTemplate" file="tests/test_OCRTemplate.py" line="29" name="test_OCRTemplate[5001-5000-OCR-IgnoretoEnd]" time="44.19531703"><failure message="AssertionError: assert [&apos;31597&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;31597&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;31597&apos;]
+  + [&apos;NR&apos;]">test_OCRTemplate.py:35: in test_OCRTemplate
+    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;31597&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;31597&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;31597&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_OCRTemplate" file="tests/test_OCRTemplate.py" line="29" name="test_OCRTemplate[5001-5000-OCR-SkipUntill]" time="41.2656280994"><failure message="AssertionError: assert [&apos;DRMARIO&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;DRMARIO&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;DRMARIO&apos;]
+  + [&apos;NR&apos;]">test_OCRTemplate.py:35: in test_OCRTemplate
+    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;DRMARIO&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;DRMARIO&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;DRMARIO&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_OCRTemplate" file="tests/test_OCRTemplate.py" line="29" name="test_OCRTemplate[5001-5000-OCR-SkipUntillNot]" time="44.4544901848"><failure message="AssertionError: assert [&apos;ENTERPRISE&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;ENTERPRISE&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;ENTERPRISE&apos;]
+  + [&apos;NR&apos;]">test_OCRTemplate.py:35: in test_OCRTemplate
+    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;ENTERPRISE&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;ENTERPRISE&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;ENTERPRISE&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_OCRTemplate" file="tests/test_OCRTemplate.py" line="29" name="test_OCRTemplate[5001-5000-OCR-RepeatInvalid]" time="25.0714771748"></testcase><testcase classname="tests.test_OCRTemplate" file="tests/test_OCRTemplate.py" line="29" name="test_OCRTemplate[5001-5000-OCR-RepeatValid]" time="16.680742979"></testcase><testcase classname="tests.test_OCRTemplate" file="tests/test_OCRTemplate.py" line="29" name="test_OCRTemplate[5001-5000-OCR-Scroll]" time="43.8663041592"><failure message="AssertionError: assert [&apos;12345&apos;] == [&apos;NR&apos;]
+  At index 0 diff: &apos;12345&apos; != &apos;NR&apos;
+  Full diff:
+  - [&apos;12345&apos;]
+  + [&apos;NR&apos;]">test_OCRTemplate.py:35: in test_OCRTemplate
+    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)
+E   AssertionError: assert [&apos;12345&apos;] == [&apos;NR&apos;]
+E     At index 0 diff: &apos;12345&apos; != &apos;NR&apos;
+E     Full diff:
+E     - [&apos;12345&apos;]
+E     + [&apos;NR&apos;]</failure></testcase><testcase classname="tests.test_PostalDisable" file="tests/test_PostalDisable.py" line="18" name="test_PostalDisable[5001-5000-Japanese Postal]" time="24.8556342125"></testcase><testcase classname="tests.test_PostalDisable" file="tests/test_PostalDisable.py" line="18" name="test_PostalDisable[5001-5000-Korean Postal]" time="24.6542928219"></testcase><testcase classname="tests.test_PostalDisable" file="tests/test_PostalDisable.py" line="18" name="test_PostalDisable[5001-5000-US Planet ]" time="22.3955459595"></testcase><testcase classname="tests.test_PostalDisable" file="tests/test_PostalDisable.py" line="18" name="test_PostalDisable[5001-5000-US Postnet]" time="24.3262946606"></testcase><testcase classname="tests.test_PostalDisable" file="tests/test_PostalDisable.py" line="18" name="test_PostalDisable[5001-5000-Netherlands Postal]" time="25.2133491039"></testcase><testcase classname="tests.test_PostalDisable" file="tests/test_PostalDisable.py" line="18" name="test_PostalDisable[5001-5000-Australian Postal]" time="24.528938055"></testcase><testcase classname="tests.test_PostalDisable" file="tests/test_PostalDisable.py" line="18" name="test_PostalDisable[5001-5000-UK Royal Mail]" time="24.5118188858"></testcase><testcase classname="tests.test_PostalDisable" file="tests/test_PostalDisable.py" line="18" name="test_PostalDisable[5001-5000-Intellimail]" time="25.9371418953"></testcase></testsuite>

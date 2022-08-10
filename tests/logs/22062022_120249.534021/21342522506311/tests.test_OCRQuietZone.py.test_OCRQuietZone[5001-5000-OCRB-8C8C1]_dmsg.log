@@ -1,0 +1,59 @@
+<38>[82798.405668] type=1400 audit(1654289666.448:192550): avc: denied { kill } for comm="swapper/1" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<14>[82799.424287] init: starting service 'qccsyshalservice'...
+<14>[82799.471955] init: starting service 'qccvndhalservice'...
+<14>[82799.558721] init: Service 'qccsyshalservice' (pid 10745) exited with status 1
+<14>[82799.558818] init: Sending signal 9 to service 'qccsyshalservice' (pid 10745) process group...
+<14>[82799.559714] libprocessgroup: Successfully killed process cgroup uid 1000 pid 10745 in 0ms
+<38>[82800.537597] type=1400 audit(1654289668.578:192551): avc: denied { read } for comm="Binder:568_1" name="wakeup48" dev="sysfs" ino=68376 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=1
+<38>[82800.538308] type=1400 audit(1654289668.578:192552): avc: denied { open } for comm="Binder:568_1" path="/sys/devices/virtual/misc/msm_mp3/wakeup48" dev="sysfs" ino=68376 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=1
+<38>[82800.541021] type=1400 audit(1654289668.578:192553): avc: denied { read } for comm="Binder:568_1" name="event_count" dev="sysfs" ino=68383 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+<4>[82800.688898] audit: audit_lost=87032 audit_rate_limit=5 audit_backlog_limit=64
+<3>[82800.688913] audit: rate limit exceeded
+<38>[82800.689537] type=1400 audit(1654289668.728:192556): avc: denied { read } for comm="Binder:568_1" name="wakeup27" dev="sysfs" ino=57704 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs_battery_supply:s0 tclass=dir permissive=1
+<38>[82800.690103] type=1400 audit(1654289668.728:192557): avc: denied { open } for comm="Binder:568_1" path="/sys/devices/platform/soc/800f000.qcom,spmi/spmi-0/spmi0-00/800f000.qcom,spmi:qcom,pm660@0:qcom,qpnp-smb2/power_supply/battery/wakeup27" dev="sysfs" ino=57704 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs_battery_supply:s0 tclass=dir permissive=1
+<38>[82800.690462] type=1400 audit(1654289668.728:192558): avc: denied { read } for comm="Binder:568_1" name="event_count" dev="sysfs" ino=57711 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs_battery_supply:s0 tclass=file permissive=1
+<6>[82802.214603] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<6>[82802.214629] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 
+<3>[82804.296676] [schedu][0x1730586dc9e][20:54:32.347878] wlan: [2028:E:scan] scm_11d_elected_country_algo_fcc: 98: No AP with 11d Country code is present in scan list
+<3>[82804.296837] FUSIONWL: : ==Regulatory_elect_country_db==: No AP with 11d Country code is present in scan list 
+<3>[82804.311606] FUSIONWL: : ==Regulatory_scan_country_list_db_reset==: Reset complete for scan country list 
+<14>[82804.525561] init: starting service 'qccvndhalservice'...
+<38>[82804.585280] type=1400 audit(1654289672.628:192562): avc: denied { search } for comm="vendor.qti.hard" name="/" dev="mmcblk0p37" ino=2 scontext=u:r:vendor_hal_qccvndhal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[82804.605245] init: Service 'qccsyshalservice' (pid 10749) exited with status 1
+<14>[82804.605364] init: Sending signal 9 to service 'qccsyshalservice' (pid 10749) process group...
+<14>[82804.606375] libprocessgroup: Successfully killed process cgroup uid 1000 pid 10749 in 0ms
+<14>[82804.638806] init: Service 'qccvndhalservice' (pid 10750) exited with status 1
+<14>[82804.638946] init: Sending signal 9 to service 'qccvndhalservice' (pid 10750) process group...
+<14>[82804.640441] libprocessgroup: Successfully killed process cgroup uid 1000 pid 10750 in 0ms
+<3>[82808.058916] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[82808.059528] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[82808.063945] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[82808.069001] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[82808.085200] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[82808.090318] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[82808.100980] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[82808.117070] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[82808.123409] [SDL] misc_ioctl msg.len is 3 : 0x77 0x02 0x87 
+<3>[82808.127742] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[82808.168062] frame_src is 1 frame_id is 1905 blackjoe
+<3>[82808.236713] frame_src is 1 frame_id is 1907 blackjoe
+<31>[82808.238099] logd: logdr: UID=0 GID=0 PID=10762 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[82808.354386] frame_src is 1 frame_id is 1909 blackjoe
+<38>[82808.411764] type=1400 audit(1654289676.448:192563): avc: denied { kill } for comm="swapper/2" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<3>[82808.443923] frame_src is 1 frame_id is 1912 blackjoe
+<3>[82808.481510] frame_src is 1 frame_id is 1914 blackjoe
+<3>[82808.637411] frame_src is 1 frame_id is 1918 blackjoe
+<3>[82808.755447] frame_src is 1 frame_id is 1920 blackjoe
+<31>[82808.824202] logd: logdr: UID=0 GID=0 PID=10769 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[82808.827705] frame_src is 1 frame_id is 1922 blackjoe
+<3>[82808.846542] frame_src is 1 frame_id is 1923 blackjoe
+<3>[82808.865461] frame_src is 1 frame_id is 1924 blackjoe
+<3>[82808.884235] frame_src is 1 frame_id is 1925 blackjoe
+<3>[82808.903201] frame_src is 1 frame_id is 1926 blackjoe
+<3>[82808.972519] frame_src is 1 frame_id is 1927 blackjoe
+<3>[82809.006846] frame_src is 1 frame_id is 1928 blackjoe
+<6>[82809.011986] IRQ 6: no longer affine to CPU5
+<3>[82809.041333] frame_src is 1 frame_id is 1929 blackjoe
+<31>[82809.095243] logd: logdr: UID=0 GID=0 PID=10772 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[82809.124688] frame_src is 1 frame_id is 1930 blackjoe
+<3>[82809.158873] frame_src is 1 frame_id is 1931 blackjoe

@@ -1,0 +1,65 @@
+<14>[77225.572122] init: starting service 'smartmu'...
+<14>[77225.615285] init: starting service 'qccsyshalservice'...
+<14>[77225.653771] init: starting service 'qccvndhalservice'...
+<38>[77225.678009] type=1400 audit(1642510143.301:11211): avc: denied { search } for comm="qccsyshalservic" name="/" dev="sda10" ino=2 scontext=u:r:vendor_qccsyshal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[77225.717001] init: Service 'smartmu' (pid 26927) exited with status 0
+<14>[77225.717107] init: Sending signal 9 to service 'smartmu' (pid 26927) process group...
+<14>[77225.717944] libprocessgroup: Successfully killed process cgroup uid 0 pid 26927 in 0ms
+<14>[77225.739765] init: Service 'qccsyshalservice' (pid 26928) exited with status 1
+<14>[77225.739857] init: Sending signal 9 to service 'qccsyshalservice' (pid 26928) process group...
+<14>[77225.740646] libprocessgroup: Successfully killed process cgroup uid 1000 pid 26928 in 0ms
+<14>[77225.769297] init: Service 'qccvndhalservice' (pid 26929) exited with status 1
+<38>[77227.347664] type=1400 audit(1642510144.971:11212): avc: denied { kill } for comm="swapper/3" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<14>[77230.612716] init: starting service 'smartmu'...
+<14>[77230.654694] init: starting service 'qccsyshalservice'...
+<14>[77230.684969] init: starting service 'qccvndhalservice'...
+<14>[77230.758362] init: Service 'smartmu' (pid 26933) exited with status 0
+<14>[77230.758479] init: Sending signal 9 to service 'smartmu' (pid 26933) process group...
+<14>[77230.759821] libprocessgroup: Successfully killed process cgroup uid 0 pid 26933 in 1ms
+<14>[77230.775134] init: Service 'qccsyshalservice' (pid 26934) exited with status 1
+<14>[77230.775196] init: Sending signal 9 to service 'qccsyshalservice' (pid 26934) process group...
+<14>[77230.775880] libprocessgroup: Successfully killed process cgroup uid 1000 pid 26934 in 0ms
+<3>[77233.407255] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[77233.408987] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[77233.418229] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[77233.423419] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[77233.428045] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[77233.438921] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[77233.449561] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[77233.465623] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[77233.471513] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[77233.476273] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[77233.481664] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[77233.486950] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[77233.492342] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[77233.497925] [SDL] misc_ioctl msg.len is 4 : 0x7b 0x00 0x00 0x85 
+<3>[77233.514149] [SDL] misc_ioctl msg.len is 2 : 0x7d 0x80 
+<3>[77233.736082] msm_ispif_config2: Exit 
+<3>[77233.776549] frame_src is 1 frame_id is 2 blackjoe
+<3>[77233.809776] frame_src is 1 frame_id is 4 blackjoe
+<3>[77233.826413] frame_src is 1 frame_id is 5 blackjoe
+<3>[77233.853158] tavil_codec tavil_codec: ASoC: DAPM unknown pin Lineout_3 amp
+<3>[77233.879693] frame_src is 1 frame_id is 6 blackjoe
+<31>[77233.903332] logd: logdr: UID=0 GID=0 PID=26964 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[77233.912790] frame_src is 1 frame_id is 8 blackjoe
+<3>[77233.929436] frame_src is 1 frame_id is 9 blackjoe
+<3>[77233.946027] frame_src is 1 frame_id is 10 blackjoe
+<3>[77233.962689] frame_src is 1 frame_id is 11 blackjoe
+<3>[77234.003514] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[77234.004028] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[77234.008346] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[77234.013606] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[77234.019089] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[77234.024185] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<14>[77235.654090] init: starting service 'smartmu'...
+<14>[77235.700685] init: starting service 'qccsyshalservice'...
+<14>[77235.733463] init: starting service 'qccvndhalservice'...
+<12>[77235.733748] healthd: battery l=42 v=3557 t=42.0 h=2 st=2 c=-306152 fc=4008000 cc=2 chg=u
+<14>[77235.811997] init: Service 'smartmu' (pid 26977) exited with status 0
+<14>[77235.812039] init: Sending signal 9 to service 'smartmu' (pid 26977) process group...
+<14>[77235.812457] libprocessgroup: Successfully killed process cgroup uid 0 pid 26977 in 0ms
+<14>[77235.815799] init: Service 'qccsyshalservice' (pid 26978) exited with status 1
+<14>[77235.815834] init: Sending signal 9 to service 'qccsyshalservice' (pid 26978) process group...
+<14>[77235.816166] libprocessgroup: Successfully killed process cgroup uid 1000 pid 26978 in 0ms
+<3>[77237.391198] tavil_codec tavil_codec: ASoC: DAPM unknown pin Lineout_3 amp
+<3>[77239.468857] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 

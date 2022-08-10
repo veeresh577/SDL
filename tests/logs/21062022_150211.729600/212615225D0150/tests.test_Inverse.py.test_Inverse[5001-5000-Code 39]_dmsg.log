@@ -1,0 +1,54 @@
+<38>[77477.428042] type=1400 audit(1642510395.051:11262): avc: denied { kill } for comm="swapper/3" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<14>[77477.623998] init: starting service 'smartmu'...
+<14>[77477.671387] init: starting service 'qccsyshalservice'...
+<14>[77477.707161] init: starting service 'qccvndhalservice'...
+<14>[77477.770171] init: Service 'smartmu' (pid 27884) exited with status 0
+<14>[77477.770284] init: Sending signal 9 to service 'smartmu' (pid 27884) process group...
+<14>[77477.771047] libprocessgroup: Successfully killed process cgroup uid 0 pid 27884 in 0ms
+<14>[77477.800247] init: Service 'qccsyshalservice' (pid 27885) exited with status 1
+<14>[77477.800402] init: Sending signal 9 to service 'qccsyshalservice' (pid 27885) process group...
+<14>[77477.801654] libprocessgroup: Successfully killed process cgroup uid 1000 pid 27885 in 0ms
+<14>[77477.841513] init: Service 'qccvndhalservice' (pid 27886) exited with status 1
+<14>[77482.669697] init: starting service 'smartmu'...
+<14>[77482.712872] init: starting service 'qccsyshalservice'...
+<14>[77482.745476] init: starting service 'qccvndhalservice'...
+<14>[77482.827155] init: Service 'smartmu' (pid 27899) exited with status 0
+<14>[77482.827268] init: Sending signal 9 to service 'smartmu' (pid 27899) process group...
+<14>[77482.828181] libprocessgroup: Successfully killed process cgroup uid 0 pid 27899 in 0ms
+<14>[77482.834273] init: Service 'qccsyshalservice' (pid 27900) exited with status 1
+<14>[77482.834346] init: Sending signal 9 to service 'qccsyshalservice' (pid 27900) process group...
+<14>[77482.835114] libprocessgroup: Successfully killed process cgroup uid 1000 pid 27900 in 0ms
+<14>[77487.711106] init: starting service 'smartmu'...
+<14>[77487.794028] init: starting service 'qccvndhalservice'...
+<38>[77487.821829] type=1400 audit(1642510405.451:11264): avc: denied { search } for comm="qccsyshalservic" name="/" dev="sda10" ino=2 scontext=u:r:vendor_qccsyshal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[77487.873306] init: Service 'qccsyshalservice' (pid 27907) exited with status 1
+<14>[77487.873397] init: Sending signal 9 to service 'qccsyshalservice' (pid 27907) process group...
+<14>[77487.874383] libprocessgroup: Successfully killed process cgroup uid 1000 pid 27907 in 0ms
+<3>[77489.673538] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[77489.675213] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[77489.683874] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[77489.689338] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[77489.694421] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[77489.700087] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[77489.705052] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[77489.715785] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[77489.726449] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[77489.737208] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[77489.747793] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[77489.753305] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[77489.758541] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[77489.764344] [SDL] misc_ioctl msg.len is 4 : 0x7b 0x00 0x00 0x85 
+<3>[77489.775298] [SDL] misc_ioctl msg.len is 4 : 0x82 0x00 0x00 0x7e 
+<3>[77489.780346] [SDL] misc_ioctl msg.len is 2 : 0x7d 0x80 
+<3>[77489.999747] msm_ispif_config:1061 Exit 
+<3>[77490.000423] msm_ispif_config2: Exit 
+<3>[77490.074687] frame_src is 1 frame_id is 4 blackjoe
+<3>[77490.091299] frame_src is 1 frame_id is 5 blackjoe
+<3>[77490.144362] frame_src is 1 frame_id is 6 blackjoe
+<3>[77490.244051] frame_src is 1 frame_id is 12 blackjoe
+<3>[77490.260689] frame_src is 1 frame_id is 13 blackjoe
+<3>[77490.277335] frame_src is 1 frame_id is 14 blackjoe
+<3>[77490.293928] frame_src is 1 frame_id is 15 blackjoe
+<3>[77490.314966] frame_src is 1 frame_id is 16 blackjoe
+<3>[77490.348207] frame_src is 1 frame_id is 18 blackjoe
+<3>[77490.364839] frame_src is 1 frame_id is 19 blackjoe

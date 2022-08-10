@@ -1,0 +1,33 @@
+<3>[ 3008.045168] [schedu][0x119f1f6653d][19:39:27.211418] wlan: [2070:E:scan] scm_11d_elected_country_algo_fcc: 98: No AP with 11d Country code is present in scan list
+<3>[ 3008.045318] FUSIONWL: : ==Regulatory_elect_country_db==: No AP with 11d Country code is present in scan list 
+<3>[ 3008.059355] FUSIONWL: : ==Regulatory_scan_country_list_db_reset==: Reset complete for scan country list 
+<38>[ 3009.208729] type=1400 audit(1654198768.365:5987): avc: denied { kill } for comm="swapper/0" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<14>[ 3012.173763] init: starting service 'qccsyshalservice'...
+<14>[ 3012.217419] init: starting service 'qccvndhalservice'...
+<38>[ 3012.272911] type=1400 audit(1654198771.435:5988): avc: denied { search } for comm="vendor.qti.hard" name="/" dev="mmcblk0p37" ino=2 scontext=u:r:vendor_hal_qccvndhal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[ 3012.306127] init: Service 'qccsyshalservice' (pid 14236) exited with status 1
+<14>[ 3012.306311] init: Sending signal 9 to service 'qccsyshalservice' (pid 14236) process group...
+<14>[ 3012.307711] libprocessgroup: Successfully killed process cgroup uid 1000 pid 14236 in 0ms
+<14>[ 3012.349461] libprocessgroup: Successfully killed process cgroup uid 1000 pid 14237 in 0ms
+<6>[ 3015.964398] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<6>[ 3015.964430] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 
+<14>[ 3017.216480] init: starting service 'qccsyshalservice'...
+<14>[ 3017.268187] init: starting service 'qccvndhalservice'...
+<14>[ 3017.399644] init: Service 'qccvndhalservice' (pid 14241) exited with status 1
+<14>[ 3017.399732] init: Sending signal 9 to service 'qccvndhalservice' (pid 14241) process group...
+<14>[ 3017.401395] libprocessgroup: Successfully killed process cgroup uid 1000 pid 14241 in 1ms
+<6>[ 3017.451887] IRQ 6: no longer affine to CPU7
+<3>[ 3018.061600] FUSIONWL: : ==Regulatory_scan_country_list_db_reset==: Reset complete for scan country list 
+<3>[ 3020.471476] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 3020.485891] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 3020.490889] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 3020.495911] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 3020.501517] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 3020.506767] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 3020.517320] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 3020.523208] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 3020.528124] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 3020.538713] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 3020.544336] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 3020.549426] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 3020.824888] frame_src is 1 frame_id is 1 blackjoe

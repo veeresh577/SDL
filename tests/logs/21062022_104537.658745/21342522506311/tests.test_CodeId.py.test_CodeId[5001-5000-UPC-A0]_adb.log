@@ -1,0 +1,67 @@
+--------- beginning of main
+06-02 19:17:50.532 I/qccsyshalservice( 8749): Start with system binder
+06-02 19:17:50.534 I/qccsyshalservice( 8749): Registering qccsyshal service...
+06-02 19:17:50.536 I/hwservicemanager(  501): getTransport: Cannot find entry vendor.qti.hardware.qccsyshal@1.0::IQccsyshal/qccsyshal in either framework or device manifest.
+06-02 19:17:50.538 E/HidlServiceManagement( 8749): Service vendor.qti.hardware.qccsyshal@1.0::IQccsyshal/qccsyshal must be in VINTF manifest in order to register/get.
+06-02 19:17:50.538 E/qccsyshalservice( 8749): [ERROR] registerAsService() failed with status: -2147483648
+06-02 19:17:50.570 I/vendor.qti.hardware.qccvndhal@1.0-service( 8750): Start with vendor binder
+06-02 19:17:50.572 I/vendor.qti.hardware.qccvndhal@1.0-service( 8750): Registering qccvndhal service...
+06-02 19:17:50.577 I/hwservicemanager(  501): getTransport: Cannot find entry vendor.qti.hardware.qccvndhal@1.0::IQccvndhal/qccvndhal in either framework or device manifest.
+06-02 19:17:50.578 E/HidlServiceManagement( 8750): Service vendor.qti.hardware.qccvndhal@1.0::IQccvndhal/qccvndhal must be in VINTF manifest in order to register/get.
+06-02 19:17:50.579 E/vendor.qti.hardware.qccvndhal@1.0-service( 8750): [ERROR] registerAsService() failed with status: -2147483648
+06-02 19:17:52.173 D/CompatibilityInfo( 1599): mCompatibilityFlags - 4
+06-02 19:17:52.174 D/CompatibilityInfo( 1599): applicationDensity - 240
+06-02 19:17:52.174 D/CompatibilityInfo( 1599): applicationScale - 1.0
+06-02 19:17:52.182 I/NextSubtest service( 7609): hit
+06-02 19:17:52.182 I/cmd     ( 8754): oneway function results will be dropped but finished with status OK and parcel size 4
+--------- beginning of kernel
+06-02 19:17:52.144 E/        (    0): [SDL] misc_ioctl msg.len is 2 : 0x88 0x00
+06-02 19:17:52.145 E/        (    0): [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81
+06-02 19:17:52.149 E/        (    0): [SDL] misc_ioctl msg.len is 2 : 0x88 0x00
+06-02 19:17:52.165 E/        (    0): [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86
+06-02 19:17:52.170 E/        (    0): [SDL] misc_ioctl msg.len is 2 : 0x88 0x00
+06-02 19:17:52.175 E/        (    0): [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81
+06-02 19:17:52.181 E/        (    0): [SDL] misc_ioctl msg.len is 2 : 0x88 0x00
+06-02 19:17:52.186 E/        (    0): [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8
+06-02 19:17:52.191 E/        (    0): [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00
+06-02 19:17:52.601 D/logd    (    0): logdr: UID=0 GID=0 PID=8760 b tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+--------- beginning of system
+06-02 19:17:52.985 I/ActivityTaskManager( 1599): START u0 {flg=0x10000000 cmp=sdl.android.testapp/.SW_Decode_Android_TestApp_Activity} from uid 0
+06-02 19:17:52.986 D/EventSequenceValidator( 1599): Transition from INTENT_FAILED to INTENT_STARTED
+06-02 19:17:52.990 D/EventSequenceValidator( 1599): Transition from INTENT_STARTED to INTENT_FAILED
+06-02 19:17:54.006 W/adbd    ( 3608): timeout expired while flushing socket, closing
+06-02 19:17:54.768 E/WifiScoringParams( 1599): Invalid frequency(-1), using 5G as default rssi array
+06-02 19:17:54.790 D/WifiNative( 1599): Scan trigered from WifiNative
+06-02 19:17:54.797 V/WifiHAL ( 1348): event received NL80211_CMD_TRIGGER_SCAN
+06-02 19:17:54.798 V/WifiHAL (  741): event received NL80211_CMD_TRIGGER_SCAN
+06-02 19:17:55.405 I/init    (    0): starting service 'qccsyshalservice'...
+06-02 19:17:55.555 I/vendor.qti.hard( 8775): type=1400 audit(0.0:5718): avc: denied { search } for name="/" dev="mmcblk0p37" ino=2 scontext=u:r:vendor_hal_qccvndhal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+06-02 19:17:55.575 I/qccsyshalservice( 8774): Start with system binder
+06-02 19:17:55.576 I/qccsyshalservice( 8774): Registering qccsyshal service...
+06-02 19:17:55.578 I/hwservicemanager(  501): getTransport: Cannot find entry vendor.qti.hardware.qccsyshal@1.0::IQccsyshal/qccsyshal in either framework or device manifest.
+06-02 19:17:55.579 E/HidlServiceManagement( 8774): Service vendor.qti.hardware.qccsyshal@1.0::IQccsyshal/qccsyshal must be in VINTF manifest in order to register/get.
+06-02 19:17:55.579 E/qccsyshalservice( 8774): [ERROR] registerAsService() failed with status: -2147483648
+06-02 19:17:55.618 I/vendor.qti.hardware.qccvndhal@1.0-service( 8775): Start with vendor binder
+06-02 19:17:55.619 I/vendor.qti.hardware.qccvndhal@1.0-service( 8775): Registering qccvndhal service...
+06-02 19:17:55.622 I/hwservicemanager(  501): getTransport: Cannot find entry vendor.qti.hardware.qccvndhal@1.0::IQccvndhal/qccvndhal in either framework or device manifest.
+06-02 19:17:55.623 E/HidlServiceManagement( 8775): Service vendor.qti.hardware.qccvndhal@1.0::IQccvndhal/qccvndhal must be in VINTF manifest in order to register/get.
+06-02 19:17:55.623 E/vendor.qti.hardware.qccvndhal@1.0-service( 8775): [ERROR] registerAsService() failed with status: -2147483648
+06-02 19:17:55.581 I/init    (    0): Service 'qccvndhalservice' (pid 8775) exited with status 1
+06-02 19:17:55.581 I/init    (    0): Sending signal 9 to service 'qccvndhalservice' (pid 8775) process group...
+06-02 19:17:55.583 I/libprocessgroup(    0): Successfully killed process cgroup uid 1000 pid 8775 in 0ms
+06-02 19:17:56.911 V/WifiHAL ( 1348): event received NL80211_CMD_NEW_SCAN_RESULTS
+06-02 19:17:56.911 D/WifiNl80211Manager( 1599): Scan result ready event
+06-02 19:17:56.912 D/WifiNative( 1599): Scan result ready event
+06-02 19:17:56.917 V/WifiHAL (  741): event received NL80211_CMD_NEW_SCAN_RESULTS
+06-02 19:17:56.921 D/ZebraRttProvider.FusionEngine( 3675): receive broadcast intent, action: android.net.wifi.SCAN_RESULTS
+06-02 19:17:56.922 D/FusionLoggerService( 4653): onReceive = android.net.wifi.SCAN_RESULTS
+06-02 19:17:56.922 I/FusionManager( 4653): getCountry ENTER
+06-02 19:17:56.923 D/vendor.zebra.fusion@1.0-service(  811): is80211dEnabled: returns 1
+06-02 19:17:56.924 E/FusionServiceImpl( 4680): is80211dEnabled true
+06-02 19:17:56.926 I/fusionconfd( 1348): getDriverCountry ENTER
+06-02 19:17:56.941 D/FusionLoggerService( 4653): Country unchanged
+06-02 19:17:58.301 D/CompatibilityInfo( 1599): mCompatibilityFlags - 4
+06-02 19:17:58.301 D/CompatibilityInfo( 1599): applicationDensity - 240
+06-02 19:17:58.301 D/CompatibilityInfo( 1599): applicationScale - 1.0
+06-02 19:17:58.259 E/        (    0): [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86
+06-02 19:17:58.308 I/NextSubtest service( 7609): hit

@@ -1,0 +1,45 @@
+<14>[ 3320.455876] init: starting service 'qccsyshalservice'...
+<14>[ 3320.500042] init: starting service 'qccvndhalservice'...
+<38>[ 3320.531514] type=1400 audit(1642433906.564:4530): avc: denied { search } for comm="qccsyshalservic" name="/" dev="sda10" ino=2 scontext=u:r:vendor_qccsyshal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[ 3320.536799] init: starting service 'smartmu'...
+<14>[ 3320.599173] init: Service 'qccsyshalservice' (pid 16164) exited with status 1
+<14>[ 3320.599340] init: Sending signal 9 to service 'qccsyshalservice' (pid 16164) process group...
+<14>[ 3320.600600] libprocessgroup: Successfully killed process cgroup uid 1000 pid 16164 in 0ms
+<14>[ 3320.628169] init: Service 'qccvndhalservice' (pid 16165) exited with status 1
+<14>[ 3320.628299] init: Sending signal 9 to service 'qccvndhalservice' (pid 16165) process group...
+<14>[ 3320.629651] libprocessgroup: Successfully killed process cgroup uid 1000 pid 16165 in 0ms
+<14>[ 3320.698170] init: Service 'smartmu' (pid 16166) exited with status 0
+<38>[ 3322.176041] type=1400 audit(1642433908.214:4531): avc: denied { kill } for comm="swapper/2" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<6>[ 3322.691488] IRQ 6: no longer affine to CPU4
+<14>[ 3325.495595] init: starting service 'qccsyshalservice'...
+<14>[ 3325.571030] init: starting service 'smartmu'...
+<14>[ 3325.659899] init: Service 'qccvndhalservice' (pid 16172) exited with status 1
+<14>[ 3325.660085] init: Sending signal 9 to service 'qccvndhalservice' (pid 16172) process group...
+<14>[ 3325.662815] libprocessgroup: Successfully killed process cgroup uid 1000 pid 16172 in 2ms
+<14>[ 3325.723156] init: Service 'smartmu' (pid 16173) exited with status 0
+<6>[ 3328.811410] IRQ 6: no longer affine to CPU5
+<3>[ 3330.157215] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 3330.158839] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 3330.162196] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 3330.172872] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 3330.178024] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 3330.183650] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 3330.188662] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 3330.199412] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 3330.210135] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 3330.215699] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 3330.220999] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 3330.226249] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 3330.231476] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 3330.236866] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 3330.242287] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 3330.248186] [SDL] misc_ioctl msg.len is 4 : 0x7b 0x00 0x00 0x85 
+<3>[ 3330.253065] [SDL] misc_ioctl msg.len is 2 : 0x84 0x00 
+<3>[ 3330.258881] [SDL] misc_ioctl msg.len is 4 : 0x82 0x00 0x00 0x7e 
+<3>[ 3330.452118] msm_isp_open_node: reset VFE
+<31>[ 3330.512940] logd: logdr: UID=0 GID=0 PID=16198 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[ 3330.516797] frame_src is 1 frame_id is 2 blackjoe
+<14>[ 3330.532344] init: starting service 'qccsyshalservice'...
+<3>[ 3330.533475] frame_src is 1 frame_id is 3 blackjoe
+<3>[ 3330.566667] frame_src is 1 frame_id is 5 blackjoe
+<14>[ 3330.567158] init: starting service 'qccvndhalservice'...

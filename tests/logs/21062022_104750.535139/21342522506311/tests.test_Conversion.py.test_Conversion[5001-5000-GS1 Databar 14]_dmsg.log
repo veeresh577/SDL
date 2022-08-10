@@ -1,0 +1,35 @@
+<6>[ 2261.771094] IRQ 6: no longer affine to CPU7
+<3>[ 2263.564032] qcom-lpi-pinctrl 15070000.lpi_pinctrl: lpi_pinctrl_runtime_resume: unable to get core clk handle -2
+<6>[ 2263.571365] afe_close: port_id = 0x102e
+<14>[ 2265.924240] init: starting service 'qccsyshalservice'...
+<14>[ 2265.975753] init: starting service 'qccvndhalservice'...
+<14>[ 2266.063730] init: Service 'qccsyshalservice' (pid 10982) exited with status 1
+<14>[ 2266.063878] init: Sending signal 9 to service 'qccsyshalservice' (pid 10982) process group...
+<14>[ 2266.065068] libprocessgroup: Successfully killed process cgroup uid 1000 pid 10982 in 0ms
+<3>[ 2267.868380] [schedu][0x116a2e5ba5b][19:27:07.034633] wlan: [2070:E:scan] scm_11d_elected_country_algo_fcc: 98: No AP with 11d Country code is present in scan list
+<3>[ 2267.868541] FUSIONWL: : ==Regulatory_elect_country_db==: No AP with 11d Country code is present in scan list 
+<3>[ 2267.884797] FUSIONWL: : ==Regulatory_scan_country_list_db_reset==: Reset complete for scan country list 
+<38>[ 2268.974845] type=1400 audit(1654198028.135:5849): avc: denied { kill } for comm="swapper/3" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<14>[ 2270.971373] init: starting service 'qccsyshalservice'...
+<14>[ 2271.015915] init: starting service 'qccvndhalservice'...
+<14>[ 2271.104244] init: Service 'qccsyshalservice' (pid 10987) exited with status 1
+<14>[ 2271.104418] init: Sending signal 9 to service 'qccsyshalservice' (pid 10987) process group...
+<14>[ 2271.106217] libprocessgroup: Successfully killed process cgroup uid 1000 pid 10987 in 1ms
+<14>[ 2271.145190] init: Service 'qccvndhalservice' (pid 10988) exited with status 1
+<14>[ 2271.145317] init: Sending signal 9 to service 'qccvndhalservice' (pid 10988) process group...
+<14>[ 2271.146694] libprocessgroup: Successfully killed process cgroup uid 1000 pid 10988 in 0ms
+<3>[ 2274.186397] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 2274.216213] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 2274.226984] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 2274.232680] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 2274.237551] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 2274.242908] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 2274.248307] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 2274.259026] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 2274.264293] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 2274.347432] [SDL] misc_ioctl msg.len is 3 : 0x77 0x02 0x87 
+<3>[ 2274.348023] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<31>[ 2274.348499] logd: logdr: UID=0 GID=0 PID=10999 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[ 2274.466711] msm_isp_open_node: reset VFE
+<3>[ 2274.477270] msm_ispif_config:1061 Exit 
+<3>[ 2274.477948] msm_ispif_config2: Exit 

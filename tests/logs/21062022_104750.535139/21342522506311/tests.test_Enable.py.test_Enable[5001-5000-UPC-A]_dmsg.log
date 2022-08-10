@@ -1,0 +1,24 @@
+<6>[ 3842.291182] IRQ 6: no longer affine to CPU4
+<14>[ 3844.853232] init: starting service 'qccsyshalservice'...
+<14>[ 3844.988882] init: Service 'qccsyshalservice' (pid 17961) exited with status 1
+<14>[ 3844.988995] init: Sending signal 9 to service 'qccsyshalservice' (pid 17961) process group...
+<14>[ 3844.989826] libprocessgroup: Successfully killed process cgroup uid 1000 pid 17961 in 0ms
+<14>[ 3845.019105] init: Service 'qccvndhalservice' (pid 17962) exited with status 1
+<14>[ 3845.019246] init: Sending signal 9 to service 'qccvndhalservice' (pid 17962) process group...
+<14>[ 3845.021181] libprocessgroup: Successfully killed process cgroup uid 1000 pid 17962 in 1ms
+<6>[ 3846.146056] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<6>[ 3846.146087] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 
+<3>[ 3848.228318] [schedu][0x11db379c65e][19:53:27.394473] wlan: [2070:E:scan] scm_11d_elected_country_algo_fcc: 98: No AP with 11d Country code is present in scan list
+<3>[ 3848.228463] FUSIONWL: : ==Regulatory_elect_country_db==: No AP with 11d Country code is present in scan list 
+<6>[ 3848.411184] IRQ 6: no longer affine to CPU7
+<14>[ 3849.894306] init: starting service 'qccsyshalservice'...
+<14>[ 3849.936487] init: starting service 'qccvndhalservice'...
+<14>[ 3850.025034] init: Service 'qccsyshalservice' (pid 17967) exited with status 1
+<14>[ 3850.025221] init: Sending signal 9 to service 'qccsyshalservice' (pid 17967) process group...
+<14>[ 3850.026791] libprocessgroup: Successfully killed process cgroup uid 1000 pid 17967 in 1ms
+<14>[ 3850.082333] libprocessgroup: Successfully killed process cgroup uid 1000 pid 17968 in 0ms
+<3>[ 3854.453719] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 3854.454309] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 3854.469021] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 3854.474756] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 3854.480044] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 

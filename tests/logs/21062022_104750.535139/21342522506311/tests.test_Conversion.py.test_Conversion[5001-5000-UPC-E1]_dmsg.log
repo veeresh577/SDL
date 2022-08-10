@@ -1,0 +1,29 @@
+<14>[ 2190.285485] init: starting service 'qccsyshalservice'...
+<14>[ 2190.334548] init: starting service 'qccvndhalservice'...
+<38>[ 2190.364618] type=1400 audit(1654197949.525:5826): avc: denied { search } for comm="qccsyshalservic" name="/" dev="mmcblk0p37" ino=2 scontext=u:r:vendor_qccsyshal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[ 2195.362182] init: starting service 'qccvndhalservice'...
+<14>[ 2195.442847] init: Service 'qccsyshalservice' (pid 10668) exited with status 1
+<14>[ 2195.443034] init: Sending signal 9 to service 'qccsyshalservice' (pid 10668) process group...
+<14>[ 2195.444611] libprocessgroup: Successfully killed process cgroup uid 1000 pid 10668 in 1ms
+<6>[ 2195.551694] IRQ 6: no longer affine to CPU7
+<3>[ 2197.865061] FUSIONWL: : ==Regulatory_scan_country_list_db_reset==: Reset complete for scan country list 
+<14>[ 2200.362252] init: starting service 'qccsyshalservice'...
+<14>[ 2200.411918] init: starting service 'qccvndhalservice'...
+<14>[ 2200.546001] init: Service 'qccvndhalservice' (pid 10674) exited with status 1
+<14>[ 2200.546147] init: Sending signal 9 to service 'qccvndhalservice' (pid 10674) process group...
+<14>[ 2200.547619] libprocessgroup: Successfully killed process cgroup uid 1000 pid 10674 in 0ms
+<12>[ 2200.978356] healthd: battery l=22 v=3360 t=27.0 h=2 st=2 c=-765624 fc=0 cc=7 chg=u
+<12>[ 2201.058067] healthd: battery l=22 v=3360 t=27.0 h=2 st=2 c=-765624 fc=0 cc=7 chg=u
+<12>[ 2201.093530] healthd: battery l=22 v=3360 t=27.0 h=2 st=2 c=-765624 fc=0 cc=7 chg=u
+<12>[ 2201.128489] healthd: battery l=22 v=3360 t=27.0 h=2 st=2 c=-765624 fc=0 cc=7 chg=u
+<12>[ 2201.168071] healthd: battery l=22 v=3360 t=27.0 h=2 st=2 c=-765624 fc=0 cc=7 chg=u
+<3>[ 2201.182369] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<12>[ 2201.190886] healthd: battery l=22 v=3360 t=27.0 h=2 st=2 c=-765624 fc=0 cc=7 chg=u
+<3>[ 2201.192645] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 2201.192995] [SDL] se47xx_misc_ioctl ret = -107 
+<3>[ 2201.196826] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 2201.201765] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 2201.206830] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 2201.212450] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 2201.217429] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 2201.223430] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 

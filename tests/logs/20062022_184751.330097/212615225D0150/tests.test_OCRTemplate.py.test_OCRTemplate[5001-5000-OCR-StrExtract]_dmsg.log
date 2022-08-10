@@ -1,0 +1,39 @@
+<6>[ 7411.153526] IRQ 6: no longer affine to CPU6
+<14>[ 7413.313723] init: starting service 'qccsyshalservice'...
+<14>[ 7413.357979] init: starting service 'qccvndhalservice'...
+<14>[ 7413.439796] init: Service 'qccsyshalservice' (pid 7009) exited with status 1
+<14>[ 7413.439896] init: Sending signal 9 to service 'qccsyshalservice' (pid 7009) process group...
+<14>[ 7413.468597] init: Service 'qccvndhalservice' (pid 7010) exited with status 1
+<14>[ 7413.468692] init: Sending signal 9 to service 'qccvndhalservice' (pid 7010) process group...
+<14>[ 7413.469498] libprocessgroup: Successfully killed process cgroup uid 1000 pid 7010 in 0ms
+<38>[ 7413.481279] type=1400 audit(1642437999.514:5218): avc: denied { kill } for comm="swapper/1" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<14>[ 7418.353080] init: starting service 'qccsyshalservice'...
+<14>[ 7418.396341] init: starting service 'qccvndhalservice'...
+<14>[ 7418.478572] init: Service 'qccsyshalservice' (pid 7016) exited with status 1
+<14>[ 7418.478688] init: Sending signal 9 to service 'qccsyshalservice' (pid 7016) process group...
+<14>[ 7418.479628] libprocessgroup: Successfully killed process cgroup uid 1000 pid 7016 in 0ms
+<14>[ 7418.594513] init: Service 'smartmu' (pid 7018) exited with status 0
+<14>[ 7423.392935] init: starting service 'qccsyshalservice'...
+<14>[ 7423.429626] init: starting service 'qccvndhalservice'...
+<14>[ 7423.532472] init: Service 'qccvndhalservice' (pid 7025) exited with status 1
+<14>[ 7423.532512] init: Sending signal 9 to service 'qccvndhalservice' (pid 7025) process group...
+<14>[ 7423.532905] libprocessgroup: Successfully killed process cgroup uid 1000 pid 7025 in 0ms
+<14>[ 7423.548276] init: Service 'qccsyshalservice' (pid 7022) exited with status 1
+<14>[ 7423.548359] init: Sending signal 9 to service 'qccsyshalservice' (pid 7022) process group...
+<14>[ 7423.549176] libprocessgroup: Successfully killed process cgroup uid 1000 pid 7022 in 0ms
+<3>[ 7423.646995] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 7423.649049] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 7423.651986] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 7423.657212] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 7423.675057] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 7423.678516] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 7423.684105] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 7423.689345] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 7423.699823] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 7423.705388] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 7423.710533] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 7423.716354] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 7423.721234] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 7423.726742] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 7423.732094] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 7423.738055] [SDL] misc_ioctl msg.len is 4 : 0x7b 0x00 0x00 0x85 

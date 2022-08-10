@@ -1,0 +1,42 @@
+<3>[82894.325538] [schedu][0x1736c8e819f][20:56:02.376745] wlan: [2028:E:scan] scm_11d_elected_country_algo_fcc: 98: No AP with 11d Country code is present in scan list
+<3>[82894.325691] FUSIONWL: : ==Regulatory_elect_country_db==: No AP with 11d Country code is present in scan list 
+<3>[82894.340436] FUSIONWL: : ==Regulatory_scan_country_list_db_reset==: Reset complete for scan country list 
+<14>[82895.172290] init: starting service 'qccsyshalservice'...
+<14>[82895.218653] init: starting service 'qccvndhalservice'...
+<38>[82895.272922] type=1400 audit(1654289763.318:192590): avc: denied { search } for comm="vendor.qti.hard" name="/" dev="mmcblk0p37" ino=2 scontext=u:r:vendor_hal_qccvndhal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[82895.352953] init: Service 'qccvndhalservice' (pid 11150) exited with status 1
+<14>[82895.353071] init: Sending signal 9 to service 'qccvndhalservice' (pid 11150) process group...
+<14>[82895.354476] libprocessgroup: Successfully killed process cgroup uid 1000 pid 11150 in 0ms
+<14>[82900.216152] init: starting service 'qccsyshalservice'...
+<14>[82900.263002] init: starting service 'qccvndhalservice'...
+<6>[82902.238718] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<6>[82902.238755] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 
+<3>[82904.334836] FUSIONWL: : ==Regulatory_scan_country_list_db_reset==: Reset complete for scan country list 
+<14>[82905.296694] init: starting service 'qccvndhalservice'...
+<38>[82905.363887] type=1400 audit(1654289773.408:192592): avc: denied { search } for comm="vendor.qti.hard" name="/" dev="mmcblk0p37" ino=2 scontext=u:r:vendor_hal_qccvndhal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[82905.376299] init: Service 'qccsyshalservice' (pid 11165) exited with status 1
+<14>[82905.376480] init: Sending signal 9 to service 'qccsyshalservice' (pid 11165) process group...
+<14>[82905.377953] libprocessgroup: Successfully killed process cgroup uid 1000 pid 11165 in 0ms
+<3>[82905.787230] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[82905.807829] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[82905.818593] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[82905.839837] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[82905.845205] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[82905.850542] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[82905.855990] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[82905.866447] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[82905.906790] frame_src is 1 frame_id is 2445 blackjoe
+<3>[82905.941244] frame_src is 1 frame_id is 2446 blackjoe
+<3>[82906.058775] frame_src is 1 frame_id is 2448 blackjoe
+<3>[82906.093163] frame_src is 1 frame_id is 2449 blackjoe
+<3>[82906.127492] frame_src is 1 frame_id is 2450 blackjoe
+<3>[82906.163898] frame_src is 1 frame_id is 2451 blackjoe
+<3>[82906.239307] frame_src is 1 frame_id is 2455 blackjoe
+<3>[82906.341721] frame_src is 1 frame_id is 2457 blackjoe
+<3>[82906.376124] frame_src is 1 frame_id is 2458 blackjoe
+<3>[82906.459908] frame_src is 1 frame_id is 2459 blackjoe
+<31>[82906.482773] logd: logdr: UID=0 GID=0 PID=11182 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[82906.493950] frame_src is 1 frame_id is 2460 blackjoe
+<3>[82906.566189] frame_src is 1 frame_id is 2462 blackjoe
+<3>[82906.585014] frame_src is 1 frame_id is 2463 blackjoe
+<3>[82906.603890] frame_src is 1 frame_id is 2464 blackjoe

@@ -1,0 +1,10 @@
+<6>[ 1976.151076] IRQ 6: no longer affine to CPU7
+<3>[ 1977.787341] [schedu][0x11556ed0c2d][19:22:16.953596] wlan: [2070:E:scan] scm_11d_elected_country_algo_fcc: 98: No AP with 11d Country code is present in scan list
+<3>[ 1977.787516] FUSIONWL: : ==Regulatory_elect_country_db==: No AP with 11d Country code is present in scan list 
+<3>[ 1977.801543] FUSIONWL: : ==Regulatory_scan_country_list_db_reset==: Reset complete for scan country list 
+<14>[ 1978.411766] init: starting service 'qccsyshalservice'...
+<14>[ 1978.457644] init: starting service 'qccvndhalservice'...
+<38>[ 1978.486760] type=1400 audit(1654197737.645:5780): avc: denied { search } for comm="qccsyshalservic" name="/" dev="mmcblk0p37" ino=2 scontext=u:r:vendor_qccsyshal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<38>[ 1978.522823] type=1400 audit(1654197737.675:5781): avc: denied { search } for comm="vendor.qti.hard" name="/" dev="mmcblk0p37" ino=2 scontext=u:r:vendor_hal_qccvndhal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[ 1978.545254] init: Sending signal 9 to service 'qccsyshalservice' (pid 9735) process group...
+<6>[ 1978.651241] IRQ 6: no longer affine to CPU4

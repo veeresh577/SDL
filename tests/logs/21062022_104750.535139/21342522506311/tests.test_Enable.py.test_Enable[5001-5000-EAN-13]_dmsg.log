@@ -1,0 +1,76 @@
+<14>[ 4001.191867] init: starting service 'qccsyshalservice'...
+<14>[ 4001.236332] init: starting service 'qccvndhalservice'...
+<38>[ 4001.264758] type=1400 audit(1654199760.425:6217): avc: denied { search } for comm="qccsyshalservic" name="/" dev="mmcblk0p37" ino=2 scontext=u:r:vendor_qccsyshal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<38>[ 4001.299238] type=1400 audit(1654199760.455:6218): avc: denied { search } for comm="vendor.qti.hard" name="/" dev="mmcblk0p37" ino=2 scontext=u:r:vendor_hal_qccvndhal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[ 4001.330229] init: Service 'qccsyshalservice' (pid 18589) exited with status 1
+<14>[ 4001.330341] init: Sending signal 9 to service 'qccsyshalservice' (pid 18589) process group...
+<14>[ 4001.331705] libprocessgroup: Successfully killed process cgroup uid 1000 pid 18589 in 0ms
+<14>[ 4001.358322] init: Service 'qccvndhalservice' (pid 18590) exited with status 1
+<14>[ 4001.358463] init: Sending signal 9 to service 'qccvndhalservice' (pid 18590) process group...
+<14>[ 4001.359939] libprocessgroup: Successfully killed process cgroup uid 1000 pid 18590 in 0ms
+<6>[ 4006.188927] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<6>[ 4006.188962] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 
+<14>[ 4006.234551] init: starting service 'qccsyshalservice'...
+<14>[ 4006.265855] init: starting service 'qccvndhalservice'...
+<14>[ 4006.374504] init: Service 'qccvndhalservice' (pid 18603) exited with status 1
+<14>[ 4006.374608] init: Sending signal 9 to service 'qccvndhalservice' (pid 18603) process group...
+<14>[ 4006.375792] libprocessgroup: Successfully killed process cgroup uid 1000 pid 18603 in 0ms
+<3>[ 4008.287218] FUSIONWL: : ==Regulatory_scan_country_list_db_reset==: Reset complete for scan country list 
+<38>[ 4009.596903] type=1400 audit(1654199768.755:6219): avc: denied { kill } for comm="swapper/0" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<14>[ 4011.265807] init: starting service 'qccsyshalservice'...
+<14>[ 4011.313410] init: starting service 'qccvndhalservice'...
+<14>[ 4011.403669] init: Service 'qccsyshalservice' (pid 18607) exited with status 1
+<14>[ 4011.403894] init: Sending signal 9 to service 'qccsyshalservice' (pid 18607) process group...
+<14>[ 4011.405510] libprocessgroup: Successfully killed process cgroup uid 1000 pid 18607 in 1ms
+<14>[ 4011.450990] init: Service 'qccvndhalservice' (pid 18608) exited with status 1
+<14>[ 4011.451116] init: Sending signal 9 to service 'qccvndhalservice' (pid 18608) process group...
+<14>[ 4011.455394] libprocessgroup: Successfully killed process cgroup uid 1000 pid 18608 in 2ms
+<3>[ 4012.526733] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 4012.537041] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 4012.541534] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 4012.546549] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 4012.551235] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 4012.557197] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 4012.573518] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 4012.579205] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 4012.588886] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 4012.605746] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 4012.763865] [SDL] misc_ioctl msg.len is 3 : 0x77 0x02 0x87 
+<3>[ 4012.764303] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 4012.995358] msm_isp_open_node: reset VFE
+<31>[ 4013.019886] logd: logdr: UID=0 GID=0 PID=18624 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[ 4013.031731] msm_ispif_config:1061 Exit 
+<3>[ 4013.032233] msm_ispif_config2: Exit 
+<3>[ 4013.121650] frame_src is 1 frame_id is 2 blackjoe
+<3>[ 4013.156012] frame_src is 1 frame_id is 3 blackjoe
+<3>[ 4013.228621] frame_src is 1 frame_id is 4 blackjoe
+<3>[ 4013.262915] frame_src is 1 frame_id is 5 blackjoe
+<3>[ 4013.297275] frame_src is 1 frame_id is 6 blackjoe
+<3>[ 4013.323229] qcom-lpi-pinctrl 15070000.lpi_pinctrl: lpi_pinctrl_runtime_resume: unable to get core clk handle -2
+<6>[ 4013.328049] __afe_port_start: port id: 0x102e
+<6>[ 4013.328091] afe_find_cal_topo_id_by_port: port id: 0x102e, dev_acdb_id: 0
+<6>[ 4013.328105] afe_find_cal_topo_id_by_port: top_id:1025e acdb_id:15 afe_port:0x102e
+<6>[ 4013.328119] afe_get_cal_topology_id: port_id = 0x102e acdb_id = 15 topology_id = 0x1025e cal_type_index=8 ret=0
+<6>[ 4013.329413] afe_send_port_topology_id: AFE set topology id 0x1025e  enable for port 0x102e ret 0
+<6>[ 4013.329431] send_afe_cal_type: cal_index is 0
+<6>[ 4013.329444] send_afe_cal_type: dev_acdb_id[130] is 0
+<6>[ 4013.329457] send_afe_cal_type: Sending cal_index cal 0
+<6>[ 4013.330825] afe_send_hw_delay: port_id 0x102e rate 48000 delay_usec 474 status 0
+<3>[ 4013.420745] qcom-lpi-pinctrl 15070000.lpi_pinctrl: lpi_pinctrl_runtime_suspend: unable to get core clk handle -2
+<3>[ 4013.439714] frame_src is 1 frame_id is 9 blackjoe
+<3>[ 4013.511581] frame_src is 1 frame_id is 10 blackjoe
+<3>[ 4013.545751] frame_src is 1 frame_id is 11 blackjoe
+<31>[ 4013.610034] logd: logdr: UID=0 GID=0 PID=18635 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[ 4013.649038] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 4013.656786] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 4013.659374] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<6>[ 4016.189497] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<6>[ 4016.189533] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 
+<14>[ 4016.313247] init: starting service 'qccsyshalservice'...
+<14>[ 4016.362304] init: starting service 'qccvndhalservice'...
+<14>[ 4016.447141] init: Service 'qccsyshalservice' (pid 18646) exited with status 1
+<14>[ 4016.447310] init: Sending signal 9 to service 'qccsyshalservice' (pid 18646) process group...
+<14>[ 4016.449039] libprocessgroup: Successfully killed process cgroup uid 1000 pid 18646 in 1ms
+<14>[ 4016.491514] init: Service 'qccvndhalservice' (pid 18647) exited with status 1
+<14>[ 4016.491609] init: Sending signal 9 to service 'qccvndhalservice' (pid 18647) process group...
+<14>[ 4016.492789] libprocessgroup: Successfully killed process cgroup uid 1000 pid 18647 in 0ms

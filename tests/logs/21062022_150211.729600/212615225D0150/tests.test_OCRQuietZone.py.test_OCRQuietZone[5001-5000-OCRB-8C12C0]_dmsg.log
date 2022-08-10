@@ -1,0 +1,30 @@
+<14>[78188.032230] init: starting service 'smartmu'...
+<14>[78188.073789] init: starting service 'qccsyshalservice'...
+<14>[78188.104326] init: starting service 'qccvndhalservice'...
+<14>[78188.219559] init: Service 'qccvndhalservice' (pid 31058) exited with status 1
+<6>[78188.269565] IRQ 6: no longer affine to CPU7
+<14>[78193.072325] init: starting service 'smartmu'...
+<14>[78193.113054] init: starting service 'qccsyshalservice'...
+<14>[78193.143777] init: starting service 'qccvndhalservice'...
+<14>[78193.233381] init: Service 'qccsyshalservice' (pid 31063) exited with status 1
+<14>[78193.233475] init: Sending signal 9 to service 'qccsyshalservice' (pid 31063) process group...
+<14>[78193.234245] libprocessgroup: Successfully killed process cgroup uid 1000 pid 31063 in 0ms
+<12>[78195.746445] healthd: battery l=39 v=3548 t=43.0 h=2 st=2 c=-248046 fc=4008000 cc=2 chg=u
+<3>[78196.002925] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[78196.004489] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[78196.007803] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[78196.029261] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[78196.034520] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[78196.040223] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[78196.045162] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[78196.055913] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[78196.066423] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[78196.072033] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[78196.082788] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[78196.087878] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[78196.093885] [SDL] misc_ioctl msg.len is 4 : 0x7b 0x00 0x00 0x85 
+<3>[78196.098522] [SDL] misc_ioctl msg.len is 2 : 0x84 0x00 
+<3>[78196.104767] [SDL] misc_ioctl msg.len is 4 : 0x82 0x00 0x00 0x7e 
+<3>[78196.109705] [SDL] misc_ioctl msg.len is 2 : 0x7d 0x80 
+<3>[78196.116369] [SDL] misc_ioctl msg.len is 3 : 0x77 0x02 0x87 
+<3>[78196.120815] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 

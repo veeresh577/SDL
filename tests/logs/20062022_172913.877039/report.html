@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Test Report</title>
+    <link href="assets/style.css" rel="stylesheet" type="text/css"/></head>
+  <body onLoad="init()">
+    <script>/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this file,
+ * You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+
+function toArray(iter) {
+    if (iter === null) {
+        return null;
+    }
+    return Array.prototype.slice.call(iter);
+}
+
+function find(selector, elem) {
+    if (!elem) {
+        elem = document;
+    }
+    return elem.querySelector(selector);
+}
+
+function find_all(selector, elem) {
+    if (!elem) {
+        elem = document;
+    }
+    return toArray(elem.querySelectorAll(selector));
+}
+
+function sort_column(elem) {
+    toggle_sort_states(elem);
+    var colIndex = toArray(elem.parentNode.childNodes).indexOf(elem);
+    var key;
+    if (elem.classList.contains('numeric')) {
+        key = key_num;
+    } else if (elem.classList.contains('result')) {
+        key = key_result;
+    } else {
+        key = key_alpha;
+    }
+    sort_table(elem, key(colIndex));
+}
+
+function show_all_extras() {
+    find_all('.col-result').forEach(show_extras);
+}
+
+function hide_all_extras() {
+    find_all('.col-result').forEach(hide_extras);
+}
+
+function show_extras(colresult_elem) {
+    var extras = colresult_elem.parentNode.nextElementSibling;
+    var expandcollapse = colresult_elem.firstElementChild;
+    extras.classList.remove("collapsed");
+    expandcollapse.classList.remove("expander");
+    expandcollapse.classList.add("collapser");
+}
+
+function hide_extras(colresult_elem) {
+    var extras = colresult_elem.parentNode.nextElementSibling;
+    var expandcollapse = colresult_elem.firstElementChild;
+    extras.classList.add("collapsed");
+    expandcollapse.classList.remove("collapser");
+    expandcollapse.classList.add("expander");
+}
+
+function show_filters() {
+    var filter_items = document.getElementsByClassName('filter');
+    for (var i = 0; i < filter_items.length; i++)
+        filter_items[i].hidden = false;
+}
+
+function add_collapse() {
+    // Add links for show/hide all
+    var resulttable = find('table#results-table');
+    var showhideall = document.createElement("p");
+    showhideall.innerHTML = '<a href="javascript:show_all_extras()">Show all details</a> / ' +
+                            '<a href="javascript:hide_all_extras()">Hide all details</a>';
+    resulttable.parentElement.insertBefore(showhideall, resulttable);
+
+    // Add show/hide link to each result
+    find_all('.col-result').forEach(function(elem) {
+        var extras = elem.parentNode.nextElementSibling;
+        var expandcollapse = document.createElement("span");
+        if (elem.innerHTML === 'Passed') {
+            extras.classList.add("collapsed");
+            expandcollapse.classList.add("expander");
+        } else {
+            expandcollapse.classList.add("collapser");
+        }
+        elem.appendChild(expandcollapse);
+
+        elem.addEventListener("click", function(event) {
+            if (event.currentTarget.parentNode.nextElementSibling.classList.contains("collapsed")) {
+                show_extras(event.currentTarget);
+            } else {
+                hide_extras(event.currentTarget);
+            }
+        });
+    })
+}
+
+function init () {
+    reset_sort_headers();
+
+    add_collapse();
+
+    show_filters();
+
+    toggle_sort_states(find('.initial-sort'));
+
+    find_all('.sortable').forEach(function(elem) {
+        elem.addEventListener("click",
+                              function(event) {
+                                  sort_column(elem);
+                              }, false)
+    });
+
+};
+
+function sort_table(clicked, key_func) {
+    var rows = find_all('.results-table-row');
+    var reversed = !clicked.classList.contains('asc');
+    var sorted_rows = sort(rows, key_func, reversed);
+    /* Whole table is removed here because browsers acts much slower
+     * when appending existing elements.
+     */
+    var thead = document.getElementById("results-table-head");
+    document.getElementById('results-table').remove();
+    var parent = document.createElement("table");
+    parent.id = "results-table";
+    parent.appendChild(thead);
+    sorted_rows.forEach(function(elem) {
+        parent.appendChild(elem);
+    });
+    document.getElementsByTagName("BODY")[0].appendChild(parent);
+}
+
+function sort(items, key_func, reversed) {
+    var sort_array = items.map(function(item, i) {
+        return [key_func(item), i];
+    });
+    var multiplier = reversed ? -1 : 1;
+
+    sort_array.sort(function(a, b) {
+        var key_a = a[0];
+        var key_b = b[0];
+        return multiplier * (key_a >= key_b ? 1 : -1);
+    });
+
+    return sort_array.map(function(item) {
+        var index = item[1];
+        return items[index];
+    });
+}
+
+function key_alpha(col_index) {
+    return function(elem) {
+        return elem.childNodes[1].childNodes[col_index].firstChild.data.toLowerCase();
+    };
+}
+
+function key_num(col_index) {
+    return function(elem) {
+        return parseFloat(elem.childNodes[1].childNodes[col_index].firstChild.data);
+    };
+}
+
+function key_result(col_index) {
+    return function(elem) {
+        var strings = ['Error', 'Failed', 'Rerun', 'XFailed', 'XPassed',
+                       'Skipped', 'Passed'];
+        return strings.indexOf(elem.childNodes[1].childNodes[col_index].firstChild.data);
+    };
+}
+
+function reset_sort_headers() {
+    find_all('.sort-icon').forEach(function(elem) {
+        elem.parentNode.removeChild(elem);
+    });
+    find_all('.sortable').forEach(function(elem) {
+        var icon = document.createElement("div");
+        icon.className = "sort-icon";
+        icon.textContent = "vvv";
+        elem.insertBefore(icon, elem.firstChild);
+        elem.classList.remove("desc", "active");
+        elem.classList.add("asc", "inactive");
+    });
+}
+
+function toggle_sort_states(elem) {
+    //if active, toggle between asc and desc
+    if (elem.classList.contains('active')) {
+        elem.classList.toggle('asc');
+        elem.classList.toggle('desc');
+    }
+
+    //if inactive, reset all other functions and add ascending active
+    if (elem.classList.contains('inactive')) {
+        reset_sort_headers();
+        elem.classList.remove('inactive');
+        elem.classList.add('active');
+    }
+}
+
+function is_all_rows_hidden(value) {
+  return value.hidden == false;
+}
+
+function filter_table(elem) {
+    var outcome_att = "data-test-result";
+    var outcome = elem.getAttribute(outcome_att);
+    class_outcome = outcome + " results-table-row";
+    var outcome_rows = document.getElementsByClassName(class_outcome);
+
+    for(var i = 0; i < outcome_rows.length; i++){
+        outcome_rows[i].hidden = !elem.checked;
+    }
+
+    var rows = find_all('.results-table-row').filter(is_all_rows_hidden);
+    var all_rows_hidden = rows.length == 0 ? true : false;
+    var not_found_message = document.getElementById("not-found-message");
+    not_found_message.hidden = !all_rows_hidden;
+}
+</script>
+    <p>Report generated on 20-Jun-2022 at 18:17:50 by<a href="https://pypi.python.org/pypi/pytest-html"> pytest-html</a> v1.16.1</p>
+    <h2>Environment</h2>
+    <table id="environment">
+      <tr>
+        <td>Packages</td>
+        <td>{&apos;py&apos;: &apos;1.8.0&apos;, &apos;pytest&apos;: &apos;3.6.1&apos;, &apos;pluggy&apos;: &apos;0.6.0&apos;}</td></tr>
+      <tr>
+        <td>Platform</td>
+        <td>Linux-4.19.66-v7+-armv7l-with-debian-9.11</td></tr>
+      <tr>
+        <td>Plugins</td>
+        <td>{&apos;repeater&apos;: &apos;0.1.1&apos;, &apos;cov&apos;: &apos;2.7.1&apos;, &apos;random&apos;: &apos;0.2&apos;, &apos;xdist&apos;: &apos;1.22.2&apos;, &apos;allure-pytest&apos;: &apos;2.5.0&apos;, &apos;remove-stale-bytecode&apos;: &apos;3.0&apos;, &apos;rerunfailures&apos;: &apos;4.0&apos;, &apos;html&apos;: &apos;1.16.1&apos;, &apos;timeout&apos;: &apos;1.2.1&apos;, &apos;forked&apos;: &apos;1.0.2&apos;, &apos;logger&apos;: &apos;0.3.0&apos;, &apos;instafail&apos;: &apos;0.3.0&apos;, &apos;metadata&apos;: &apos;1.8.0&apos;}</td></tr>
+      <tr>
+        <td>Python</td>
+        <td>2.7.13</td></tr></table>
+    <h2>Summary</h2>
+    <p>79 tests ran in 2916.35 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">38 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">41 failed</span>, <input checked="true" class="filter" data-test-result="error" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">1 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>, <input checked="true" class="filter" data-test-result="rerun" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="rerun">45 rerun</span>
+    <h2>Results</h2>
+    <table id="results-table">
+      <thead id="results-table-head">
+        <tr>
+          <th class="sortable result initial-sort" col="result">Result</th>
+          <th class="sortable" col="name">Test</th>
+          <th class="sortable numeric" col="duration">Duration</th>
+          <th>Links</th></tr>
+        <tr hidden="true" id="not-found-message">
+          <th colspan="4">No results found. Try to check the filters</th></tr></thead>
+      <tbody class="error results-table-row">
+        <tr>
+          <td class="col-result">Error</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-MICR-12C12C]::setup</td>
+          <td class="col-duration">1.41</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">../conftest.py:183: in logfolder<br/>    os.makedirs(logfolder)<br/>../../venv27/lib/python2.7/os.py:157: in makedirs<br/>    mkdir(name, mode)<br/><span class="error">E   OSError: [Errno 17] File exists: 'logs/20062022_172913.877039/212615225D0150'</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_OCRCheckDigit.py::test_OCRCheckDigit[5001-5000-OCRA-DigitAddLtoRRemind]</td>
+          <td class="col-duration">19.03</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRCheckDigit.py:22: in test_OCRCheckDigit<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['HEROES9'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'HEROES9' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['HEROES9']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_OCRCheckDigit.py::test_OCRCheckDigit[5001-5000-OCRA-Health]</td>
+          <td class="col-duration">19.49</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRCheckDigit.py:22: in test_OCRCheckDigit<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['+V3820LK392001C'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '+V3820LK392001C' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['+V3820LK392001C']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_OCRFonts.py::test_OCRFonts[5001-5000-OCRA-Enable]</td>
+          <td class="col-duration">19.10</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRFonts.py:55: in test_OCRFonts<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['UNLIMITED POWER'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'UNLIMITED POWER' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['UNLIMITED POWER']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_OCRFonts.py::test_OCRFonts[5001-5000-OCRA-EnableRes1]</td>
+          <td class="col-duration">15.50</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRFonts.py:55: in test_OCRFonts<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['FAST CA$H +...1 IS **FUN**'] == ['.ST CA$H + 300.1 IS **FUN**']</span><br/><span class="error">E     At index 0 diff: 'FAST CA$H + 300.1 IS **FUN**' != '.ST CA$H + 300.1 IS **FUN**'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['FAST CA$H + 300.1 IS **FUN**']</span><br/><span class="error">E     ?   ^^</span><br/><span class="error">E     + ['.ST CA$H + 300.1 IS **FUN**']</span><br/><span class="error">E     ?   ^</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_OCRFonts.py::test_OCRFonts[5001-5000-OCRA-EnableRes2]</td>
+          <td class="col-duration">14.95</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRFonts.py:55: in test_OCRFonts<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['&lt;SQUID PARTY&gt;'] == ['&lt;SQUID PARTY']</span><br/><span class="error">E     At index 0 diff: '&lt;SQUID PARTY&gt;' != '&lt;SQUID PARTY'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['&lt;SQUID PARTY&gt;']</span><br/><span class="error">E     ?               -</span><br/><span class="error">E     + ['&lt;SQUID PARTY']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_OCRFonts.py::test_OCRFonts[5001-5000-OCRA-Similar]</td>
+          <td class="col-duration">14.11</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRFonts.py:55: in test_OCRFonts<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['1!LIOOEFPRBDS5$+-'] == ['1!LIO0EFPRBDS5$+-']</span><br/><span class="error">E     At index 0 diff: '1!LIOOEFPRBDS5$+-' != '1!LIO0EFPRBDS5$+-'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['1!LIOOEFPRBDS5$+-']</span><br/><span class="error">E     ?        ^</span><br/><span class="error">E     + ['1!LIO0EFPRBDS5$+-']</span><br/><span class="error">E     ?        ^</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_OCRFonts.py::test_OCRFonts[5001-5000-OCRB-Enable]</td>
+          <td class="col-duration">14.29</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRFonts.py:55: in test_OCRFonts<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['TESTING THE TEXT DECODE'] == ['TESTING THE TEXT DECOD| |.']</span><br/><span class="error">E     At index 0 diff: 'TESTING THE TEXT DECODE' != 'TESTING THE TEXT DECOD| |.'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['TESTING THE TEXT DECODE']</span><br/><span class="error">E     ?                         ^</span><br/><span class="error">E     + ['TESTING THE TEXT DECOD| |.']</span><br/><span class="error">E     ?                         ^^^^</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_OCRFonts.py::test_OCRFonts[5001-5000-OCRB-EnaTravel1]</td>
+          <td class="col-duration">19.56</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRFonts.py:55: in test_OCRFonts<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['CIUSAD23145...&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'CIUSAD231458907A123X5328434D23' != 'NR'</span><br/><span class="error">E     Left contains more items, first extra item: '3407127M9507122USA&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;6'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     + ['NR']</span><br/><span class="error">E     - ['CIUSAD231458907A123X5328434D23',</span><br/><span class="error">E     -  '3407127M9507122USA&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;6',</span><br/><span class="error">E     -  'STEVENSON&lt;&lt;PETER&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_OCRFonts.py::test_OCRFonts[5001-5000-OCRB-EnaTravel2]</td>
+          <td class="col-duration">19.34</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRFonts.py:55: in test_OCRFonts<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['I&lt;USASTEVEN...7122&lt;&lt;&lt;&lt;&lt;&lt;&lt;2'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'I&lt;USASTEVENSON&lt;&lt;PETER&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;' != 'NR'</span><br/><span class="error">E     Left contains more items, first extra item: 'D231458907USA3407127M9507122&lt;&lt;&lt;&lt;&lt;&lt;&lt;2'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     + ['NR']</span><br/><span class="error">E     - ['I&lt;USASTEVENSON&lt;&lt;PETER&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;',</span><br/><span class="error">E     -  'D231458907USA3407127M9507122&lt;&lt;&lt;&lt;&lt;&lt;&lt;2']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_OCRFonts.py::test_OCRFonts[5001-5000-OCRB-EnaTraAuto]</td>
+          <td class="col-duration">19.62</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRFonts.py:55: in test_OCRFonts<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['CIUSAD23145...&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'CIUSAD231458907A123X5328434D23' != 'NR'</span><br/><span class="error">E     Left contains more items, first extra item: '3407127M9507122USA&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;6'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     + ['NR']</span><br/><span class="error">E     - ['CIUSAD231458907A123X5328434D23',</span><br/><span class="error">E     -  '3407127M9507122USA&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;6',</span><br/><span class="error">E     -  'STEVENSON&lt;&lt;PETER&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_OCRFonts.py::test_OCRFonts[5001-5000-OCRB-EnaPP]</td>
+          <td class="col-duration">19.31</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRFonts.py:55: in test_OCRFonts<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['P&lt;USAERIKSS...4226B&lt;&lt;&lt;&lt;&lt;14'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'P&lt;USAERIKSSON&lt;&lt;ANNA&lt;MARIA&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;' != 'NR'</span><br/><span class="error">E     Left contains more items, first extra item: 'L898902C&lt;3USA6908061F9406236ZE184226B&lt;&lt;&lt;&lt;&lt;14'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     + ['NR']</span><br/><span class="error">E     - ['P&lt;USAERIKSSON&lt;&lt;ANNA&lt;MARIA&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;',</span><br/><span class="error">E     -  'L898902C&lt;3USA6908061F9406236ZE184226B&lt;&lt;&lt;&lt;&lt;14']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_OCRFonts.py::test_OCRFonts[5001-5000-OCRB-EnaVisaA]</td>
+          <td class="col-duration">18.89</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRFonts.py:55: in test_OCRFonts<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['V&lt;USAERIKSS...84226B&lt;&lt;&lt;&lt;&lt;&lt;'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'V&lt;USAERIKSSON&lt;&lt;JOHN&lt;ARTHUR&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;' != 'NR'</span><br/><span class="error">E     Left contains more items, first extra item: 'L898902C&lt;3USA4009078M9612109ZE6184226B&lt;&lt;&lt;&lt;&lt;&lt;'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     + ['NR']</span><br/><span class="error">E     - ['V&lt;USAERIKSSON&lt;&lt;JOHN&lt;ARTHUR&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;',</span><br/><span class="error">E     -  'L898902C&lt;3USA4009078M9612109ZE6184226B&lt;&lt;&lt;&lt;&lt;&lt;']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_OCRFonts.py::test_OCRFonts[5001-5000-OCRB-EnaVisaB]</td>
+          <td class="col-duration">14.65</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRFonts.py:55: in test_OCRFonts<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['V&lt;USAERIKSS...2109&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'V&lt;USAERIKSSON&lt;&lt;JOHN&lt;ARTHUR&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;' != 'NR'</span><br/><span class="error">E     Left contains more items, first extra item: 'L898902C&lt;3USA4009078M9612109&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     + ['NR']</span><br/><span class="error">E     - ['V&lt;USAERIKSSON&lt;&lt;JOHN&lt;ARTHUR&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;',</span><br/><span class="error">E     -  'L898902C&lt;3USA4009078M9612109&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_OCRFonts.py::test_OCRFonts[5001-5000-OCRB-EnaICAO]</td>
+          <td class="col-duration">15.45</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRFonts.py:55: in test_OCRFonts<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['V&lt;USAERIKSS...84226B&lt;&lt;&lt;&lt;&lt;&lt;'] == ['CIUSAD231458...&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;']</span><br/><span class="error">E     At index 0 diff: 'V&lt;USAERIKSSON&lt;&lt;JOHN&lt;ARTHUR&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;' != 'CIUSAD231458907A123X5328434D23'</span><br/><span class="error">E     Right contains more items, first extra item: 'STEVENSON&lt;&lt;PETER&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['V&lt;USAERIKSSON&lt;&lt;JOHN&lt;ARTHUR&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;',</span><br/><span class="error">E     -  'L898902C&lt;3USA4009078M9612109ZE6184226B&lt;&lt;&lt;&lt;&lt;&lt;']</span><br/><span class="error">E     + ['CIUSAD231458907A123X5328434D23',</span><br/><span class="error">E     +  '3407127M9507122USA&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;6',...</span><br/><span class="error">E     </span><br/><span class="error">E     ...Full output truncated (2 lines hidden), use '-vv' to show</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_OCRFonts.py::test_OCRFonts[5001-5000-OCRB-Similar]</td>
+          <td class="col-duration">13.38</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRFonts.py:55: in test_OCRFonts<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['1!LIOOEFPRBDS5$+-C(&lt;'] == ['3407127M9507122USA&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;6']</span><br/><span class="error">E     At index 0 diff: '1!LIOOEFPRBDS5$+-C(&lt;' != '3407127M9507122USA&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;6'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['1!LIOOEFPRBDS5$+-C(&lt;']</span><br/><span class="error">E     + ['3407127M9507122USA&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;6']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_OCRFonts.py::test_OCRFonts[5001-5000-MICR-Enable]</td>
+          <td class="col-duration">18.58</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRFonts.py:55: in test_OCRFonts<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['51t86o361a381d'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '51t86o361a381d' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['51t86o361a381d']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_OCRFonts.py::test_OCRFonts[5001-5000-USCurrencyEna]</td>
+          <td class="col-duration">19.21</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRFonts.py:55: in test_OCRFonts<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['EC22775765F'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'EC22775765F' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['EC22775765F']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_OCRInverse.py::test_OCRInverse[5001-5000-OCRA-RegInvReg]</td>
+          <td class="col-duration">18.46</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRInverse.py:21: in test_OCRInverse<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['29487901'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '29487901' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['29487901']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_OCRInverse.py::test_OCRInverse[5001-5000-OCRA-RegInvAuto]</td>
+          <td class="col-duration">18.75</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRInverse.py:21: in test_OCRInverse<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['29487901'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '29487901' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['29487901']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_OCRInverse.py::test_OCRInverse[5001-5000-OCRA-InvInvInv]</td>
+          <td class="col-duration">14.73</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRInverse.py:21: in test_OCRInverse<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['29487901'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '29487901' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['29487901']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_OCRInverse.py::test_OCRInverse[5001-5000-OCRA-InvInvAuto]</td>
+          <td class="col-duration">18.79</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRInverse.py:21: in test_OCRInverse<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['29487901'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '29487901' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['29487901']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRA-6C3C0]</td>
+          <td class="col-duration">15.76</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRQuietZone.py:58: in test_OCRQuietZone<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['TESTSTRING'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'TESTSTRING' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['TESTSTRING']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRA-8C8C0]</td>
+          <td class="col-duration">18.63</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRQuietZone.py:58: in test_OCRQuietZone<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['TESTSTRING'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'TESTSTRING' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['TESTSTRING']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRA-12C12C0]</td>
+          <td class="col-duration">18.37</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRQuietZone.py:58: in test_OCRQuietZone<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['TESTSTRING'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'TESTSTRING' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['TESTSTRING']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRA-6C3C1]</td>
+          <td class="col-duration">18.68</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRQuietZone.py:58: in test_OCRQuietZone<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['TESTSTRING'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'TESTSTRING' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['TESTSTRING']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRA-8C8C1]</td>
+          <td class="col-duration">18.56</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRQuietZone.py:58: in test_OCRQuietZone<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['TESTSTRING'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'TESTSTRING' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['TESTSTRING']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRA-12C12C1]</td>
+          <td class="col-duration">15.18</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRQuietZone.py:58: in test_OCRQuietZone<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['TESTSTRING'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'TESTSTRING' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['TESTSTRING']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRA-6C3C2]</td>
+          <td class="col-duration">18.35</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRQuietZone.py:58: in test_OCRQuietZone<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['TESTSTRING'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'TESTSTRING' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['TESTSTRING']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRA-8C8C2]</td>
+          <td class="col-duration">19.57</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRQuietZone.py:58: in test_OCRQuietZone<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['TESTSTRING'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'TESTSTRING' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['TESTSTRING']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRA-12C12C2]</td>
+          <td class="col-duration">18.64</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRQuietZone.py:58: in test_OCRQuietZone<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['TESTSTRING'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'TESTSTRING' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['TESTSTRING']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRB-6C3C0]</td>
+          <td class="col-duration">19.74</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRQuietZone.py:58: in test_OCRQuietZone<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['TESTSTRING'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'TESTSTRING' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['TESTSTRING']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRB-8C8C0]</td>
+          <td class="col-duration">14.73</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRQuietZone.py:58: in test_OCRQuietZone<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['TESTSTRING'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'TESTSTRING' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['TESTSTRING']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRB-12C12C0]</td>
+          <td class="col-duration">18.65</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRQuietZone.py:58: in test_OCRQuietZone<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['TESTSTRING'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'TESTSTRING' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['TESTSTRING']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRB-6C3C1]</td>
+          <td class="col-duration">18.78</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRQuietZone.py:58: in test_OCRQuietZone<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['TESTSTRING'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'TESTSTRING' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['TESTSTRING']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRB-8C8C1]</td>
+          <td class="col-duration">18.63</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRQuietZone.py:58: in test_OCRQuietZone<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['TESTSTRING'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'TESTSTRING' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['TESTSTRING']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRB-12C12C1]</td>
+          <td class="col-duration">18.81</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRQuietZone.py:58: in test_OCRQuietZone<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['TESTSTRING'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'TESTSTRING' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['TESTSTRING']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRB-6C3C2]</td>
+          <td class="col-duration">18.53</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRQuietZone.py:58: in test_OCRQuietZone<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['TESTSTRING'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'TESTSTRING' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['TESTSTRING']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRB-8C8C2]</td>
+          <td class="col-duration">19.54</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRQuietZone.py:58: in test_OCRQuietZone<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['TESTSTRING'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'TESTSTRING' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['TESTSTRING']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRB-12C12C2]</td>
+          <td class="col-duration">18.26</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRQuietZone.py:58: in test_OCRQuietZone<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['TESTSTRING'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'TESTSTRING' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['TESTSTRING']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-MICR-6C3C]</td>
+          <td class="col-duration">18.86</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRQuietZone.py:58: in test_OCRQuietZone<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['987656789'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '987656789' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['987656789']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-MICR-8C8C]</td>
+          <td class="col-duration">19.12</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRQuietZone.py:58: in test_OCRQuietZone<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['987656789'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '987656789' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['987656789']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_OCRCheckDigit.py::test_OCRCheckDigit[5001-5000-OCRA-DigiAddLtoR]</td>
+          <td class="col-duration">18.55</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRCheckDigit.py:22: in test_OCRCheckDigit<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['*5673&gt;*'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '*5673&gt;*' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['*5673&gt;*']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_OCRCheckDigit.py::test_OCRCheckDigit[5001-5000-OCRA-DigitAddLtoRRemind]</td>
+          <td class="col-duration">19.33</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRCheckDigit.py:22: in test_OCRCheckDigit<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['HEROES9'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'HEROES9' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['HEROES9']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_OCRCheckDigit.py::test_OCRCheckDigit[5001-5000-OCRA-Health]</td>
+          <td class="col-duration">19.14</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRCheckDigit.py:22: in test_OCRCheckDigit<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['+V3820LK392001C'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '+V3820LK392001C' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['+V3820LK392001C']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_OCRFonts.py::test_OCRFonts[5001-5000-OCRA-Enable]</td>
+          <td class="col-duration">18.83</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRFonts.py:55: in test_OCRFonts<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['UNLIMITED POWER'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'UNLIMITED POWER' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['UNLIMITED POWER']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_OCRFonts.py::test_OCRFonts[5001-5000-OCRA-EnableRes1]</td>
+          <td class="col-duration">17.34</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRFonts.py:55: in test_OCRFonts<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['FAST CA$H +...1 IS **FUN**'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'FAST CA$H + 300.1 IS **FUN**' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['FAST CA$H + 300.1 IS **FUN**']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_OCRFonts.py::test_OCRFonts[5001-5000-OCRA-EnableRes2]</td>
+          <td class="col-duration">18.83</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRFonts.py:55: in test_OCRFonts<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['&lt;SQUID PARTY&gt;'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '&lt;SQUID PARTY&gt;' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['&lt;SQUID PARTY&gt;']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_OCRFonts.py::test_OCRFonts[5001-5000-OCRA-Similar]</td>
+          <td class="col-duration">13.35</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRFonts.py:55: in test_OCRFonts<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['1!LIOOEFPRBDS5$+-'] == ['1 !LIO0EFPRBDS5$+-']</span><br/><span class="error">E     At index 0 diff: '1!LIOOEFPRBDS5$+-' != '1 !LIO0EFPRBDS5$+-'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['1!LIOOEFPRBDS5$+-']</span><br/><span class="error">E     ?        ^</span><br/><span class="error">E     + ['1 !LIO0EFPRBDS5$+-']</span><br/><span class="error">E     ?    +    ^</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_OCRFonts.py::test_OCRFonts[5001-5000-OCRB-Enable]</td>
+          <td class="col-duration">14.24</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRFonts.py:55: in test_OCRFonts<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['TESTING THE TEXT DECODE'] == ['TESTING THE TEXT DE']</span><br/><span class="error">E     At index 0 diff: 'TESTING THE TEXT DECODE' != 'TESTING THE TEXT DE'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['TESTING THE TEXT DECODE']</span><br/><span class="error">E     ?                    ----</span><br/><span class="error">E     + ['TESTING THE TEXT DE']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_OCRFonts.py::test_OCRFonts[5001-5000-OCRB-EnaBank]</td>
+          <td class="col-duration">18.13</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRFonts.py:55: in test_OCRFonts<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['#198513218&lt;JNP&gt;|'] == ['|| ||&lt;J||P&gt;|']</span><br/><span class="error">E     At index 0 diff: '#198513218&lt;JNP&gt;|' != '|| ||&lt;J||P&gt;|'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['#198513218&lt;JNP&gt;|']</span><br/><span class="error">E     + ['|| ||&lt;J||P&gt;|']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_OCRFonts.py::test_OCRFonts[5001-5000-OCRB-EnaLimit]</td>
+          <td class="col-duration">16.34</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRFonts.py:55: in test_OCRFonts<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['+468719/8ACVX'] == ['...']</span><br/><span class="error">E     At index 0 diff: '+468719/8ACVX' != '...'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['+468719/8ACVX']</span><br/><span class="error">E     + ['...']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_OCRFonts.py::test_OCRFonts[5001-5000-OCRB-EnaTravel1]</td>
+          <td class="col-duration">14.35</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRFonts.py:55: in test_OCRFonts<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['CIUSAD23145...&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;'] == ['CIUSAD231458...&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;']</span><br/><span class="error">E     At index 2 diff: 'STEVENSON&lt;&lt;PETER&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;' != 'STEVENSON&lt;&lt;PETEM&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     ['CIUSAD231458907A123X5328434D23',</span><br/><span class="error">E     '3407127M9507122USA&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;6',</span><br/><span class="error">E     -  'STEVENSON&lt;&lt;PETER&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;']</span><br/><span class="error">E     ?                  ^</span><br/><span class="error">E     +  'STEVENSON&lt;&lt;PETEM&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;']...</span><br/><span class="error">E     </span><br/><span class="error">E     ...Full output truncated (2 lines hidden), use '-vv' to show</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_OCRFonts.py::test_OCRFonts[5001-5000-OCRB-EnaTravel2]</td>
+          <td class="col-duration">19.26</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRFonts.py:55: in test_OCRFonts<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['I&lt;USASTEVEN...7122&lt;&lt;&lt;&lt;&lt;&lt;&lt;2'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'I&lt;USASTEVENSON&lt;&lt;PETER&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;' != 'NR'</span><br/><span class="error">E     Left contains more items, first extra item: 'D231458907USA3407127M9507122&lt;&lt;&lt;&lt;&lt;&lt;&lt;2'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     + ['NR']</span><br/><span class="error">E     - ['I&lt;USASTEVENSON&lt;&lt;PETER&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;',</span><br/><span class="error">E     -  'D231458907USA3407127M9507122&lt;&lt;&lt;&lt;&lt;&lt;&lt;2']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_OCRFonts.py::test_OCRFonts[5001-5000-OCRB-EnaTraAuto]</td>
+          <td class="col-duration">19.38</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRFonts.py:55: in test_OCRFonts<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['CIUSAD23145...&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'CIUSAD231458907A123X5328434D23' != 'NR'</span><br/><span class="error">E     Left contains more items, first extra item: '3407127M9507122USA&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;6'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     + ['NR']</span><br/><span class="error">E     - ['CIUSAD231458907A123X5328434D23',</span><br/><span class="error">E     -  '3407127M9507122USA&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;6',</span><br/><span class="error">E     -  'STEVENSON&lt;&lt;PETER&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_OCRFonts.py::test_OCRFonts[5001-5000-OCRB-EnaPP]</td>
+          <td class="col-duration">18.32</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRFonts.py:55: in test_OCRFonts<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['P&lt;USAERIKSS...4226B&lt;&lt;&lt;&lt;&lt;14'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'P&lt;USAERIKSSON&lt;&lt;ANNA&lt;MARIA&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;' != 'NR'</span><br/><span class="error">E     Left contains more items, first extra item: 'L898902C&lt;3USA6908061F9406236ZE184226B&lt;&lt;&lt;&lt;&lt;14'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     + ['NR']</span><br/><span class="error">E     - ['P&lt;USAERIKSSON&lt;&lt;ANNA&lt;MARIA&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;',</span><br/><span class="error">E     -  'L898902C&lt;3USA6908061F9406236ZE184226B&lt;&lt;&lt;&lt;&lt;14']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_OCRFonts.py::test_OCRFonts[5001-5000-OCRB-EnaVisaA]</td>
+          <td class="col-duration">19.21</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRFonts.py:55: in test_OCRFonts<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['V&lt;USAERIKSS...84226B&lt;&lt;&lt;&lt;&lt;&lt;'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'V&lt;USAERIKSSON&lt;&lt;JOHN&lt;ARTHUR&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;' != 'NR'</span><br/><span class="error">E     Left contains more items, first extra item: 'L898902C&lt;3USA4009078M9612109ZE6184226B&lt;&lt;&lt;&lt;&lt;&lt;'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     + ['NR']</span><br/><span class="error">E     - ['V&lt;USAERIKSSON&lt;&lt;JOHN&lt;ARTHUR&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;',</span><br/><span class="error">E     -  'L898902C&lt;3USA4009078M9612109ZE6184226B&lt;&lt;&lt;&lt;&lt;&lt;']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_OCRFonts.py::test_OCRFonts[5001-5000-OCRB-EnaVisaB]</td>
+          <td class="col-duration">19.50</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRFonts.py:55: in test_OCRFonts<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['V&lt;USAERIKSS...2109&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'V&lt;USAERIKSSON&lt;&lt;JOHN&lt;ARTHUR&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;' != 'NR'</span><br/><span class="error">E     Left contains more items, first extra item: 'L898902C&lt;3USA4009078M9612109&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     + ['NR']</span><br/><span class="error">E     - ['V&lt;USAERIKSSON&lt;&lt;JOHN&lt;ARTHUR&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;',</span><br/><span class="error">E     -  'L898902C&lt;3USA4009078M9612109&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_OCRFonts.py::test_OCRFonts[5001-5000-OCRB-EnaICAO]</td>
+          <td class="col-duration">13.85</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRFonts.py:55: in test_OCRFonts<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['V&lt;USAERIKSS...84226B&lt;&lt;&lt;&lt;&lt;&lt;'] == ['CIUSAD231458...&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;']</span><br/><span class="error">E     At index 0 diff: 'V&lt;USAERIKSSON&lt;&lt;JOHN&lt;ARTHUR&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;' != 'CIUSAD231458907A123X5328434D23'</span><br/><span class="error">E     Right contains more items, first extra item: 'STEVENSON&lt;&lt;PETEN&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['V&lt;USAERIKSSON&lt;&lt;JOHN&lt;ARTHUR&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;',</span><br/><span class="error">E     -  'L898902C&lt;3USA4009078M9612109ZE6184226B&lt;&lt;&lt;&lt;&lt;&lt;']</span><br/><span class="error">E     + ['CIUSAD231458907A123X5328434D23',</span><br/><span class="error">E     +  '3407127M9507122USA&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;6',...</span><br/><span class="error">E     </span><br/><span class="error">E     ...Full output truncated (2 lines hidden), use '-vv' to show</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_OCRFonts.py::test_OCRFonts[5001-5000-OCRB-Similar]</td>
+          <td class="col-duration">13.42</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRFonts.py:55: in test_OCRFonts<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['1!LIOOEFPRBDS5$+-C(&lt;'] == ['STEVENSON&lt;&lt;PETE...d&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;']</span><br/><span class="error">E     At index 0 diff: '1!LIOOEFPRBDS5$+-C(&lt;' != 'STEVENSON&lt;&lt;PETE\xef\xbf\xbd&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['1!LIOOEFPRBDS5$+-C(&lt;']</span><br/><span class="error">E     + ['STEVENSON&lt;&lt;PETE\xef\xbf\xbd&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_OCRFonts.py::test_OCRFonts[5001-5000-MICR-Enable]</td>
+          <td class="col-duration">19.56</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRFonts.py:55: in test_OCRFonts<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['51t86o361a381d'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '51t86o361a381d' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['51t86o361a381d']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_OCRFonts.py::test_OCRFonts[5001-5000-USCurrencyEna]</td>
+          <td class="col-duration">18.99</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRFonts.py:55: in test_OCRFonts<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['EC22775765F'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'EC22775765F' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['EC22775765F']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_OCRInverse.py::test_OCRInverse[5001-5000-OCRA-RegInvReg]</td>
+          <td class="col-duration">18.30</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRInverse.py:21: in test_OCRInverse<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['29487901'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '29487901' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['29487901']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_OCRInverse.py::test_OCRInverse[5001-5000-OCRA-RegInvAuto]</td>
+          <td class="col-duration">18.45</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRInverse.py:21: in test_OCRInverse<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['29487901'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '29487901' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['29487901']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_OCRInverse.py::test_OCRInverse[5001-5000-OCRA-InvInvInv]</td>
+          <td class="col-duration">19.46</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRInverse.py:21: in test_OCRInverse<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['29487901'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '29487901' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['29487901']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_OCRInverse.py::test_OCRInverse[5001-5000-OCRA-InvInvAuto]</td>
+          <td class="col-duration">19.65</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRInverse.py:21: in test_OCRInverse<br/>    assert output == device.scanner.scan(imageName, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['29487901'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '29487901' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['29487901']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRA-6C3C0]</td>
+          <td class="col-duration">18.45</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRQuietZone.py:58: in test_OCRQuietZone<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['TESTSTRING'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'TESTSTRING' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['TESTSTRING']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRA-8C8C0]</td>
+          <td class="col-duration">18.46</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRQuietZone.py:58: in test_OCRQuietZone<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['TESTSTRING'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'TESTSTRING' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['TESTSTRING']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRA-12C12C0]</td>
+          <td class="col-duration">18.75</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRQuietZone.py:58: in test_OCRQuietZone<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['TESTSTRING'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'TESTSTRING' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['TESTSTRING']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRA-6C3C1]</td>
+          <td class="col-duration">18.87</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRQuietZone.py:58: in test_OCRQuietZone<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['TESTSTRING'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'TESTSTRING' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['TESTSTRING']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRA-8C8C1]</td>
+          <td class="col-duration">18.38</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRQuietZone.py:58: in test_OCRQuietZone<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['TESTSTRING'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'TESTSTRING' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['TESTSTRING']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRA-12C12C1]</td>
+          <td class="col-duration">19.02</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRQuietZone.py:58: in test_OCRQuietZone<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['TESTSTRING'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'TESTSTRING' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['TESTSTRING']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRA-6C3C2]</td>
+          <td class="col-duration">18.80</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRQuietZone.py:58: in test_OCRQuietZone<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['TESTSTRING'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'TESTSTRING' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['TESTSTRING']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRA-8C8C2]</td>
+          <td class="col-duration">16.15</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRQuietZone.py:58: in test_OCRQuietZone<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['TESTSTRING'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'TESTSTRING' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['TESTSTRING']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRA-12C12C2]</td>
+          <td class="col-duration">18.90</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRQuietZone.py:58: in test_OCRQuietZone<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['TESTSTRING'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'TESTSTRING' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['TESTSTRING']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRB-6C3C0]</td>
+          <td class="col-duration">18.81</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRQuietZone.py:58: in test_OCRQuietZone<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['TESTSTRING'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'TESTSTRING' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['TESTSTRING']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRB-8C8C0]</td>
+          <td class="col-duration">18.64</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRQuietZone.py:58: in test_OCRQuietZone<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['TESTSTRING'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'TESTSTRING' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['TESTSTRING']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRB-12C12C0]</td>
+          <td class="col-duration">18.73</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRQuietZone.py:58: in test_OCRQuietZone<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['TESTSTRING'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'TESTSTRING' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['TESTSTRING']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRB-6C3C1]</td>
+          <td class="col-duration">14.61</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRQuietZone.py:58: in test_OCRQuietZone<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['TESTSTRING'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'TESTSTRING' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['TESTSTRING']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRB-8C8C1]</td>
+          <td class="col-duration">19.74</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRQuietZone.py:58: in test_OCRQuietZone<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['TESTSTRING'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'TESTSTRING' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['TESTSTRING']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRB-12C12C1]</td>
+          <td class="col-duration">13.63</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRQuietZone.py:58: in test_OCRQuietZone<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['TESTSTRING'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'TESTSTRING' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['TESTSTRING']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRB-6C3C2]</td>
+          <td class="col-duration">18.74</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRQuietZone.py:58: in test_OCRQuietZone<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['TESTSTRING'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'TESTSTRING' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['TESTSTRING']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRB-8C8C2]</td>
+          <td class="col-duration">19.27</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRQuietZone.py:58: in test_OCRQuietZone<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['TESTSTRING'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'TESTSTRING' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['TESTSTRING']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRB-12C12C2]</td>
+          <td class="col-duration">14.64</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRQuietZone.py:58: in test_OCRQuietZone<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['TESTSTRING'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'TESTSTRING' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['TESTSTRING']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-MICR-6C3C]</td>
+          <td class="col-duration">18.86</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRQuietZone.py:58: in test_OCRQuietZone<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['987656789'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '987656789' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['987656789']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-MICR-8C8C]</td>
+          <td class="col-duration">19.67</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRQuietZone.py:58: in test_OCRQuietZone<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['987656789'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '987656789' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['987656789']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-MICR-12C12C]</td>
+          <td class="col-duration">18.48</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_OCRQuietZone.py:58: in test_OCRQuietZone<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['987656789'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '987656789' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['987656789']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_OCRCheckDigit.py::test_OCRCheckDigit[5001-5000-OCRA-ProAddLtoR]</td>
+          <td class="col-duration">13.73</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_OCRCheckDigit.py::test_OCRCheckDigit[5001-5000-OCRA-ProAddRtoL]</td>
+          <td class="col-duration">13.48</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_OCRCheckDigit.py::test_OCRCheckDigit[5001-5000-OCRA-DigiAddLtoR]</td>
+          <td class="col-duration">15.58</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_OCRCheckDigit.py::test_OCRCheckDigit[5001-5000-OCRA-DigitAddRtoL]</td>
+          <td class="col-duration">17.56</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_OCRCheckDigit.py::test_OCRCheckDigit[5001-5000-OCRA-ProAddRtoLRemind]</td>
+          <td class="col-duration">13.23</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_OCRFonts.py::test_OCRFonts[5001-5000-OCRA-OCRDisable]</td>
+          <td class="col-duration">18.58</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_OCRFonts.py::test_OCRFonts[5001-5000-OCRA-Disable]</td>
+          <td class="col-duration">18.48</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_OCRFonts.py::test_OCRFonts[5001-5000-OCRA-EnableBank]</td>
+          <td class="col-duration">13.10</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_OCRFonts.py::test_OCRFonts[5001-5000-OCRB-Disable]</td>
+          <td class="col-duration">18.80</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_OCRFonts.py::test_OCRFonts[5001-5000-OCRB-EnaBank]</td>
+          <td class="col-duration">13.26</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_OCRFonts.py::test_OCRFonts[5001-5000-OCRB-EnaLimit]</td>
+          <td class="col-duration">13.34</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_OCRFonts.py::test_OCRFonts[5001-5000-OCRB-EnaISBN10]</td>
+          <td class="col-duration">12.99</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_OCRFonts.py::test_OCRFonts[5001-5000-OCRB-EnaISBN13]</td>
+          <td class="col-duration">13.35</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_OCRFonts.py::test_OCRFonts[5001-5000-MICR-Disable]</td>
+          <td class="col-duration">18.49</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_OCRFonts.py::test_OCRFonts[5001-5000-USCurrencyDis]</td>
+          <td class="col-duration">18.13</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_OCRInverse.py::test_OCRInverse[5001-5000-OCRA-RegInvInv]</td>
+          <td class="col-duration">16.95</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_OCRInverse.py::test_OCRInverse[5001-5000-OCRA-InvInvReg]</td>
+          <td class="col-duration">18.77</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRA-2C3C0]</td>
+          <td class="col-duration">18.90</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRA-6C8C0]</td>
+          <td class="col-duration">19.12</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRA-8C12C0]</td>
+          <td class="col-duration">19.31</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRA-2C3C1]</td>
+          <td class="col-duration">19.80</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRA-6C8C1]</td>
+          <td class="col-duration">15.58</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRA-8C12C1]</td>
+          <td class="col-duration">18.96</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRA-2C3C2]</td>
+          <td class="col-duration">18.80</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRA-6C8C2]</td>
+          <td class="col-duration">18.90</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRA-8C12C2]</td>
+          <td class="col-duration">19.32</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRB-2C3C0]</td>
+          <td class="col-duration">15.51</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRB-6C8C0]</td>
+          <td class="col-duration">19.64</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRB-8C12C0]</td>
+          <td class="col-duration">18.80</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRB-2C3C1]</td>
+          <td class="col-duration">19.39</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRB-6C8C1]</td>
+          <td class="col-duration">19.02</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRB-8C12C1]</td>
+          <td class="col-duration">14.42</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRB-2C3C2]</td>
+          <td class="col-duration">19.14</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRB-6C8C2]</td>
+          <td class="col-duration">18.54</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-OCRB-8C12C2]</td>
+          <td class="col-duration">19.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-MICR-2C3C]</td>
+          <td class="col-duration">18.77</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-MICR-6C8C]</td>
+          <td class="col-duration">15.99</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_OCRQuietZone.py::test_OCRQuietZone[5001-5000-MICR-8C12C]</td>
+          <td class="col-duration">18.66</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody></table></body></html>

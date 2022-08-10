@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Test Report</title>
+    <link href="assets/style.css" rel="stylesheet" type="text/css"/></head>
+  <body onLoad="init()">
+    <script>/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this file,
+ * You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+
+function toArray(iter) {
+    if (iter === null) {
+        return null;
+    }
+    return Array.prototype.slice.call(iter);
+}
+
+function find(selector, elem) {
+    if (!elem) {
+        elem = document;
+    }
+    return elem.querySelector(selector);
+}
+
+function find_all(selector, elem) {
+    if (!elem) {
+        elem = document;
+    }
+    return toArray(elem.querySelectorAll(selector));
+}
+
+function sort_column(elem) {
+    toggle_sort_states(elem);
+    var colIndex = toArray(elem.parentNode.childNodes).indexOf(elem);
+    var key;
+    if (elem.classList.contains('numeric')) {
+        key = key_num;
+    } else if (elem.classList.contains('result')) {
+        key = key_result;
+    } else {
+        key = key_alpha;
+    }
+    sort_table(elem, key(colIndex));
+}
+
+function show_all_extras() {
+    find_all('.col-result').forEach(show_extras);
+}
+
+function hide_all_extras() {
+    find_all('.col-result').forEach(hide_extras);
+}
+
+function show_extras(colresult_elem) {
+    var extras = colresult_elem.parentNode.nextElementSibling;
+    var expandcollapse = colresult_elem.firstElementChild;
+    extras.classList.remove("collapsed");
+    expandcollapse.classList.remove("expander");
+    expandcollapse.classList.add("collapser");
+}
+
+function hide_extras(colresult_elem) {
+    var extras = colresult_elem.parentNode.nextElementSibling;
+    var expandcollapse = colresult_elem.firstElementChild;
+    extras.classList.add("collapsed");
+    expandcollapse.classList.remove("collapser");
+    expandcollapse.classList.add("expander");
+}
+
+function show_filters() {
+    var filter_items = document.getElementsByClassName('filter');
+    for (var i = 0; i < filter_items.length; i++)
+        filter_items[i].hidden = false;
+}
+
+function add_collapse() {
+    // Add links for show/hide all
+    var resulttable = find('table#results-table');
+    var showhideall = document.createElement("p");
+    showhideall.innerHTML = '<a href="javascript:show_all_extras()">Show all details</a> / ' +
+                            '<a href="javascript:hide_all_extras()">Hide all details</a>';
+    resulttable.parentElement.insertBefore(showhideall, resulttable);
+
+    // Add show/hide link to each result
+    find_all('.col-result').forEach(function(elem) {
+        var extras = elem.parentNode.nextElementSibling;
+        var expandcollapse = document.createElement("span");
+        if (elem.innerHTML === 'Passed') {
+            extras.classList.add("collapsed");
+            expandcollapse.classList.add("expander");
+        } else {
+            expandcollapse.classList.add("collapser");
+        }
+        elem.appendChild(expandcollapse);
+
+        elem.addEventListener("click", function(event) {
+            if (event.currentTarget.parentNode.nextElementSibling.classList.contains("collapsed")) {
+                show_extras(event.currentTarget);
+            } else {
+                hide_extras(event.currentTarget);
+            }
+        });
+    })
+}
+
+function init () {
+    reset_sort_headers();
+
+    add_collapse();
+
+    show_filters();
+
+    toggle_sort_states(find('.initial-sort'));
+
+    find_all('.sortable').forEach(function(elem) {
+        elem.addEventListener("click",
+                              function(event) {
+                                  sort_column(elem);
+                              }, false)
+    });
+
+};
+
+function sort_table(clicked, key_func) {
+    var rows = find_all('.results-table-row');
+    var reversed = !clicked.classList.contains('asc');
+    var sorted_rows = sort(rows, key_func, reversed);
+    /* Whole table is removed here because browsers acts much slower
+     * when appending existing elements.
+     */
+    var thead = document.getElementById("results-table-head");
+    document.getElementById('results-table').remove();
+    var parent = document.createElement("table");
+    parent.id = "results-table";
+    parent.appendChild(thead);
+    sorted_rows.forEach(function(elem) {
+        parent.appendChild(elem);
+    });
+    document.getElementsByTagName("BODY")[0].appendChild(parent);
+}
+
+function sort(items, key_func, reversed) {
+    var sort_array = items.map(function(item, i) {
+        return [key_func(item), i];
+    });
+    var multiplier = reversed ? -1 : 1;
+
+    sort_array.sort(function(a, b) {
+        var key_a = a[0];
+        var key_b = b[0];
+        return multiplier * (key_a >= key_b ? 1 : -1);
+    });
+
+    return sort_array.map(function(item) {
+        var index = item[1];
+        return items[index];
+    });
+}
+
+function key_alpha(col_index) {
+    return function(elem) {
+        return elem.childNodes[1].childNodes[col_index].firstChild.data.toLowerCase();
+    };
+}
+
+function key_num(col_index) {
+    return function(elem) {
+        return parseFloat(elem.childNodes[1].childNodes[col_index].firstChild.data);
+    };
+}
+
+function key_result(col_index) {
+    return function(elem) {
+        var strings = ['Error', 'Failed', 'Rerun', 'XFailed', 'XPassed',
+                       'Skipped', 'Passed'];
+        return strings.indexOf(elem.childNodes[1].childNodes[col_index].firstChild.data);
+    };
+}
+
+function reset_sort_headers() {
+    find_all('.sort-icon').forEach(function(elem) {
+        elem.parentNode.removeChild(elem);
+    });
+    find_all('.sortable').forEach(function(elem) {
+        var icon = document.createElement("div");
+        icon.className = "sort-icon";
+        icon.textContent = "vvv";
+        elem.insertBefore(icon, elem.firstChild);
+        elem.classList.remove("desc", "active");
+        elem.classList.add("asc", "inactive");
+    });
+}
+
+function toggle_sort_states(elem) {
+    //if active, toggle between asc and desc
+    if (elem.classList.contains('active')) {
+        elem.classList.toggle('asc');
+        elem.classList.toggle('desc');
+    }
+
+    //if inactive, reset all other functions and add ascending active
+    if (elem.classList.contains('inactive')) {
+        reset_sort_headers();
+        elem.classList.remove('inactive');
+        elem.classList.add('active');
+    }
+}
+
+function is_all_rows_hidden(value) {
+  return value.hidden == false;
+}
+
+function filter_table(elem) {
+    var outcome_att = "data-test-result";
+    var outcome = elem.getAttribute(outcome_att);
+    class_outcome = outcome + " results-table-row";
+    var outcome_rows = document.getElementsByClassName(class_outcome);
+
+    for(var i = 0; i < outcome_rows.length; i++){
+        outcome_rows[i].hidden = !elem.checked;
+    }
+
+    var rows = find_all('.results-table-row').filter(is_all_rows_hidden);
+    var all_rows_hidden = rows.length == 0 ? true : false;
+    var not_found_message = document.getElementById("not-found-message");
+    not_found_message.hidden = !all_rows_hidden;
+}
+</script>
+    <p>Report generated on 21-Jun-2022 at 18:10:26 by<a href="https://pypi.python.org/pypi/pytest-html"> pytest-html</a> v1.16.1</p>
+    <h2>Environment</h2>
+    <table id="environment">
+      <tr>
+        <td>Packages</td>
+        <td>{&apos;py&apos;: &apos;1.8.0&apos;, &apos;pytest&apos;: &apos;3.6.1&apos;, &apos;pluggy&apos;: &apos;0.6.0&apos;}</td></tr>
+      <tr>
+        <td>Platform</td>
+        <td>Linux-4.19.66-v7+-armv7l-with-debian-9.11</td></tr>
+      <tr>
+        <td>Plugins</td>
+        <td>{&apos;repeater&apos;: &apos;0.1.1&apos;, &apos;cov&apos;: &apos;2.7.1&apos;, &apos;random&apos;: &apos;0.2&apos;, &apos;xdist&apos;: &apos;1.22.2&apos;, &apos;allure-pytest&apos;: &apos;2.5.0&apos;, &apos;remove-stale-bytecode&apos;: &apos;3.0&apos;, &apos;rerunfailures&apos;: &apos;4.0&apos;, &apos;html&apos;: &apos;1.16.1&apos;, &apos;timeout&apos;: &apos;1.2.1&apos;, &apos;forked&apos;: &apos;1.0.2&apos;, &apos;logger&apos;: &apos;0.3.0&apos;, &apos;instafail&apos;: &apos;0.3.0&apos;, &apos;metadata&apos;: &apos;1.8.0&apos;}</td></tr>
+      <tr>
+        <td>Python</td>
+        <td>2.7.13</td></tr></table>
+    <h2>Summary</h2>
+    <p>85 tests ran in 2524.29 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">65 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">20 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>, <input checked="true" class="filter" data-test-result="rerun" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="rerun">20 rerun</span>
+    <h2>Results</h2>
+    <table id="results-table">
+      <thead id="results-table-head">
+        <tr>
+          <th class="sortable result initial-sort" col="result">Result</th>
+          <th class="sortable" col="name">Test</th>
+          <th class="sortable numeric" col="duration">Duration</th>
+          <th>Links</th></tr>
+        <tr hidden="true" id="not-found-message">
+          <th colspan="4">No results found. Try to check the filters</th></tr></thead>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_Disable.py::test_Disable[5001-5000-ISSN-26-95-barcode5-output5-0.5-0]</td>
+          <td class="col-duration">15.97</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_Disable.py:47: in test_Disable<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['9778765301533'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '9778765301533' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['9778765301533']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_Disable.py::test_Disable[5001-5000-Code 39 Sample with Full ASCII and the symbology enabled-9-100-barcode10-output10-0.5-0]</td>
+          <td class="col-duration">18.06</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_Disable.py:47: in test_Disable<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['CODE%V7'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'CODE%V7' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['CODE%V7']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_IgnoreFNC4.py::test_IgnoreFNC4[5001-5000-Code 1280]</td>
+          <td class="col-duration">17.87</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_IgnoreFNC4.py:28: in test_IgnoreFNC4<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['\xef\xbf\xb...\xbf\xbd\xbd'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '\xef\xbf\xbdBC\xef\xbf\xbdbc\xef\xbf\xbd' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['\xef\xbf\xbdBC\xef\xbf\xbdbc\xef\xbf\xbd']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_IgnoreFNC4.py::test_IgnoreFNC4[5001-5000-Code 1281]</td>
+          <td class="col-duration">18.38</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_IgnoreFNC4.py:28: in test_IgnoreFNC4<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['290000010043\xef\xbf\xbd'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '290000010043\xef\xbf\xbd' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['290000010043\xef\xbf\xbd']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_IgnoreFNC4.py::test_IgnoreFNC4[5001-5000-Code 1282]</td>
+          <td class="col-duration">18.03</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_IgnoreFNC4.py:28: in test_IgnoreFNC4<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['290000017635\xef\xbf\xbd'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '290000017635\xef\xbf\xbd' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['290000017635\xef\xbf\xbd']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_IgnoreFNC4.py::test_IgnoreFNC4[5001-5000-Code 1283]</td>
+          <td class="col-duration">16.77</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_IgnoreFNC4.py:28: in test_IgnoreFNC4<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['290000090100\xef\xbf\xbd'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '290000090100\xef\xbf\xbd' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['290000090100\xef\xbf\xbd']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_IgnoreFNC4.py::test_IgnoreFNC4[5001-5000-Code 1284]</td>
+          <td class="col-duration">19.03</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_IgnoreFNC4.py:28: in test_IgnoreFNC4<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['290000028002\xef\xbf\xbd'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '290000028002\xef\xbf\xbd' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['290000028002\xef\xbf\xbd']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_IgnoreFNC4.py::test_IgnoreFNC4[5001-5000-Code 1285]</td>
+          <td class="col-duration">18.01</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_IgnoreFNC4.py:28: in test_IgnoreFNC4<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['ABCabcz'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'ABCabcz' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['ABCabcz']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_IgnoreFNC4.py::test_IgnoreFNC4[5001-5000-Code 1286]</td>
+          <td class="col-duration">18.05</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_IgnoreFNC4.py:28: in test_IgnoreFNC4<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['2900000100437'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '2900000100437' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['2900000100437']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_IgnoreFNC4.py::test_IgnoreFNC4[5001-5000-Code 1287]</td>
+          <td class="col-duration">18.49</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_IgnoreFNC4.py:28: in test_IgnoreFNC4<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['2900000176350'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '2900000176350' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['2900000176350']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_IgnoreFNC4.py::test_IgnoreFNC4[5001-5000-Code 1288]</td>
+          <td class="col-duration">15.45</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_IgnoreFNC4.py:28: in test_IgnoreFNC4<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['2900000901004'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '2900000901004' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['2900000901004']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_IgnoreFNC4.py::test_IgnoreFNC4[5001-5000-Code 1289]</td>
+          <td class="col-duration">18.66</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_IgnoreFNC4.py:28: in test_IgnoreFNC4<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['2900000280025'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '2900000280025' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['2900000280025']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_PostalEnable.py::test_PostalEnable[5001-5000-Japanese Postal]</td>
+          <td class="col-duration">19.72</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_PostalEnable.py:26: in test_PostalEnable<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['1234567'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '1234567' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['1234567']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_PostalEnable.py::test_PostalEnable[5001-5000-Korean Postal]</td>
+          <td class="col-duration">18.64</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_PostalEnable.py:26: in test_PostalEnable<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['123456'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '123456' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['123456']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_PostalEnable.py::test_PostalEnable[5001-5000-US Planet ]</td>
+          <td class="col-duration">18.45</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_PostalEnable.py:26: in test_PostalEnable<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['123456789014'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '123456789014' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['123456789014']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_PostalEnable.py::test_PostalEnable[5001-5000-US Postnet]</td>
+          <td class="col-duration">16.51</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_PostalEnable.py:26: in test_PostalEnable<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['123455'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '123455' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['123455']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_PostalEnable.py::test_PostalEnable[5001-5000-Netherlands Postal]</td>
+          <td class="col-duration">18.13</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_PostalEnable.py:26: in test_PostalEnable<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['2500GG30250'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '2500GG30250' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['2500GG30250']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_PostalEnable.py::test_PostalEnable[5001-5000-Australian Postal]</td>
+          <td class="col-duration">18.44</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_PostalEnable.py:26: in test_PostalEnable<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['11,12345678,26 44 19 15'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '11,12345678,26 44 19 15' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['11,12345678,26 44 19 15']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_PostalEnable.py::test_PostalEnable[5001-5000-UK Royal Mail]</td>
+          <td class="col-duration">18.37</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_PostalEnable.py:26: in test_PostalEnable<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['12345678P'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '12345678P' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['12345678P']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/test_PostalEnable.py::test_PostalEnable[5001-5000-Intellimail]</td>
+          <td class="col-duration">19.43</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_PostalEnable.py:26: in test_PostalEnable<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['2054398789801234567811788'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '2054398789801234567811788' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['2054398789801234567811788']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_Disable.py::test_Disable[5001-5000-ISSN-26-95-barcode5-output5-0.5-0]</td>
+          <td class="col-duration">18.13</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_Disable.py:47: in test_Disable<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['9778765301533'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '9778765301533' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['9778765301533']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_Disable.py::test_Disable[5001-5000-Code 39 Sample with Full ASCII and the symbology enabled-9-100-barcode10-output10-0.5-0]</td>
+          <td class="col-duration">16.60</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_Disable.py:47: in test_Disable<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['CODE%V7'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'CODE%V7' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['CODE%V7']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_IgnoreFNC4.py::test_IgnoreFNC4[5001-5000-Code 1280]</td>
+          <td class="col-duration">18.45</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_IgnoreFNC4.py:28: in test_IgnoreFNC4<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['\xef\xbf\xb...\xbf\xbd\xbd'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '\xef\xbf\xbdBC\xef\xbf\xbdbc\xef\xbf\xbd' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['\xef\xbf\xbdBC\xef\xbf\xbdbc\xef\xbf\xbd']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_IgnoreFNC4.py::test_IgnoreFNC4[5001-5000-Code 1281]</td>
+          <td class="col-duration">17.38</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_IgnoreFNC4.py:28: in test_IgnoreFNC4<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['290000010043\xef\xbf\xbd'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '290000010043\xef\xbf\xbd' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['290000010043\xef\xbf\xbd']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_IgnoreFNC4.py::test_IgnoreFNC4[5001-5000-Code 1282]</td>
+          <td class="col-duration">19.23</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_IgnoreFNC4.py:28: in test_IgnoreFNC4<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['290000017635\xef\xbf\xbd'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '290000017635\xef\xbf\xbd' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['290000017635\xef\xbf\xbd']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_IgnoreFNC4.py::test_IgnoreFNC4[5001-5000-Code 1283]</td>
+          <td class="col-duration">18.04</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_IgnoreFNC4.py:28: in test_IgnoreFNC4<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['290000090100\xef\xbf\xbd'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '290000090100\xef\xbf\xbd' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['290000090100\xef\xbf\xbd']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_IgnoreFNC4.py::test_IgnoreFNC4[5001-5000-Code 1284]</td>
+          <td class="col-duration">18.22</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_IgnoreFNC4.py:28: in test_IgnoreFNC4<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['290000028002\xef\xbf\xbd'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '290000028002\xef\xbf\xbd' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['290000028002\xef\xbf\xbd']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_IgnoreFNC4.py::test_IgnoreFNC4[5001-5000-Code 1285]</td>
+          <td class="col-duration">18.20</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_IgnoreFNC4.py:28: in test_IgnoreFNC4<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['ABCabcz'] == ['NR']</span><br/><span class="error">E     At index 0 diff: 'ABCabcz' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['ABCabcz']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_IgnoreFNC4.py::test_IgnoreFNC4[5001-5000-Code 1286]</td>
+          <td class="col-duration">16.54</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_IgnoreFNC4.py:28: in test_IgnoreFNC4<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['2900000100437'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '2900000100437' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['2900000100437']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_IgnoreFNC4.py::test_IgnoreFNC4[5001-5000-Code 1287]</td>
+          <td class="col-duration">18.83</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_IgnoreFNC4.py:28: in test_IgnoreFNC4<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['2900000176350'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '2900000176350' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['2900000176350']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_IgnoreFNC4.py::test_IgnoreFNC4[5001-5000-Code 1288]</td>
+          <td class="col-duration">18.38</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_IgnoreFNC4.py:28: in test_IgnoreFNC4<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['2900000901004'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '2900000901004' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['2900000901004']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_IgnoreFNC4.py::test_IgnoreFNC4[5001-5000-Code 1289]</td>
+          <td class="col-duration">19.66</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_IgnoreFNC4.py:28: in test_IgnoreFNC4<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['2900000280025'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '2900000280025' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['2900000280025']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_PostalEnable.py::test_PostalEnable[5001-5000-Japanese Postal]</td>
+          <td class="col-duration">19.79</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_PostalEnable.py:26: in test_PostalEnable<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['1234567'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '1234567' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['1234567']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_PostalEnable.py::test_PostalEnable[5001-5000-Korean Postal]</td>
+          <td class="col-duration">13.52</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_PostalEnable.py:26: in test_PostalEnable<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['123456'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '123456' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['123456']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_PostalEnable.py::test_PostalEnable[5001-5000-US Planet ]</td>
+          <td class="col-duration">19.58</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_PostalEnable.py:26: in test_PostalEnable<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['123456789014'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '123456789014' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['123456789014']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_PostalEnable.py::test_PostalEnable[5001-5000-US Postnet]</td>
+          <td class="col-duration">18.21</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_PostalEnable.py:26: in test_PostalEnable<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['123455'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '123455' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['123455']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_PostalEnable.py::test_PostalEnable[5001-5000-Netherlands Postal]</td>
+          <td class="col-duration">18.28</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_PostalEnable.py:26: in test_PostalEnable<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['2500GG30250'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '2500GG30250' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['2500GG30250']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_PostalEnable.py::test_PostalEnable[5001-5000-Australian Postal]</td>
+          <td class="col-duration">18.11</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_PostalEnable.py:26: in test_PostalEnable<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['11,12345678,26 44 19 15'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '11,12345678,26 44 19 15' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['11,12345678,26 44 19 15']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_PostalEnable.py::test_PostalEnable[5001-5000-UK Royal Mail]</td>
+          <td class="col-duration">16.24</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_PostalEnable.py:26: in test_PostalEnable<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['12345678P'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '12345678P' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['12345678P']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">tests/test_PostalEnable.py::test_PostalEnable[5001-5000-Intellimail]</td>
+          <td class="col-duration">18.25</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">test_PostalEnable.py:26: in test_PostalEnable<br/>    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)<br/><span class="error">E   AssertionError: assert ['2054398789801234567811788'] == ['NR']</span><br/><span class="error">E     At index 0 diff: '2054398789801234567811788' != 'NR'</span><br/><span class="error">E     Full diff:</span><br/><span class="error">E     - ['2054398789801234567811788']</span><br/><span class="error">E     + ['NR']</span><br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_Disable.py::test_Disable[5001-5000-UPC-A-34-90-barcode0-output0-0.5-0]</td>
+          <td class="col-duration">18.24</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_Disable.py::test_Disable[5001-5000-UPC-E-37-91-barcode1-output1-0.5-0]</td>
+          <td class="col-duration">17.19</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_Disable.py::test_Disable[5001-5000-UPC-E1-Sdl_EnDis_BC3-92-barcode2-output2-0-1]</td>
+          <td class="col-duration">18.62</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_Disable.py::test_Disable[5001-5000-EAN-8-10-93-barcode3-output3-0.5-0]</td>
+          <td class="col-duration">18.54</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_Disable.py::test_Disable[5001-5000-EAN-13-13-94-barcode4-output4-0.5-0]</td>
+          <td class="col-duration">18.29</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_Disable.py::test_Disable[5001-5000-Code 128b-60-96-barcode6-output6-0.4-0]</td>
+          <td class="col-duration">18.36</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_Disable.py::test_Disable[5001-5000-EAN-128-16-97-barcode7-output7-0.5-0]</td>
+          <td class="col-duration">18.10</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_Disable.py::test_Disable[5001-5000-ISBT-128-Sdl_EnDis_BC9-98-barcode8-output8-0-1]</td>
+          <td class="col-duration">18.18</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_Disable.py::test_Disable[5001-5000-Code 39-8-99-barcode9-output9-0.5-0]</td>
+          <td class="col-duration">17.93</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_Disable.py::test_Disable[5001-5000-Code 93-25-101-barcode11-output11-0.5-0]</td>
+          <td class="col-duration">18.32</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_Disable.py::test_Disable[5001-5000-Interleaved 2 of 5-3-102-barcode12-output12-0.5-0]</td>
+          <td class="col-duration">18.25</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_Disable.py::test_Disable[5001-5000-Discrete 2 of 5-Sdl_EnDis_BC14-103-barcode13-output13-0-1]</td>
+          <td class="col-duration">18.07</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_Disable.py::test_Disable[5001-5000-Matrix 2 of 5-5-104-barcode14-output14-0.5-0]</td>
+          <td class="col-duration">16.66</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_Disable.py::test_Disable[5001-5000-Codabar-18-105-barcode15-output15-0.4-0]</td>
+          <td class="col-duration">19.26</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_Disable.py::test_Disable[5001-5000-MSI-47-106-barcode16-output16-0.5-0]</td>
+          <td class="col-duration">19.36</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_Disable.py::test_Disable[5001-5000-GS1 Databar 14-29-107-barcode17-output17-0.5-0]</td>
+          <td class="col-duration">17.97</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_Disable.py::test_Disable[5001-5000-GS1 Databar Limited-30-108-barcode18-output18-0.5-0]</td>
+          <td class="col-duration">18.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_Disable.py::test_Disable[5001-5000-PDF417-55-109-barcode19-output19-0.5-0]</td>
+          <td class="col-duration">16.83</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_Disable.py::test_Disable[5001-5000-MicroPDF-84-110-barcode20-output20-0.5-0]</td>
+          <td class="col-duration">18.64</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_Disable.py::test_Disable[5001-5000-Datamatrix-71-111-barcode21-output21-0.5-0]</td>
+          <td class="col-duration">18.85</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_Disable.py::test_Disable[5001-5000-Maxicode-Sdl_EnDis_BC23-112-barcode22-output22-0.6-1]</td>
+          <td class="col-duration">18.09</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_Disable.py::test_Disable[5001-5000-QR Code-112-113-barcode23-output23-0.5-0]</td>
+          <td class="col-duration">17.84</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_Disable.py::test_Disable[5001-5000-MicroQR-97-114-barcode24-output24-0.5-0]</td>
+          <td class="col-duration">16.98</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_Disable.py::test_Disable[5001-5000-Aztec-92-115-barcode25-output25-0.5-0]</td>
+          <td class="col-duration">18.66</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_Disable.py::test_Disable[5001-5000-Han-Xin-116-116-barcode26-output26-0.5-0]</td>
+          <td class="col-duration">18.20</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_ReduceQuietZone.py::test_ReduceQuietZone[5001-5000-RQZ 1]</td>
+          <td class="col-duration">18.70</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_ReduceQuietZone.py::test_ReduceQuietZone[5001-5000-RQZ 2]</td>
+          <td class="col-duration">15.11</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_ReduceQuietZone.py::test_ReduceQuietZone[5001-5000-RQZ 3]</td>
+          <td class="col-duration">19.13</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_ReduceQuietZone.py::test_ReduceQuietZone[5001-5000-RQZ 4]</td>
+          <td class="col-duration">18.99</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_ReduceQuietZone.py::test_ReduceQuietZone[5001-5000-RQZ 5]</td>
+          <td class="col-duration">19.32</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_ReduceQuietZone.py::test_ReduceQuietZone[5001-5000-RQZ 6]</td>
+          <td class="col-duration">18.53</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_ReduceQuietZone.py::test_ReduceQuietZone[5001-5000-RQZ 7]</td>
+          <td class="col-duration">14.60</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_ReduceQuietZone.py::test_ReduceQuietZone[5001-5000-RQZ 8]</td>
+          <td class="col-duration">17.75</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_ReduceQuietZone.py::test_ReduceQuietZone[5001-5000-RQZ 9]</td>
+          <td class="col-duration">18.76</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_ReduceQuietZone.py::test_ReduceQuietZone[5001-5000-RQZ 10]</td>
+          <td class="col-duration">19.17</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_ReduceQuietZone.py::test_ReduceQuietZone[5001-5000-RQZ 11]</td>
+          <td class="col-duration">19.56</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_ReduceQuietZone.py::test_ReduceQuietZone[5001-5000-RQZ 12]</td>
+          <td class="col-duration">14.24</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_ReduceQuietZone.py::test_ReduceQuietZone[5001-5000-RQZ 13]</td>
+          <td class="col-duration">18.35</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_ReduceQuietZone.py::test_ReduceQuietZone[5001-5000-RQZ 14]</td>
+          <td class="col-duration">18.89</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_ReduceQuietZone.py::test_ReduceQuietZone[5001-5000-RQZ 15]</td>
+          <td class="col-duration">18.50</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_ReduceQuietZone.py::test_ReduceQuietZone[5001-5000-RQZ 16]</td>
+          <td class="col-duration">19.01</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_ReduceQuietZone.py::test_ReduceQuietZone[5001-5000-RQZ 17]</td>
+          <td class="col-duration">15.62</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_ReduceQuietZone.py::test_ReduceQuietZone[5001-5000-RQZ 18]</td>
+          <td class="col-duration">18.58</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_ReduceQuietZone.py::test_ReduceQuietZone[5001-5000-RQZ 19]</td>
+          <td class="col-duration">18.07</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_ReduceQuietZone.py::test_ReduceQuietZone[5001-5000-RQZ 20]</td>
+          <td class="col-duration">18.22</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_ReduceQuietZone.py::test_ReduceQuietZone[5001-5000-RQZ 21]</td>
+          <td class="col-duration">18.81</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_ReduceQuietZone.py::test_ReduceQuietZone[5001-5000-RQZ 22]</td>
+          <td class="col-duration">15.71</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_ReduceQuietZone.py::test_ReduceQuietZone[5001-5000-RQZ 23]</td>
+          <td class="col-duration">18.29</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_ReduceQuietZone.py::test_ReduceQuietZone[5001-5000-RQZ 24]</td>
+          <td class="col-duration">18.42</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_ReduceQuietZone.py::test_ReduceQuietZone[5001-5000-RQZ 25]</td>
+          <td class="col-duration">18.30</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_ReduceQuietZone.py::test_ReduceQuietZone[5001-5000-RQZ 26]</td>
+          <td class="col-duration">18.22</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_ReduceQuietZone.py::test_ReduceQuietZone[5001-5000-RQZ 27]</td>
+          <td class="col-duration">19.13</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_ReduceQuietZone.py::test_ReduceQuietZone[5001-5000-RQZ 28]</td>
+          <td class="col-duration">19.06</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_ReduceQuietZone.py::test_ReduceQuietZone[5001-5000-RQZ 29]</td>
+          <td class="col-duration">18.38</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_ReduceQuietZone.py::test_ReduceQuietZone[5001-5000-RQZ 30]</td>
+          <td class="col-duration">19.02</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_ReduceQuietZone.py::test_ReduceQuietZone[5001-5000-RQZ 31]</td>
+          <td class="col-duration">18.32</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_ReduceQuietZone.py::test_ReduceQuietZone[5001-5000-RQZ 32]</td>
+          <td class="col-duration">15.14</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_ReduceQuietZone.py::test_ReduceQuietZone[5001-5000-RQZ 33]</td>
+          <td class="col-duration">18.25</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_ReduceQuietZone.py::test_ReduceQuietZone[5001-5000-RQZ 34]</td>
+          <td class="col-duration">17.91</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_ReduceQuietZone.py::test_ReduceQuietZone[5001-5000-RQZ 35]</td>
+          <td class="col-duration">19.66</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_ReduceQuietZone.py::test_ReduceQuietZone[5001-5000-RQZ 36]</td>
+          <td class="col-duration">18.55</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_ReduceQuietZone.py::test_ReduceQuietZone[5001-5000-RQZ 37]</td>
+          <td class="col-duration">15.57</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_ReduceQuietZone.py::test_ReduceQuietZone[5001-5000-RQZ 38]</td>
+          <td class="col-duration">19.04</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_ReduceQuietZone.py::test_ReduceQuietZone[5001-5000-RQZ 39]</td>
+          <td class="col-duration">20.11</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_ReduceQuietZone.py::test_ReduceQuietZone[5001-5000-RQZ 40]</td>
+          <td class="col-duration">19.30</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody></table></body></html>

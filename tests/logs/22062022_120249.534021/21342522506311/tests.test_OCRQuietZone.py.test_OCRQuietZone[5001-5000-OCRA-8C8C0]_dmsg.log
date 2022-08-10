@@ -1,0 +1,22 @@
+<14>[81927.666225] init: starting service 'qccsyshalservice'...
+<14>[81927.714352] init: starting service 'qccvndhalservice'...
+<14>[81927.842107] init: Sending signal 9 to service 'qccvndhalservice' (pid 6746) process group...
+<38>[81928.119452] type=1400 audit(1654288796.158:192386): avc: denied { kill } for comm="swapper/1" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<12>[81929.527635] healthd: battery l=44 v=3566 t=27.0 h=2 st=2 c=-450195 fc=0 cc=8 chg=u
+<12>[81929.587758] healthd: battery l=44 v=3566 t=27.0 h=2 st=2 c=-450195 fc=0 cc=8 chg=u
+<12>[81929.604746] healthd: battery l=44 v=3566 t=27.0 h=2 st=2 c=-450195 fc=0 cc=8 chg=u
+<12>[81929.639432] healthd: battery l=44 v=3566 t=27.0 h=2 st=2 c=-450195 fc=0 cc=8 chg=u
+<12>[81929.682824] healthd: battery l=44 v=3566 t=27.0 h=2 st=2 c=-450195 fc=0 cc=8 chg=u
+<6>[81932.002359] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<6>[81932.002369] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 
+<3>[81932.253752] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[81932.272990] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[81932.278077] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[81932.284454] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[81932.288682] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[81932.299258] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[81932.305042] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[81932.310179] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[81932.315754] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[81932.321007] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<31>[81932.428352] logd: logdr: UID=0 GID=0 PID=6759 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns

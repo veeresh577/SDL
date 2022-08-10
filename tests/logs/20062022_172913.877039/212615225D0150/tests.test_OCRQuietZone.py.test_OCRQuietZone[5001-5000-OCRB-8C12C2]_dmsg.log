@@ -1,0 +1,7 @@
+<38>[ 4882.680045] type=1400 audit(1642435468.714:4805): avc: denied { kill } for comm="swapper/0" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<14>[ 4883.157104] init: starting service 'qccsyshalservice'...
+<14>[ 4883.205865] init: starting service 'qccvndhalservice'...
+<38>[ 4883.261836] type=1400 audit(1642435469.294:4806): avc: denied { search } for comm="vendor.qti.hard" name="/" dev="sda10" ino=2 scontext=u:r:vendor_hal_qccvndhal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<6>[ 4883.492094] IRQ 6: no longer affine to CPU6
+<3>[ 4885.971634] GBSOC->83, GBTemp->470, GBTTE->448, GBTTF->65535
+<12>[ 4886.000913] healthd: battery l=83 v=3864 t=47.0 h=2 st=2 c=-150390 fc=4008000 cc=2 chg=u

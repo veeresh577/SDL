@@ -1,0 +1,33 @@
+<14>[82018.361489] init: starting service 'qccsyshalservice'...
+<14>[82018.412662] init: starting service 'qccvndhalservice'...
+<38>[82018.444873] type=1400 audit(1654288886.488:192403): avc: denied { search } for comm="qccsyshalservic" name="/" dev="mmcblk0p37" ino=2 scontext=u:r:vendor_qccsyshal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[82018.500302] init: Service 'qccsyshalservice' (pid 7192) exited with status 1
+<14>[82018.500393] init: Sending signal 9 to service 'qccsyshalservice' (pid 7192) process group...
+<14>[82018.501542] libprocessgroup: Successfully killed process cgroup uid 1000 pid 7192 in 0ms
+<14>[82018.529333] init: Service 'qccvndhalservice' (pid 7193) exited with status 1
+<14>[82018.529443] init: Sending signal 9 to service 'qccvndhalservice' (pid 7193) process group...
+<14>[82018.530659] libprocessgroup: Successfully killed process cgroup uid 1000 pid 7193 in 0ms
+<14>[82023.411661] init: starting service 'qccsyshalservice'...
+<14>[82023.545692] init: Service 'qccsyshalservice' (pid 7203) exited with status 1
+<14>[82023.545784] init: Sending signal 9 to service 'qccsyshalservice' (pid 7203) process group...
+<14>[82023.546738] libprocessgroup: Successfully killed process cgroup uid 1000 pid 7203 in 0ms
+<3>[82024.115267] [schedu][0x16f88ae1132][20:41:32.166393] wlan: [2028:E:scan] scm_11d_elected_country_algo_fcc: 98: No AP with 11d Country code is present in scan list
+<3>[82024.115425] FUSIONWL: : ==Regulatory_elect_country_db==: No AP with 11d Country code is present in scan list 
+<38>[82028.153896] type=1400 audit(1654288896.198:192404): avc: denied { kill } for comm="swapper/0" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<14>[82028.453268] init: starting service 'qccsyshalservice'...
+<14>[82028.495670] init: starting service 'qccvndhalservice'...
+<14>[82028.611601] init: Service 'qccvndhalservice' (pid 7209) exited with status 1
+<14>[82028.611747] init: Sending signal 9 to service 'qccvndhalservice' (pid 7209) process group...
+<14>[82028.613107] libprocessgroup: Successfully killed process cgroup uid 1000 pid 7209 in 0ms
+<3>[82030.705884] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[82030.706413] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[82030.710523] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[82030.721914] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[82030.731759] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<31>[82030.858340] logd: logdr: UID=0 GID=0 PID=7220 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[82031.007025] msm_isp_open_node: reset VFE
+<3>[82031.017726] msm_ispif_config:1061 Exit 
+<3>[82031.018197] msm_ispif_config2: Exit 
+<31>[82031.042101] logd: logdr: UID=0 GID=0 PID=7230 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[82031.050537] frame_src is 1 frame_id is 1 blackjoe
+<3>[82031.084857] frame_src is 1 frame_id is 2 blackjoe

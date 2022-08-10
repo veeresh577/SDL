@@ -1,0 +1,16 @@
+<6>[10095.286752] FUSIONWL: : ==ChannelMask_GetChannels==: Dropping channel 144, not valid 
+<6>[10095.286773] FUSIONWL: : ==ChannelMask_GetChannels==: Band Auto, Ch list length 37 
+<14>[10095.888295] init: starting service 'qccsyshalservice'...
+<14>[10096.043868] init: Service 'qccsyshalservice' (pid 27608) exited with status 1
+<14>[10096.043963] init: Sending signal 9 to service 'qccsyshalservice' (pid 27608) process group...
+<14>[10096.044815] libprocessgroup: Successfully killed process cgroup uid 1000 pid 27608 in 0ms
+<38>[10096.158312] type=1400 audit(1654205855.315:6689): avc: denied { search } for comm="vendor.qti.hard" name="/" dev="mmcblk0p37" ino=2 scontext=u:r:vendor_hal_qccvndhal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1
+<14>[10096.255860] init: Service 'qccvndhalservice' (pid 27609) exited with status 1
+<14>[10096.255962] init: Sending signal 9 to service 'qccvndhalservice' (pid 27609) process group...
+<14>[10096.256815] libprocessgroup: Successfully killed process cgroup uid 1000 pid 27609 in 0ms
+<4>[10097.071028] FG: is_batt_empty: batt_soc_rt_sts: 32 vbatt: 3028068 uV msoc:0
+<3>[10097.369549] [schedu][0x139a30ce069][21:37:36.535724] wlan: [2070:E:scan] scm_11d_elected_country_algo_fcc: 98: No AP with 11d Country code is present in scan list
+<3>[10097.369661] FUSIONWL: : ==Regulatory_elect_country_db==: No AP with 11d Country code is present in scan list 
+<3>[10097.391129] FUSIONWL: : ==Regulatory_scan_country_list_db_reset==: Reset complete for scan country list 
+<14>[10100.916598] init: starting service 'qccsyshalservice'...
+<38>[10100.991881] type=1400 audit(1654205860.145:6690): avc: denied { search } for comm="qccsyshalservic" name="/" dev="mmcblk0p37" ino=2 scontext=u:r:vendor_qccsyshal_qti:s0 tcontext=u:object_r:factory_file:s0 tclass=dir permissive=1

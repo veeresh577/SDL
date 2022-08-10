@@ -1,0 +1,31 @@
+<14>[ 6249.449295] init: starting service 'qccsyshalservice'...
+<14>[ 6249.495667] init: starting service 'qccvndhalservice'...
+<14>[ 6249.531838] init: starting service 'smartmu'...
+<38>[ 6253.145950] type=1400 audit(1642436839.184:5041): avc: denied { kill } for comm="swapper/3" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+<6>[ 6254.291401] IRQ 6: no longer affine to CPU4
+<14>[ 6254.493874] init: starting service 'qccsyshalservice'...
+<14>[ 6254.537404] init: starting service 'qccvndhalservice'...
+<14>[ 6254.568797] init: starting service 'smartmu'...
+<14>[ 6254.634691] init: Service 'qccsyshalservice' (pid 29311) exited with status 1
+<14>[ 6254.634825] init: Sending signal 9 to service 'qccsyshalservice' (pid 29311) process group...
+<14>[ 6254.635827] libprocessgroup: Successfully killed process cgroup uid 1000 pid 29311 in 0ms
+<14>[ 6254.661810] init: Service 'qccvndhalservice' (pid 29312) exited with status 1
+<14>[ 6254.661972] init: Sending signal 9 to service 'qccvndhalservice' (pid 29312) process group...
+<14>[ 6254.663254] libprocessgroup: Successfully killed process cgroup uid 1000 pid 29312 in 0ms
+<14>[ 6254.691267] init: Service 'smartmu' (pid 29313) exited with status 0
+<3>[ 6258.748854] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 6258.754280] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 6258.759412] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 6258.770164] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 6258.780875] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 6258.786612] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 6258.791510] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 6258.802659] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 6258.807582] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 6258.818632] [SDL] misc_ioctl msg.len is 4 : 0x7b 0x00 0x00 0x85 
+<3>[ 6258.823642] [SDL] misc_ioctl msg.len is 2 : 0x84 0x00 
+<3>[ 6258.829605] [SDL] misc_ioctl msg.len is 4 : 0x82 0x00 0x00 0x7e 
+<3>[ 6259.058469] msm_ispif_config:1061 Exit 
+<3>[ 6259.058946] msm_ispif_config2: Exit 
+<3>[ 6259.072434] frame_src is 1 frame_id is 1 blackjoe
+<3>[ 6259.089038] frame_src is 1 frame_id is 2 blackjoe

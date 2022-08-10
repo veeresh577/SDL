@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?><testsuite errors="1" failures="1" name="pytest" skips="0" tests="2" time="18.452"><testcase classname="tests.test_CodeId" file="tests/test_CodeId.py" line="11" name="test_CodeId[5001-5000-UPC-A0]" time="7.92681479454"><failure message="AttributeError: &apos;Scanner&apos; object has no attribute &apos;kindle_send&apos;">test_CodeId.py:17: in test_CodeId
+    assert output == device.scanner.scan(symbology_num, subtest, barcode[0], size, use)
+../lib/scanner.py:20: in scan
+    self.kindle_send(msg, True)
+E   AttributeError: &apos;Scanner&apos; object has no attribute &apos;kindle_send&apos;</failure></testcase><testcase classname="tests.test_CodeId" file="tests/test_CodeId.py" line="11" name="test_CodeId[5001-5000-UPC-A1]" time="2.11937713623"><error message="test setup failure">../conftest.py:183: in logfolder
+    os.makedirs(logfolder)
+../../venv27/lib/python2.7/os.py:157: in makedirs
+    mkdir(name, mode)
+E   OSError: [Errno 17] File exists: &apos;logs/21062022_104537.658745/21342522506311&apos;</error></testcase></testsuite>

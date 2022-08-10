@@ -1,0 +1,62 @@
+<14>[ 5815.914729] init: starting service 'qccsyshalservice'...
+<14>[ 5815.959095] init: starting service 'qccvndhalservice'...
+<14>[ 5816.054671] init: Service 'qccsyshalservice' (pid 27187) exited with status 1
+<14>[ 5816.054771] init: Sending signal 9 to service 'qccsyshalservice' (pid 27187) process group...
+<14>[ 5816.055697] libprocessgroup: Successfully killed process cgroup uid 1000 pid 27187 in 0ms
+<14>[ 5816.153320] init: Service 'smartmu' (pid 27189) exited with status 0
+<14>[ 5820.957611] init: starting service 'qccsyshalservice'...
+<14>[ 5821.009364] init: starting service 'qccvndhalservice'...
+<14>[ 5821.128113] init: Service 'qccsyshalservice' (pid 27200) exited with status 1
+<14>[ 5821.128356] init: Sending signal 9 to service 'qccsyshalservice' (pid 27200) process group...
+<14>[ 5821.130035] libprocessgroup: Successfully killed process cgroup uid 1000 pid 27200 in 1ms
+<14>[ 5821.137234] init: Service 'qccvndhalservice' (pid 27201) exited with status 1
+<14>[ 5821.137329] init: Sending signal 9 to service 'qccvndhalservice' (pid 27201) process group...
+<14>[ 5821.138167] libprocessgroup: Successfully killed process cgroup uid 1000 pid 27201 in 0ms
+<6>[ 5821.252379] IRQ 6: no longer affine to CPU4
+<14>[ 5826.006449] init: starting service 'qccsyshalservice'...
+<14>[ 5826.054159] init: starting service 'qccvndhalservice'...
+<14>[ 5826.093696] init: starting service 'smartmu'...
+<14>[ 5826.252714] init: Service 'smartmu' (pid 27209) exited with status 0
+<6>[ 5827.491350] IRQ 6: no longer affine to CPU4
+<3>[ 5827.532911] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 5827.534393] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 5827.537955] [SDL] misc_ioctl msg.len is 3 : 0x77 0x03 0x86 
+<3>[ 5827.543215] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 5827.548497] [SDL] misc_ioctl msg.len is 3 : 0x77 0x08 0x81 
+<3>[ 5827.564666] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 5827.570098] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 5827.575124] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 5827.596712] [SDL] misc_ioctl msg.len is 2 : 0x88 0x00 
+<3>[ 5827.602928] [SDL] misc_ioctl msg.len is 3 : 0x58 0x00 0xa8 
+<3>[ 5827.607058] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 5827.618227] [SDL] misc_ioctl msg.len is 2 : 0xa7 0x00 
+<3>[ 5827.623676] [SDL] misc_ioctl msg.len is 4 : 0x7b 0x00 0x00 0x85 
+<3>[ 5827.628586] [SDL] misc_ioctl msg.len is 2 : 0x84 0x00 
+<3>[ 5827.634733] [SDL] misc_ioctl msg.len is 4 : 0x82 0x00 0x00 0x7e 
+<3>[ 5827.639727] [SDL] misc_ioctl msg.len is 2 : 0x7d 0x80 
+<31>[ 5827.706124] logd: logdr: UID=0 GID=0 PID=27220 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[ 5827.734934] [SDL] misc_ioctl msg.len is 3 : 0x77 0x02 0x87 
+<31>[ 5827.847059] logd: logdr: UID=0 GID=0 PID=27226 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[ 5827.896216] msm_isp_open_node: reset VFE
+<3>[ 5827.906717] msm_ispif_config:1061 Exit 
+<3>[ 5827.907286] msm_ispif_config2: Exit 
+<3>[ 5827.914750] frame_src is 1 frame_id is 1 blackjoe
+<3>[ 5827.931354] frame_src is 1 frame_id is 2 blackjoe
+<3>[ 5827.947986] frame_src is 1 frame_id is 3 blackjoe
+<3>[ 5828.000069] frame_src is 1 frame_id is 4 blackjoe
+<3>[ 5828.033280] frame_src is 1 frame_id is 6 blackjoe
+<3>[ 5828.066529] frame_src is 1 frame_id is 8 blackjoe
+<3>[ 5828.083146] frame_src is 1 frame_id is 9 blackjoe
+<3>[ 5828.116391] frame_src is 1 frame_id is 11 blackjoe
+<3>[ 5828.132992] frame_src is 1 frame_id is 12 blackjoe
+<3>[ 5828.149632] frame_src is 1 frame_id is 13 blackjoe
+<3>[ 5828.186498] frame_src is 1 frame_id is 15 blackjoe
+<3>[ 5828.219765] frame_src is 1 frame_id is 17 blackjoe
+<31>[ 5828.222413] logd: logdr: UID=0 GID=0 PID=27240 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+<3>[ 5828.236417] frame_src is 1 frame_id is 18 blackjoe
+<3>[ 5828.253025] frame_src is 1 frame_id is 19 blackjoe
+<3>[ 5828.286242] frame_src is 1 frame_id is 21 blackjoe
+<3>[ 5828.319480] frame_src is 1 frame_id is 23 blackjoe
+<3>[ 5828.353063] frame_src is 1 frame_id is 25 blackjoe
+<3>[ 5828.386052] frame_src is 1 frame_id is 27 blackjoe
+<3>[ 5828.435849] frame_src is 1 frame_id is 30 blackjoe
